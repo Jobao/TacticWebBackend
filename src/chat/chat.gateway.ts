@@ -11,15 +11,23 @@ export class ChatGateway implements OnGatewayConnection {
   @WebSocketServer()
   server: Server;
 
-  handleConnection(client: any, ...args: any[]) {
-    console.log('ccc');
-    
+  handleConnection(client: Socket, ...args: any[]) {
+    client.join('lobby');
   }
   @SubscribeMessage('sendChat')
   handleMessage(@ConnectedSocket() client: Socket, @MessageBody() chatText:string) {
-    console.log('Message '.concat(chatText));
-    //client.emit('event', chatText);
-    this.server.emit('event', chatText)
+    this.server.to(Array.from(client.rooms)).emit('sendChat', {id: client.id, text: chatText})
     //return 'Hello world!';
+  }
+
+  @SubscribeMessage('changeRoom')
+  changeRoom(@ConnectedSocket() client: Socket, @MessageBody() newRoom:string) {
+    client.join(newRoom);
+    
+  }
+
+  @SubscribeMessage('myRoom')
+  myRooms(@ConnectedSocket() client: Socket) {
+    this.server.to(client.id).emit('myRoom',Array.from(client.rooms)[1]);
   }
 }
