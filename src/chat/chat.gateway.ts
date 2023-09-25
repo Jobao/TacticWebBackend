@@ -1,5 +1,7 @@
 import { ConnectedSocket, MessageBody, OnGatewayConnection, SubscribeMessage, WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
 import {Socket, Server} from 'socket.io'
+import { ChatDto } from './dto/chat.dto';
+import { PrivateChatDto } from './dto/privateChat.dto';
 
 @WebSocketGateway({
   cors: {
@@ -14,20 +16,15 @@ export class ChatGateway implements OnGatewayConnection {
   handleConnection(client: Socket, ...args: any[]) {
     client.join('lobby');
   }
-  @SubscribeMessage('sendChat')
-  handleMessage(@ConnectedSocket() client: Socket, @MessageBody() chatText:string) {
-    this.server.to(Array.from(client.rooms)).emit('sendChat', {id: client.id, text: chatText})
-    //return 'Hello world!';
+  @SubscribeMessage('sendPublicChat')
+  handlePublicMessage(@ConnectedSocket() client: Socket, @MessageBody() chatText:ChatDto) {
+    //Recibo el texto y lo envio a todos que estan en el canal
+    this.server.to(Array.from(client.rooms)).emit('publicChat', {id: client.id, text: chatText.text})
   }
 
-  @SubscribeMessage('changeRoom')
-  changeRoom(@ConnectedSocket() client: Socket, @MessageBody() newRoom:string) {
-    client.join(newRoom);
-    
-  }
+  @SubscribeMessage('sendPrivateChat')
+  handleMessage(@ConnectedSocket() client: Socket, @MessageBody() chatText:PrivateChatDto) {
 
-  @SubscribeMessage('myRoom')
-  myRooms(@ConnectedSocket() client: Socket) {
-    this.server.to(client.id).emit('myRoom',Array.from(client.rooms)[1]);
+    this.server.to(chatText.idTo).emit('privateChat', {id: client.id, text: chatText.text})
   }
 }
