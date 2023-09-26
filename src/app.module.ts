@@ -7,10 +7,12 @@ import { UserGateway } from './user/user.gateway';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ChatModule } from './chat/chat.module';
 import { UserModule } from './user/user.module';
+import { GameService } from './game/game.service';
+import { GameModule } from './game/game.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/TacticWeb'), ChatModule, UserModule],
+  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/TacticWeb'), ChatModule, UserModule, GameModule],
   controllers: [AppController],
-  providers: [AppService, RoomGateway, GameGateway],
+  providers: [AppService, RoomGateway],
 })
 export class AppModule {}
