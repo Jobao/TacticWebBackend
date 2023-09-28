@@ -12,20 +12,9 @@ export class User{
     @Prop({required:true})
     user: string;
 
+    @Prop()
+    createdUnits:string;
+
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
-/*
-export const UsertSchema =new  mongoose.Schema({
-    user:{
-        type: String,
-        required: true
-    },
-    uuiid:{
-        type: String,
-        required: false
-    }
-});
-
-const UserT = mongoose.model('userT', UsertSchema);
-*/

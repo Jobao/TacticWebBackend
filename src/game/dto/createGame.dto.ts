@@ -1,6 +1,10 @@
-import { User } from "src/user/user";
-
 export class CreateGameDto{
-    owner_uuid: string;
+    /**
+     * Id del que solicita
+     */
+    my_uuid: string;
+    /**
+     * id del juego
+     */
     _id: string;
 }

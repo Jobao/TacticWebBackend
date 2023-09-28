@@ -4,6 +4,7 @@ import { GameService } from './game.service';
 import {Socket} from 'socket.io'
 import { UserService } from 'src/user/user.service';
 import { User } from 'src/user/user';
+import { JoinGameDto } from './dto/joinGame.dto';
 /**
  * Encargada de enviar y recibir toda la informacion en el juego
  */
@@ -22,23 +23,26 @@ export class GameGateway {
   }
 
   @SubscribeMessage('sendStartGame')
-  startGame(){
-
+  async startGame(@MessageBody() payload: CreateGameDto){
+    this.gameService.startGame(payload);
   }
 
-  @SubscribeMessage('sendStartGame')
-  joinGame(){
-    
+  @SubscribeMessage('sendJoinGame')
+  async joinGame(@MessageBody() payload: JoinGameDto){
+      this.gameService.joinGame(payload);
+  }
+
+  @SubscribeMessage('sendLeaveGame')
+  async leaveGame(@MessageBody() payload: CreateGameDto){
+    this.gameService.leaveGame(payload);
   }
 
   @SubscribeMessage('sendCreateGame')
   async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
-    let tt= await this.userService.findOne(payload.owner_uuid);
+    let tt= await this.userService.findOne(payload.my_uuid);
     if(tt){
       this.gameService.createGame(payload);
     }
-    
-    
   }
   
 }
