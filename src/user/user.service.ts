@@ -5,6 +5,8 @@ import { Model } from 'mongoose';
 import { CreateUserDto } from './dto/createUser.dto';
 import { GetUserDto } from './dto/getUser.dto';
 import { v4 as uuidv4 } from 'uuid';
+import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
+import { Unit } from 'src/game/schemas/unit.schema';
 
 @Injectable()
 export class UserService {
@@ -30,6 +32,16 @@ export class UserService {
             tt._id = t._id;
         });
         return tt;
+    }
+
+    async addNewUnit(cUnity: CreateUnitDto){
+        cUnity.uuid = uuidv4();
+        let usr = await this.userModel.findById(cUnity.client_uuid);
+        if(usr){
+            usr.createdUnits.push({_id: cUnity.uuid, name: cUnity.name, class: cUnity.class})
+            this.userModel.findByIdAndUpdate(cUnity.client_uuid, usr).exec();
+        }
+        
     }
 
 }

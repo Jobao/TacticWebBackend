@@ -8,10 +8,11 @@ export class Unit{
     _id:string;
 
     @Prop()
-    posX: number;
+    name:string;
 
     @Prop()
-    posY: number;
+    class:string;
+
 }
 
 export const UnitSchema = SchemaFactory.createForClass(Unit);
