@@ -18,7 +18,7 @@ export class UserGateway {
     this.userService.findAll();
   }
 
-  @SubscribeMessage('setNewUnit')
+  @SubscribeMessage('sendNewUnit')
   newUnit(client:Socket, payload: CreateUnitDto){
     payload.client_uuid ="fdf8ad27-d284-4c18-bf78-f58bcabd8c58";
     this.userService.addNewUnit(payload);
