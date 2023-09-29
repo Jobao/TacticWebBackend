@@ -6,15 +6,32 @@ import { CreateGameDto } from './dto/createGame.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { JoinGameDto } from './dto/joinGame.dto';
 import { PlaceUnitDto } from './dto/placeUnit.dto';
+import { UserService } from 'src/user/user.service';
 
 @Injectable()
 export class GameService {
-    constructor(@InjectModel(Game.name) private gameModel:Model<GameDocument>){}
+    constructor(@InjectModel(Game.name) private gameModel:Model<GameDocument>, private userService:UserService){}
 
     async createGame(cGame:CreateGameDto){
-        let temp: string[]=[];
-        temp.push(cGame.user_uuid);
-        await this.gameModel.create({_id: uuidv4(),owner_uuid: cGame.user_uuid, isStart: false, isEnd: false, users_uuid: [cGame.user_uuid]});
+        //TODO: El usuario puede tener mas de un juego ??????
+        /*let gameRep = await this.gameModel.find({owner_uuid: cGame.user_uuid}).exec()
+        if(gameRep){
+        }*/
+        let user= await this.userService.findOne(cGame.user_uuid);
+        if(user){
+            if (user.createdUnits.length >=3) {
+                await this.gameModel.create({_id: uuidv4(),owner_uuid: cGame.user_uuid, isStart: false, isEnd: false, users_uuid: [cGame.user_uuid]});
+            }
+            else{
+              console.log("El jugador tiene que tener al menos tres personajes");
+              
+            }
+        }
+        else{
+            console.log("No existe el jugador");
+            
+        }
+        
     }
 
     async joinGame(sol: JoinGameDto){

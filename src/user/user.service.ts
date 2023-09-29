@@ -24,12 +24,13 @@ export class UserService {
     }
 
     async findOne(uuid:string){
-        let tt:GetUserDto = new GetUserDto();
+        let dto:GetUserDto = new GetUserDto();
         await this.userModel.findOne({_id: uuid}).exec().then((t) =>{
-            tt.user = t.user
-            tt._id = t._id;
+            dto.user = t.user;
+            dto._id = t._id;
+            dto.createdUnits = t.createdUnits;
         });
-        return tt;
+        return dto;
     }
 
     async addNewUnit(cUnity: CreateUnitDto){
