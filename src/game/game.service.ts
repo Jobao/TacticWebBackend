@@ -13,8 +13,8 @@ export class GameService {
 
     async createGame(cGame:CreateGameDto){
         let temp: string[]=[];
-        temp.push(cGame.my_uuid);
-        await this.gameModel.create({_id: uuidv4(),owner_uuid: cGame.my_uuid, isStart: false, isEnd: false, users_uuid: [cGame.my_uuid]});
+        temp.push(cGame.user_uuid);
+        await this.gameModel.create({_id: uuidv4(),owner_uuid: cGame.user_uuid, isStart: false, isEnd: false, users_uuid: [cGame.user_uuid]});
     }
 
     async joinGame(sol: JoinGameDto){
@@ -48,16 +48,16 @@ export class GameService {
      -SINO (Ya empezo la partida):
      --Se finaliza la partida y avisa al otro jugador de su victoria
      */
-     let game= await this.findGame(lGame._id);
+     let game= await this.findGame(lGame.game_uuid);
      if(!game.isEnd){
         if(!game.isStart){
-            if(lGame.my_uuid === game.owner_uuid){//Si el que solicita salir es el owner
-                await this.gameModel.findByIdAndRemove(lGame._id).exec();
+            if(lGame.user_uuid === game.owner_uuid){//Si el que solicita salir es el owner
+                await this.gameModel.findByIdAndRemove(lGame.game_uuid).exec();
                 //aca se deberia avisar al otro jugador.
             }
             else{
                 //elimino el otro jugador
-                await this.gameModel.findByIdAndUpdate(lGame._id, {$pull:{users_uuid: lGame.my_uuid}}).exec();
+                await this.gameModel.findByIdAndUpdate(lGame.game_uuid, {$pull:{users_uuid: lGame.user_uuid}}).exec();
             }
         }
         else{
@@ -72,10 +72,10 @@ export class GameService {
     }
     //Solo el owner deberia empezar
     async startGame(sGame: CreateGameDto){
-        let game = await this.findGame(sGame._id);
+        let game = await this.findGame(sGame.game_uuid);
         if(game){
             if (game.users_uuid.length >= 2) {//TODO: que pasa si quiero hacer las partidas para mas de 2
-                if(game.owner_uuid === sGame.my_uuid){
+                if(game.owner_uuid === sGame.user_uuid){
                     game.isStart = true;
                     game.users_uuid.forEach((element) =>{//Inicializo el array de las unidades
                         game.placedUnitList.push({owner_id: element, unitInfo:[]})

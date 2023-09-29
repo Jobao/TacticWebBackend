@@ -2,9 +2,9 @@ export class CreateGameDto{
     /**
      * Id del que solicita
      */
-    my_uuid: string;
+    user_uuid: string;
     /**
      * id del juego
      */
-    _id: string;
+    game_uuid: string;
 }
