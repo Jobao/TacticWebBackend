@@ -19,7 +19,7 @@ export class AuthService {
                 
                 const paylo = { sub: r.uuid, username: r._id };
                 return {
-                            access_token: await this.jwtService.signAsync(paylo),
+                            access_token:  "Bearer " + await this.jwtService.signAsync(paylo),
                     };
             }
         }
