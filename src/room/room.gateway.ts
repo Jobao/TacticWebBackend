@@ -1,6 +1,9 @@
+import { UseGuards } from '@nestjs/common';
 import { ConnectedSocket, MessageBody, SubscribeMessage, WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
 import {Socket, Server} from 'socket.io'
+import { AuthGuard } from 'src/auth/auth.guard';
 
+@UseGuards(AuthGuard)
 @WebSocketGateway({
   cors: {
     origin: '*',

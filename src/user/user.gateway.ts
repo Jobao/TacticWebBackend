@@ -3,8 +3,15 @@ import {Socket} from 'socket.io'
 import { CreateUserDto } from './dto/createUser.dto';
 import { UserService } from './user.service';
 import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
+import { UseGuards } from '@nestjs/common';
+import { AuthGuard } from 'src/auth/auth.guard';
 
-@WebSocketGateway()
+@UseGuards(AuthGuard)
+@WebSocketGateway({
+  cors: {
+    origin: '*',
+  },
+})
 export class UserGateway {
   constructor(private userService:UserService){}
 

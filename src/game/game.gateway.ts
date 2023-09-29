@@ -5,10 +5,17 @@ import {Socket} from 'socket.io'
 import { UserService } from 'src/user/user.service';
 import { User } from 'src/user/user';
 import { JoinGameDto } from './dto/joinGame.dto';
+import { UseGuards } from '@nestjs/common';
+import { AuthGuard } from 'src/auth/auth.guard';
 /**
  * Encargada de enviar y recibir toda la informacion en el juego
  */
-@WebSocketGateway()
+@UseGuards(AuthGuard)
+@WebSocketGateway({
+  cors: {
+    origin: '*',
+  },
+})
 export class GameGateway {
   constructor(private gameService:GameService, private userService:UserService){}
 
