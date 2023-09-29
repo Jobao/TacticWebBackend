@@ -46,10 +46,10 @@ export class GameGateway {
 
   @SubscribeMessage('sendCreateGame')
   async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
-    let user= await this.userService.findOne(client['user']);
+    let user= await this.userService.findOne(client['user'].sub);
     
     if(user){
-      payload.game_uuid= user._id;
+      payload.user_uuid= user._id;
       this.gameService.createGame(payload);
     }
   }
