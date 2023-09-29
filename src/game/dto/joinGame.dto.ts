@@ -1,4 +1,4 @@
 export class JoinGameDto{
-    _id:string;
-    my_uuid:string;
+    game_uuid:string;
+    user_uuid:string;
 }

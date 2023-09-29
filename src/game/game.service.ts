@@ -35,25 +35,29 @@ export class GameService {
     }
 
     async joinGame(sol: JoinGameDto){
-        let game = await this.gameModel.findById(sol._id);
-        if(game){
-            if (!game.isEnd && !game.isStart) {
-                
-                if(game.users_uuid.indexOf(sol.my_uuid) === -1){
-                    await this.gameModel.findByIdAndUpdate(game._id,{$push:{'users_uuid': sol.my_uuid}}).exec();
+        let nUser = await this.userService.findOne(sol.user_uuid);
+        let game = await this.gameModel.findById(sol.game_uuid);
+        
+        if (nUser?.createdUnits.length >=3) {
+            if(game){
+                if (!game.isEnd && !game.isStart) {
                     
+                    if(game.users_uuid.indexOf(sol.user_uuid) === -1){
+                        await this.gameModel.findByIdAndUpdate(game._id,{$push:{'users_uuid': sol.user_uuid}}).exec();
+                        
+                    }
+                    else{
+                        console.log("Ya estoy");
+                        
+                    }
                 }
                 else{
-                    console.log("Ya estoy");
-                    
+                    console.log('Juego ya en curso o finalizado')
                 }
             }
             else{
-                console.log('Juego ya en curso o finalizado')
+                console.log("Inexistent game");
             }
-        }
-        else{
-            console.log("Inexistent game");
         }
         
     }
