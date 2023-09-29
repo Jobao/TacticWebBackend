@@ -16,7 +16,6 @@ export class AuthService {
         let r= await this.authModel.findById(payload.user);
         if(r){
             if(r.pass === payload.pass){
-                console.log("Perfect >D");
                 
                 const paylo = { sub: r.uuid, username: r._id };
                 return {
@@ -27,7 +26,9 @@ export class AuthService {
     }
 
     async signup(payload: LoginDto){
-        this.authModel.create({_id: payload.user, pass: payload.pass, uuid: uuidv4()})
+        let uuid = uuidv4();
+        this.authModel.create({_id: payload.user, pass: payload.pass, uuid: uuid})
+        this.userService.create({_id: uuid, user: payload.user})
 
     }
 }

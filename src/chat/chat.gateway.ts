@@ -29,9 +29,6 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayInit {
   //@UseFilters(WsExceptionFilter)
   handlePublicMessage(@ConnectedSocket() client: Socket, @MessageBody() chatText:ChatDto) {
     //Recibo el texto y lo envio a todos que estan en el canal
-    console.log(client['user']);
-    
-    
     serverVar.to(Array.from(client.rooms)).emit('publicChat', {id: client.id, text: chatText.text})
   }
 

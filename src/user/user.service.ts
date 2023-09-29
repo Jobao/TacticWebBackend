@@ -13,8 +13,6 @@ export class UserService {
     constructor(@InjectModel(User.name) private userModel:Model<UserDocument>){}
 
     async create(cUser:CreateUserDto){
-        cUser._id = uuidv4();
-        
         await this.userModel.create(cUser);
         
     }

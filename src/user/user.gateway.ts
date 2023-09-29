@@ -15,10 +15,10 @@ import { AuthGuard } from 'src/auth/auth.guard';
 export class UserGateway {
   constructor(private userService:UserService){}
 
-  @SubscribeMessage('setNewUser')
+  /*@SubscribeMessage('setNewUser')
   newUser(client: Socket, payload: CreateUserDto) {
     this.userService.create(payload);
-  }
+  }*/
 
   @SubscribeMessage('allUser')
   allUsers() {
@@ -27,7 +27,7 @@ export class UserGateway {
 
   @SubscribeMessage('sendNewUnit')
   newUnit(client:Socket, payload: CreateUnitDto){
-    payload.client_uuid ="fdf8ad27-d284-4c18-bf78-f58bcabd8c58";
+    payload.client_uuid = client['user'].sub;
     this.userService.addNewUnit(payload);
   }
 }
