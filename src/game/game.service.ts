@@ -200,4 +200,29 @@ export class GameService {
     }
 
   }
+
+  async moveUnit(placeUnit: PlaceUnitDto){
+    if (await this.userService.isMyUnit(placeUnit.user_uuid, placeUnit.unit_uuid)){
+        let game = await this.findGame(placeUnit.game_uuid);
+        if (game) {
+            //El juego existe
+            if (game.gamePhase === 1 && game.isStart && !game.isEnd) {
+              //Estoy en fase, empezo y no termino
+              if (game.isInsideBoard(placeUnit.pos[0], placeUnit.pos[1])) {
+                  console.log('Adentro del tablero');
+                    //Esta dentro del tablero
+                    if (!game.isOcupiedByAnotherUnit(placeUnit.pos[0], placeUnit.pos[1])) {
+                        console.log("libre");
+                        
+                        if(game.moveUnit(placeUnit.unit_uuid,placeUnit.user_uuid,placeUnit.pos[0],placeUnit.pos[1])){
+                            await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+                            console.log('move');
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+  }
 }

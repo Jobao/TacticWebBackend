@@ -61,7 +61,6 @@ export class Game extends Document{
     }
 
     getUserIndexOnPlacedUnitList(user_uuid:string): number {
-        
         for (let userIndex = 0; userIndex < this.placedUnitList.length; userIndex++) {
             if(this.placedUnitList[userIndex].user_uuid === user_uuid){
                 return userIndex;
@@ -90,13 +89,27 @@ export class Game extends Document{
 
     isThisUnitPlace(unit_uuid:string, user_uuid:string){
         let index = this.getUserIndexOnPlacedUnitList(user_uuid);
-        console.log(unit_uuid);
         let result = false;
         if(index >=0){
             this.placedUnitList[index].unitInfo.forEach(element => {
-                console.log(element.unitBase_uuid);
                 
                 if(element.unitBase_uuid === unit_uuid){
+                    result = true;
+                }//TODO: al estar repetida terminar el bucle
+            });
+        }
+        return result;
+    }
+
+    moveUnit(unit_uuid:string, user_uuid:string, x:number, y:number){
+        let index = this.getUserIndexOnPlacedUnitList(user_uuid);
+        let result = false;
+        if(index >=0){
+            this.placedUnitList[index].unitInfo.forEach(element => {
+                
+                if(element.unitBase_uuid === unit_uuid){
+                    element.posX = x;
+                    element.posY = y;
                     result = true;
                 }//TODO: al estar repetida terminar el bucle
             });

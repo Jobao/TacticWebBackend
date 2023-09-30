@@ -60,6 +60,12 @@ export class GameGateway {
     
     this.gameService.placeUnit(payload);
   }
+
+  @SubscribeMessage('sendMoveUnit')
+  async sendMoveUnit(@ConnectedSocket() client: Socket, @MessageBody() payload:PlaceUnitDto){
+    payload.user_uuid = client['user'].sub;
+    this.gameService.moveUnit(payload);
+  }
 }
 
 
