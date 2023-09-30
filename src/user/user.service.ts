@@ -43,4 +43,17 @@ export class UserService {
         
     }
 
+    async isMyUnit(user_uuid:string, unit_uuid){
+        let res:boolean = false;
+        await this.userModel.findOne({_id: user_uuid}).exec().then((usr)=>{
+            usr.createdUnits.forEach((element) =>{
+                if(element._id === unit_uuid){
+                    res = true
+                }
+            });
+        });
+
+        return res;
+    }
+
 }

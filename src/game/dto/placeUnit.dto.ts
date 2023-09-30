@@ -1,10 +1,12 @@
+import { Unit } from "../schemas/unit.schema";
+
 export class PlaceUnitDto{
     game_uuid:string;
 
-    client_uuid:string;
+    user_uuid:string;
 
     unit_uuid:string;
 
-    pos:[x:number, y:number];
+    pos:number[];
 
 }

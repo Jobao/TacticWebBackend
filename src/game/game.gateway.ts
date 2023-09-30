@@ -7,6 +7,7 @@ import { User } from 'src/user/user';
 import { JoinGameDto } from './dto/joinGame.dto';
 import { UseGuards } from '@nestjs/common';
 import { AuthGuard } from 'src/auth/auth.guard';
+import { PlaceUnitDto } from './dto/placeUnit.dto';
 /**
  * Encargada de enviar y recibir toda la informacion en el juego
  */
@@ -30,12 +31,14 @@ export class GameGateway {
   }
 
   @SubscribeMessage('sendStartGame')
-  async startGame(@MessageBody() payload: CreateGameDto){
+  async startGame(@ConnectedSocket() client: Socket,@MessageBody() payload: CreateGameDto){
+    payload.user_uuid = client['user'].sub;
     this.gameService.startGame(payload);
   }
 
   @SubscribeMessage('sendJoinGame')
-  async joinGame(@MessageBody() payload: JoinGameDto){
+  async joinGame(@ConnectedSocket() client: Socket,@MessageBody() payload: JoinGameDto){
+    payload.user_uuid = client['user'].sub;
       this.gameService.joinGame(payload);
   }
 
@@ -48,6 +51,13 @@ export class GameGateway {
   async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
     payload.user_uuid = client['user'].sub;
     this.gameService.createGame(payload);
+  }
+
+  @SubscribeMessage('sendPlaceUnit')
+  async placeUnit(@ConnectedSocket() client: Socket, @MessageBody() payload:PlaceUnitDto){
+    payload.user_uuid = client['user'].sub;
+    
+    this.gameService.placeUnit(payload);
   }
 }
 
