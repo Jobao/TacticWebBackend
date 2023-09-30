@@ -102,29 +102,33 @@ export class GameService {
   async startGame(sGame: CreateGameDto) {
     let game = await this.findGame(sGame.game_uuid);
     if (game) {
-      if (game.users_uuid.length >= 2) {
-        //TODO: que pasa si quiero hacer las partidas para mas de 2
-        if (game.owner_uuid === sGame.user_uuid) {
-          game.isStart = true;
-          game.users_uuid.forEach((element) => {
-            //Inicializo el array de las unidades
-            let place: PlacedUnit; //Esto porque no me dejaba hacer ...push({element.uuid ....}) directamente
-            place.user_uuid = element;
-            place.unitInfo = [];
-            game.placedUnitList.push(place);
-          });
-          game.turn = game.owner_uuid; //Le asigno el turno al owner
-          game.gamePhase = 0; //Momento de poner unidades
-          await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+      if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego
+        if (game.users_uuid.length >= 2) {
+          //TODO: que pasa si quiero hacer las partidas para mas de 2
+          if (game.owner_uuid === sGame.user_uuid) {
+            game.isStart = true;
+            game.users_uuid.forEach((element) => {
+              //Inicializo el array de las unidades
+              let place: PlacedUnit; //Esto porque no me dejaba hacer ...push({element.uuid ....}) directamente
+              place.user_uuid = element;
+              place.unitInfo = [];
+              game.placedUnitList.push(place);
+            });
+            game.turn = game.owner_uuid; //Le asigno el turno al owner
+            game.gamePhase = 0; //Momento de poner unidades
+            await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+          } else {
+            console.log('no sos el owner');
+          }
         } else {
-          console.log('no sos el owner');
+          console.log('Por ahora no se puede jugar solo :(');
         }
       } else {
-        console.log('Por ahora no se puede jugar solo :(');
+        console.log('juego ya iniciado');
       }
-    } else {
-      console.log('no existe el juego');
-    }
+      } else{
+        console.log('no existe el juego');
+      }
   }
 
   async placeUnit(placeUnit: PlaceUnitDto) {
@@ -176,7 +180,24 @@ export class GameService {
     }
   }
 
-  async initGame(){
+  async initGame(payload:CreateGameDto){
+    let game = await this.gameModel.findById(payload.game_uuid);
+    if(game){
+        console.log(game.owner_uuid);
+        console.log(payload.user_uuid);
+        
+        
+        if(game.owner_uuid === payload.user_uuid){
+            game.gamePhase = 1;
+            await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+        }else{
+            console.log("No sos el owner");
+        }
+    }
+    else{
+        console.log("Juego inexistente");
+        
+    }
 
   }
 }

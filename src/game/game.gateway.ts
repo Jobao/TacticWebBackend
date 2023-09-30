@@ -21,8 +21,9 @@ export class GameGateway {
   constructor(private gameService:GameService, private userService:UserService){}
 
   @SubscribeMessage('sendInitGame')
-  initGame(@MessageBody() msg: CreateGameDto){
-
+  initGame(@ConnectedSocket() client: Socket,@MessageBody() payload: CreateGameDto){
+    payload.user_uuid = client['user'].sub;
+    this.gameService.initGame(payload);
   }
 
   @SubscribeMessage('sendGetGame')
