@@ -3,6 +3,7 @@ import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
 import { Public } from './public.decorator';
 import { AuthGuard } from './auth.guard';
+import { SignupDto } from './dto/signup.dto';
 
 @Controller('')
 export class AuthController {
@@ -16,7 +17,7 @@ export class AuthController {
 
     @Public()
     @Post('signup')
-    async signup(@Body() payload: LoginDto){
+    async signup(@Body() payload: SignupDto){
         this.authService.signup(payload);
     }
 }

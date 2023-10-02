@@ -4,12 +4,12 @@ export type AuthDocument = Auth & Document;
 
 @Schema()
 export class Auth{
-    @Prop()
+    @Prop({required: true})
     _id:string;
-    @Prop()
+    @Prop({required: true})
     uuid:string;
 
-    @Prop()
+    @Prop({required: true})
     pass:string;
     
 }

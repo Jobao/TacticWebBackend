@@ -13,6 +13,9 @@ export class User{
     @Prop({required:true})
     user: string;
 
+    @Prop({required:true})
+    displayName:string;
+
     @Prop([Unit])
     createdUnits:Unit[];
 

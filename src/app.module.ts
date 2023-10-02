@@ -9,10 +9,12 @@ import { GameModule } from './game/game.module';
 import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { AuthGuard } from './auth/auth.guard';
+import { AdminController } from './admin/admin.controller';
+import { AdminModule } from './admin/admin.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/TacticWeb'), ChatModule, UserModule, GameModule, AuthModule],
-  controllers: [AppController],
+  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/TacticWeb'), ChatModule, UserModule, GameModule, AuthModule, AdminModule],
+  controllers: [AppController, AdminController],
   providers: [AppService, RoomGateway,{provide: APP_GUARD,
     useClass: AuthGuard,}],
 })

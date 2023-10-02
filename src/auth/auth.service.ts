@@ -6,6 +6,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { LoginDto } from './dto/login.dto';
 import { v4 as uuidv4 } from 'uuid';
+import { SignupDto } from './dto/signup.dto';
 
 @Injectable()
 export class AuthService {
@@ -25,10 +26,12 @@ export class AuthService {
         }
     }
 
-    async signup(payload: LoginDto){
+    async signup(payload: SignupDto){
+        console.log(payload);
+        
         let uuid = uuidv4();
         this.authModel.create({_id: payload.user, pass: payload.pass, uuid: uuid})
-        this.userService.create({_id: uuid, user: payload.user})
+        this.userService.create({_id: uuid, user: payload.user, displayName: payload.displayName})
 
     }
 }

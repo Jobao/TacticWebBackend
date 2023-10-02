@@ -11,7 +11,10 @@ import { Unit } from 'src/game/schemas/unit.schema';
 @Injectable()
 export class UserService {
     constructor(@InjectModel(User.name) private userModel:Model<UserDocument>){}
-
+    /**
+     * NO llamar directamente de los controllers/gateway
+     * Llamar auth.Create
+     */
     async create(cUser:CreateUserDto){
         await this.userModel.create(cUser);
         
@@ -19,7 +22,7 @@ export class UserService {
 
     async findAll(){//TODO: Esto deberia devolver un DTO
 
-        console.log( await this.userModel.find().exec())
+        return await this.userModel.find().exec();
         
     }
 
