@@ -4,6 +4,7 @@ import { Prop, Schema, SchemaFactory,  } from '@nestjs/mongoose';
 import { PlacedUnit, PlacedUnitSchema } from "./placedUnits.schema";
 import { UnitInfo } from "./unitInfo.schema";
 import { HydratedDocument, Document } from "mongoose";
+import { Unit } from "./unit.schema";
 
 export type GameDocument = Game & Document;
 
@@ -69,13 +70,15 @@ export class Game extends Document{
         return -1;
     }
 
-    placeNewUnit(user_uuid:string, unit_uuid:string, x:number, y:number){
+    placeNewUnit(user_uuid:string, unit_uuid:string, x:number, y:number, hp:number, mp:number){
         let idx= this.getUserIndexOnPlacedUnitList(user_uuid);
         if(idx !== -1){
             let temp:UnitInfo = new UnitInfo();
             temp.unitBase_uuid = unit_uuid;
             temp.posX = x;
             temp.posY=y
+            temp.currentHP = hp;
+            temp.currentMP = mp;
             this.placedUnitList[idx].unitInfo.push(temp);
             return true;
         }
@@ -106,12 +109,11 @@ export class Game extends Document{
         let result = false;
         if(index >=0){
             this.placedUnitList[index].unitInfo.forEach(element => {
-                
                 if(element.unitBase_uuid === unit_uuid){
                     element.posX = x;
                     element.posY = y;
                     result = true;
-                }//TODO: al estar repetida terminar el bucle
+                }
             });
         }
         return result;

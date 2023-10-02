@@ -16,6 +16,12 @@ export class UnitInfo{
     @Prop()
     posY: number;
 
+    @Prop()
+    currentHP:number;
+
+    @Prop()
+    currentMP:number;
+
     ocupied(x:number, y:number): boolean{
         return x===this.posX && y === this.posY;
     }

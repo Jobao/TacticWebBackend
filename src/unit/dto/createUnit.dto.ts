@@ -1,9 +1,15 @@
 export class CreateUnitDto{
     client_uuid:string;
     
-    uuid:string;
+    _id:string;
 
     name:string;
 
-    class:string;
+    class_id:string;
+
+    HP:number;
+
+    MP:number
+
+    battleActions:string;
 }

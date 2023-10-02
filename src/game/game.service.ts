@@ -9,6 +9,7 @@ import { PlaceUnitDto } from './dto/placeUnit.dto';
 import { UserService } from 'src/user/user.service';
 import { UnitInfo } from './schemas/unitInfo.schema';
 import { PlacedUnit } from './schemas/placedUnits.schema';
+import { Unit } from './schemas/unit.schema';
 
 @Injectable()
 export class GameService {
@@ -132,7 +133,9 @@ export class GameService {
   }
 
   async placeUnit(placeUnit: PlaceUnitDto) {
-    if (await this.userService.isMyUnit(placeUnit.user_uuid, placeUnit.unit_uuid)) {
+    let unit:{res:boolean, unit:Unit};
+    unit = await this.userService.isMyUnit(placeUnit.user_uuid, placeUnit.unit_uuid);
+    if ((await unit).res) {
         let game = await this.findGame(placeUnit.game_uuid);
         if (game) {
           //El juego existe
@@ -147,7 +150,7 @@ export class GameService {
                 if (!game.isThisUnitPlace(placeUnit.unit_uuid, placeUnit.user_uuid)) {
                     console.log('unidad no se encuentra en el tablero');
                     
-                    if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1])) {
+                    if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.unit.HP, unit.unit.MP)) {
                       await this.gameModel.findByIdAndUpdate(game._id, game).exec();
                       console.log('place');
                     }
@@ -213,7 +216,6 @@ export class GameService {
                     //Esta dentro del tablero
                     if (!game.isOcupiedByAnotherUnit(placeUnit.pos[0], placeUnit.pos[1])) {
                         console.log("libre");
-                        
                         if(game.moveUnit(placeUnit.unit_uuid,placeUnit.user_uuid,placeUnit.pos[0],placeUnit.pos[1])){
                             await this.gameModel.findByIdAndUpdate(game._id, game).exec();
                             console.log('move');

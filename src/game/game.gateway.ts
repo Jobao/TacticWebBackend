@@ -1,4 +1,4 @@
-import { ConnectedSocket, MessageBody, SubscribeMessage, WebSocketGateway } from '@nestjs/websockets';
+import { ConnectedSocket, MessageBody, SubscribeMessage, WebSocketGateway, WsResponse } from '@nestjs/websockets';
 import { CreateGameDto } from './dto/createGame.dto';
 import { GameService } from './game.service';
 import {Socket} from 'socket.io'
@@ -8,6 +8,7 @@ import { JoinGameDto } from './dto/joinGame.dto';
 import { UseGuards } from '@nestjs/common';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { PlaceUnitDto } from './dto/placeUnit.dto';
+import { Public } from 'src/auth/public.decorator';
 /**
  * Encargada de enviar y recibir toda la informacion en el juego
  */
@@ -65,6 +66,14 @@ export class GameGateway {
   async sendMoveUnit(@ConnectedSocket() client: Socket, @MessageBody() payload:PlaceUnitDto){
     payload.user_uuid = client['user'].sub;
     this.gameService.moveUnit(payload);
+  }
+  @Public()
+  @SubscribeMessage('p')//Esto es para devolver uin mensaje
+  async pp(@ConnectedSocket() client: Socket){
+      let event = "publicChat";
+      let data:boolean = true;
+      return "{}";
+      //return{event, data }
   }
 }
 

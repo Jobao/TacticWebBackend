@@ -11,8 +11,18 @@ export class Unit{
     name:string;
 
     @Prop()
-    class:string;
+    class_id:string;
+
+    @Prop()
+    HP:number;
+
+    @Prop()
+    MP:number;
+
+    @Prop()
+    battleActions:string;
 
 }
 
 export const UnitSchema = SchemaFactory.createForClass(Unit);
+UnitSchema.loadClass(Unit);
