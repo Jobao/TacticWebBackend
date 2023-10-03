@@ -10,6 +10,7 @@ import { UserService } from 'src/user/user.service';
 import { UnitInfo } from './schemas/unitInfo.schema';
 import { PlacedUnit } from './schemas/placedUnits.schema';
 import { Unit } from './schemas/unit.schema';
+import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 
 @Injectable()
 export class GameService {
@@ -133,9 +134,9 @@ export class GameService {
   }
 
   async placeUnit(placeUnit: PlaceUnitDto) {
-    let unit:{res:boolean, unit:Unit};
+    let unit:{isMy:boolean, unit:Unit};
     unit = await this.userService.isMyUnit(placeUnit.user_uuid, placeUnit.unit_uuid);
-    if ((await unit).res) {
+    if ((await unit).isMy) {
         let game = await this.findGame(placeUnit.game_uuid);
         if (game) {
           //El juego existe
@@ -226,5 +227,28 @@ export class GameService {
             }
         }
     }
+  }
+
+  /**
+   * Controla todas las posibles acciones que puede hacer una unidad
+   * @param payload 
+   * @returns 
+   */
+  async actionUnit(payload:UnitActionDto)
+  {
+    let unit = await this.userService.isMyUnit(payload.user_uuid, payload.unit_uuid)
+    let game = await this.findGame(payload.game_uuid);
+    if (game) {
+      if(unit.isMy){
+        if(payload.action.action === "WAIT"){
+          
+          return;
+        }
+        //if(game.placedUnitList[0].unitInfo[0].)
+        //TODO: Aca quede, es preguntar a la BD si la unidad es mia ?? Ya no le pregunte
+        //cuando la agregue al tablero ?? Si controlo desde el placedUnit, seria casi lo mismo
+      }
+    }
+    
   }
 }

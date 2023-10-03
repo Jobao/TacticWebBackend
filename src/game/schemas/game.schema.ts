@@ -79,6 +79,7 @@ export class Game extends Document{
             temp.posY=y
             temp.currentHP = hp;
             temp.currentMP = mp;
+            temp.canPerformActionThisTurn = true;
             this.placedUnitList[idx].unitInfo.push(temp);
             return true;
         }
@@ -118,6 +119,8 @@ export class Game extends Document{
         }
         return result;
     }
+
+    
 }
 
 export const GameSchema = SchemaFactory.createForClass(Game);

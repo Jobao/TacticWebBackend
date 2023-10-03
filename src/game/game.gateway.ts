@@ -9,6 +9,8 @@ import { UseGuards } from '@nestjs/common';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { PlaceUnitDto } from './dto/placeUnit.dto';
 import { Public } from 'src/auth/public.decorator';
+import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
+import { Unit } from './schemas/unit.schema';
 /**
  * Encargada de enviar y recibir toda la informacion en el juego
  */
@@ -67,9 +69,18 @@ export class GameGateway {
     payload.user_uuid = client['user'].sub;
     this.gameService.moveUnit(payload);
   }
+  @SubscribeMessage('sendActionUnit')
+  async sendActionUnit(@ConnectedSocket() client: Socket, @MessageBody() payload:UnitActionDto){
+    payload.user_uuid = client['user'].sub;
+    this.gameService.actionUnit(payload);
+  }
+
+
   @Public()
   @SubscribeMessage('p')//Esto es para devolver uin mensaje
   async pp(@ConnectedSocket() client: Socket){
+    
+    
       let event = "publicChat";
       let data:boolean = true;
       return "{}";

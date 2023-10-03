@@ -22,6 +22,9 @@ export class UnitInfo{
     @Prop()
     currentMP:number;
 
+    @Prop()
+    canPerformActionThisTurn:boolean
+
     ocupied(x:number, y:number): boolean{
         return x===this.posX && y === this.posY;
     }
