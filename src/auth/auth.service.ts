@@ -16,7 +16,7 @@ export class AuthService {
     async login(payload: LoginDto){
         let r= await this.authModel.findById(payload.user);
         if(r){
-            if(r.pass === payload.pass){
+            if(r.checkPassword(payload.pass)){
                 
                 const paylo = { sub: r.uuid, username: r._id };
                 return {

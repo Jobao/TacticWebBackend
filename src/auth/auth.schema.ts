@@ -11,7 +11,12 @@ export class Auth{
 
     @Prop({required: true})
     pass:string;
+
+    checkPassword(pass:string):boolean{
+        return pass===this.pass;
+    }
     
 }
 
 export const AuthSchema = SchemaFactory.createForClass(Auth);
+AuthSchema.loadClass(Auth);
