@@ -5,7 +5,7 @@ import { Document } from 'mongoose';
 export type PlacedUnitsDocument = PlacedUnit & Document;
 
 @Schema({_id: false})
-export class PlacedUnit extends Document{
+export class PlacedUnit{
     
     @Prop()
     user_uuid: string;

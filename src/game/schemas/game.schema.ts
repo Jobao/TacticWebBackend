@@ -1,4 +1,3 @@
-import { User } from "src/user/user";
 import { Board } from "./board.schema";
 import { Prop, Schema, SchemaFactory,  } from '@nestjs/mongoose';
 import { PlacedUnit, PlacedUnitSchema } from "./placedUnits.schema";
@@ -9,7 +8,7 @@ import { Unit } from "./unit.schema";
 export type GameDocument = Game & Document;
 
 @Schema()
-export class Game extends Document{
+export class Game{
     @Prop()
     _id: string;
 
@@ -70,6 +69,15 @@ export class Game extends Document{
         return -1;
     }
 
+    getUserIndexOnListUsers(user_uuid:string): number {
+        for (let userIndex = 0; userIndex < this.users_uuid.length; userIndex++) {
+            if(this.users_uuid[userIndex] === user_uuid){
+                return userIndex;
+            }
+        }
+        return -1;
+    }
+
     placeNewUnit(user_uuid:string, unit_uuid:string, x:number, y:number, hp:number, mp:number){
         let idx= this.getUserIndexOnPlacedUnitList(user_uuid);
         if(idx !== -1){
@@ -120,7 +128,14 @@ export class Game extends Document{
         return result;
     }
 
-    
+    joinGame(user_uuid:string):boolean{
+        if(this.getUserIndexOnListUsers(user_uuid) === -1){
+            this.users_uuid.push(user_uuid);
+            return true;
+        }
+        return false;
+    }
+
 }
 
 export const GameSchema = SchemaFactory.createForClass(Game);

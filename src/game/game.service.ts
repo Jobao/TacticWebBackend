@@ -11,52 +11,53 @@ import { UnitInfo } from './schemas/unitInfo.schema';
 import { PlacedUnit } from './schemas/placedUnits.schema';
 import { Unit } from './schemas/unit.schema';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
+import { CacheService } from 'src/game-cache/cache.service';
+import { MongodbService } from 'src/mongodb/mongodb.service';
 
 @Injectable()
 export class GameService {
   constructor(
-    @InjectModel(Game.name) private gameModel: Model<GameDocument>,
-    private userService: UserService,
+    private cacheService:CacheService,
+    private mongoService:MongodbService
   ) {}
 
   async createGame(cGame: CreateGameDto) {
-    //TODO: El usuario puede tener mas de un juego ??????
-    /*let gameRep = await this.gameModel.find({owner_uuid: cGame.user_uuid}).exec()
-        if(gameRep){
-        }*/
-    let user = await this.userService.findOne(cGame.user_uuid);
-    if (user) {
-      if (user.createdUnits.length >= 3) {
-        await this.gameModel.create({
-          _id: uuidv4(),
-          owner_uuid: cGame.user_uuid,
-          isStart: false,
-          isEnd: false,
-          users_uuid: [cGame.user_uuid],
-          gamePhase: 3,
-        });
+
+    let userCache =await this.cacheService.userInCache(cGame.user_uuid);
+    console.log(userCache);
+    
+    if (userCache) {
+      if (userCache.createdUnits.length >= 3) {
+        console.log("bien");
+        
+        let game:Game = new Game();
+        game._id = uuidv4();
+        game.owner_uuid = cGame.user_uuid;
+        game.isStart = false;
+        game.isEnd = false;
+        game.users_uuid = [cGame.user_uuid];
         //TODO: Ver porque gamephase me da error, aca le asigno un valor magico
+        game.gamePhase = 3;
+
+        this.cacheService.setGameInCache(await this.mongoService.createGame(game));
       } else {
         console.log('El jugador tiene que tener al menos tres personajes');
       }
-    } else {
-      console.log('No existe el jugador');
     }
   }
 
-  async joinGame(sol: JoinGameDto) {
-    let nUser = await this.userService.findOne(sol.user_uuid);
-    let game = await this.gameModel.findById(sol.game_uuid);
+  async joinGame(jGame: JoinGameDto) {
+    let nUser = await this.cacheService.userInCache(jGame.user_uuid);
+    let game = await this.cacheService.gameInCache(jGame.game_uuid);
 
     if (nUser?.createdUnits.length >= 3) {
       if (game) {
         if (!game.isEnd && !game.isStart) {
-          if (game.users_uuid.indexOf(sol.user_uuid) === -1) {
-            await this.gameModel
-              .findByIdAndUpdate(game._id, {
-                $push: { users_uuid: sol.user_uuid },
-              })
-              .exec();
+          if (game.joinGame(jGame.user_uuid)) {
+            /*this.cacheService.setGameInCache(await this.gameModel.findByIdAndUpdate(game._id, {
+              $push: { users_uuid: jGame.user_uuid }
+            }).exec());*/
+            this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
           } else {
             console.log('Ya estoy');
           }
@@ -76,33 +77,36 @@ export class GameService {
      -SINO (Ya empezo la partida):
      --Se finaliza la partida y avisa al otro jugador de su victoria
      */
-    let game = await this.findGame(lGame.game_uuid);
-    if (!game.isEnd) {
-      if (!game.isStart) {
-        if (lGame.user_uuid === game.owner_uuid) {
-          //Si el que solicita salir es el owner
-          await this.gameModel.findByIdAndRemove(lGame.game_uuid).exec();
-          //aca se deberia avisar al otro jugador.
-        } else {
-          //elimino el otro jugador
-          await this.gameModel
-            .findByIdAndUpdate(lGame.game_uuid, {
-              $pull: { users_uuid: lGame.user_uuid },
-            })
-            .exec();
-        }
-      } else {
-        //Finalizar
-      }
-    }
+    let game = await this.cacheService.gameInCache(lGame.game_uuid);
+    
+   if (game) {
+     if (!game.isEnd) {
+       if (!game.isStart) {
+         if (lGame.user_uuid === game.owner_uuid) {
+           //Si el que solicita salir es el owner
+           this.cacheService.removeGameInCache((await this.mongoService.removeGame(game))._id);
+           //aca se deberia avisar al otro jugador.
+         } else {
+           //elimino el otro jugador
+           game.users_uuid.push(lGame.user_uuid);
+           this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
+           /*await this.gameModel
+             .findByIdAndUpdate(lGame.game_uuid, {
+               $pull: { users_uuid: lGame.user_uuid },
+             })
+             .exec();*/
+         }
+       } else {
+         //Finalizar
+       }
+     }
+   }
   }
 
-  async findGame(uuid: string) {
-    return await this.gameModel.findById(uuid).exec();
-  }
+
   //Solo el owner deberia empezar
   async startGame(sGame: CreateGameDto) {
-    let game = await this.findGame(sGame.game_uuid);
+    let game = await this.cacheService.gameInCache(sGame.game_uuid);
     if (game) {
       if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego
         if (game.users_uuid.length >= 2) {
@@ -118,7 +122,9 @@ export class GameService {
             });
             game.turn = game.owner_uuid; //Le asigno el turno al owner
             game.gamePhase = 0; //Momento de poner unidades
-            await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+            //this.cacheService.gameInCache(game.)
+            this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
+            //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
           } else {
             console.log('no sos el owner');
           }
@@ -134,10 +140,11 @@ export class GameService {
   }
 
   async placeUnit(placeUnit: PlaceUnitDto) {
-    let unit:{isMy:boolean, unit:Unit};
-    unit = await this.userService.isMyUnit(placeUnit.user_uuid, placeUnit.unit_uuid);
-    if ((await unit).isMy) {
-        let game = await this.findGame(placeUnit.game_uuid);
+    let user = await this.cacheService.userInCache(placeUnit.user_uuid);
+    if (user) {
+      let unit = user.getUnit(placeUnit.unit_uuid);
+      if(unit){
+        let game = await this.cacheService.gameInCache(placeUnit.game_uuid);
         if (game) {
           //El juego existe
           if (game.gamePhase === 0 && game.isStart && !game.isEnd) {
@@ -151,49 +158,41 @@ export class GameService {
                 if (!game.isThisUnitPlace(placeUnit.unit_uuid, placeUnit.user_uuid)) {
                     console.log('unidad no se encuentra en el tablero');
                     
-                    if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.unit.HP, unit.unit.MP)) {
-                      await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+                    if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.HP, unit.MP)) {
+                      this.cacheService.setGameInCache(await this.mongoService.updateGame(game))
+                      //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
                       console.log('place');
                     }
                     else{
-                        console.log("la unidad no se pudo colocar (BD)");
-                        
+                      console.log("la unidad no se pudo colocar (BD)");
                     }
                 }
                 else{
                     console.log("Unidad ya colocada");
-                    
                 }
               }
               else{
                 console.log("Lugar ocupado");
               }
-              
             }
             else{
                 console.log("Fuera del tablero");
-                
             }
           } else {
             console.log('El juego no esta iniciado');
           }
         }
-    }
-    else{
-        console.log("User or Unit ID incorrect");
+      }
     }
   }
 
   async initGame(payload:CreateGameDto){
-    let game = await this.gameModel.findById(payload.game_uuid);
+    let game = await this.cacheService.gameInCache(payload.game_uuid);
     if(game){
-        console.log(game.owner_uuid);
-        console.log(payload.user_uuid);
-        
-        
         if(game.owner_uuid === payload.user_uuid){
             game.gamePhase = 1;
-            await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+            this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
+            //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
         }else{
             console.log("No sos el owner");
         }
@@ -206,8 +205,10 @@ export class GameService {
   }
 
   async moveUnit(placeUnit: PlaceUnitDto){
-    if (await this.userService.isMyUnit(placeUnit.user_uuid, placeUnit.unit_uuid)){
-        let game = await this.findGame(placeUnit.game_uuid);
+    let user = await this.cacheService.userInCache(placeUnit.user_uuid);
+    if (user) {
+      if(user.isMyUnit(placeUnit.unit_uuid)){
+        let game = await this.cacheService.gameInCache(placeUnit.game_uuid);
         if (game) {
             //El juego existe
             if (game.gamePhase === 1 && game.isStart && !game.isEnd) {
@@ -218,7 +219,8 @@ export class GameService {
                     if (!game.isOcupiedByAnotherUnit(placeUnit.pos[0], placeUnit.pos[1])) {
                         console.log("libre");
                         if(game.moveUnit(placeUnit.unit_uuid,placeUnit.user_uuid,placeUnit.pos[0],placeUnit.pos[1])){
-                            await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+                          this.cacheService.setGameInCache(await this.mongoService.updateGame(game));  
+                          //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
                             console.log('move');
                         }
 
@@ -226,6 +228,7 @@ export class GameService {
                 }
             }
         }
+      }
     }
   }
 
@@ -236,10 +239,10 @@ export class GameService {
    */
   async actionUnit(payload:UnitActionDto)
   {
-    let unit = await this.userService.isMyUnit(payload.user_uuid, payload.unit_uuid)
-    let game = await this.findGame(payload.game_uuid);
+    let unit = (await this.cacheService.userInCache(payload.user_uuid)).getUnit(payload.unit_uuid);
+    let game = await this.cacheService.gameInCache(payload.game_uuid);
     if (game) {
-      if(unit.isMy){
+      if(unit){
         if(payload.action.action === "WAIT"){
           
           return;

@@ -3,7 +3,6 @@ import { CreateGameDto } from './dto/createGame.dto';
 import { GameService } from './game.service';
 import {Socket} from 'socket.io'
 import { UserService } from 'src/user/user.service';
-import { User } from 'src/user/user';
 import { JoinGameDto } from './dto/joinGame.dto';
 import { UseGuards } from '@nestjs/common';
 import { AuthGuard } from 'src/auth/auth.guard';
@@ -21,7 +20,7 @@ import { Unit } from './schemas/unit.schema';
   },
 })
 export class GameGateway {
-  constructor(private gameService:GameService, private userService:UserService){}
+  constructor(private gameService:GameService){}
 
   @SubscribeMessage('sendInitGame')
   initGame(@ConnectedSocket() client: Socket,@MessageBody() payload: CreateGameDto){
@@ -47,13 +46,16 @@ export class GameGateway {
   }
 
   @SubscribeMessage('sendLeaveGame')
-  async leaveGame(@MessageBody() payload: CreateGameDto){
+  async leaveGame(@ConnectedSocket() client: Socket,@MessageBody() payload: CreateGameDto){
+    payload.user_uuid = client['user'].sub;
     this.gameService.leaveGame(payload);
   }
 
   @SubscribeMessage('sendCreateGame')
   async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
     payload.user_uuid = client['user'].sub;
+    console.log("entro");
+    
     this.gameService.createGame(payload);
   }
 

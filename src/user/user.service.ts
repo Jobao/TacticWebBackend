@@ -27,13 +27,7 @@ export class UserService {
     }
 
     async findOne(uuid:string){
-        let dto:GetUserDto = new GetUserDto();
-        await this.userModel.findOne({_id: uuid}).exec().then((t) =>{
-            dto.user = t.user;
-            dto._id = t._id;
-            dto.createdUnits = t.createdUnits;
-        });
-        return dto;
+        return await this.userModel.findOne({_id: uuid}).exec();
     }
 
     async addNewUnit(cUnity: CreateUnitDto){
