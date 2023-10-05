@@ -1,15 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { Game, GameDocument, GameSchema } from './schemas/game.schema';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import { Game } from './schemas/game.schema';
 import { CreateGameDto } from './dto/createGame.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { JoinGameDto } from './dto/joinGame.dto';
 import { PlaceUnitDto } from './dto/placeUnit.dto';
-import { UserService } from 'src/user/user.service';
-import { UnitInfo } from './schemas/unitInfo.schema';
 import { PlacedUnit } from './schemas/placedUnits.schema';
-import { Unit } from './schemas/unit.schema';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
@@ -23,26 +18,31 @@ export class GameService {
 
   async createGame(cGame: CreateGameDto) {
 
-    let userCache =await this.cacheService.userInCache(cGame.user_uuid);
-    console.log(userCache);
+    let user =await this.cacheService.userInCache(cGame.user_uuid);
     
-    if (userCache) {
-      if (userCache.createdUnits.length >= 3) {
-        console.log("bien");
-        
-        let game:Game = new Game();
+    if (user) {
+      let game:Game = new Game();
         game._id = uuidv4();
         game.owner_uuid = cGame.user_uuid;
         game.isStart = false;
         game.isEnd = false;
-        game.users_uuid = [cGame.user_uuid];
-        //TODO: Ver porque gamephase me da error, aca le asigno un valor magico
-        game.gamePhase = 3;
-
+        game.placedUnitList = [];
+        if(!cGame.minUnits){
+          game.minUnits = 1;
+        } else{
+          game.minUnits = cGame.minUnits;
+        }
+        if(!cGame.maxUnits){
+          game.maxUnits = 6;
+        } else{
+          game.maxUnits = cGame.maxUnits;
+        }
+        //FIXME: Ver porque gamephase me da error, aca le asigno un valor magico
+        game.gamePhase = 0;
+        game.joinGame(cGame.user_uuid);
+        user.joinGame(game._id);
         this.cacheService.setGameInCache(await this.mongoService.createGame(game));
-      } else {
-        console.log('El jugador tiene que tener al menos tres personajes');
-      }
+        this.cacheService.setUserInCache(await this.mongoService.updateUser(user));
     }
   }
 
@@ -50,23 +50,20 @@ export class GameService {
     let nUser = await this.cacheService.userInCache(jGame.user_uuid);
     let game = await this.cacheService.gameInCache(jGame.game_uuid);
 
-    if (nUser?.createdUnits.length >= 3) {
-      if (game) {
-        if (!game.isEnd && !game.isStart) {
-          if (game.joinGame(jGame.user_uuid)) {
-            /*this.cacheService.setGameInCache(await this.gameModel.findByIdAndUpdate(game._id, {
-              $push: { users_uuid: jGame.user_uuid }
-            }).exec());*/
-            this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-          } else {
-            console.log('Ya estoy');
-          }
+    if (game && nUser) {
+      if (!game.isEnd && !game.isStart) {
+        if (game.joinGame(nUser._id)) {
+          nUser.joinGame(game._id);
+          this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
+          this.cacheService.setUserInCache(await this.mongoService.updateUser(nUser));
         } else {
-          console.log('Juego ya en curso o finalizado');
+          console.log('Ya estoy');
         }
       } else {
-        console.log('Inexistent game');
+        console.log('Juego ya en curso o finalizado');
       }
+    } else {
+      console.log('Inexistent game or user');
     }
   }
 
@@ -82,20 +79,16 @@ export class GameService {
    if (game) {
      if (!game.isEnd) {
        if (!game.isStart) {
-         if (lGame.user_uuid === game.owner_uuid) {
-           //Si el que solicita salir es el owner
-           this.cacheService.removeGameInCache((await this.mongoService.removeGame(game))._id);
-           //aca se deberia avisar al otro jugador.
-         } else {
-           //elimino el otro jugador
-           game.users_uuid.push(lGame.user_uuid);
-           this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-           /*await this.gameModel
-             .findByIdAndUpdate(lGame.game_uuid, {
-               $pull: { users_uuid: lGame.user_uuid },
-             })
-             .exec();*/
-         }
+        let remainUsers = game.leaveGame(lGame.user_uuid);
+        let user = await this.cacheService.userInCache(lGame.user_uuid);
+        user.leaveGame(game._id);
+        this.cacheService.setUserInCache(await this.mongoService.updateUser(user));
+        if(remainUsers === 0){//si no queda nadie
+          this.cacheService.removeGameInCache((await this.mongoService.removeGame(game))._id);
+        }
+        else{
+          this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
+        }
        } else {
          //Finalizar
        }
@@ -109,22 +102,12 @@ export class GameService {
     let game = await this.cacheService.gameInCache(sGame.game_uuid);
     if (game) {
       if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego
-        if (game.users_uuid.length >= 2) {
-          //TODO: que pasa si quiero hacer las partidas para mas de 2
-          if (game.owner_uuid === sGame.user_uuid) {
+        if (game.placedUnitList .length >= 2) {
+          if (game.isOwner(sGame.user_uuid)) {
             game.isStart = true;
-            game.users_uuid.forEach((element) => {
-              //Inicializo el array de las unidades
-              let place: PlacedUnit; //Esto porque no me dejaba hacer ...push({element.uuid ....}) directamente
-              place.user_uuid = element;
-              place.unitInfo = [];
-              game.placedUnitList.push(place);
-            });
             game.turn = game.owner_uuid; //Le asigno el turno al owner
-            game.gamePhase = 0; //Momento de poner unidades
-            //this.cacheService.gameInCache(game.)
+            game.gamePhase = 1; //Momento de poner unidades
             this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-            //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
           } else {
             console.log('no sos el owner');
           }
@@ -147,8 +130,8 @@ export class GameService {
         let game = await this.cacheService.gameInCache(placeUnit.game_uuid);
         if (game) {
           //El juego existe
-          if (game.gamePhase === 0 && game.isStart && !game.isEnd) {
-            //Estoy en fase, empezo y no termino
+          if (game.gamePhase === 0 && !game.isStart && !game.isEnd) {
+            //Estoy en fase, no empezo y no termino
             if (game.isInsideBoard(placeUnit.pos[0], placeUnit.pos[1])) {
                 console.log('Adentro del tablero');
               //Esta dentro del tablero
@@ -157,10 +140,9 @@ export class GameService {
                 console.log('no ocupado')
                 if (!game.isThisUnitPlace(placeUnit.unit_uuid, placeUnit.user_uuid)) {
                     console.log('unidad no se encuentra en el tablero');
-                    
+                    //TODO: cambiar los parametros, enviar la unidad directamente
                     if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.HP, unit.MP)) {
-                      this.cacheService.setGameInCache(await this.mongoService.updateGame(game))
-                      //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
+                      this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
                       console.log('place');
                     }
                     else{

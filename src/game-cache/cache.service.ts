@@ -25,6 +25,7 @@ export class CacheService {
                 temp = gameBD;
             }
         }
+        
         return temp;
     }
     /**
@@ -55,6 +56,7 @@ export class CacheService {
                 temp = userBD;
             }
         }
+        
         return  temp; 
     }
 

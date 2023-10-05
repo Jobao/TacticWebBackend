@@ -31,4 +31,8 @@ export class MongodbService {
     async findUser(user_uuid:string){
         return await this.userModel.findById(user_uuid).exec();
     }
+
+    async updateUser(user:User){
+        return await this.userModel.findByIdAndUpdate(user._id, user).exec();
+    }
 }

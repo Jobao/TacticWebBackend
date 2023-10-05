@@ -7,4 +7,8 @@ export class CreateGameDto{
      * id del juego
      */
     game_uuid: string;
+
+    minUnits:number;
+
+    maxUnits:number;
 }

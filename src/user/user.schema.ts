@@ -19,6 +19,9 @@ export class User{
     @Prop([Unit])
     createdUnits:Unit[];
 
+    @Prop()
+    gameJoinedList:string[];
+
     toGetDto(){
         let ret:GetUserDto;
         ret._id = this._id;
@@ -39,6 +42,21 @@ export class User{
             }
         });
         return unit;
+    }
+
+    joinGame(game_uuid:string){
+        if(!this.gameJoinedList.includes(game_uuid)){
+            this.gameJoinedList.push(game_uuid);
+            return true;
+        }
+        return false;
+    }
+
+    leaveGame(game_uuid:string){
+        let idx =this.gameJoinedList.indexOf(game_uuid);
+        if(idx !== -1){
+            this.gameJoinedList.splice(idx,1);
+        }
     }
 
 }

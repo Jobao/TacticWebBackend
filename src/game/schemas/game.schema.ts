@@ -24,14 +24,17 @@ export class Game{
     @Prop([PlacedUnit])
     placedUnitList: PlacedUnit[];
 
-    @Prop([String])
-    users_uuid: string[];
-
     @Prop()
     isEnd:boolean;
 
     @Prop()
     isStart:boolean;
+
+    @Prop()
+    minUnits:number;
+
+    @Prop()
+    maxUnits:number;
     
     @Prop()
     owner_uuid:string;
@@ -69,14 +72,14 @@ export class Game{
         return -1;
     }
 
-    getUserIndexOnListUsers(user_uuid:string): number {
+    /*getUserIndexOnListUsers(user_uuid:string): number {
         for (let userIndex = 0; userIndex < this.users_uuid.length; userIndex++) {
             if(this.users_uuid[userIndex] === user_uuid){
                 return userIndex;
             }
         }
         return -1;
-    }
+    }*/
 
     placeNewUnit(user_uuid:string, unit_uuid:string, x:number, y:number, hp:number, mp:number){
         let idx= this.getUserIndexOnPlacedUnitList(user_uuid);
@@ -129,11 +132,27 @@ export class Game{
     }
 
     joinGame(user_uuid:string):boolean{
-        if(this.getUserIndexOnListUsers(user_uuid) === -1){
-            this.users_uuid.push(user_uuid);
+        if(this.getUserIndexOnPlacedUnitList(user_uuid) === -1){
+            //this.users_uuid.push(user_uuid);
+            let place: PlacedUnit = new PlacedUnit(); //Esto porque no me dejaba hacer ...push({element.uuid ....}) directamente
+            place.user_uuid = user_uuid;
+            place.unitInfo = [];
+            this.placedUnitList.push(place);
             return true;
         }
         return false;
+    }
+
+    leaveGame(user_uuid:string){
+       let index = this.getUserIndexOnPlacedUnitList(user_uuid);
+       if(index !== -1){
+        this.placedUnitList.splice(index, 1);
+       }
+       return this.placedUnitList.length;
+    }
+
+    isOwner(user_uuid:string): boolean{
+        return(user_uuid === this.owner_uuid);
     }
 
 }

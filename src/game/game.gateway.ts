@@ -54,7 +54,6 @@ export class GameGateway {
   @SubscribeMessage('sendCreateGame')
   async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
     payload.user_uuid = client['user'].sub;
-    console.log("entro");
     
     this.gameService.createGame(payload);
   }
