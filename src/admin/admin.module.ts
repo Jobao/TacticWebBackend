@@ -7,9 +7,10 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Auth, AuthSchema } from 'src/auth/auth.schema';
 import { User, UserSchema } from 'src/user/user.schema';
 import { UserModule } from 'src/user/user.module';
+import { GameModule } from 'src/game/game.module';
 
 @Module({
-  imports:[AuthModule, UserModule],
+  imports:[AuthModule, UserModule, GameModule],
   controllers: [AdminController],
   providers:[]
 })

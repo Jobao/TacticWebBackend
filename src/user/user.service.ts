@@ -30,6 +30,10 @@ export class UserService {
         return await this.userModel.findOne({_id: uuid}).exec();
     }
 
+    async update(uUser:User){
+        return await this.userModel.findByIdAndUpdate(uUser._id, uUser, {new:true});
+    }
+
     async addNewUnit(cUnity: CreateUnitDto){
         cUnity._id = uuidv4();
         let usr = await this.userModel.findById(cUnity.client_uuid);

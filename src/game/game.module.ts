@@ -12,6 +12,7 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 @Module({
     imports:[MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema}])],
     providers:[GameGateway,GameService, MongodbService, CacheService],
+    exports:[GameService]
 })
 export class GameModule {
 
