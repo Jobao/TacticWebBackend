@@ -22,15 +22,15 @@ import { Unit } from './schemas/unit.schema';
 export class GameGateway {
   constructor(private gameService:GameService){}
 
-  @SubscribeMessage('sendInitGame')
-  initGame(@ConnectedSocket() client: Socket,@MessageBody() payload: CreateGameDto){
-    payload.user_uuid = client['user'].sub;
-    this.gameService.initGame(payload);
-  }
-
   @SubscribeMessage('sendGetGame')
-  getGame(){
-
+  getGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
+    payload.user_uuid = client['user'].sub;
+    return this.gameService.getGame(payload.game_uuid);
+  }
+  @SubscribeMessage('sendCreateGame')
+  async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
+    payload.user_uuid = client['user'].sub;
+    this.gameService.createGame(payload);
   }
 
   @SubscribeMessage('sendStartGame')
@@ -51,17 +51,9 @@ export class GameGateway {
     this.gameService.leaveGame(payload);
   }
 
-  @SubscribeMessage('sendCreateGame')
-  async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
-    payload.user_uuid = client['user'].sub;
-    
-    this.gameService.createGame(payload);
-  }
-
   @SubscribeMessage('sendPlaceUnit')
   async placeUnit(@ConnectedSocket() client: Socket, @MessageBody() payload:PlaceUnitDto){
     payload.user_uuid = client['user'].sub;
-    
     this.gameService.placeUnit(payload);
   }
 

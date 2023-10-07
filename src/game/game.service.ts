@@ -37,10 +37,15 @@ export class GameService {
         } else{
           game.maxUnits = cGame.maxUnits;
         }
+        //FIXME: Aca hay que obtener los datos del dto
+        game.sizeX = 10;
+        game.sizeY = 10
         //FIXME: Ver porque gamephase me da error, aca le asigno un valor magico
         game.gamePhase = 0;
         game.joinGame(cGame.user_uuid);
         user.joinGame(game._id);
+        
+        
         this.cacheService.setGameInCache(await this.mongoService.createGame(game));
         this.cacheService.setUserInCache(await this.mongoService.updateUser(user));
     }
@@ -54,6 +59,7 @@ export class GameService {
       if (!game.isEnd && !game.isStart) {
         if (game.joinGame(nUser._id)) {
           nUser.joinGame(game._id);
+          
           this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
           this.cacheService.setUserInCache(await this.mongoService.updateUser(nUser));
         } else {
@@ -66,14 +72,8 @@ export class GameService {
       console.log('Inexistent game or user');
     }
   }
-
+//aaca !! Al entrar y salir me vuelve a cargar todos los games
   async leaveGame(lGame: CreateGameDto) {
-    /*
-     -Si la partida no empezo:
-     --Si el que sale es owner -> se elimina la partida :? se retira el jugador
-     -SINO (Ya empezo la partida):
-     --Se finaliza la partida y avisa al otro jugador de su victoria
-     */
     let game = await this.cacheService.gameInCache(lGame.game_uuid);
     
    if (game) {
@@ -96,21 +96,16 @@ export class GameService {
    }
   }
 
-
-  //Solo el owner deberia empezar
+//TODO: Se podria implementar un sistema de votacion para iniciar el juego
   async startGame(sGame: CreateGameDto) {
     let game = await this.cacheService.gameInCache(sGame.game_uuid);
     if (game) {
       if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego
-        if (game.placedUnitList .length >= 2) {
-          if (game.isOwner(sGame.user_uuid)) {
-            game.isStart = true;
-            game.turn = game.owner_uuid; //Le asigno el turno al owner
-            game.gamePhase = 1; //Momento de poner unidades
-            this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-          } else {
-            console.log('no sos el owner');
-          }
+        if (game.placedUnitList.length >= 2) {
+          game.isStart = true;
+          game.turn = game.owner_uuid; //Le asigno el turno al owner
+          game.gamePhase = 1; //Momento de poner unidades
+          this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
         } else {
           console.log('Por ahora no se puede jugar solo :(');
         }
@@ -130,60 +125,44 @@ export class GameService {
         let game = await this.cacheService.gameInCache(placeUnit.game_uuid);
         if (game) {
           //El juego existe
-          if (game.gamePhase === 0 && !game.isStart && !game.isEnd) {
-            //Estoy en fase, no empezo y no termino
-            if (game.isInsideBoard(placeUnit.pos[0], placeUnit.pos[1])) {
-                console.log('Adentro del tablero');
-              //Esta dentro del tablero
-              if (!game.isOcupiedByAnotherUnit(placeUnit.pos[0], placeUnit.pos[1])) {
-                //No esta ocupado por otra pieza
-                console.log('no ocupado')
-                if (!game.isThisUnitPlace(placeUnit.unit_uuid, placeUnit.user_uuid)) {
-                    console.log('unidad no se encuentra en el tablero');
-                    //TODO: cambiar los parametros, enviar la unidad directamente
-                    if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.HP, unit.MP)) {
-                      this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-                      console.log('place');
-                    }
-                    else{
-                      console.log("la unidad no se pudo colocar (BD)");
-                    }
+          if (game.canPlaceMoreUnit(user._id)) {
+            if (game.gamePhase === 0 && !game.isStart && !game.isEnd) {
+              //Estoy en fase, no empezo y no termino
+              if (game.isInsideBoard(placeUnit.pos[0], placeUnit.pos[1])) {
+                  console.log('Adentro del tablero');
+                //Esta dentro del tablero
+                if (!game.isOcupiedByAnotherUnit(placeUnit.pos[0], placeUnit.pos[1])) {
+                  //No esta ocupado por otra pieza
+                  console.log('no ocupado')
+                  if (!game.isThisUnitPlace(placeUnit.unit_uuid, placeUnit.user_uuid)) {
+                      console.log('unidad no se encuentra en el tablero');
+                      //TODO: cambiar los parametros, enviar la unidad directamente
+                      if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.HP, unit.MP)) {
+                        this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
+                        console.log('place');
+                      }
+                      else{
+                        console.log("la unidad no se pudo colocar (BD)");
+                      }
+                  }
+                  else{
+                      console.log("Unidad ya colocada");
+                  }
                 }
                 else{
-                    console.log("Unidad ya colocada");
+                  console.log("Lugar ocupado");
                 }
               }
               else{
-                console.log("Lugar ocupado");
+                  console.log("Fuera del tablero");
               }
+            } else {
+              console.log('El juego no esta iniciado');
             }
-            else{
-                console.log("Fuera del tablero");
-            }
-          } else {
-            console.log('El juego no esta iniciado');
           }
         }
       }
     }
-  }
-
-  async initGame(payload:CreateGameDto){
-    let game = await this.cacheService.gameInCache(payload.game_uuid);
-    if(game){
-        if(game.owner_uuid === payload.user_uuid){
-            game.gamePhase = 1;
-            this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-            //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
-        }else{
-            console.log("No sos el owner");
-        }
-    }
-    else{
-        console.log("Juego inexistente");
-        
-    }
-
   }
 
   async moveUnit(placeUnit: PlaceUnitDto){
@@ -234,6 +213,15 @@ export class GameService {
         //cuando la agregue al tablero ?? Si controlo desde el placedUnit, seria casi lo mismo
       }
     }
-    
+  }
+
+  async getGame(game_uuid:string){
+    let game = await this.cacheService.gameInCache(game_uuid);
+    if(game){
+      return game;
+    }
+    else{
+       return 'inexistent game';
+    }
   }
 }

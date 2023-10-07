@@ -155,6 +155,22 @@ export class Game{
         return(user_uuid === this.owner_uuid);
     }
 
+    canPlaceMoreUnit(user_uuid:string){
+        let index = this.getUserIndexOnPlacedUnitList(user_uuid);
+        if(index !== -1){
+            return ((this.placedUnitList[index].unitInfo.length < this.maxUnits))
+        }
+        return false;
+    }
+
+    canRemoveUnit(user_uuid:string){
+        let index = this.getUserIndexOnPlacedUnitList(user_uuid);
+        if(index !== -1){
+            return ((this.placedUnitList[index].unitInfo.length >= 1))
+        }
+        return false;
+    }
+
 }
 
 export const GameSchema = SchemaFactory.createForClass(Game);

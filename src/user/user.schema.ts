@@ -47,6 +47,7 @@ export class User{
     joinGame(game_uuid:string){
         if(!this.gameJoinedList.includes(game_uuid)){
             this.gameJoinedList.push(game_uuid);
+            
             return true;
         }
         return false;

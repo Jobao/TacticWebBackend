@@ -11,4 +11,7 @@ export class CreateGameDto{
     minUnits:number;
 
     maxUnits:number;
+
+    sizeX:number;
+    sizeY:number;
 }

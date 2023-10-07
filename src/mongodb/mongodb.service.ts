@@ -18,7 +18,7 @@ export class MongodbService {
     }
 
     async updateGame(uGame:Game){
-        return await this.gameModel.findByIdAndUpdate(uGame._id, uGame).exec();
+        return await this.gameModel.findByIdAndUpdate(uGame._id, uGame, {new: true}).exec();
     }
 
     async removeGame(game:Game){
@@ -33,6 +33,7 @@ export class MongodbService {
     }
 
     async updateUser(user:User){
-        return await this.userModel.findByIdAndUpdate(user._id, user).exec();
+        
+        return await this.userModel.findByIdAndUpdate(user._id, user, {new: true}).exec();
     }
 }

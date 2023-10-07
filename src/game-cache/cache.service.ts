@@ -1,11 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import { GameService } from 'src/game/game.service';
-import { Game, GameDocument } from 'src/game/schemas/game.schema';
+import { Game } from 'src/game/schemas/game.schema';
 import { MongodbService } from 'src/mongodb/mongodb.service';
-import { User, UserDocument } from 'src/user/user.schema';
-import { UserService } from 'src/user/user.service';
+import { User } from 'src/user/user.schema';
 
 @Injectable()
 export class CacheService {
