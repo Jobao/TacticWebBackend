@@ -7,14 +7,16 @@ import { Model } from 'mongoose';
 import { LoginDto } from './dto/login.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { SignupDto } from './dto/signup.dto';
+import { MongodbService } from 'src/mongodb/mongodb.service';
 
 @Injectable()
 export class AuthService {
-    constructor(private jwtService: JwtService, private userService:UserService,
+    constructor(private jwtService: JwtService, private userService:UserService,private mongoService:MongodbService,
         @InjectModel(Auth.name) private authModel:Model<AuthDocument>) {}
 
     async login(payload: LoginDto){
-        let r= await this.authModel.findById(payload.user);
+        //let t = this.mongoService.
+        let r= await this.mongoService.findAuth(payload.user);
         if(r){
             if(r.checkPassword(payload.pass)){
                 
@@ -27,10 +29,13 @@ export class AuthService {
     }
 
     async signup(payload: SignupDto){
-        console.log(payload);
-        
         let uuid = uuidv4();
-        this.authModel.create({_id: payload.user, pass: payload.pass, uuid: uuid})
+        let auth = new Auth();
+        auth._id = payload.user;
+        auth.pass = payload.pass;
+        auth.uuid = uuid;
+        this.mongoService.createAuth(auth);
+        //this.authModel.create({_id: payload.user, pass: payload.pass, uuid: uuid})
         this.userService.create({_id: uuid, user: payload.user, displayName: payload.displayName})
 
     }
