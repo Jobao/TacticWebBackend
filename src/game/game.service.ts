@@ -73,7 +73,7 @@ export class GameService {
     }
   }
 //aaca !! Al entrar y salir me vuelve a cargar todos los games
-  async leaveGame(lGame: CreateGameDto) {
+  async leaveGame(lGame: JoinGameDto) {
     let game = await this.cacheService.gameInCache(lGame.game_uuid);
     
    if (game) {
