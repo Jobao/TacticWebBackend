@@ -36,7 +36,8 @@ export class UserService {
     }
 
     async update(uUser:User){
-        return await this.mongoService.updateUser(uUser);
+        this.cacheService.setUserInCache(await this.mongoService.updateUser(uUser));
+        return this.cacheService.userInCache(uUser._id);
     }
 
     async addNewUnit(cUnity: CreateUnitDto){
@@ -44,7 +45,8 @@ export class UserService {
         let usr = await this.cacheService.userInCache(cUnity.client_uuid);
         if(usr){
             usr.createdUnits.push(cUnity)
-            return await this.update(usr);
+            await this.update(usr);
+            
         }
     }
 }
