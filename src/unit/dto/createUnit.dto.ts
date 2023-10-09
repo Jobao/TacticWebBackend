@@ -1,5 +1,5 @@
 export class CreateUnitDto{
-    client_uuid:string;
+    user_uuid:string;
     
     _id:string;
 

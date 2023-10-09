@@ -6,6 +6,7 @@ import { Public } from 'src/auth/public.decorator';
 import { JoinGameDto } from 'src/game/dto/joinGame.dto';
 import { PlaceUnitDto } from 'src/game/dto/placeUnit.dto';
 import { GameService } from 'src/game/game.service';
+import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
 import { CreateUserDto } from 'src/user/dto/createUser.dto';
 import { User } from 'src/user/user.schema';
 import { UserService } from 'src/user/user.service';
@@ -31,8 +32,8 @@ export class AdminController {
     }
 
     @Get('/games/:id')
-    getGame(@Param() game_uuid:any){
-        return this.s.getGame(game_uuid.id);
+    getGame(@Param('id') game_uuid:string){
+        return this.s.getGame(game_uuid);
     }
 
     @Post('/games/leave')
@@ -43,9 +44,12 @@ export class AdminController {
     }
 
     @Post('/user/:id/unit')
-    placeUnit(@Param() user_uuid:any, @Body() payload:PlaceUnitDto){
-
+    placeUnit(@Param('id') user_uuid:any, @Body() payload:CreateUnitDto){
+        payload.user_uuid = user_uuid;
+        this.userService.addNewUnit(payload);
     }
+
+    
 
 
 
