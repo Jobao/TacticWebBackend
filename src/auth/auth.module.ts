@@ -9,6 +9,7 @@ import { Auth, AuthSchema } from './auth.schema';
 import { User, UserSchema } from 'src/user/user.schema';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { Game, GameSchema } from 'src/game/schemas/game.schema';
+import { CacheService } from 'src/game-cache/cache.service';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { Game, GameSchema } from 'src/game/schemas/game.schema';
     MongooseModule.forFeature([{name: Auth.name , schema: AuthSchema},{name: User.name , schema: UserSchema}, {name: Game.name, schema: GameSchema}])
   ],
   controllers: [AuthController],
-  providers: [AuthService,UserService, MongodbService],
+  providers: [AuthService,UserService, MongodbService, CacheService],
   exports:[AuthService, UserService]
 })
 export class AuthModule {}

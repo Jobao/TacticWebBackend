@@ -39,6 +39,14 @@ export class MongodbService {
         return await this.userModel.findByIdAndUpdate(user._id, user, {new: true}).exec();
     }
 
+    async createUser(user:User){
+        return await this.userModel.create(user);
+    }
+
+    async getAllUsers(){
+        return await this.userModel.find().exec();
+    }
+
     //------------------------AUTH--------------------AUTH----------------AUTH-----
 
     async findAuth(user:string){
