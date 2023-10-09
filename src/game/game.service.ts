@@ -184,7 +184,6 @@ export class GameService {
                           //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
                             console.log('move');
                         }
-
                     }
                 }
             }
@@ -200,19 +199,29 @@ export class GameService {
    */
   async actionUnit(payload:UnitActionDto)
   {
-    let unit = (await this.cacheService.userInCache(payload.user_uuid)).getUnit(payload.unit_uuid);
+    let user = (await this.cacheService.userInCache(payload.user_uuid));
+    let unit = user.getUnit(payload.unit_uuid);
     let game = await this.cacheService.gameInCache(payload.game_uuid);
     if (game) {
       if(unit){
-        if(payload.action.action === "WAIT"){
+        if(payload.action.type === "WAIT"){
           
           return;
+        }
+        else{
+          if(payload.action.type === "MOVE"){
+            
+          }
         }
         //if(game.placedUnitList[0].unitInfo[0].)
         //TODO: Aca quede, es preguntar a la BD si la unidad es mia ?? Ya no le pregunte
         //cuando la agregue al tablero ?? Si controlo desde el placedUnit, seria casi lo mismo
       }
     }
+  }
+
+  async validPosition(game:Game, x:number, y:number){
+    return (game.isInsideBoard(x,y) && game.isOcupiedByAnotherUnit(x,y));
   }
 
   async getGame(game_uuid:string){

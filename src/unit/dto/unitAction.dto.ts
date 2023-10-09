@@ -12,6 +12,6 @@ class Target{
 }
 
 class UnitAction{
-    action:string;
+    type:string;
     target:Target;
 }
