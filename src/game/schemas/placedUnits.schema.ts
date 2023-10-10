@@ -13,6 +13,7 @@ export class PlacedUnit{
     @Prop([UnitInfo])
     unitInfo: UnitInfo[];
 
+    
     isThisUnitPlace(unit_uuid: string): boolean{
         this.unitInfo.forEach(element => {
             if(element.unitBase_uuid == unit_uuid){
@@ -20,6 +21,13 @@ export class PlacedUnit{
             }
         });
         return false;
+    }
+
+     getUnit(unit_uuid:string){
+        console.log('MMMM');
+        
+        return this.unitInfo.find((element) => element.unitBase_uuid === unit_uuid)
+
     }
 }
 

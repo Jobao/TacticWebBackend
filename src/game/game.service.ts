@@ -8,6 +8,8 @@ import { PlacedUnit } from './schemas/placedUnits.schema';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
+import { UnitInfo } from './schemas/unitInfo.schema';
+import { Types } from 'mongoose';
 
 @Injectable()
 export class GameService {
@@ -26,6 +28,7 @@ export class GameService {
         game.owner_uuid = cGame.user_uuid;
         game.isStart = false;
         game.isEnd = false;
+        
         game.placedUnitList = [];
         if(!cGame.minUnits){
           game.minUnits = 1;
@@ -197,31 +200,60 @@ export class GameService {
    * @param payload 
    * @returns 
    */
-  async actionUnit(payload:UnitActionDto)
+  async actionUnit(payload:UnitActionDto)//TODO:Falta controlar que el juego este iniciado
   {
-    let user = (await this.cacheService.userInCache(payload.user_uuid));
-    let unit = user.getUnit(payload.unit_uuid);
+    console.log("action");
+    
     let game = await this.cacheService.gameInCache(payload.game_uuid);
     if (game) {
-      if(unit){
-        if(payload.action.type === "WAIT"){
+      
+      console.log("game");
+      if (game.isMyTurn(payload.user_uuid)) {
+        console.log("My turn");
+        
+        let user = (await this.cacheService.userInCache(payload.user_uuid));
+        if (user) {
+          console.log("user");
+          //console.log(game);
           
-          return;
-        }
-        else{
-          if(payload.action.type === "MOVE"){
+          if (game.isMyTurn(user._id)) {
+            console.log("turn");
+            let pll = new UnitInfo();
+            let placedUnit = game.getUnit(user._id, payload.unit_uuid);
             
+            
+            if (placedUnit) {
+              console.log("encontre");
+              console.log(pll.prueba);
+              
+              if (placedUnit.canPerformActionThisTurn) {
+                console.log('perform')
+                if(payload.action.type === "WAIT"){
+                    placedUnit.wait();
+                    this.cacheService.setGameInCache( await this.mongoService.updateGame(game));
+                  return;
+                }
+                else{
+                  if(payload.action.type === "MOVE"){
+                    if (placedUnit.canMove) {
+                      if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
+                          if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
+                            if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
+                              this.cacheService.setGameInCache( await this.mongoService.updateGame(game));
+                              console.log("moved");
+                              
+                            }
+                          }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
-        //if(game.placedUnitList[0].unitInfo[0].)
-        //TODO: Aca quede, es preguntar a la BD si la unidad es mia ?? Ya no le pregunte
-        //cuando la agregue al tablero ?? Si controlo desde el placedUnit, seria casi lo mismo
       }
     }
-  }
-
-  async validPosition(game:Game, x:number, y:number){
-    return (game.isInsideBoard(x,y) && game.isOcupiedByAnotherUnit(x,y));
   }
 
   async getGame(game_uuid:string){

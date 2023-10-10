@@ -1,8 +1,8 @@
 import { Board } from "./board.schema";
 import { Prop, Schema, SchemaFactory,  } from '@nestjs/mongoose';
-import { PlacedUnit, PlacedUnitSchema } from "./placedUnits.schema";
+import { PlacedUnit, PlacedUnitSchema, PlacedUnitsDocument} from "./placedUnits.schema";
 import { UnitInfo } from "./unitInfo.schema";
-import { HydratedDocument, Document } from "mongoose";
+import { HydratedDocument, Document, Types } from "mongoose";
 import { Unit } from "./unit.schema";
 
 export type GameDocument = Game & Document;
@@ -72,14 +72,13 @@ export class Game{
         return -1;
     }
 
-    /*getUserIndexOnListUsers(user_uuid:string): number {
-        for (let userIndex = 0; userIndex < this.users_uuid.length; userIndex++) {
-            if(this.users_uuid[userIndex] === user_uuid){
-                return userIndex;
-            }
+    getPlacedUnit(user_uuid:string, unit_uuid:string){
+        
+        let idx= this.getUserIndexOnPlacedUnitList(user_uuid);
+        if(idx !== -1){
+            return  this.placedUnitList[idx].getUnit(unit_uuid);
         }
-        return -1;
-    }*/
+    }
 
     placeNewUnit(user_uuid:string, unit_uuid:string, x:number, y:number, hp:number, mp:number){
         let idx= this.getUserIndexOnPlacedUnitList(user_uuid);
@@ -91,6 +90,8 @@ export class Game{
             temp.currentHP = hp;
             temp.currentMP = mp;
             temp.canPerformActionThisTurn = true;
+            temp.canMove = true;
+            temp.canAttack = true;
             this.placedUnitList[idx].unitInfo.push(temp);
             return true;
         }
@@ -99,6 +100,7 @@ export class Game{
     }
 
     isMyTurn(uuid:string):boolean{
+        //console.log(GameSchema.paths);
         return this.turn===uuid;
     }
 
@@ -169,6 +171,18 @@ export class Game{
             return ((this.placedUnitList[index].unitInfo.length >= 1))
         }
         return false;
+    }
+
+    getUnit(user_uuid:string, unit_uuid:string){
+        let index = this.getUserIndexOnPlacedUnitList(user_uuid);
+        let unit:UnitInfo;
+        if(index !== -1){
+            console.log(this.placedUnitList[index]);
+            
+            unit = this.placedUnitList[index].unitInfo.find((element) =>element.unitBase_uuid === unit_uuid);
+            
+        }
+        return unit;
     }
 
 }
