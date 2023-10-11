@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { UnitInfo } from './unitInfo.schema';
+import { UnitInfo, UnitInfoSchema } from './unitInfo.schema';
 import { Document } from 'mongoose';
 
 export type PlacedUnitsDocument = PlacedUnit & Document;
@@ -10,7 +10,7 @@ export class PlacedUnit{
     @Prop()
     user_uuid: string;
 
-    @Prop([UnitInfo])
+    @Prop({type: [UnitInfoSchema], autopopulate:true})
     unitInfo: UnitInfo[];
 
     
@@ -24,12 +24,11 @@ export class PlacedUnit{
     }
 
      getUnit(unit_uuid:string){
-        console.log('MMMM');
-        
         return this.unitInfo.find((element) => element.unitBase_uuid === unit_uuid)
 
     }
 }
 
 export const PlacedUnitSchema = SchemaFactory.createForClass(PlacedUnit);
+PlacedUnitSchema.plugin(require('mongoose-autopopulate'));
 PlacedUnitSchema.loadClass(PlacedUnit);

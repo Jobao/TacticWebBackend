@@ -21,7 +21,7 @@ export class Game{
     @Prop()
     sizeY:number;//size del tablero vertical
 
-    @Prop([PlacedUnit])
+    @Prop({type: [PlacedUnitSchema], autopopulate:true})
     placedUnitList: PlacedUnit[];
 
     @Prop()
@@ -177,9 +177,8 @@ export class Game{
         let index = this.getUserIndexOnPlacedUnitList(user_uuid);
         let unit:UnitInfo;
         if(index !== -1){
-            console.log(this.placedUnitList[index]);
-            
-            unit = this.placedUnitList[index].unitInfo.find((element) =>element.unitBase_uuid === unit_uuid);
+            return this.placedUnitList[index].getUnit(unit_uuid);
+            //unit = this.placedUnitList[index].unitInfo.find((element) =>element.unitBase_uuid === unit_uuid);
             
         }
         return unit;
@@ -188,6 +187,8 @@ export class Game{
 }
 
 export const GameSchema = SchemaFactory.createForClass(Game);
+//console.log(GameSchema.paths);
+GameSchema.plugin(require('mongoose-autopopulate'));
 GameSchema.loadClass(Game); //https://github.com/nestjs/mongoose/issues/408#issuecomment-917179516
 
 

@@ -15,7 +15,10 @@ import { CacheModule } from './game-cache/cache.module';
 import { MongodbModule } from './mongodb/mongodb.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/TacticWeb'), ChatModule, UserModule, GameModule, AuthModule, AdminModule, CacheModule, MongodbModule],
+  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/TacticWeb', {connectionFactory:(connection) =>{
+    connection.plugin(require('mongoose-autopopulate')); 
+    return connection;
+  }}), ChatModule, UserModule, GameModule, AuthModule, AdminModule, CacheModule, MongodbModule],
   controllers: [AppController, AdminController],
   providers: [AppService, RoomGateway,{provide: APP_GUARD,
     useClass: AuthGuard,}],

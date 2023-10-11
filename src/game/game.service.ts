@@ -211,6 +211,7 @@ export class GameService {
       if (game.isMyTurn(payload.user_uuid)) {
         console.log("My turn");
         
+        
         let user = (await this.cacheService.userInCache(payload.user_uuid));
         if (user) {
           console.log("user");
@@ -223,8 +224,7 @@ export class GameService {
             
             
             if (placedUnit) {
-              console.log("encontre");
-              console.log(pll.prueba);
+              //console.log(placedUnit);
               
               if (placedUnit.canPerformActionThisTurn) {
                 console.log('perform')
