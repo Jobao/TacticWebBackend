@@ -4,12 +4,9 @@ import { CreateGameDto } from './dto/createGame.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { JoinGameDto } from './dto/joinGame.dto';
 import { PlaceUnitDto } from './dto/placeUnit.dto';
-import { PlacedUnit } from './schemas/placedUnits.schema';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
-import { UnitInfo } from './schemas/unitInfo.schema';
-import { Types } from 'mongoose';
 
 @Injectable()
 export class GameService {
@@ -211,25 +208,25 @@ export class GameService {
             let placedUnit = game.getUnit(user._id, payload.unit_uuid);
             if (placedUnit) {
               if (placedUnit.canPerformActionThisTurn) {
-                if(payload.action.type === "WAIT"){
+                switch (payload.action.type) {
+                  case "WAIT":
                     placedUnit.wait();
-                    this.cacheService.setGameInCache( await this.mongoService.updateGame(game));
-                }
-                else{
-                  if(payload.action.type === "MOVE"){
+                    break;
+                  case "MOVE":
                     if (placedUnit.canMove) {
                       if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
                           if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
                             if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
                               this.cacheService.setGameInCache( await this.mongoService.updateGame(game));
-                              console.log("moved");
-                              
                             }
                           }
                       }
                     }
-                  }
+                    break;
+                  default:
+                    break;
                 }
+                //TODO: Ver la manera de actualizar una sola vez, y no en cada case
               }
             }
           }

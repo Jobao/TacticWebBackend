@@ -184,6 +184,19 @@ export class Game{
         return unit;
     }
 
+    getUnitOnPos(x:number, y:number){
+        let p:UnitInfo;
+        this.placedUnitList.forEach(element => {
+            element.unitInfo.forEach(uInfo => {
+                if (uInfo.ocupied(x, y)) {
+                    p = uInfo;
+                }
+                
+            });
+        });
+        return p;
+    }
+
 }
 
 export const GameSchema = SchemaFactory.createForClass(Game);
