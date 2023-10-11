@@ -202,36 +202,18 @@ export class GameService {
    */
   async actionUnit(payload:UnitActionDto)//TODO:Falta controlar que el juego este iniciado
   {
-    console.log("action");
-    
     let game = await this.cacheService.gameInCache(payload.game_uuid);
     if (game) {
-      
-      console.log("game");
       if (game.isMyTurn(payload.user_uuid)) {
-        console.log("My turn");
-        
-        
         let user = (await this.cacheService.userInCache(payload.user_uuid));
         if (user) {
-          console.log("user");
-          //console.log(game);
-          
           if (game.isMyTurn(user._id)) {
-            console.log("turn");
-            let pll = new UnitInfo();
             let placedUnit = game.getUnit(user._id, payload.unit_uuid);
-            
-            
             if (placedUnit) {
-              //console.log(placedUnit);
-              
               if (placedUnit.canPerformActionThisTurn) {
-                console.log('perform')
                 if(payload.action.type === "WAIT"){
                     placedUnit.wait();
                     this.cacheService.setGameInCache( await this.mongoService.updateGame(game));
-                  return;
                 }
                 else{
                   if(payload.action.type === "MOVE"){
