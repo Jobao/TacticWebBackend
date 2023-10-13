@@ -12,9 +12,6 @@ export class Game{
     @Prop()
     _id: string;
 
-    @Prop(Board)
-    board: Board;//Por ahora queda
-
     @Prop()
     sizeX: number;//size del tablero horizontal
 

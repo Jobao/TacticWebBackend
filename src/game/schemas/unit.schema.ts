@@ -11,7 +11,7 @@ export class Unit{
     name:string;
 
     @Prop()
-    class_id:string;
+    currentClassId:string;
 
     @Prop()
     HP:number;
@@ -21,7 +21,10 @@ export class Unit{
 
     @Prop()
     battleActions:string;
+    @Prop()
+    classExperience:{classId:string, amount:number}[]
 
+    
 }
 
 export const UnitSchema = SchemaFactory.createForClass(Unit);

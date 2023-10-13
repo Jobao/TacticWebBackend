@@ -7,9 +7,10 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 import { Auth, AuthSchema } from 'src/auth/auth.schema';
 import { Game, GameSchema } from 'src/game/schemas/game.schema';
 import { CacheService } from 'src/game-cache/cache.service';
+import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema';
 
 @Module({
-    imports:[MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema},{name: Auth.name , schema: AuthSchema}])],
+    imports:[MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema},{name: Auth.name , schema: AuthSchema},{name: ClassSkill.name , schema: ClassSkillSchema}])],
     providers:[UserGateway, UserService, MongodbService, CacheService]
 })
 export class UserModule {}

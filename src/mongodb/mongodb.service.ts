@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Auth, AuthDocument } from 'src/auth/auth.schema';
+import { ClassSkill, ClassSkillDocument } from 'src/game/schemas/classSkill.schema';
 import { Game, GameDocument } from 'src/game/schemas/game.schema';
 import { User, UserDocument } from 'src/user/user.schema';
 
@@ -9,7 +10,8 @@ import { User, UserDocument } from 'src/user/user.schema';
 export class MongodbService {
     constructor(@InjectModel(User.name) private userModel:Model<UserDocument>,
     @InjectModel(Game.name) private gameModel: Model<GameDocument>,
-    @InjectModel(Auth.name) private authModel:Model<AuthDocument>){}
+    @InjectModel(Auth.name) private authModel:Model<AuthDocument>,
+    @InjectModel(ClassSkill.name) private classSkillModel:Model<ClassSkillDocument>){}
 
     async createGame(nGame:Game){
         return await this.gameModel.create(nGame);
@@ -55,5 +57,11 @@ export class MongodbService {
 
     async createAuth(auth:Auth){
         await this.authModel.create(auth);
+    }
+
+    //-------------------------SKILLS---------------SKILLS-------------------SKILLS---------
+    
+    async createSkill(nSkill:ClassSkill){
+        await this.classSkillModel.create(nSkill);
     }
 }

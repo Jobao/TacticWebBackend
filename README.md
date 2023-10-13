@@ -60,3 +60,5 @@ El equipamento cambia los atributos basicos del personaje.
 
 
 
+# Clases
+
