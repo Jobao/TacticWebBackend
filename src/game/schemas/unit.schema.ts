@@ -1,4 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { RequiredClass } from './requiredClass.schema';
+import { Stats } from './stats.schema';
 
 export type UnitDocument = Unit & Document;
 
@@ -21,8 +23,12 @@ export class Unit{
 
     @Prop()
     battleActions:string;
-    @Prop()
-    classExperience:{classId:string, amount:number}[]
+    @Prop([RequiredClass])
+    classExperience:RequiredClass[]
+
+    @Prop([Stats])
+    stats:Stats[];
+
 
     
 }

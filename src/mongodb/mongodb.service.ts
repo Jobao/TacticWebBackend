@@ -4,6 +4,7 @@ import { Model } from 'mongoose';
 import { Auth, AuthDocument } from 'src/auth/auth.schema';
 import { ClassSkill, ClassSkillDocument } from 'src/game/schemas/classSkill.schema';
 import { Game, GameDocument } from 'src/game/schemas/game.schema';
+import { UnitClass, UnitClassDocument } from 'src/game/schemas/unitClass.schema';
 import { User, UserDocument } from 'src/user/user.schema';
 
 @Injectable()
@@ -11,7 +12,8 @@ export class MongodbService {
     constructor(@InjectModel(User.name) private userModel:Model<UserDocument>,
     @InjectModel(Game.name) private gameModel: Model<GameDocument>,
     @InjectModel(Auth.name) private authModel:Model<AuthDocument>,
-    @InjectModel(ClassSkill.name) private classSkillModel:Model<ClassSkillDocument>){}
+    @InjectModel(ClassSkill.name) private classSkillModel:Model<ClassSkillDocument>, 
+    @InjectModel(UnitClass.name) private unitClassModel:Model<UnitClassDocument>){}
 
     async createGame(nGame:Game){
         return await this.gameModel.create(nGame);
@@ -64,4 +66,10 @@ export class MongodbService {
     async createSkill(nSkill:ClassSkill){
         await this.classSkillModel.create(nSkill);
     }
+
+    //------------------------CLASS------------------CLASS-------------------CLASS--------
+    async createUnitClass(nclass:UnitClass){
+        await this.unitClassModel.create(nclass);
+    }
+
 }

@@ -4,6 +4,7 @@ import { Cost } from "./cost.schema";
 import { Document } from 'mongoose';
 import { Attribute } from "./attribute.schema";
 import { UnitClass } from "./unitClass.schema";
+import { Stats } from "./stats.schema";
 
 export type ClassSkillDocument = ClassSkill & Document;
 
@@ -21,8 +22,8 @@ export class ClassSkill{
     @Prop([Effect])
     effectList:Effect[];
 
-    @Prop(Attribute)
-    cost:Attribute;
+    @Prop(Stats)
+    cost:Stats;
 
     @Prop()
     allowedClasses:string[]

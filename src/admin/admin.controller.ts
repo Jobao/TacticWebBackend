@@ -6,7 +6,9 @@ import { Public } from 'src/auth/public.decorator';
 import { JoinGameDto } from 'src/game/dto/joinGame.dto';
 import { PlaceUnitDto } from 'src/game/dto/placeUnit.dto';
 import { GameService } from 'src/game/game.service';
+import { UnitClass } from 'src/game/schemas/unitClass.schema';
 import { SkillsService } from 'src/skills/skills.service';
+import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
 import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
 import { CreateUserDto } from 'src/user/dto/createUser.dto';
 import { User } from 'src/user/user.schema';
@@ -18,7 +20,8 @@ export class AdminController {
     constructor(private userService:UserService, 
         private authService:AuthService, 
         private gameService:GameService,
-        private skillService: SkillsService){}
+        private skillService: SkillsService,
+        private unitClassService: UnitClasesService){}
 
     @Post('/user')
     addNewUser(@Body() nUser:SignupDto){
@@ -56,6 +59,11 @@ export class AdminController {
     @Post('skills')
     newSkill(){
         this.skillService.create();
+    }
+
+    @Post('class')
+    newClass(@Body() nunitClass:UnitClass){
+        this.unitClassService.addNewClass(nunitClass);
     }
 
     

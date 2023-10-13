@@ -9,10 +9,12 @@ import { SkillsModule } from 'src/skills/skills.module';
 import { SkillsService } from 'src/skills/skills.service';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
 import { MongodbService } from 'src/mongodb/mongodb.service';
+import { UnitClasesModule } from 'src/unit-clases/unit-clases.module';
+import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
 
 @Module({
-  imports:[AuthModule, UserModule, GameModule, MongodbModule],
+  imports:[AuthModule, UserModule, GameModule, MongodbModule, UnitClasesModule],
   controllers: [AdminController],
-  providers:[SkillsService, MongodbService]
+  providers:[SkillsService, MongodbService, UnitClasesService]
 })
 export class AdminModule {}

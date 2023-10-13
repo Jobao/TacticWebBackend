@@ -1,9 +1,7 @@
-import { Board } from "./board.schema";
 import { Prop, Schema, SchemaFactory,  } from '@nestjs/mongoose';
-import { PlacedUnit, PlacedUnitSchema, PlacedUnitsDocument} from "./placedUnits.schema";
+import { PlacedUnit, PlacedUnitSchema} from "./placedUnits.schema";
 import { UnitInfo } from "./unitInfo.schema";
-import { HydratedDocument, Document, Types } from "mongoose";
-import { Unit } from "./unit.schema";
+import { Document } from "mongoose";
 
 export type GameDocument = Game & Document;
 

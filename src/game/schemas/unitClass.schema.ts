@@ -1,15 +1,25 @@
-import { Prop, Schema } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Attribute } from "./attribute.schema";
+import { RequiredClass } from "./requiredClass.schema";
+import { Document } from "mongoose";
 
+export type UnitClassDocument = UnitClass & Document;
 @Schema()
 export class UnitClass{
     @Prop()
-    classId:string;//Es su nombre
+    _id:string;//Es su nombre
 
     @Prop([Attribute])
     baseAttributes:Attribute[];
 
-    requiredBaseClass:string;
+    @Prop([RequiredClass])
+    requiredClass:RequiredClass[];
 
+    @Prop()
     requiredExp:number[];
 }
+
+export const UnitClassSchema = SchemaFactory.createForClass(UnitClass);
+//console.log(GameSchema.paths);
+UnitClassSchema.plugin(require('mongoose-autopopulate'));
+UnitClassSchema.loadClass(UnitClass);

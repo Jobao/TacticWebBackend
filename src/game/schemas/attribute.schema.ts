@@ -1,9 +1,9 @@
 import { Prop } from "@nestjs/mongoose";
-import { Attributes_Name } from "./enums";
+import { AttributesName, StatsName } from "./enums";
 
 export class Attribute{
     @Prop()
-    attributeName:Attributes_Name;
+    attributeName:StatsName;
     @Prop()
     amount:number;
 }
