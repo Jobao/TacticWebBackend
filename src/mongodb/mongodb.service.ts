@@ -72,4 +72,12 @@ export class MongodbService {
         await this.unitClassModel.create(nclass);
     }
 
+    async getAllClasses(){
+        return await this.unitClassModel.find();
+    }
+
+    async findClass(classId:string){
+        return await this.unitClassModel.findById(classId);
+    }
+
 }

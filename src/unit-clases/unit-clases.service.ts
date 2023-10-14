@@ -9,4 +9,12 @@ export class UnitClasesService {
     addNewClass(nClass:UnitClass){
         this.mongooseService.createUnitClass(nClass);
     }
+
+    getAllClasses(){
+        return this.mongooseService.getAllClasses();
+    }
+
+    changeClass(nClass){
+
+    }
 }

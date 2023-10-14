@@ -62,8 +62,13 @@ export class AdminController {
     }
 
     @Post('class')
-    newClass(@Body() nunitClass:UnitClass){
-        this.unitClassService.addNewClass(nunitClass);
+    async newClass(@Body() nunitClass:UnitClass){
+        await this.unitClassService.addNewClass(nunitClass);
+    }
+
+    @Get('class')
+    async getAllClasses(){
+        return await this.unitClassService.getAllClasses();
     }
 
     
