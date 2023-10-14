@@ -1,5 +1,5 @@
-import { RequiredClass } from "src/game/schemas/requiredClass.schema";
-import { Stats } from "src/game/schemas/stats.schema";
+import { TupleRequiredClass } from "src/game/schemas/requiredClass.schema";
+import { TupleStats } from "src/game/schemas/stats.schema";
 
 export class CreateUnitDto{
     user_uuid:string;
@@ -18,7 +18,7 @@ export class CreateUnitDto{
 
     currentClassId:string;
 
-    classExperience:RequiredClass[]
+    classExperience:TupleRequiredClass[]
 
-    stats:Stats[];
+    stats:TupleStats[];
 }

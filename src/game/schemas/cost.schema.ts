@@ -1,10 +1,10 @@
 import { Prop } from "@nestjs/mongoose";
-import { Attribute } from "./attribute.schema";
-import { Stats } from "./stats.schema";
+import { TupleAttribute } from "./attribute.schema";
+import { TupleStats } from "./stats.schema";
 
 export class Cost{
     @Prop()
     amount:number;
     @Prop()
-    resource:Stats;
+    resource:TupleStats;
 }

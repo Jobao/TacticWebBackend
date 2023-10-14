@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { RequiredClass } from './requiredClass.schema';
-import { Stats } from './stats.schema';
+import { TupleRequiredClass } from './requiredClass.schema';
+import { TupleStats } from './stats.schema';
 
 export type UnitDocument = Unit & Document;
 
@@ -23,13 +23,12 @@ export class Unit{
 
     @Prop()
     battleActions:string;
-    @Prop([RequiredClass])
-    classExperience:RequiredClass[]
 
-    @Prop([Stats])
-    stats:Stats[];
+    @Prop([TupleRequiredClass])
+    classExperience:TupleRequiredClass[]
 
-
+    @Prop([TupleStats])
+    stats:TupleStats[];
     
 }
 

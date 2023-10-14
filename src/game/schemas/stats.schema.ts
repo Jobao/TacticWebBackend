@@ -1,6 +1,6 @@
 import { StatsName } from "./enums";
 
-export class Stats{
+export class TupleStats{
     statsName: StatsName;
     amount:number;
 }

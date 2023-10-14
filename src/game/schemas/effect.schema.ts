@@ -1,11 +1,11 @@
 import { Prop } from "@nestjs/mongoose";
 import { TypeEffect, TypeAffect } from "./enums";
-import { Attribute } from "./attribute.schema";
-import { Stats } from "./stats.schema";
+import { TupleAttribute } from "./attribute.schema";
+import { TupleStats } from "./stats.schema";
 
 export class Effect{
     @Prop()
-    stats:Stats;
+    stats:TupleStats;
     @Prop(TypeEffect)
     typeEffect:TypeEffect;
     @Prop()

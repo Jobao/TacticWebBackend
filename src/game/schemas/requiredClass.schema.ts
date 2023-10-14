@@ -1,6 +1,6 @@
 import { Prop } from "@nestjs/mongoose";
 
-export class RequiredClass{
+export class TupleRequiredClass{
     @Prop()
     classID:string;
     @Prop()

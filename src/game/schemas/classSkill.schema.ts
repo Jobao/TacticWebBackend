@@ -2,9 +2,9 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Effect } from "./effect.schema";
 import { Cost } from "./cost.schema";
 import { Document } from 'mongoose';
-import { Attribute } from "./attribute.schema";
+import { TupleAttribute } from "./attribute.schema";
 import { UnitClass } from "./unitClass.schema";
-import { Stats } from "./stats.schema";
+import { TupleStats } from "./stats.schema";
 
 export type ClassSkillDocument = ClassSkill & Document;
 
@@ -22,8 +22,8 @@ export class ClassSkill{
     @Prop([Effect])
     effectList:Effect[];
 
-    @Prop(Stats)
-    cost:Stats;
+    @Prop(TupleStats)
+    cost:TupleStats;
 
     @Prop()
     allowedClasses:string[]
