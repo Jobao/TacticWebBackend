@@ -17,7 +17,7 @@ export class GameService {
 
   async createGame(cGame: CreateGameDto) {
 
-    let user =await this.cacheService.userInCache(cGame.user_uuid);
+    let user =await this.cacheService.userCache2.getInCacheOrBD(cGame.user_uuid);
     
     if (user) {
       let game:Game = new Game();
@@ -46,8 +46,8 @@ export class GameService {
         user.joinGame(game._id);
         
         
-        this.cacheService.setGameInCache(await this.mongoService.createGame(game));
-        this.cacheService.setUserInCache(await this.mongoService.updateUser(user));
+        this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.create(game));
+        this.cacheService.userCache2.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
     }
   }
 
@@ -99,6 +99,7 @@ export class GameService {
 //TODO: Se podria implementar un sistema de votacion para iniciar el juego
   async startGame(sGame: CreateGameDto) {
     let game = await this.cacheService.gameInCache(sGame.game_uuid);
+    //let game = await this.cacheService.gameCache2.inCache(sGame.game_uuid);
     if (game) {
       if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego
         if (game.placedUnitList.length >= 2) {
@@ -236,12 +237,17 @@ export class GameService {
   }
 
   async getGame(game_uuid:string){
-    let game = await this.cacheService.gameInCache(game_uuid);
+    //let game = await this.cacheService.gameInCache(game_uuid);
+    let game = await this.cacheService.gameCache2.getInCacheOrBD(game_uuid);
     if(game){
       return game;
     }
     else{
        return 'inexistent game';
     }
+  }
+
+  async getAllGames(){
+    return await this.mongoService.gameRepository.findAll();
   }
 }

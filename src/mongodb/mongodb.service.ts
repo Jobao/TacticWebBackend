@@ -6,6 +6,9 @@ import { ClassSkill, ClassSkillDocument } from 'src/game/schemas/classSkill.sche
 import { Game, GameDocument } from 'src/game/schemas/game.schema';
 import { UnitClass, UnitClassDocument } from 'src/game/schemas/unitClass.schema';
 import { User, UserDocument } from 'src/user/user.schema';
+import { GameMongoModel } from './gameMongoModel';
+import { UserMongoModel } from './userMongoModel';
+import { UnitClassMongoModel } from './unitClassMongoModel';
 
 @Injectable()
 export class MongodbService {
@@ -13,7 +16,12 @@ export class MongodbService {
     @InjectModel(Game.name) private gameModel: Model<GameDocument>,
     @InjectModel(Auth.name) private authModel:Model<AuthDocument>,
     @InjectModel(ClassSkill.name) private classSkillModel:Model<ClassSkillDocument>, 
-    @InjectModel(UnitClass.name) private unitClassModel:Model<UnitClassDocument>){}
+    @InjectModel(UnitClass.name) private unitClassModel:Model<UnitClassDocument>,
+    readonly gameRepository:GameMongoModel,
+    readonly userRepository:UserMongoModel,
+    readonly unitClassrepository:UnitClassMongoModel){
+        
+    }
 
     async createGame(nGame:Game){
         return await this.gameModel.create(nGame);

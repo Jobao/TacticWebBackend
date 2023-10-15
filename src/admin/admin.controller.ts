@@ -38,6 +38,11 @@ export class AdminController {
         return this.userService.update(uUser);
     }
 
+    @Get('/games')
+    getAllGames(){
+        return this.gameService.getAllGames();
+    }
+
     @Get('/games/:id')
     getGame(@Param('id') game_uuid:string){
         return this.gameService.getGame(game_uuid);

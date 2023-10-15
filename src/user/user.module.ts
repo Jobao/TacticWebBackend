@@ -9,9 +9,11 @@ import { Game, GameSchema } from 'src/game/schemas/game.schema';
 import { CacheService } from 'src/game-cache/cache.service';
 import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema';
 import { UnitClass, UnitClassSchema } from 'src/game/schemas/unitClass.schema';
+import { MongodbModule } from 'src/mongodb/mongodb.module';
 
 @Module({
-    imports:[MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema}, {name: Auth.name , schema: AuthSchema}, {name: ClassSkill.name , schema: ClassSkillSchema},{name: UnitClass.name , schema: UnitClassSchema}])],
-    providers:[UserGateway, UserService, MongodbService, CacheService]
+    imports:[MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema}, {name: Auth.name , schema: AuthSchema}, {name: ClassSkill.name , schema: ClassSkillSchema},{name: UnitClass.name , schema: UnitClassSchema}]),
+            MongodbModule],
+    providers:[UserGateway, UserService, CacheService]
 })
 export class UserModule {}
