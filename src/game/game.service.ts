@@ -52,16 +52,16 @@ export class GameService {
   }
 
   async joinGame(jGame: JoinGameDto) {
-    let nUser = await this.cacheService.userInCache(jGame.user_uuid);
-    let game = await this.cacheService.gameInCache(jGame.game_uuid);
+    let user = await this.cacheService.userCache2.getInCacheOrBD(jGame.user_uuid);
+    let game = await this.cacheService.gameCache2.getInCacheOrBD(jGame.game_uuid);
 
-    if (game && nUser) {
+    if (game && user) {
       if (!game.isEnd && !game.isStart) {
-        if (game.joinGame(nUser._id)) {
-          nUser.joinGame(game._id);
+        if (game.joinGame(user._id)) {
+          user.joinGame(game._id);
           
-          this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-          this.cacheService.setUserInCache(await this.mongoService.updateUser(nUser));
+          this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.create(game));
+          this.cacheService.userCache2.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
         } else {
           console.log('Ya estoy');
         }
@@ -72,7 +72,7 @@ export class GameService {
       console.log('Inexistent game or user');
     }
   }
-//aaca !! Al entrar y salir me vuelve a cargar todos los games
+  
   async leaveGame(lGame: JoinGameDto) {
     let game = await this.cacheService.gameInCache(lGame.game_uuid);
     
