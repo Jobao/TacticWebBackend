@@ -60,7 +60,7 @@ export class GameService {
         if (game.joinGame(user._id)) {
           user.joinGame(game._id);
           
-          this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.create(game));
+          this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
           this.cacheService.userCache2.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
         } else {
           console.log('Ya estoy');
@@ -74,24 +74,29 @@ export class GameService {
   }
   
   async leaveGame(lGame: JoinGameDto) {
-    let game = await this.cacheService.gameInCache(lGame.game_uuid);
+    let game = await this.cacheService.gameCache2.getInCacheOrBD(lGame.game_uuid);
     
    if (game) {
-     if (!game.isEnd) {
-       if (!game.isStart) {
-        let remainUsers = game.leaveGame(lGame.user_uuid);
-        let user = await this.cacheService.userInCache(lGame.user_uuid);
-        user.leaveGame(game._id);
-        this.cacheService.setUserInCache(await this.mongoService.updateUser(user));
-        if(remainUsers === 0){//si no queda nadie
-          this.cacheService.removeGameInCache((await this.mongoService.removeGame(game))._id);
+     if (game.getUserIndexOnPlacedUnitList(lGame.user_uuid) !== -1){//Si no aparezco aca no hago nada directamente
+      if (!game.isEnd) {
+        if (!game.isStart) {
+         let user = await this.cacheService.userCache2.getInCacheOrBD(lGame.user_uuid);
+         if (user) {
+           let remainUsers = game.leaveGame(lGame.user_uuid);
+           user.leaveGame(game._id);
+           this.cacheService.userCache2.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
+           if(remainUsers === 0){//si no queda nadie
+             this.cacheService.gameCache2.removeInCache((await this.mongoService.gameRepository.remove(game._id)).id)
+             //this.cacheService.removeGameInCache((await this.mongoService.removeGame(game))._id);
+           }
+           else{
+             this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
+           }
+         }
+        } else {
+          //Finalizar
         }
-        else{
-          this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-        }
-       } else {
-         //Finalizar
-       }
+      }
      }
    }
   }
