@@ -19,31 +19,30 @@ export class UserService {
         user._id = cUser._id;
         user.user = cUser.user;
         user.displayName = cUser.displayName;
-        await this.mongoService.createUser(user);
+        await this.mongoService.userRepository.create(user);
         //await this.userModel.create(cUser);
         
     }
 
-    async findAll(){//TODO: Esto deberia devolver un DTO
+    async findAll(){
 
-        return await this.mongoService.getAllUsers();
+        return await this.mongoService.userRepository.findAll();
         
     }
 
     async findOne(user_uuid:string){
-        return await this.mongoService.findUser(user_uuid);
-        //return await this.userModel.findOne({_id: user_uuid}).exec();
+        return await this.mongoService.userRepository.findOne(user_uuid);
     }
 
     async update(uUser:User){
-        this.cacheService.setUserInCache(await this.mongoService.updateUser(uUser));
+        this.cacheService.UserCache.setInCache(uUser._id, await this.mongoService.userRepository.update(uUser._id,uUser));
         
-        return this.cacheService.userInCache(uUser._id);
+        return this.cacheService.UserCache.getInCacheOrBD(uUser._id);
     }
 
     async addNewUnit(cUnity: CreateUnitDto){
         cUnity._id = uuidv4();
-        let usr = await this.cacheService.userInCache(cUnity.user_uuid);
+        let usr = await this.cacheService.UserCache.getInCacheOrBD(cUnity.user_uuid);
         if(usr){
             usr.createdUnits.push(cUnity)
             await this.update(usr);

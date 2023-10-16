@@ -56,28 +56,11 @@ export class GameGateway {
     payload.user_uuid = client['user'].sub;
     this.gameService.placeUnit(payload);
   }
-
-  @SubscribeMessage('sendMoveUnit')
-  async sendMoveUnit(@ConnectedSocket() client: Socket, @MessageBody() payload:PlaceUnitDto){
-    payload.user_uuid = client['user'].sub;
-    this.gameService.moveUnit(payload);
-  }
+  
   @SubscribeMessage('sendActionUnit')
   async sendActionUnit(@ConnectedSocket() client: Socket, @MessageBody() payload:UnitActionDto){
     payload.user_uuid = client['user'].sub;
     this.gameService.actionUnit(payload);
-  }
-
-
-  @Public()
-  @SubscribeMessage('p')//Esto es para devolver uin mensaje
-  async pp(@ConnectedSocket() client: Socket){
-    
-    
-      let event = "publicChat";
-      let data:boolean = true;
-      return "{}";
-      //return{event, data }
   }
 }
 

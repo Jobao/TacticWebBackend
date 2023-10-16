@@ -7,6 +7,7 @@ import { PlaceUnitDto } from './dto/placeUnit.dto';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
+import { deprecate } from 'util';
 
 @Injectable()
 export class GameService {
@@ -17,7 +18,7 @@ export class GameService {
 
   async createGame(cGame: CreateGameDto) {
 
-    let user =await this.cacheService.userCache2.getInCacheOrBD(cGame.user_uuid);
+    let user =await this.cacheService.UserCache.getInCacheOrBD(cGame.user_uuid);
     
     if (user) {
       let game:Game = new Game();
@@ -46,22 +47,22 @@ export class GameService {
         user.joinGame(game._id);
         
         
-        this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.create(game));
-        this.cacheService.userCache2.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
+        this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.create(game));
+        this.cacheService.UserCache.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
     }
   }
 
   async joinGame(jGame: JoinGameDto) {
-    let user = await this.cacheService.userCache2.getInCacheOrBD(jGame.user_uuid);
-    let game = await this.cacheService.gameCache2.getInCacheOrBD(jGame.game_uuid);
+    let user = await this.cacheService.UserCache.getInCacheOrBD(jGame.user_uuid);
+    let game = await this.cacheService.GameCache.getInCacheOrBD(jGame.game_uuid);
 
     if (game && user) {
       if (!game.isEnd && !game.isStart) {
         if (game.joinGame(user._id)) {
           user.joinGame(game._id);
           
-          this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
-          this.cacheService.userCache2.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
+          this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
+          this.cacheService.UserCache.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
         } else {
           console.log('Ya estoy');
         }
@@ -74,23 +75,23 @@ export class GameService {
   }
   
   async leaveGame(lGame: JoinGameDto) {
-    let game = await this.cacheService.gameCache2.getInCacheOrBD(lGame.game_uuid);
+    let game = await this.cacheService.GameCache.getInCacheOrBD(lGame.game_uuid);
     
    if (game) {
      if (game.getUserIndexOnPlacedUnitList(lGame.user_uuid) !== -1){//Si no aparezco aca no hago nada directamente
       if (!game.isEnd) {
         if (!game.isStart) {
-         let user = await this.cacheService.userCache2.getInCacheOrBD(lGame.user_uuid);
+         let user = await this.cacheService.UserCache.getInCacheOrBD(lGame.user_uuid);
          if (user) {
            let remainUsers = game.leaveGame(lGame.user_uuid);
            user.leaveGame(game._id);
-           this.cacheService.userCache2.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
+           this.cacheService.UserCache.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
            if(remainUsers === 0){//si no queda nadie
-             this.cacheService.gameCache2.removeInCache((await this.mongoService.gameRepository.remove(game._id)).id)
+             this.cacheService.GameCache.removeInCache((await this.mongoService.gameRepository.remove(game._id)).id)
              //this.cacheService.removeGameInCache((await this.mongoService.removeGame(game))._id);
            }
            else{
-             this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
+             this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
            }
          }
         } else {
@@ -103,16 +104,14 @@ export class GameService {
 
 //TODO: Se podria implementar un sistema de votacion para iniciar el juego
   async startGame(sGame: CreateGameDto) {
-    let game = await this.cacheService.gameCache2.getInCacheOrBD(sGame.game_uuid);
+    let game = await this.cacheService.GameCache.getInCacheOrBD(sGame.game_uuid);
     if (game) {
-      console.log(game.isStart);
-      
       if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego
         if (game.placedUnitList.length >= 2) {
           game.isStart = true;
           game.turn = game.owner_uuid; //Le asigno el turno al owner
           game.gamePhase = 1; //Momento de poner unidades
-          this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
+          this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
         } else {
           console.log('Por ahora no se puede jugar solo :(');
         }
@@ -125,28 +124,24 @@ export class GameService {
   }
 
   async placeUnit(placeUnit: PlaceUnitDto) {
-    let user = await this.cacheService.userInCache(placeUnit.user_uuid);
+    let user = await this.cacheService.UserCache.getInCacheOrBD(placeUnit.user_uuid);
     if (user) {
       let unit = user.getUnit(placeUnit.unit_uuid);
       if(unit){
-        let game = await this.cacheService.gameInCache(placeUnit.game_uuid);
+        let game = await this.cacheService.GameCache.getInCacheOrBD(placeUnit.game_uuid);
         if (game) {
           //El juego existe
           if (game.canPlaceMoreUnit(user._id)) {
             if (game.gamePhase === 0 && !game.isStart && !game.isEnd) {
               //Estoy en fase, no empezo y no termino
               if (game.isInsideBoard(placeUnit.pos[0], placeUnit.pos[1])) {
-                  console.log('Adentro del tablero');
                 //Esta dentro del tablero
                 if (!game.isOcupiedByAnotherUnit(placeUnit.pos[0], placeUnit.pos[1])) {
                   //No esta ocupado por otra pieza
-                  console.log('no ocupado')
                   if (!game.isThisUnitPlace(placeUnit.unit_uuid, placeUnit.user_uuid)) {
-                      console.log('unidad no se encuentra en el tablero');
                       //TODO: cambiar los parametros, enviar la unidad directamente
                       if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.HP, unit.MP)) {
-                        this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
-                        console.log('place');
+                        this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
                       }
                       else{
                         console.log("la unidad no se pudo colocar (BD)");
@@ -172,33 +167,6 @@ export class GameService {
     }
   }
 
-  async moveUnit(placeUnit: PlaceUnitDto){
-    let user = await this.cacheService.userInCache(placeUnit.user_uuid);
-    if (user) {
-      if(user.isMyUnit(placeUnit.unit_uuid)){
-        let game = await this.cacheService.gameInCache(placeUnit.game_uuid);
-        if (game) {
-            //El juego existe
-            if (game.gamePhase === 1 && game.isStart && !game.isEnd) {
-              //Estoy en fase, empezo y no termino
-              if (game.isInsideBoard(placeUnit.pos[0], placeUnit.pos[1])) {
-                  console.log('Adentro del tablero');
-                    //Esta dentro del tablero
-                    if (!game.isOcupiedByAnotherUnit(placeUnit.pos[0], placeUnit.pos[1])) {
-                        console.log("libre");
-                        if(game.moveUnit(placeUnit.unit_uuid,placeUnit.user_uuid,placeUnit.pos[0],placeUnit.pos[1])){
-                          this.cacheService.setGameInCache(await this.mongoService.updateGame(game));  
-                          //await this.gameModel.findByIdAndUpdate(game._id, game).exec();
-                            console.log('move');
-                        }
-                    }
-                }
-            }
-        }
-      }
-    }
-  }
-
   /**
    * Controla todas las posibles acciones que puede hacer una unidad
    * @param payload 
@@ -206,10 +174,10 @@ export class GameService {
    */
   async actionUnit(payload:UnitActionDto)//TODO:Falta controlar que el juego este iniciado
   {
-    let game = await this.cacheService.gameInCache(payload.game_uuid);
+    let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
     if (game) {
       if (game.isMyTurn(payload.user_uuid)) {
-        let user = (await this.cacheService.userInCache(payload.user_uuid));
+        let user = (await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid));
         if (user) {
           if (game.isMyTurn(user._id)) {
             let placedUnit = game.getUnit(user._id, payload.unit_uuid);
@@ -224,7 +192,8 @@ export class GameService {
                       if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
                           if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
                             if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
-                              this.cacheService.setGameInCache( await this.mongoService.updateGame(game));
+                              this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
+                              //this.cacheService.setGameInCache( await this.mongoService.updateGame(game));
                             }
                           }
                       }
@@ -244,12 +213,13 @@ export class GameService {
 
   async getGame(game_uuid:string){
     //let game = await this.cacheService.gameInCache(game_uuid);
-    let game = await this.cacheService.gameCache2.getInCacheOrBD(game_uuid);
+    let game = await this.cacheService.GameCache.getInCacheOrBD(game_uuid);
     if(game){
       return game;
     }
     else{
        return 'inexistent game';
+       
     }
   }
 
