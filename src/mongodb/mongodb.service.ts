@@ -10,8 +10,7 @@ import { AuthMongoRepository } from './repositories/authMongoRepository';
 
 @Injectable()
 export class MongodbService {
-    constructor(@InjectModel(ClassSkill.name) private classSkillModel:Model<ClassSkillDocument>, 
-    @InjectModel(UnitClass.name) private unitClassModel:Model<UnitClassDocument>,
+    constructor(@InjectModel(ClassSkill.name) private classSkillModel:Model<ClassSkillDocument>,
     readonly gameRepository:GameMongoRepository,
     readonly userRepository:UserMongoRepository,
     readonly unitClassRepository:UnitClassMongoRepository,
@@ -23,19 +22,6 @@ export class MongodbService {
     
     async createSkill(nSkill:ClassSkill){
         await this.classSkillModel.create(nSkill);
-    }
-
-    //------------------------CLASS------------------CLASS-------------------CLASS--------
-    async createUnitClass(nclass:UnitClass){
-        await this.unitClassModel.create(nclass);
-    }
-
-    async getAllClasses(){
-        return await this.unitClassModel.find();
-    }
-
-    async findClass(classId:string){
-        return await this.unitClassModel.findById(classId);
     }
 
 }

@@ -7,11 +7,11 @@ export class UnitClasesService {
     constructor(private mongooseService:MongodbService){}
 
     addNewClass(nClass:UnitClass){
-        this.mongooseService.createUnitClass(nClass);
+        this.mongooseService.unitClassRepository.create(nClass);
     }
 
     getAllClasses(){
-        return this.mongooseService.getAllClasses();
+        return this.mongooseService.unitClassRepository.findAll();
     }
 
     changeClass(nClass){
