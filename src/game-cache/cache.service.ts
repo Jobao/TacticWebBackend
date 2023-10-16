@@ -9,7 +9,7 @@ import { BaseCache } from './baseCache';
 export class CacheService {
     constructor(private mongoService:MongodbService){
 
-        this.unitClassCache = new BaseCache<UnitClass>(mongoService.unitClassrepository);
+        this.unitClassCache = new BaseCache<UnitClass>(mongoService.unitClassRepository);
         this.gameCache = new BaseCache<Game>(mongoService.gameRepository);
         this.userCache = new BaseCache<User>(mongoService.userRepository);
 

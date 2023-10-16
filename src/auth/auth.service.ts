@@ -16,7 +16,7 @@ export class AuthService {
 
     async login(payload: LoginDto){
         //let t = this.mongoService.
-        let r= await this.mongoService.findAuth(payload.user);
+        let r= await this.mongoService.authMongoRepository.findOne(payload.user);
         if(r){
             if(r.checkPassword(payload.pass)){
                 
@@ -34,7 +34,7 @@ export class AuthService {
         auth._id = payload.user;
         auth.pass = payload.pass;
         auth.uuid = uuid;
-        this.mongoService.createAuth(auth);
+        this.mongoService.authMongoRepository.create(auth);
         //this.authModel.create({_id: payload.user, pass: payload.pass, uuid: uuid})
         this.userService.create({_id: uuid, user: payload.user, displayName: payload.displayName})
 

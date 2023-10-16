@@ -20,7 +20,6 @@ export class UserService {
         user.user = cUser.user;
         user.displayName = cUser.displayName;
         await this.mongoService.userRepository.create(user);
-        //await this.userModel.create(cUser);
         
     }
 
