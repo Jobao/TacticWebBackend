@@ -22,7 +22,7 @@ constructor(private readonly model:Model<X>){}
     }
 
     async update(uuid:string, doc:X){
-        return await this.model.findByIdAndUpdate(uuid,doc).exec();
+        return await this.model.findByIdAndUpdate(uuid,doc, {new:true}).exec();
     }
 
     async remove(uuid:string){

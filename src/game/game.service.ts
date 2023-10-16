@@ -103,15 +103,16 @@ export class GameService {
 
 //TODO: Se podria implementar un sistema de votacion para iniciar el juego
   async startGame(sGame: CreateGameDto) {
-    let game = await this.cacheService.gameInCache(sGame.game_uuid);
-    //let game = await this.cacheService.gameCache2.inCache(sGame.game_uuid);
+    let game = await this.cacheService.gameCache2.getInCacheOrBD(sGame.game_uuid);
     if (game) {
+      console.log(game.isStart);
+      
       if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego
         if (game.placedUnitList.length >= 2) {
           game.isStart = true;
           game.turn = game.owner_uuid; //Le asigno el turno al owner
           game.gamePhase = 1; //Momento de poner unidades
-          this.cacheService.setGameInCache(await this.mongoService.updateGame(game));
+          this.cacheService.gameCache2.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
         } else {
           console.log('Por ahora no se puede jugar solo :(');
         }
