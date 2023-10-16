@@ -6,9 +6,9 @@ import { User, UserSchema } from 'src/user/user.schema';
 import { Auth, AuthSchema } from 'src/auth/auth.schema';
 import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema';
 import { UnitClass, UnitClassSchema } from 'src/game/schemas/unitClass.schema';
-import { GameMongoRepository } from './repositories/gameMongoModel';
-import { UserMongoRepository } from './repositories/userMongoModel';
-import { UnitClassMongoRepository } from './repositories/unitClassMongoModel';
+import { GameMongoRepository } from './repositories/gameMongoRepository';
+import { UserMongoRepository } from './repositories/userMongoRepository';
+import { UnitClassMongoRepository } from './repositories/unitClassMongoRepository';
 import { AuthMongoRepository } from './repositories/authMongoRepository';
 import { ClassSkillMongoRepository } from './repositories/classSkillRepository';
 

@@ -7,12 +7,10 @@ import { UserService } from 'src/user/user.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Auth, AuthSchema } from './auth.schema';
 import { User, UserSchema } from 'src/user/user.schema';
-import { MongodbService } from 'src/mongodb/mongodb.service';
 import { Game, GameSchema } from 'src/game/schemas/game.schema';
 import { CacheService } from 'src/game-cache/cache.service';
 import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema';
 import { UnitClass, UnitClassSchema } from 'src/game/schemas/unitClass.schema';
-import { GameMongoRepository } from 'src/mongodb/repositories/gameMongoModel';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
 
 @Module({

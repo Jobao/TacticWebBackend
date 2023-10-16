@@ -1,4 +1,4 @@
-import { BaseMongoRepository } from "./baseMongoModel";
+import { BaseMongoRepository } from "./baseMongoRepository";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 import { Injectable } from "@nestjs/common";
