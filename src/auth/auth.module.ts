@@ -12,7 +12,7 @@ import { Game, GameSchema } from 'src/game/schemas/game.schema';
 import { CacheService } from 'src/game-cache/cache.service';
 import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema';
 import { UnitClass, UnitClassSchema } from 'src/game/schemas/unitClass.schema';
-import { GameMongoModel } from 'src/mongodb/gameMongoModel';
+import { GameMongoRepository } from 'src/mongodb/repositories/gameMongoModel';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
 
 @Module({

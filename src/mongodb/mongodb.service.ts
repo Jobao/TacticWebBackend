@@ -6,18 +6,18 @@ import { ClassSkill, ClassSkillDocument } from 'src/game/schemas/classSkill.sche
 import { Game, GameDocument } from 'src/game/schemas/game.schema';
 import { UnitClass, UnitClassDocument } from 'src/game/schemas/unitClass.schema';
 import { User, UserDocument } from 'src/user/user.schema';
-import { GameMongoModel } from './gameMongoModel';
-import { UserMongoModel } from './userMongoModel';
-import { UnitClassMongoModel } from './unitClassMongoModel';
+import { GameMongoRepository } from './repositories/gameMongoModel';
+import { UserMongoRepository } from './repositories/userMongoModel';
+import { UnitClassMongoRepository } from './repositories/unitClassMongoModel';
 
 @Injectable()
 export class MongodbService {
     constructor(@InjectModel(Auth.name) private authModel:Model<AuthDocument>,
     @InjectModel(ClassSkill.name) private classSkillModel:Model<ClassSkillDocument>, 
     @InjectModel(UnitClass.name) private unitClassModel:Model<UnitClassDocument>,
-    readonly gameRepository:GameMongoModel,
-    readonly userRepository:UserMongoModel,
-    readonly unitClassrepository:UnitClassMongoModel){
+    readonly gameRepository:GameMongoRepository,
+    readonly userRepository:UserMongoRepository,
+    readonly unitClassrepository:UnitClassMongoRepository){
         
     }
 

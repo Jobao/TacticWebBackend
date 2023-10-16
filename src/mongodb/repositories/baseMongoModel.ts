@@ -1,10 +1,9 @@
-import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
 
 
 //TODO: ACA me quede, quiero ver la manera de hacer todo mas generico y evitar tanto codigo
 //Hacer lo posible para pasar un MongoModel al cache
-export class BaseMongoModel<X>{
+export class BaseMongoRepository<X>{
 constructor(private readonly model:Model<X>){}
 
     async create(doc: object){
