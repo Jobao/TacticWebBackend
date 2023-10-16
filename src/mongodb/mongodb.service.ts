@@ -7,21 +7,15 @@ import { GameMongoRepository } from './repositories/gameMongoModel';
 import { UserMongoRepository } from './repositories/userMongoModel';
 import { UnitClassMongoRepository } from './repositories/unitClassMongoModel';
 import { AuthMongoRepository } from './repositories/authMongoRepository';
+import { ClassSkillMongoRepository } from './repositories/classSkillRepository';
 
 @Injectable()
 export class MongodbService {
-    constructor(@InjectModel(ClassSkill.name) private classSkillModel:Model<ClassSkillDocument>,
-    readonly gameRepository:GameMongoRepository,
+    constructor(readonly gameRepository:GameMongoRepository,
     readonly userRepository:UserMongoRepository,
     readonly unitClassRepository:UnitClassMongoRepository,
-    readonly authMongoRepository:AuthMongoRepository){
+    readonly authRepository:AuthMongoRepository,
+    readonly classSkillRepository:ClassSkillMongoRepository){
         
     }
-
-    //-------------------------SKILLS---------------SKILLS-------------------SKILLS---------
-    
-    async createSkill(nSkill:ClassSkill){
-        await this.classSkillModel.create(nSkill);
-    }
-
 }

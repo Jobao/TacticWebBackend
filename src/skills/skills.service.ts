@@ -16,7 +16,7 @@ export class SkillsService {
         nSkill.name= "FireBall";
         nSkill.range = 6;
         nSkill.requiredLvl = 0;
-        await this.mongooseService.createSkill(nSkill);
+        await this.mongooseService.classSkillRepository.create(nSkill);
     }
 
 }
