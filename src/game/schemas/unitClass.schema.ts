@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { TupleAttribute } from "./attribute.schema";
-import { TupleRequiredClass } from "./requiredClass.schema";
+import { TupleRequiredClass, TupleRequiredClassSchema } from "./requiredClass.schema";
 import { Document } from "mongoose";
 
 export type UnitClassDocument = UnitClass & Document;
@@ -12,15 +12,29 @@ export class UnitClass{
     @Prop([TupleAttribute])
     baseAttributes:TupleAttribute[];
 
-    @Prop([TupleRequiredClass])
+    @Prop({type:[TupleRequiredClassSchema], autopopulate:true})
     requiredClass:TupleRequiredClass[];
-
 
     @Prop()
     requiredExp:number[];
+
+    canUseThisUnitClass(t:TupleRequiredClass[]){
+        let cant = this.requiredClass.length;
+        //Por cada elemento requerido, tengo que ver si en T esta
+        this.requiredClass.forEach(element=>{
+            t.forEach(element2 => {
+                if(element._id === element2._id){
+                    if(element2.experience >= element.experience){
+                        cant--;
+                    }
+                }
+            });
+        });
+        return cant === 0;
+
+    }
 }
 
 export const UnitClassSchema = SchemaFactory.createForClass(UnitClass);
-//console.log(GameSchema.paths);
 UnitClassSchema.plugin(require('mongoose-autopopulate'));
 UnitClassSchema.loadClass(UnitClass);

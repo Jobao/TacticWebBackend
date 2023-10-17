@@ -28,7 +28,7 @@ export class CacheService {
     }
     //---------------------UnitClass---------------UnitClass-----------
 
-    unitClassCache:BaseCache<UnitClass>;
+    private unitClassCache:BaseCache<UnitClass>;
 
     public get UnitClassCache(): BaseCache<UnitClass>{
         return this.unitClassCache;

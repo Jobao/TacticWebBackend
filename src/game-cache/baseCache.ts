@@ -3,7 +3,7 @@ export class BaseCache<T>{
         this.cache = new Map<string, T>();
         this.mongo = mongo;
     }
-    mongo:any;
+    private mongo:any;
 
     cache:Map<string, T>;
 

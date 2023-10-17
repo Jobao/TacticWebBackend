@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { CacheService } from 'src/game-cache/cache.service';
+import { Unit } from 'src/game/schemas/unit.schema';
 
 @Injectable()
 export class UserService {
@@ -40,10 +41,12 @@ export class UserService {
     }
 
     async addNewUnit(cUnity: CreateUnitDto){
-        cUnity._id = uuidv4();
         let usr = await this.cacheService.UserCache.getInCacheOrBD(cUnity.user_uuid);
         if(usr){
-            usr.createdUnits.push(cUnity)
+            let unit = new Unit();
+            unit._id = uuidv4();
+            unit.name = cUnity.name;
+            usr.createdUnits.push(unit)
             await this.update(usr);
             
         }

@@ -140,7 +140,7 @@ export class GameService {
                   //No esta ocupado por otra pieza
                   if (!game.isThisUnitPlace(placeUnit.unit_uuid, placeUnit.user_uuid)) {
                       //TODO: cambiar los parametros, enviar la unidad directamente
-                      if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.HP, unit.MP)) {
+                      if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.currentHP, unit.currentMP)) {
                         this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
                       }
                       else{

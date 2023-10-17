@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { TupleRequiredClass } from './requiredClass.schema';
+import { TupleRequiredClass, TupleRequiredClassSchema } from './requiredClass.schema';
 import { TupleStats } from './stats.schema';
+import { UnitClass } from './unitClass.schema';
 
 export type UnitDocument = Unit & Document;
 
@@ -16,21 +17,35 @@ export class Unit{
     currentClassId:string;
 
     @Prop()
-    HP:number;
+    currentHP:number;
 
     @Prop()
-    MP:number;
+    currentMP:number;
 
     @Prop()
     battleActions:string;
 
-    @Prop([TupleRequiredClass])
+    @Prop({type:[TupleRequiredClassSchema], autopopulate:true})
     classExperience:TupleRequiredClass[]
 
     @Prop([TupleStats])
     stats:TupleStats[];
+
+    changeClass(nClass:UnitClass){
+        this.currentClassId = nClass._id;
+        //calcular stats
+    }
+
+    increaseClassExperience(amount:number){
+        this.classExperience.find(x =>{
+            if(x._id ===this.currentClassId){
+                x.experience+=amount;
+            }
+        })
+    }
     
 }
 
 export const UnitSchema = SchemaFactory.createForClass(Unit);
+UnitSchema.plugin(require('mongoose-autopopulate'));
 UnitSchema.loadClass(Unit);

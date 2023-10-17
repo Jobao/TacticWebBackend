@@ -11,10 +11,11 @@ import { MongodbModule } from 'src/mongodb/mongodb.module';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { UnitClasesModule } from 'src/unit-clases/unit-clases.module';
 import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
+import { CacheService } from 'src/game-cache/cache.service';
 
 @Module({
   imports:[AuthModule, UserModule, GameModule, MongodbModule, UnitClasesModule],
   controllers: [AdminController],
-  providers:[SkillsService, MongodbService, UnitClasesService]
+  providers:[SkillsService, MongodbService, UnitClasesService, CacheService]
 })
 export class AdminModule {}

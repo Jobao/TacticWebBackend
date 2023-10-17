@@ -1,8 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import { ClassSkill, ClassSkillDocument } from 'src/game/schemas/classSkill.schema';
-import { UnitClass, UnitClassDocument } from 'src/game/schemas/unitClass.schema';
 import { GameMongoRepository } from './repositories/gameMongoRepository';
 import { UserMongoRepository } from './repositories/userMongoRepository';
 import { UnitClassMongoRepository } from './repositories/unitClassMongoRepository';
@@ -16,6 +12,5 @@ export class MongodbService {
     readonly unitClassRepository:UnitClassMongoRepository,
     readonly authRepository:AuthMongoRepository,
     readonly classSkillRepository:ClassSkillMongoRepository){
-        
     }
 }
