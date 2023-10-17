@@ -6,11 +6,12 @@ import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { CacheService } from 'src/game-cache/cache.service';
 import { Unit } from 'src/game/schemas/unit.schema';
+import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
 
 @Injectable()
 export class UserService {
     constructor(private mongoService:MongodbService,
-    private cacheService:CacheService){}
+    private cacheService:CacheService, private unitClassService:UnitClasesService){}
     /**
      * NO llamar directamente de los controllers/gateway
      * Llamar auth.Create
@@ -44,10 +45,20 @@ export class UserService {
         let usr = await this.cacheService.UserCache.getInCacheOrBD(cUnity.user_uuid);
         if(usr){
             let unit = new Unit();
-            unit._id = uuidv4();
-            unit.name = cUnity.name;
-            usr.createdUnits.push(unit)
-            await this.update(usr);
+            unit.classExperience=[];
+            let uClass = this.unitClassService.canUseThisClass(cUnity.class_id, unit);
+            if(uClass){
+                unit._id = uuidv4();
+                unit.name = cUnity.name;
+                unit.changeClass(uClass);
+                unit.classExperience.push({_id: uClass._id, experience:0});
+                usr.createdUnits.push(unit)
+                await this.update(usr);
+            }
+            else{
+                console.log("CANT")
+            }
+            
             
         }
     }

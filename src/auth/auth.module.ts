@@ -12,6 +12,7 @@ import { CacheService } from 'src/game-cache/cache.service';
 import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema';
 import { UnitClass, UnitClassSchema } from 'src/game/schemas/unitClass.schema';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
+import { UserModule } from 'src/user/user.module';
 
 @Module({
   imports: [
@@ -21,10 +22,10 @@ import { MongodbModule } from 'src/mongodb/mongodb.module';
       signOptions: { expiresIn: '1h' },
     }),
     MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema}, {name: Auth.name , schema: AuthSchema}, {name: ClassSkill.name , schema: ClassSkillSchema},{name: UnitClass.name , schema: UnitClassSchema}])
-  ,MongodbModule],
+  ,MongodbModule, UserModule],
   controllers: [AuthController],
-  providers: [AuthService,UserService, CacheService],
-  exports:[AuthService, UserService]
+  providers: [AuthService, CacheService],
+  exports:[AuthService]
 })
 export class AuthModule {}
 

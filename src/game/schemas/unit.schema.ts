@@ -32,8 +32,14 @@ export class Unit{
     stats:TupleStats[];
 
     changeClass(nClass:UnitClass){
-        this.currentClassId = nClass._id;
-        //calcular stats
+        if (this.currentClassId !==nClass._id) {
+            this.currentClassId = nClass._id;
+            //calcular stats
+            return true;
+        }
+        
+        return false;
+        
     }
 
     increaseClassExperience(amount:number){

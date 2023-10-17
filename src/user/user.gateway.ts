@@ -29,6 +29,6 @@ export class UserGateway {
   newUnit(client:Socket, payload: CreateUnitDto){
     payload.user_uuid = client['user'].sub;
     
-    this.userService.addNewUnit(payload);
+     return this.userService.addNewUnit(payload);
   }
 }

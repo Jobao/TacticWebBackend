@@ -23,10 +23,12 @@ export class UnitClasesService {
      * @param unit 
      * @returns 
      */
-    tryChangeClass(class_id:string, unit:Unit){
+    canUseThisClass(class_id:string, unit:Unit){
         let uClass =this.cacheService.UnitClassCache.inCache(class_id);
-        if(uClass.canUseThisUnitClass(unit.classExperience)){
-            return uClass;
+        if (uClass) {
+            if(uClass.canUseThisUnitClass(unit.classExperience)){
+                return uClass;
+            }
         }
         return null;
     }
