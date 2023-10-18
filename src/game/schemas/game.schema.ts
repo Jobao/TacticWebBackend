@@ -95,7 +95,6 @@ export class Game{
     }
 
     isMyTurn(uuid:string):boolean{
-        //console.log(GameSchema.paths);
         return this.turn===uuid;
     }
 

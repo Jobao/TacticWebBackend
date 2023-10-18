@@ -7,7 +7,6 @@ import { PlaceUnitDto } from './dto/placeUnit.dto';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
-import { deprecate } from 'util';
 
 @Injectable()
 export class GameService {
@@ -174,6 +173,7 @@ export class GameService {
    */
   async actionUnit(payload:UnitActionDto)//TODO:Falta controlar que el juego este iniciado
   {
+    let update = false;
     let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
     if (game) {
       if (game.isMyTurn(payload.user_uuid)) {
@@ -186,14 +186,14 @@ export class GameService {
                 switch (payload.action.type) {
                   case "WAIT":
                     placedUnit.wait();
+                    update = true;
                     break;
                   case "MOVE":
                     if (placedUnit.canMove) {
                       if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
                           if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
                             if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
-                              this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
-                              //this.cacheService.setGameInCache( await this.mongoService.updateGame(game));
+                              update = true;
                             }
                           }
                       }
@@ -202,7 +202,10 @@ export class GameService {
                   default:
                     break;
                 }
-                //TODO: Ver la manera de actualizar una sola vez, y no en cada case
+                //
+                  if (update) {
+                    this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game)); 
+                  }              
               }
             }
           }
