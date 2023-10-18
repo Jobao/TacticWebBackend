@@ -173,16 +173,16 @@ export class GameService {
    */
   async actionUnit(payload:UnitActionDto)//TODO:Falta controlar que el juego este iniciado
   {
-    let update = false;
     let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
     if (game) {
-      if (game.isMyTurn(payload.user_uuid)) {
-        let user = (await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid));
-        if (user) {
-          if (game.isMyTurn(user._id)) {
+      if (game.getUserIndexOnPlacedUnitList(payload.user_uuid) !== -1) {//Existo en este juego
+        if (game.isMyTurn(payload.user_uuid)) {
+          let user = (await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid));
+          if (user) {
             let placedUnit = game.getUnit(user._id, payload.unit_uuid);
             if (placedUnit) {
               if (placedUnit.canPerformActionThisTurn) {
+                let update = false;
                 switch (payload.action.type) {
                   case "WAIT":
                     placedUnit.wait();
@@ -191,21 +191,20 @@ export class GameService {
                   case "MOVE":
                     if (placedUnit.canMove) {
                       if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
-                          if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
-                            if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
-                              update = true;
+                        if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
+                          if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
+                            update = true;
                             }
                           }
+                        }
                       }
-                    }
                     break;
                   default:
                     break;
-                }
-                //
-                  if (update) {
-                    this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game)); 
-                  }              
+                  }
+                if (update) {
+                  this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game)); 
+                }              
               }
             }
           }
