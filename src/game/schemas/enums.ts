@@ -31,3 +31,8 @@ export enum StatsName{
     Dodge = "DODGE"
 
 }
+
+export enum GamePhase{
+    DRAFT = "DRAFT",
+    INGAME = "INGAME"
+}

@@ -38,7 +38,7 @@ export class Game{
     turn:string;
 
     @Prop()
-    gamePhase: number;
+    gamePhase: string;
 
     isInsideBoard(x:number, y:number){
         return((x >=0 && x< this.sizeX) &&(y >=0 && y< this.sizeY))

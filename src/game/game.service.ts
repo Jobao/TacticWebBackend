@@ -7,6 +7,7 @@ import { PlaceUnitDto } from './dto/placeUnit.dto';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
+import { GamePhase } from './schemas/enums';
 
 @Injectable()
 export class GameService {
@@ -41,7 +42,7 @@ export class GameService {
         game.sizeX = 10;
         game.sizeY = 10
         //FIXME: Ver porque gamephase me da error, aca le asigno un valor magico
-        game.gamePhase = 0;
+        game.gamePhase = GamePhase.DRAFT;
         game.joinGame(cGame.user_uuid);
         user.joinGame(game._id);
         
@@ -76,8 +77,8 @@ export class GameService {
   async leaveGame(lGame: JoinGameDto) {
     let game = await this.cacheService.GameCache.getInCacheOrBD(lGame.game_uuid);
     
-   if (game) {
-     if (game.getUserIndexOnPlacedUnitList(lGame.user_uuid) !== -1){//Si no aparezco aca no hago nada directamente
+    if (game) {
+      if (game.getUserIndexOnPlacedUnitList(lGame.user_uuid) !== -1){//Si no aparezco aca no hago nada directamente
       if (!game.isEnd) {
         if (!game.isStart) {
          let user = await this.cacheService.UserCache.getInCacheOrBD(lGame.user_uuid);
@@ -107,9 +108,10 @@ export class GameService {
     if (game) {
       if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego
         if (game.placedUnitList.length >= 2) {
+          //TODO:Tengo que ver que todos colocaron sus unidades
           game.isStart = true;
           game.turn = game.owner_uuid; //Le asigno el turno al owner
-          game.gamePhase = 1; //Momento de poner unidades
+          game.gamePhase = GamePhase.INGAME; 
           this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
         } else {
           console.log('Por ahora no se puede jugar solo :(');
@@ -131,7 +133,7 @@ export class GameService {
         if (game) {
           //El juego existe
           if (game.canPlaceMoreUnit(user._id)) {
-            if (game.gamePhase === 0 && !game.isStart && !game.isEnd) {
+            if (game.gamePhase === GamePhase.DRAFT && !game.isStart && !game.isEnd) {
               //Estoy en fase, no empezo y no termino
               if (game.isInsideBoard(placeUnit.pos[0], placeUnit.pos[1])) {
                 //Esta dentro del tablero
@@ -175,36 +177,38 @@ export class GameService {
   {
     let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
     if (game) {
-      if (game.getUserIndexOnPlacedUnitList(payload.user_uuid) !== -1) {//Existo en este juego
-        if (game.isMyTurn(payload.user_uuid)) {
-          let user = (await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid));
-          if (user) {
-            let placedUnit = game.getUnit(user._id, payload.unit_uuid);
-            if (placedUnit) {
-              if (placedUnit.canPerformActionThisTurn) {
-                let update = false;
-                switch (payload.action.type) {
-                  case "WAIT":
-                    placedUnit.wait();
-                    update = true;
-                    break;
-                  case "MOVE":
-                    if (placedUnit.canMove) {
-                      if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
-                        if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
-                          if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
-                            update = true;
+      if (game.isStart) {
+        if (game.getUserIndexOnPlacedUnitList(payload.user_uuid) !== -1) {//Existo en este juego
+          if (game.isMyTurn(payload.user_uuid)) {
+            let user = (await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid));
+            if (user) {
+              let placedUnit = game.getUnit(user._id, payload.unit_uuid);
+              if (placedUnit) {
+                if (placedUnit.canPerformActionThisTurn) {
+                  let update = false;
+                  switch (payload.action.type) {
+                    case "WAIT":
+                      placedUnit.wait();
+                      update = true;
+                      break;
+                    case "MOVE":
+                      if (placedUnit.canMove) {
+                        if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
+                          if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
+                            if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
+                              update = true;
+                              }
                             }
                           }
                         }
-                      }
-                    break;
-                  default:
-                    break;
-                  }
-                if (update) {
-                  this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game)); 
-                }              
+                      break;
+                    default:
+                      break;
+                    }
+                  if (update) {
+                    this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game)); 
+                  }              
+                }
               }
             }
           }
