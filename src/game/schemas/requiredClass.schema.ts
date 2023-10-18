@@ -9,6 +9,12 @@ export class TupleRequiredClass{
     _id:string;
     @Prop()
     experience:number;
+
+    addExperience(amount:number){
+        this.experience += amount;
+
+    }
 }
 
 export const TupleRequiredClassSchema = SchemaFactory.createForClass(TupleRequiredClass);
+TupleRequiredClassSchema.loadClass(TupleRequiredClass);

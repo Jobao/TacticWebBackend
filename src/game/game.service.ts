@@ -202,6 +202,8 @@ export class GameService {
                           }
                         }
                       break;
+                    case "ATTACK":
+                      break;
                     default:
                       break;
                     }

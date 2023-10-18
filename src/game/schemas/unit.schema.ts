@@ -35,6 +35,12 @@ export class Unit{
     changeClass(nClass:UnitClass){
         if (this.currentClassId !==nClass._id) {
             this.currentClassId = nClass._id;
+            if(!this.tupleActual()){
+                let tpRC = new TupleRequiredClass();
+                tpRC._id = nClass._id;
+                tpRC.experience = 0;
+                this.classExperience.push(tpRC);
+            }
             this.calculeStats(nClass);
             return true;
         }
@@ -43,12 +49,17 @@ export class Unit{
     }
 
     increaseClassExperience(amount:number){
-        this.classExperience.find(x =>{
-            if(x._id ===this.currentClassId){
-                x.experience+=amount;
-                //TODO: calcular si subio de nivel
-            }
-        })
+        let tp = this.tupleActual();
+        if(tp){
+            tp.addExperience(amount);
+            //TODO: COntrolar si sube de nivel
+        }
+        //MAYBE: si no existe deberia crear nuevos tuples ???????
+        
+    }
+
+    tupleActual(){
+        return this.classExperience.find(x =>{return x._id ===this.currentClassId})
     }
 
 
@@ -59,7 +70,12 @@ export class Unit{
                 case AttributesName.STAMINA:
                     this.stats.push({statsName:StatsName.HP, amount: element.amount* 100})
                     break;
-            
+            case AttributesName.SPIRIT:
+            case AttributesName.STRENGTH:
+            case AttributesName.INTELLECT:
+            case AttributesName.SPEED:
+            case AttributesName.COINS:
+            case AttributesName.DEXTERY:
                 default:
                     break;
             }

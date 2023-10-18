@@ -7,7 +7,7 @@ import { UnitClassMongoRepository } from 'src/mongodb/repositories/unitClassMong
 @Injectable()
 export class UnitClasesService {
     constructor(private mongooseService:UnitClassMongoRepository, private cacheService:CacheService){
-        this.loadCache();
+        this.loadAllClassesInCache();
     }
 
     addNewClass(nClass:UnitClass){
@@ -26,8 +26,6 @@ export class UnitClasesService {
     canUseThisClass(class_id:string, unit:Unit){
         let uClass =this.cacheService.UnitClassCache.inCache(class_id);
         if (uClass) {
-            console.log(uClass);
-            
             if(uClass.canUseThisUnitClass(unit.classExperience)){
                 return uClass;
             }
@@ -35,7 +33,7 @@ export class UnitClasesService {
         return null;
     }
 
-    loadCache(){
+    loadAllClassesInCache(){
         this.getAllClasses().then((x) =>{
             x.forEach(element => {
                 this.cacheService.UnitClassCache.setInCache(element._id, element);

@@ -7,6 +7,7 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 import { CacheService } from 'src/game-cache/cache.service';
 import { Unit } from 'src/game/schemas/unit.schema';
 import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
+import { TupleRequiredClass } from 'src/game/schemas/requiredClass.schema';
 
 @Injectable()
 export class UserService {
@@ -51,7 +52,6 @@ export class UserService {
                 unit._id = uuidv4();
                 unit.name = cUnity.name;
                 unit.changeClass(uClass);
-                unit.classExperience.push({_id: uClass._id, experience:0});
                 usr.createdUnits.push(unit)
                 await this.update(usr);
             }
