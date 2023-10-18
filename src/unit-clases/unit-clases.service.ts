@@ -26,6 +26,8 @@ export class UnitClasesService {
     canUseThisClass(class_id:string, unit:Unit){
         let uClass =this.cacheService.UnitClassCache.inCache(class_id);
         if (uClass) {
+            console.log(uClass);
+            
             if(uClass.canUseThisUnitClass(unit.classExperience)){
                 return uClass;
             }

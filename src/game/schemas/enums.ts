@@ -1,8 +1,8 @@
 export enum TypeEffect {
-    Damage,
-    Recover,
-    Buff,
-    Debuff
+    Damage = "DAMAGE",
+    Recover = "RECOVER",
+    Buff = "BUFF",
+    Debuff = "DEBUFF"
 }
 export enum TypeAffect {
     Self,
@@ -21,13 +21,13 @@ export enum AttributesName{
 }
 
 export enum StatsName{
-    HP,//En base la stamina
-    MP,//En base al spirit
-    PA,//Physic Attack
-    MA,//Magical Attack
-    MPRegen,
-    PhysicDefense,
-    MagicalDefence,
-    Dodge
+    HP = "HP",//En base la stamina
+    MP = "MP",//En base al spirit
+    PA = "PA",//Physic Attack
+    MA = "MA",//Magical Attack
+    MPRegen = "MPR",
+    PhysicDefense= "PHD",
+    MagicalDefence="MD",
+    Dodge = "DODGE"
 
 }
