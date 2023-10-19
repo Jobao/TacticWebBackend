@@ -11,11 +11,13 @@ import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema
 import { UnitClass, UnitClassSchema } from 'src/game/schemas/unitClass.schema';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
 import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
+import { UserController } from './user.controller';
 
 @Module({
     imports:[MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema}, {name: Auth.name , schema: AuthSchema}, {name: ClassSkill.name , schema: ClassSkillSchema},{name: UnitClass.name , schema: UnitClassSchema}]),
             MongodbModule],
     providers:[UserGateway, UserService, CacheService, UnitClasesService],
-    exports:[UserService, UnitClasesService]
+    exports:[UserService, UnitClasesService],
+    controllers: [UserController]
 })
 export class UserModule {}

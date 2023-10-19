@@ -8,7 +8,6 @@ import { UserModule } from './user/user.module';
 import { GameModule } from './game/game.module';
 import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
-import { AuthGuard } from './auth/auth.guard';
 import { AdminController } from './admin/admin.controller';
 import { AdminModule } from './admin/admin.module';
 import { CacheModule } from './game-cache/cache.module';
@@ -22,7 +21,11 @@ import { UnitClasesModule } from './unit-clases/unit-clases.module';
     return connection;
   }}), ChatModule, UserModule, GameModule, AuthModule, AdminModule, CacheModule, MongodbModule, SkillsModule, UnitClasesModule],
   controllers: [AppController],
-  providers: [AppService, RoomGateway,{provide: APP_GUARD,
-    useClass: AuthGuard,}],
+  providers: [AppService, RoomGateway,],
 })
 export class AppModule {}
+
+
+/*{provide: APP_GUARD,
+    useClass: AuthGuardGateway,},{provide: APP_GUARD,
+      useClass: AuthGuardHTTP,}*/

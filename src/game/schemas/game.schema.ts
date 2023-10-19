@@ -194,7 +194,6 @@ export class Game{
 }
 
 export const GameSchema = SchemaFactory.createForClass(Game);
-//console.log(GameSchema.paths);
 GameSchema.plugin(require('mongoose-autopopulate'));
 GameSchema.loadClass(Game); //https://github.com/nestjs/mongoose/issues/408#issuecomment-917179516
 

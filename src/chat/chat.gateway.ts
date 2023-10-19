@@ -3,8 +3,8 @@ import {Socket, Server} from 'socket.io'
 import { ChatDto } from './dto/chat.dto';
 import { PrivateChatDto } from './dto/privateChat.dto';
 import { serverVar, setServer } from 'src/server';
-import { AuthGuard } from 'src/auth/auth.guard';
 import { Catch, UnauthorizedException, UseFilters, UseGuards, WsExceptionFilter } from '@nestjs/common';
+import { AuthGuard } from 'src/auth/auth.guard';
 
 @UseGuards(AuthGuard)
 @WebSocketGateway({

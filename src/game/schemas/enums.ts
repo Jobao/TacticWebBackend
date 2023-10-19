@@ -36,3 +36,13 @@ export enum GamePhase{
     DRAFT = "DRAFT",
     INGAME = "INGAME"
 }
+
+export enum EquipmentSlot{
+    HEAD= "HEAD",
+    CHEST="CHEST",
+    GLOVES= "GLOVES",
+    FEET="FEET",
+    MAINHAND= "MAINHAND",
+    SECONDHAND = "SECONDHAND",
+    AMULET = "AMULET"
+}

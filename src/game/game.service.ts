@@ -203,6 +203,11 @@ export class GameService {
                         }
                       break;
                     case "ATTACK":
+                      if(placedUnit.canAttack){
+                        if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
+                          
+                        }
+                      }
                       break;
                     default:
                       break;

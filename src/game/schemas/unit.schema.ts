@@ -3,6 +3,7 @@ import { TupleRequiredClass, TupleRequiredClassSchema } from './requiredClass.sc
 import { TupleStats, TupleStatsSchema } from './stats.schema';
 import { UnitClass } from './unitClass.schema';
 import { AttributesName, StatsName } from './enums';
+import { UnitEquiped } from './unitEquiped.schema';
 
 export type UnitDocument = Unit & Document;
 
@@ -31,6 +32,9 @@ export class Unit{
 
     @Prop({type:[TupleStatsSchema], autopopulate:true})
     stats:TupleStats[];
+
+    @Prop(UnitEquiped)
+    equipment:UnitEquiped
 
     changeClass(nClass:UnitClass){
         if (this.currentClassId !==nClass._id) {
@@ -81,6 +85,8 @@ export class Unit{
             }
         });
     }
+
+    
     
 }
 

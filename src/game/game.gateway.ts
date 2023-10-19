@@ -5,11 +5,11 @@ import {Socket} from 'socket.io'
 import { UserService } from 'src/user/user.service';
 import { JoinGameDto } from './dto/joinGame.dto';
 import { UseGuards } from '@nestjs/common';
-import { AuthGuard } from 'src/auth/auth.guard';
 import { PlaceUnitDto } from './dto/placeUnit.dto';
 import { Public } from 'src/auth/public.decorator';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { Unit } from './schemas/unit.schema';
+import { AuthGuard } from 'src/auth/auth.guard';
 /**
  * Encargada de enviar y recibir toda la informacion en el juego
  */
@@ -30,7 +30,7 @@ export class GameGateway {
   @SubscribeMessage('sendCreateGame')
   async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
     payload.user_uuid = client['user'].sub;
-    this.gameService.createGame(payload);
+    //this.gameService.createGame(payload);
   }
 
   @SubscribeMessage('sendStartGame')
