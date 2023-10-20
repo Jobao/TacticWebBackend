@@ -42,7 +42,7 @@ export class GameGateway {
   @SubscribeMessage('sendJoinGame')
   async joinGame(@ConnectedSocket() client: Socket,@MessageBody() payload: JoinGameDto){
     payload.user_uuid = client['user'].sub;
-      this.gameService.joinGame(payload);
+    this.gameService.joinGame(payload);
   }
 
   @SubscribeMessage('sendLeaveGame')

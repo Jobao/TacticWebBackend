@@ -7,6 +7,4 @@ export class CreateUnitDto{
     name:string;
     @ApiProperty()
     class_id:string;
-    @ApiProperty()
-    currentClassId:string;
 }

@@ -20,6 +20,8 @@ export class UnitClass{
 
     canUseThisUnitClass(t:TupleRequiredClass[]){
         let cant = this.requiredClass.length;
+        console.log(cant);
+        
         //Por cada elemento requerido, tengo que ver si en T esta
         this.requiredClass.forEach(element=>{
             t.forEach(element2 => {

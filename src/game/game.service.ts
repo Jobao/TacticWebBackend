@@ -56,7 +56,7 @@ export class GameService {
   async joinGame(jGame: JoinGameDto) {
     let user = await this.cacheService.UserCache.getInCacheOrBD(jGame.user_uuid);
     let game = await this.cacheService.GameCache.getInCacheOrBD(jGame.game_uuid);
-
+    
     if (game && user) {
       if (!game.isEnd && !game.isStart) {
         if (game.joinGame(user._id)) {
@@ -206,7 +206,10 @@ export class GameService {
                     case "ATTACK":
                       if(placedUnit.canAttack){
                         if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
-                          
+                          let unitInPlace = game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)
+                          if(unitInPlace){
+                            placedUnit.attack(unitInPlace);
+                          }
                         }
                       }
                       break;

@@ -15,9 +15,7 @@ export enum AttributesName{
     SPIRIT= "SPIRIT",
     STRENGTH = "STRENGTH",
     INTELLECT = "INTELECT",
-    SPEED = "SPEED",
-    COINS = "COINS",
-    DEXTERY = "DEXTERY"
+    AGILITY = "AGILITY"
 }
 
 export enum StatsName{
@@ -28,7 +26,8 @@ export enum StatsName{
     MPRegen = "MPR",
     PhysicDefense= "PHD",
     MagicalDefence="MD",
-    Dodge = "DODGE"
+    Dodge = "DODGE",
+    Speed = "SPEED"
 
 }
 

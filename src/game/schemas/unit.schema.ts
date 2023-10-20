@@ -72,14 +72,25 @@ export class Unit{
         nClass.baseAttributes.forEach(element => {
             switch (element.attributeName) {
                 case AttributesName.STAMINA:
-                    this.stats.push({statsName:StatsName.HP, amount: element.amount* 100})
+                    this.stats.push({statsName:StatsName.HP, amount: element.amount* 10})
                     break;
-            case AttributesName.SPIRIT:
-            case AttributesName.STRENGTH:
-            case AttributesName.INTELLECT:
-            case AttributesName.SPEED:
-            case AttributesName.COINS:
-            case AttributesName.DEXTERY:
+                case AttributesName.SPIRIT:
+                    this.stats.push({statsName: StatsName.MP, amount: element.amount * 7})
+                    this.stats.push({statsName: StatsName.MPRegen, amount: element.amount * 2})
+                    break;
+                case AttributesName.STRENGTH:
+                    this.stats.push({statsName:StatsName.PA, amount: element.amount * 6});
+                    this.stats.push({statsName:StatsName.PhysicDefense, amount: element.amount * 2})
+                    break;
+
+                case AttributesName.INTELLECT:
+                    this.stats.push({statsName:StatsName.MA, amount: element.amount * 6})
+                    this.stats.push({statsName:StatsName.MagicalDefence, amount: element.amount * 2})
+                    break;
+            case AttributesName.AGILITY:
+                this.stats.push({statsName:StatsName.Dodge, amount: element.amount * 2});
+                this.stats.push({statsName: StatsName.Speed, amount:element.amount * 10})
+                break;
                 default:
                     break;
             }

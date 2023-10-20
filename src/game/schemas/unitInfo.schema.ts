@@ -46,9 +46,10 @@ export class UnitInfo{
         return false;
     }
 
-    attack(){
+    attack(attackedUnit:UnitInfo){
         if(this.canAttack){
             this.canAttack = false;
+            attackedUnit.receiveDamage();
             if(!this.canMove){
                 this.canPerformActionThisTurn = false;
             }
@@ -60,14 +61,17 @@ export class UnitInfo{
         this.canAttack = true;
     }
 
-    prueba = function namess() {
-        
-    }
-
     wait(){
         this.canAttack = false;
         this.canMove = false;
         this.canPerformActionThisTurn = false;
+    }
+
+    receiveDamage(){
+        this.currentHP -=10;
+        if(this.currentHP <= 0){
+            console.log("DEATH");
+        }
     }
 }
 export const UnitInfoSchema = SchemaFactory.createForClass(UnitInfo);

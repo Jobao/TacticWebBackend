@@ -3,9 +3,12 @@ import { UserService } from './user.service';
 import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { AuthHTTPGuard } from 'src/auth/authHTTP.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @UseGuards(AuthHTTPGuard)
 @Controller('user')
+@ApiBearerAuth('JWT-auth')
+@ApiTags('Users')
 export class UserController {
     constructor(private userService:UserService){}
 

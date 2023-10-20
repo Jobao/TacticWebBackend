@@ -45,17 +45,19 @@ export class Game{
     }
 
     isOcupiedByAnotherUnit(x:number, y:number){
-        let res= false;
+        //let res= false;
+        let unit:UnitInfo;
         for (let index = 0; index < this.placedUnitList.length; index++) {
             const element = this.placedUnitList[index];
             element.unitInfo.forEach(element2 => {
                 if(x===element2.posX && y === element2.posY){
-                    res = true;
+                    //res = true;
+                    unit = element2;
                 }
             });
             
         }
-        return res;
+        return unit;
     }
 
     getUserIndexOnPlacedUnitList(user_uuid:string): number {
