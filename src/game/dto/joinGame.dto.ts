@@ -1,4 +1,4 @@
-export class JoinGameDto{
-    game_uuid:string;
-    user_uuid:string;
+import { GameANDUserDTO } from "./gameUser.dto";
+
+export class JoinGameDto extends GameANDUserDTO{
 }

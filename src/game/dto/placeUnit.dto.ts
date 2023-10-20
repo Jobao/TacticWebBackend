@@ -1,12 +1,13 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { Unit } from "../schemas/unit.schema";
+import { GameANDUserDTO } from "./gameUser.dto";
+import { IsUUID } from "class-validator";
+import { Target } from "src/unit/dto/unitAction.dto";
 
-export class PlaceUnitDto{
-    game_uuid:string;
-
-    user_uuid:string;
-
+export class PlaceUnitDto extends GameANDUserDTO{
+    @IsUUID('4')
+    @ApiProperty()
     unit_uuid:string;
-
-    pos:number[];
-
+    @ApiProperty({type:() =>Target})
+    pos:Target;
 }

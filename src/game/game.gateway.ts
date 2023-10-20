@@ -30,7 +30,7 @@ export class GameGateway {
   @SubscribeMessage('sendCreateGame')
   async createGame(@ConnectedSocket() client: Socket, @MessageBody() payload: CreateGameDto){
     payload.user_uuid = client['user'].sub;
-    //this.gameService.createGame(payload);
+    this.gameService.createGame(payload);
   }
 
   @SubscribeMessage('sendStartGame')
@@ -63,14 +63,3 @@ export class GameGateway {
     this.gameService.actionUnit(payload);
   }
 }
-
-
-/**
- * Que contiene el juego
- * Contiene una lista de jugadores
- * Contiene un tablero
- * --------------------------METODOS--------------------------
- * GET toda la informacion del tablero
- * GET los jugadores 
- * SET inicial un juego
- */

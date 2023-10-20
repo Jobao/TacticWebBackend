@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
@@ -10,7 +10,7 @@ export class UserController {
     constructor(private userService:UserService){}
 
     @Post('/unit')
-    sendNewUnit(@Body() payload: CreateUnitDto, @Req() req:Request){
+    createNewUnit(@Body() payload: CreateUnitDto, @Req() req:Request){
         payload.user_uuid = req['user'].sub;
         return this.userService.addNewUnit(payload);
     }

@@ -8,6 +8,7 @@ import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { GamePhase } from './schemas/enums';
+import { GameANDUserDTO } from './dto/gameUser.dto';
 
 @Injectable()
 export class GameService {
@@ -74,7 +75,7 @@ export class GameService {
     }
   }
   
-  async leaveGame(lGame: JoinGameDto) {
+  async leaveGame(lGame: GameANDUserDTO) {
     let game = await this.cacheService.GameCache.getInCacheOrBD(lGame.game_uuid);
     
     if (game) {
@@ -103,7 +104,7 @@ export class GameService {
   }
 
 //TODO: Se podria implementar un sistema de votacion para iniciar el juego
-  async startGame(sGame: CreateGameDto) {
+  async startGame(sGame: GameANDUserDTO) {
     let game = await this.cacheService.GameCache.getInCacheOrBD(sGame.game_uuid);
     if (game) {
       if (!game.isStart) {//Me aseguro que solo se puede iniciar una vez el juego

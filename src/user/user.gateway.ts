@@ -15,16 +15,6 @@ import { AuthGuard } from 'src/auth/auth.guard';
 export class UserGateway {
   constructor(private userService:UserService){}
 
-  /*@SubscribeMessage('setNewUser')
-  newUser(client: Socket, payload: CreateUserDto) {
-    this.userService.create(payload);
-  }*/
-
-  @SubscribeMessage('allUser')
-  allUsers() {
-    this.userService.findAll();
-  }
-
   @SubscribeMessage('sendNewUnit')
   newUnit(client:Socket, payload: CreateUnitDto){
     payload.user_uuid = client['user'].sub;
