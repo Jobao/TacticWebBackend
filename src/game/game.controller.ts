@@ -4,6 +4,7 @@ import { CreateGameDto } from './dto/createGame.dto';
 import { GameService } from './game.service';
 import { GameANDUserDTO } from './dto/gameUser.dto';
 import { PlaceUnitDto } from './dto/placeUnit.dto';
+import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 
 @UseGuards(AuthHTTPGuard)
 @Controller('game')
@@ -46,6 +47,13 @@ export class GameController {
         payload.user_uuid = req['user'].sub;
         payload.game_uuid = game_uuid;
         this.gameService.placeUnit(payload)
+    }
+
+    @Post('/:game_uuid/action')
+    sendActionUnit(@Param('game_uuid') game_uuid:string,@Body() payload:UnitActionDto, @Request() req){
+        payload.user_uuid = req['user'].sub;
+        payload.game_uuid = game_uuid;
+        this.gameService.actionUnit(payload)
     }
 
 
