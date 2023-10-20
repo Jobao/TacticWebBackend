@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ClassSkill } from 'src/game/schemas/classSkill.schema';
+import { ClassSkill } from 'src/skills/schema/classSkill.schema';
 import { Cost } from 'src/game/schemas/cost.schema';
 import { AttributesName, StatsName, TypeAffect, TypeEffect } from 'src/game/schemas/enums';
 import { MongodbService } from 'src/mongodb/mongodb.service';

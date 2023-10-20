@@ -6,7 +6,7 @@ import { Public } from 'src/auth/public.decorator';
 import { JoinGameDto } from 'src/game/dto/joinGame.dto';
 import { PlaceUnitDto } from 'src/game/dto/placeUnit.dto';
 import { GameService } from 'src/game/game.service';
-import { UnitClass } from 'src/game/schemas/unitClass.schema';
+import { UnitClass } from 'src/unit-clases/schema/unitClass.schema';
 import { SkillsService } from 'src/skills/skills.service';
 import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
 import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';

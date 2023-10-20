@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { TupleRequiredClass, TupleRequiredClassSchema } from './requiredClass.schema';
 import { TupleStats, TupleStatsSchema } from './stats.schema';
-import { UnitClass } from './unitClass.schema';
+import { UnitClass } from '../../unit-clases/schema/unitClass.schema';
 import { AttributesName, StatsName } from './enums';
 import { UnitEquiped } from './unitEquiped.schema';
 

@@ -7,8 +7,8 @@ import { User, UserSchema } from 'src/user/user.schema';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { Auth, AuthSchema } from 'src/auth/auth.schema';
-import { ClassSkill, ClassSkillSchema } from './schemas/classSkill.schema';
-import { UnitClass, UnitClassSchema } from './schemas/unitClass.schema';
+import { ClassSkill, ClassSkillSchema } from '../skills/schema/classSkill.schema';
+import { UnitClass, UnitClassSchema } from '../unit-clases/schema/unitClass.schema';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
 import { GameController } from './game.controller';
 

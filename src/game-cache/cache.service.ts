@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Game } from 'src/game/schemas/game.schema';
-import { UnitClass } from 'src/game/schemas/unitClass.schema';
+import { UnitClass } from 'src/unit-clases/schema/unitClass.schema';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { User } from 'src/user/user.schema';
 import { BaseCache } from './baseCache';

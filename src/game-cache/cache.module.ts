@@ -4,8 +4,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Game, GameSchema } from 'src/game/schemas/game.schema';
 import { User, UserSchema } from 'src/user/user.schema';
 import { Auth, AuthSchema } from 'src/auth/auth.schema';
-import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema';
-import { UnitClass, UnitClassSchema } from 'src/game/schemas/unitClass.schema';
+import { ClassSkill, ClassSkillSchema } from 'src/skills/schema/classSkill.schema';
+import { UnitClass, UnitClassSchema } from 'src/unit-clases/schema/unitClass.schema';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
 
 @Module({

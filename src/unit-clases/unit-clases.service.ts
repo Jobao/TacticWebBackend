@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CacheService } from 'src/game-cache/cache.service';
 import { Unit } from 'src/game/schemas/unit.schema';
-import { UnitClass } from 'src/game/schemas/unitClass.schema';
+import { UnitClass } from 'src/unit-clases/schema/unitClass.schema';
 import { UnitClassMongoRepository } from 'src/mongodb/repositories/unitClassMongoRepository';
 
 @Injectable()

@@ -1,13 +1,16 @@
-import { Body, Controller, Post, UseGuards, Request, Param } from '@nestjs/common';
+import { Body, Controller, Post, UseGuards, Request, Param, Get } from '@nestjs/common';
 import { AuthHTTPGuard } from 'src/auth/authHTTP.guard';
 import { CreateGameDto } from './dto/createGame.dto';
 import { GameService } from './game.service';
 import { GameANDUserDTO } from './dto/gameUser.dto';
 import { PlaceUnitDto } from './dto/placeUnit.dto';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @UseGuards(AuthHTTPGuard)
 @Controller('game')
+@ApiBearerAuth('JWT-auth')
+@ApiTags('Game')
 export class GameController {
     constructor(private gameService:GameService){}
 
@@ -54,6 +57,13 @@ export class GameController {
         payload.user_uuid = req['user'].sub;
         payload.game_uuid = game_uuid;
         this.gameService.actionUnit(payload)
+    }
+
+    @Get('/:game_uuid')
+    getGame(@Param('game_uuid') game_uuid:string,@Request() req){
+        console.log(req['user'].sub);
+        
+        return this.gameService.getGame(game_uuid);
     }
 
 

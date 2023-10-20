@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-import { TupleAttribute } from "./attribute.schema";
-import { TupleRequiredClass, TupleRequiredClassSchema } from "./requiredClass.schema";
+import { TupleAttribute } from "../../game/schemas/attribute.schema";
+import { TupleRequiredClass, TupleRequiredClassSchema } from "../../game/schemas/requiredClass.schema";
 import { Document } from "mongoose";
 
 export type UnitClassDocument = UnitClass & Document;

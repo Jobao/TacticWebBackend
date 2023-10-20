@@ -1,10 +1,10 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-import { Effect } from "./effect.schema";
-import { Cost } from "./cost.schema";
+import { Effect } from "../../game/schemas/effect.schema";
+import { Cost } from "../../game/schemas/cost.schema";
 import { Document } from 'mongoose';
-import { TupleAttribute } from "./attribute.schema";
-import { UnitClass } from "./unitClass.schema";
-import { TupleStats } from "./stats.schema";
+import { TupleAttribute } from "../../game/schemas/attribute.schema";
+import { UnitClass } from "../../unit-clases/schema/unitClass.schema";
+import { TupleStats } from "../../game/schemas/stats.schema";
 
 export type ClassSkillDocument = ClassSkill & Document;
 

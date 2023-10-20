@@ -9,8 +9,8 @@ import { Auth, AuthSchema } from './auth.schema';
 import { User, UserSchema } from 'src/user/user.schema';
 import { Game, GameSchema } from 'src/game/schemas/game.schema';
 import { CacheService } from 'src/game-cache/cache.service';
-import { ClassSkill, ClassSkillSchema } from 'src/game/schemas/classSkill.schema';
-import { UnitClass, UnitClassSchema } from 'src/game/schemas/unitClass.schema';
+import { ClassSkill, ClassSkillSchema } from 'src/skills/schema/classSkill.schema';
+import { UnitClass, UnitClassSchema } from 'src/unit-clases/schema/unitClass.schema';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
 import { UserModule } from 'src/user/user.module';
 
