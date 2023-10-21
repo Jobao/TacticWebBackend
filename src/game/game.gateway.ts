@@ -10,6 +10,7 @@ import { Public } from 'src/auth/public.decorator';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { Unit } from './schemas/unit.schema';
 import { AuthGuard } from 'src/auth/auth.guard';
+import { GameANDUserDTO } from './dto/gameUser.dto';
 /**
  * Encargada de enviar y recibir toda la informacion en el juego
  */
@@ -34,7 +35,7 @@ export class GameGateway {
   }
 
   @SubscribeMessage('sendStartGame')
-  async startGame(@ConnectedSocket() client: Socket,@MessageBody() payload: CreateGameDto){
+  async startGame(@ConnectedSocket() client: Socket,@MessageBody() payload: GameANDUserDTO){
     payload.user_uuid = client['user'].sub;
     this.gameService.startGame(payload);
   }

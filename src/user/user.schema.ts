@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Unit } from 'src/game/schemas/unit.schema';
+import { Unit, UnitSchema } from 'src/game/schemas/unit.schema';
 import { GetUserDto } from './dto/getUser.dto';
 
 export type UserDocument = User & Document
@@ -16,7 +16,7 @@ export class User{
     @Prop({required:true})
     displayName:string;
 
-    @Prop([Unit])
+    @Prop({type:[UnitSchema], autopopulate:true})
     createdUnits:Unit[];
 
     @Prop()
@@ -63,4 +63,5 @@ export class User{
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
+UserSchema.plugin(require('mongoose-autopopulate'));
 UserSchema.loadClass(User);

@@ -9,5 +9,5 @@ export class PlaceUnitDto extends GameANDUserDTO{
     @ApiProperty()
     unit_uuid:string;
     @ApiProperty({type:() =>Target})
-    pos:Target;
+    target:Target;
 }

@@ -2,55 +2,69 @@ import { Prop, Schema, SchemaFactory,  } from '@nestjs/mongoose';
 import { PlacedUnit, PlacedUnitSchema} from "./placedUnits.schema";
 import { UnitInfo } from "./unitInfo.schema";
 import { Document } from "mongoose";
+import { ApiProperty } from '@nestjs/swagger';
+import { Target } from 'src/unit/dto/unitAction.dto';
+import { Unit } from './unit.schema';
+import { StatsName } from './enums';
 
 export type GameDocument = Game & Document;
 
 @Schema()
 export class Game{
+    @ApiProperty()
     @Prop()
     _id: string;
 
+    @ApiProperty()
     @Prop()
     sizeX: number;//size del tablero horizontal
 
+    @ApiProperty()
     @Prop()
     sizeY:number;//size del tablero vertical
 
+    @ApiProperty({type: ()=> [PlacedUnit]})
     @Prop({type: [PlacedUnitSchema], autopopulate:true})
     placedUnitList: PlacedUnit[];
 
+    @ApiProperty()
     @Prop()
     isEnd:boolean;
 
+    @ApiProperty()
     @Prop()
     isStart:boolean;
 
+    @ApiProperty()
     @Prop()
     minUnits:number;
 
+    @ApiProperty()
     @Prop()
     maxUnits:number;
     
+    @ApiProperty()
     @Prop()
     owner_uuid:string;
 
+    @ApiProperty()
     @Prop()
     turn:string;
-
+    @ApiProperty()
     @Prop()
     gamePhase: string;
 
-    isInsideBoard(x:number, y:number){
-        return((x >=0 && x< this.sizeX) &&(y >=0 && y< this.sizeY))
+    isInsideBoard(target:Target){
+        return((target.x >=0 && target.x< this.sizeX) &&(target.y >=0 && target.y< this.sizeY))
     }
 
-    isOcupiedByAnotherUnit(x:number, y:number){
+    isOcupiedByAnotherUnit(target:Target){
         //let res= false;
         let unit:UnitInfo;
         for (let index = 0; index < this.placedUnitList.length; index++) {
             const element = this.placedUnitList[index];
             element.unitInfo.forEach(element2 => {
-                if(x===element2.posX && y === element2.posY){
+                if(target.x===element2.posX && target.y === element2.posY){
                     //res = true;
                     unit = element2;
                 }
@@ -77,15 +91,16 @@ export class Game{
         }
     }
 
-    placeNewUnit(user_uuid:string, unit_uuid:string, x:number, y:number, hp:number, mp:number){
+    placeNewUnit(user_uuid:string, unit:Unit, target:Target){
         let idx= this.getUserIndexOnPlacedUnitList(user_uuid);
         if(idx !== -1){
             let temp:UnitInfo = new UnitInfo();
-            temp.unitBase_uuid = unit_uuid;
-            temp.posX = x;
-            temp.posY=y
-            temp.currentHP = hp;
-            temp.currentMP = mp;
+            temp.unitBase_uuid = unit._id;
+            temp.posX = target.x;
+            temp.posY=target.y;
+            temp.currentHP = unit.getStats(StatsName.HP);
+            temp.currentMP = unit.getStats(StatsName.MP);
+            temp.stats = unit.stats;
             temp.canPerformActionThisTurn = true;
             temp.canMove = true;
             temp.canAttack = true;

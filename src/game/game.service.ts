@@ -9,6 +9,7 @@ import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { GamePhase } from './schemas/enums';
 import { GameANDUserDTO } from './dto/gameUser.dto';
+import { log } from 'console';
 
 @Injectable()
 export class GameService {
@@ -125,24 +126,27 @@ export class GameService {
       }
   }
 
-  async placeUnit(placeUnit: PlaceUnitDto) {
-    let user = await this.cacheService.UserCache.getInCacheOrBD(placeUnit.user_uuid);
+  async placeUnit(payload: PlaceUnitDto) {
+    console.log(payload);
+    
+    let user = await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid);
     if (user) {
-      let unit = user.getUnit(placeUnit.unit_uuid);
+      let unit = user.getUnit(payload.unit_uuid);
       if(unit){
-        let game = await this.cacheService.GameCache.getInCacheOrBD(placeUnit.game_uuid);
+        console.log("Bien");
+        let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
         if (game) {
           //El juego existe
           if (game.canPlaceMoreUnit(user._id)) {
             if (game.gamePhase === GamePhase.DRAFT && !game.isStart && !game.isEnd) {
               //Estoy en fase, no empezo y no termino
-              if (game.isInsideBoard(placeUnit.pos[0], placeUnit.pos[1])) {
+              if (game.isInsideBoard(payload.target)) {
                 //Esta dentro del tablero
-                if (!game.isOcupiedByAnotherUnit(placeUnit.pos[0], placeUnit.pos[1])) {
+                if (!game.isOcupiedByAnotherUnit(payload.target)) {
                   //No esta ocupado por otra pieza
-                  if (!game.isThisUnitPlace(placeUnit.unit_uuid, placeUnit.user_uuid)) {
+                  if (!game.isThisUnitPlace(payload.unit_uuid, payload.user_uuid)) {
                       //TODO: cambiar los parametros, enviar la unidad directamente
-                      if (game.placeNewUnit(placeUnit.user_uuid, placeUnit.unit_uuid,placeUnit.pos[0],placeUnit.pos[1], unit.currentHP, unit.currentMP)) {
+                      if (game.placeNewUnit(payload.user_uuid, unit, payload.target)) {
                         this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
                       }
                       else{
@@ -163,6 +167,10 @@ export class GameService {
             } else {
               console.log('El juego no esta iniciado');
             }
+          }
+          else{
+            console.log("El juego no existe");
+            
           }
         }
       }
@@ -194,8 +202,8 @@ export class GameService {
                       break;
                     case "MOVE":
                       if (placedUnit.canMove) {
-                        if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
-                          if(!game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)){
+                        if(game.isInsideBoard(payload.action.target)){
+                          if(!game.isOcupiedByAnotherUnit(payload.action.target)){
                             if (placedUnit.move(payload.action.target.x,payload.action.target.y)) {
                               update = true;
                               }
@@ -205,10 +213,11 @@ export class GameService {
                       break;
                     case "ATTACK":
                       if(placedUnit.canAttack){
-                        if(game.isInsideBoard(payload.action.target.x,payload.action.target.y)){
-                          let unitInPlace = game.isOcupiedByAnotherUnit(payload.action.target.x,payload.action.target.y)
+                        if(game.isInsideBoard(payload.action.target)){
+                          let unitInPlace = game.isOcupiedByAnotherUnit(payload.action.target);
                           if(unitInPlace){
                             placedUnit.attack(unitInPlace);
+                            update = true;
                           }
                         }
                       }
@@ -229,14 +238,12 @@ export class GameService {
   }
 
   async getGame(game_uuid:string){
-    //let game = await this.cacheService.gameInCache(game_uuid);
     let game = await this.cacheService.GameCache.getInCacheOrBD(game_uuid);
     if(game){
       return game;
     }
     else{
        return 'inexistent game';
-       
     }
   }
 

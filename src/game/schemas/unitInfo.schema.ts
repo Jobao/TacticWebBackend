@@ -1,33 +1,47 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { ApiProperty } from '@nestjs/swagger';
 import { Document } from 'mongoose';
+import { TupleStatsSchema, TupleStats } from './stats.schema';
 export type UnitInfoDocument = UnitInfo & Document;
 
 @Schema({_id: false})
 export class UnitInfo{
 
+    @ApiProperty()
     @Prop()
     unitBase_uuid:string;
 
+    @ApiProperty()
     @Prop()
     posX: number;
 
+    @ApiProperty()
     @Prop()
     posY: number;
 
+    @ApiProperty()
     @Prop()
     currentHP:number;
 
+    @ApiProperty()
     @Prop()
     currentMP:number;
 
+    @ApiProperty()
     @Prop()
     canPerformActionThisTurn:boolean
 
+    @ApiProperty()
     @Prop()
     canMove:boolean
 
+    @ApiProperty()
     @Prop()
     canAttack:boolean;
+
+    @ApiProperty()
+    @Prop({type:[TupleStatsSchema]})
+    stats:TupleStats[];
 
     ocupied(x:number, y:number): boolean{
         return x===this.posX && y === this.posY;

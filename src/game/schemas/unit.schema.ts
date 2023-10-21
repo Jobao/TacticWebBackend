@@ -19,12 +19,6 @@ export class Unit{
     currentClassId:string;
 
     @Prop()
-    currentHP:number;
-
-    @Prop()
-    currentMP:number;
-
-    @Prop()
     battleActions:string;
 
     @Prop({type:[TupleRequiredClassSchema], autopopulate:true})
@@ -95,6 +89,16 @@ export class Unit{
                     break;
             }
         });
+    }
+
+    getStats(sta:StatsName){
+        let result:number;
+        this.stats.forEach(element => {
+            if(element.statsName === sta){
+                result = element.amount;
+            }
+        });
+        return result;
     }
 
     

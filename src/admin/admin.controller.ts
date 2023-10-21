@@ -13,6 +13,8 @@ import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
 import { CreateUserDto } from 'src/user/dto/createUser.dto';
 import { User } from 'src/user/user.schema';
 import { UserService } from 'src/user/user.service';
+import { ApiConsumes, ApiOkResponse, ApiProduces, ApiResponse } from '@nestjs/swagger';
+import { Game } from 'src/game/schemas/game.schema';
 
 @Public()
 @Controller('admin')
@@ -39,6 +41,11 @@ export class AdminController {
     }
 
     @Get('/games')
+    @ApiOkResponse({
+        description:"All games",
+        type:Game,
+        isArray:true,
+    })
     getAllGames(){
         return this.gameService.getAllGames();
     }
