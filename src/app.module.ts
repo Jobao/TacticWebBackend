@@ -7,8 +7,6 @@ import { ChatModule } from './chat/chat.module';
 import { UserModule } from './user/user.module';
 import { GameModule } from './game/game.module';
 import { AuthModule } from './auth/auth.module';
-import { APP_GUARD } from '@nestjs/core';
-import { AdminController } from './admin/admin.controller';
 import { AdminModule } from './admin/admin.module';
 import { CacheModule } from './game-cache/cache.module';
 import { MongodbModule } from './mongodb/mongodb.module';

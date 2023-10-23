@@ -48,10 +48,16 @@ export class GameService {
         user.joinGame(game._id);
         
         
-        this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.create(game));
+        this.updateGame(game);
+        //this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.create(game));
         this.cacheService.UserCache.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
         return game;
     }
+  }
+
+  async updateGame(uGame:Game){
+    this.cacheService.GameCache.setInCache(uGame._id,await this.mongoService.gameRepository.create(uGame));
+
   }
 
   async joinGame(jGame: JoinGameDto) {
@@ -104,6 +110,20 @@ export class GameService {
    }
   }
 
+  async leaveAllGameUser(user_uuid:string, allGames:string[]){
+    allGames.forEach(async g => {
+      let game = await this.cacheService.GameCache.getInCacheOrBD(g);
+      if(game){
+        if(game.leaveGame(user_uuid)){
+          this.cacheService.GameCache.removeInCache((await this.mongoService.gameRepository.remove(game._id)).id)
+        }
+        else{
+          this.updateGame(game);
+        }
+      }
+    });
+  }
+
 //TODO: Se podria implementar un sistema de votacion para iniciar el juego
   async startGame(sGame: GameANDUserDTO) {
     let game = await this.cacheService.GameCache.getInCacheOrBD(sGame.game_uuid);
@@ -114,7 +134,7 @@ export class GameService {
           game.isStart = true;
           game.turn = game.owner_uuid; //Le asigno el turno al owner
           game.gamePhase = GamePhase.INGAME; 
-          game.calculateUnitOrderAction();
+          //game.calculateUnitOrderAction();
 
           //TODO: Deberia el orden de las unidades
           this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));

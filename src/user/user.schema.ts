@@ -44,6 +44,19 @@ export class User{
         return unit;
     }
 
+    addUnit(unit:Unit){
+        this.createdUnits.push(unit);
+    }
+
+    removeUnit(unit_uuid:string){
+        let index =this.createdUnits.findIndex((x)=>{return x._id ===unit_uuid});
+        if(index >= 0){
+            this.createdUnits.splice(index, 1);
+            return true;
+        }
+        return false;
+    }
+
     joinGame(game_uuid:string){
         if(!this.gameJoinedList.includes(game_uuid)){
             this.gameJoinedList.push(game_uuid);
@@ -58,6 +71,12 @@ export class User{
         if(idx !== -1){
             this.gameJoinedList.splice(idx,1);
         }
+    }
+
+    leaveAllGames(){
+        let tmp = this.gameJoinedList;
+        this.gameJoinedList = [];
+        return tmp;
     }
 
 }

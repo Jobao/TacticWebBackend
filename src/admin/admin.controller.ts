@@ -101,24 +101,34 @@ export class AdminController {
     async autoInsert(){
         let classNameList:UnitClass[] = [];
         classNameList = await this.unitClassService.getAllNameClass();
+        //Salgo de todos los juegos
         let user1 = await this.cacheService.UserCache.getInCacheOrBD('ddbdddd0-1fdf-42c2-978a-6989c2767443');
+        await this.gameService.leaveAllGameUser(user1._id, await this.userService.leaveAllGames(user1));
+        
+        let user2 =  await this.cacheService.UserCache.getInCacheOrBD('cdca6c1a-7c41-4773-bef0-c2bf2d01ea59');
+        await this.gameService.leaveAllGameUser(user2._id, await this.userService.leaveAllGames(user2));
+        //---------------------------------//
+        //Remuevo todas las unidades
+        this.userService.removeAllUnits(user1._id);
+        this.userService.removeAllUnits(user2._id);
+        //--------------------------------//
+        //Creo las unidades
         let cUnit:CreateUnitDto = new CreateUnitDto();
         for (let index = 0; index < 3; index++) {//classNameList.length
             cUnit.class_id = classNameList[index]._id;
             cUnit.name = FAKENAME[randomInt(0, FAKENAME.length -1)].name;
             cUnit.user_uuid = user1._id;
             await this.userService.addNewUnit(cUnit)
-            console.log((await this.cacheService.UserCache.getInCacheOrBD('ddbdddd0-1fdf-42c2-978a-6989c2767443')).createdUnits.length);
         }
-        
-        let user2 =  await this.cacheService.UserCache.getInCacheOrBD('cdca6c1a-7c41-4773-bef0-c2bf2d01ea59');
+
         for (let index = 0; index < 3; index++) {
             cUnit.class_id = classNameList[index]._id;
             cUnit.name = FAKENAME[randomInt(0, FAKENAME.length -1)].name;
             cUnit.user_uuid = user2._id;
             await this.userService.addNewUnit(cUnit)
         }
-
+        //-----------------------------------//
+        //Creo el juego
         let gDTO: CreateGameDto = new CreateGameDto();
         gDTO.user_uuid = user1._id;
         gDTO.maxUnits= 10;
@@ -131,11 +141,8 @@ export class AdminController {
         //Actualizo los usuarios
         user1 = await this.cacheService.UserCache.getInCacheOrBD('ddbdddd0-1fdf-42c2-978a-6989c2767443');
         user2 = await this.cacheService.UserCache.getInCacheOrBD('cdca6c1a-7c41-4773-bef0-c2bf2d01ea59');
-        console.log(user1._id);
         
         let placeUnitDtos:PlaceUnitDto = new PlaceUnitDto();
-        console.log(user1.createdUnits.length + " Inside");
-        console.log(user2.createdUnits.length + " Insie");
         for (let index = 0; index < user1.createdUnits.length; index++) {
             const element = user1.createdUnits[index];
             placeUnitDtos.game_uuid = gId;

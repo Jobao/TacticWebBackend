@@ -7,6 +7,7 @@ import { Target } from 'src/unit/dto/unitAction.dto';
 import { Unit } from './unit.schema';
 import { StatsName } from './enums';
 import { GameOrder, GameOrderSchema } from './gameOrder.schema';
+import { BADRESP } from 'dns';
 
 export type GameDocument = Game & Document;
 
@@ -213,15 +214,23 @@ export class Game{
         return p;
     }
 
+    /**
+     * 
+     * Calcula el orden de accion en base a la velocidad
+     */
     calculateUnitOrderAction(){
-        let temp:UnitInfo[] = [];
+        
+        let xx:{u:string, uni:string, sp:number}[] = []
         this.placedUnitList.forEach(placedUser => {
             placedUser.unitInfo.forEach(unit => {
-                temp.push(unit);
+                xx.push({u: placedUser.user_uuid, uni: unit.unitBase_uuid, sp:unit.getStats(StatsName.Speed)});
+
             });
         });
-
-        temp =temp.sort((a,b) =>a.getStats(StatsName.Speed) - b.getStats(StatsName.Speed));
+        xx =xx.sort((a,b) =>a.sp - b.sp);
+        xx.forEach(element => {
+           this.gameOrder.push({user_uuid:element.u, unit_uuid:element.uni}); 
+        });
     }
 
 }

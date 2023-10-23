@@ -26,9 +26,7 @@ export class UserService {
     }
 
     async findAll(){
-
         return await this.mongoService.userRepository.findAll();
-        
     }
 
     async findOne(user_uuid:string){
@@ -49,14 +47,36 @@ export class UserService {
                 unit._id = uuidv4();
                 unit.name = cUnity.name;
                 unit.changeClass(uClass);
-                usr.createdUnits.push(unit);
+                usr.addUnit(unit);
                 await this.cacheService.UserCache.setInCache(usr._id,await this.update(usr));
             }
             else{
                 console.log("CANT")
             }
-            
-            
         }
+    }
+
+    async removeUnit(user_uuid:string, unit_uuid:string){
+        let usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+        if(usr){
+            usr.removeUnit(unit_uuid);
+            await this.cacheService.UserCache.setInCache(usr._id,await this.update(usr));
+        }
+    }
+
+    async removeAllUnits(user_uuid:string,){
+        let usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+        if(usr){
+            usr.createdUnits = [];
+            await this.cacheService.UserCache.setInCache(usr._id,await this.update(usr));
+        }
+    }
+
+
+
+    async leaveAllGames(usr:User){
+       let temp = usr.leaveAllGames();
+       await this.cacheService.UserCache.setInCache(usr._id,await this.update(usr));
+       return temp;
     }
 }
