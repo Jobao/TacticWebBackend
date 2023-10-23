@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { UnitClasesService } from './unit-clases.service';
-import { MongodbService } from 'src/mongodb/mongodb.service';
 import { MongodbModule } from 'src/mongodb/mongodb.module';
-import { CacheService } from 'src/game-cache/cache.service';
+import { CacheModule } from 'src/game-cache/cache.module';
 
 @Module({
-  imports:[MongodbModule],
-  providers: [UnitClasesService, MongodbService, CacheService]
+  imports:[MongodbModule, CacheModule],
+  providers: [UnitClasesService],
+  exports:[UnitClasesService]
 })
 export class UnitClasesModule {}

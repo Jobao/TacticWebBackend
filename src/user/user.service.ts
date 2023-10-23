@@ -7,7 +7,6 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 import { CacheService } from 'src/game-cache/cache.service';
 import { Unit } from 'src/game/schemas/unit.schema';
 import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
-import { TupleRequiredClass } from 'src/game/schemas/requiredClass.schema';
 
 @Injectable()
 export class UserService {
@@ -37,9 +36,7 @@ export class UserService {
     }
 
     async update(uUser:User){
-        this.cacheService.UserCache.setInCache(uUser._id, await this.mongoService.userRepository.update(uUser._id,uUser));
-        
-        return this.cacheService.UserCache.getInCacheOrBD(uUser._id);
+        return await this.mongoService.userRepository.update(uUser._id,uUser)
     }
 
     async addNewUnit(cUnity: CreateUnitDto){
@@ -52,8 +49,8 @@ export class UserService {
                 unit._id = uuidv4();
                 unit.name = cUnity.name;
                 unit.changeClass(uClass);
-                usr.createdUnits.push(unit)
-                await this.update(usr);
+                usr.createdUnits.push(unit);
+                await this.cacheService.UserCache.setInCache(usr._id,await this.update(usr));
             }
             else{
                 console.log("CANT")

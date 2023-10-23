@@ -9,4 +9,8 @@ export class UnitClassMongoRepository extends BaseMongoRepository<UnitClass>{
     constructor(@InjectModel(UnitClass.name) private entity: Model<UnitClassDocument>) {
         super(entity);
       }
+
+      async getAllNameClass(){
+        return await this.entity.find().select("_id").exec();;
+      }
 }

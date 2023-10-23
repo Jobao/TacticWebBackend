@@ -1,0 +1,335 @@
+[
+    {
+      "_id": "Suremax",
+      "requiredExp": [
+        181,
+        125,
+        175,
+        137,
+        196,
+        131
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 3,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 9,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 10,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 9,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 10,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Noralex",
+      "requiredExp": [
+        144,
+        174,
+        100,
+        154,
+        124
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 8,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 7,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 6,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 7,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 6,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Musanpoly",
+      "requiredExp": [
+        137,
+        189,
+        153,
+        104,
+        160,
+        179
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 6,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 2,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 4,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 9,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 2,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Zilodyne",
+      "requiredExp": [
+        126,
+        198,
+        196,
+        183,
+        100,
+        162
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 2,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 6,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 3,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 4,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 3,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Dancity",
+      "requiredExp": [
+        135,
+        101,
+        127,
+        155,
+        189
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 9,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 8,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 1,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 6,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 2,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Zaj",
+      "requiredExp": [
+        183,
+        190,
+        189,
+        134,
+        151
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 10,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 2,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 9,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 6,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 2,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Telequiet",
+      "requiredExp": [
+        183,
+        157,
+        148,
+        171,
+        150
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 6,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 10,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 7,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 9,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 4,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Gadtron",
+      "requiredExp": [
+        172,
+        100,
+        178,
+        106,
+        128
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 2,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 6,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 9,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 3,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 8,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Entropix",
+      "requiredExp": [
+        144,
+        111,
+        121,
+        175,
+        114
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 1,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 6,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 6,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 7,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 5,
+          "attributeName": "AGILITY"
+        }
+      ]
+    },
+    {
+      "_id": "Globoil",
+      "requiredExp": [
+        176,
+        115,
+        178,
+        131,
+        126
+      ],
+      "requiredClass": [],
+      "baseAttributes": [
+        {
+          "amount": 7,
+          "attributeName": "STAMINA"
+        },
+        {
+          "amount": 9,
+          "attributeName": "SPIRIT"
+        },
+        {
+          "amount": 1,
+          "attributeName": "STRENGTH"
+        },
+        {
+          "amount": 4,
+          "attributeName": "INTELECT"
+        },
+        {
+          "amount": 3,
+          "attributeName": "AGILITY"
+        }
+      ]
+    }
+  ]

@@ -4,6 +4,7 @@ import { UnitClass } from 'src/unit-clases/schema/unitClass.schema';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { User } from 'src/user/user.schema';
 import { BaseCache } from './baseCache';
+import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class CacheService {
@@ -12,7 +13,7 @@ export class CacheService {
         this.unitClassCache = new BaseCache<UnitClass>(mongoService.unitClassRepository);
         this.gameCache = new BaseCache<Game>(mongoService.gameRepository);
         this.userCache = new BaseCache<User>(mongoService.userRepository);
-
+        
     }
     private gameCache: BaseCache<Game>;
     

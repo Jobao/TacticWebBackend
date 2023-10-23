@@ -21,6 +21,8 @@ export class BaseCache<T>{
 
     async getInCacheOrBD(uuid:string){
         if(!this.inCache(uuid)){
+            console.log("FINDBD");
+            
             let doc = await this.mongo.findOne(uuid);
             if(doc){
                 this.setInCache(doc._id, doc);

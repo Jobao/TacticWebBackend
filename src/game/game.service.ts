@@ -9,7 +9,6 @@ import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { GamePhase } from './schemas/enums';
 import { GameANDUserDTO } from './dto/gameUser.dto';
-import { log } from 'console';
 
 @Injectable()
 export class GameService {
@@ -51,6 +50,7 @@ export class GameService {
         
         this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.create(game));
         this.cacheService.UserCache.setInCache(user._id,await this.mongoService.userRepository.update(user._id,user));
+        return game;
     }
   }
 
@@ -114,6 +114,9 @@ export class GameService {
           game.isStart = true;
           game.turn = game.owner_uuid; //Le asigno el turno al owner
           game.gamePhase = GamePhase.INGAME; 
+          game.calculateUnitOrderAction();
+
+          //TODO: Deberia el orden de las unidades
           this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
         } else {
           console.log('Por ahora no se puede jugar solo :(');
@@ -127,13 +130,10 @@ export class GameService {
   }
 
   async placeUnit(payload: PlaceUnitDto) {
-    console.log(payload);
-    
     let user = await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid);
     if (user) {
       let unit = user.getUnit(payload.unit_uuid);
       if(unit){
-        console.log("Bien");
         let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
         if (game) {
           //El juego existe
@@ -148,6 +148,7 @@ export class GameService {
                       //TODO: cambiar los parametros, enviar la unidad directamente
                       if (game.placeNewUnit(payload.user_uuid, unit, payload.target)) {
                         this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
+                        return true;
                       }
                       else{
                         console.log("la unidad no se pudo colocar (BD)");
@@ -175,6 +176,7 @@ export class GameService {
         }
       }
     }
+    return false;
   }
 
   /**
@@ -242,12 +244,16 @@ export class GameService {
     if(game){
       return game;
     }
-    else{
-       return 'inexistent game';
-    }
   }
 
   async getAllGames(){
-    return await this.mongoService.gameRepository.findAll();
+    return (await this.mongoService.gameRepository.findAll());
+  }
+
+  async p(){
+    let g = await this.getGame('504ec53a-567a-447f-b657-e4f327728bd2');
+    if(g){
+      g.calculateUnitOrderAction();
+    }
   }
 }

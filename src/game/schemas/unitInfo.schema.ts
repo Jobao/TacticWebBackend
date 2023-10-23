@@ -2,6 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ApiProperty } from '@nestjs/swagger';
 import { Document } from 'mongoose';
 import { TupleStatsSchema, TupleStats } from './stats.schema';
+import { StatsName } from './enums';
 export type UnitInfoDocument = UnitInfo & Document;
 
 @Schema({_id: false})
@@ -40,7 +41,7 @@ export class UnitInfo{
     canAttack:boolean;
 
     @ApiProperty()
-    @Prop({type:[TupleStatsSchema]})
+    @Prop({type:[TupleStatsSchema], autopopulate:true})
     stats:TupleStats[];
 
     ocupied(x:number, y:number): boolean{
@@ -73,6 +74,7 @@ export class UnitInfo{
     newTurn(){
         this.canMove = true;
         this.canAttack = true;
+        this.canPerformActionThisTurn = true;
     }
 
     wait(){
@@ -86,6 +88,17 @@ export class UnitInfo{
         if(this.currentHP <= 0){
             console.log("DEATH");
         }
+    }
+
+    getStats(stat:StatsName){
+        let res:number;
+        this.stats.forEach(element => {
+            if(element.statsName === stat){
+                res = element.amount;
+            }
+        });
+
+        return res;
     }
 }
 export const UnitInfoSchema = SchemaFactory.createForClass(UnitInfo);

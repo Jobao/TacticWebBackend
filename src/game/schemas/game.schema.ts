@@ -6,6 +6,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Target } from 'src/unit/dto/unitAction.dto';
 import { Unit } from './unit.schema';
 import { StatsName } from './enums';
+import { GameOrder, GameOrderSchema } from './gameOrder.schema';
 
 export type GameDocument = Game & Document;
 
@@ -50,9 +51,13 @@ export class Game{
     @ApiProperty()
     @Prop()
     turn:string;
+
     @ApiProperty()
     @Prop()
     gamePhase: string;
+
+    @Prop({type:[GameOrderSchema], autopopulate:true})
+    gameOrder:GameOrder[];
 
     isInsideBoard(target:Target){
         return((target.x >=0 && target.x< this.sizeX) &&(target.y >=0 && target.y< this.sizeY))
@@ -206,6 +211,17 @@ export class Game{
             });
         });
         return p;
+    }
+
+    calculateUnitOrderAction(){
+        let temp:UnitInfo[] = [];
+        this.placedUnitList.forEach(placedUser => {
+            placedUser.unitInfo.forEach(unit => {
+                temp.push(unit);
+            });
+        });
+
+        temp =temp.sort((a,b) =>a.getStats(StatsName.Speed) - b.getStats(StatsName.Speed));
     }
 
 }

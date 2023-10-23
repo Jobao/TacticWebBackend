@@ -61,7 +61,7 @@ export class GameController {
 
     @Get('/:game_uuid')
     getGame(@Param('game_uuid') game_uuid:string,@Request() req){
-        console.log(req['user'].sub);
+        //console.log(req['user'].sub);
         
         return this.gameService.getGame(game_uuid);
     }

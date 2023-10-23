@@ -11,6 +11,7 @@ import { MongodbModule } from 'src/mongodb/mongodb.module';
 @Module({
   imports:[MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema}, {name: Auth.name , schema: AuthSchema}, {name: ClassSkill.name , schema: ClassSkillSchema},{name: UnitClass.name , schema: UnitClassSchema}]),
           MongodbModule],
-  providers: [CacheService]
+  providers: [CacheService],
+  exports:[ CacheService]
 })
 export class CacheModule {}

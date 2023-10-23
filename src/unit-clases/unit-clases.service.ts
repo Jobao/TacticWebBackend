@@ -8,6 +8,7 @@ import { UnitClassMongoRepository } from 'src/mongodb/repositories/unitClassMong
 export class UnitClasesService {
     constructor(private mongooseService:UnitClassMongoRepository, private cacheService:CacheService){
         this.loadAllClassesInCache();
+        
     }
 
     addNewClass(nClass:UnitClass){
@@ -16,6 +17,10 @@ export class UnitClasesService {
 
     getAllClasses(){
         return this.mongooseService.findAll();
+    }
+
+    async getAllNameClass(){
+        return await this.mongooseService.getAllNameClass();
     }
     /**
      * si puede usar la clase, la devuleve, sino NULL
