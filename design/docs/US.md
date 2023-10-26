@@ -1,6 +1,6 @@
 Casos de uso
 
-###Chat
+### Chat
 
 - [ ]  Mandar mensaje en el lobby
 - [ ]  Mandar mensaje en chat privado
