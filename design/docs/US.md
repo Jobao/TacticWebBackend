@@ -4,7 +4,7 @@ Casos de uso
 
 - [ ]  Mandar mensaje en el lobby
 - [ ]  Mandar mensaje en chat privado
-- [ ]  Reecibir mensajes lobby
+- [ ]  Recibir mensajes lobby
 - [ ]  Recibir mensajes chat privado
 
 ### Usuarios
@@ -31,3 +31,4 @@ Casos de uso
   - [ ] Wait
   - [ ] Mover
   - [ ] Usar Habilidad
+  - [ ] Usar Item

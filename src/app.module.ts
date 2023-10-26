@@ -12,12 +12,13 @@ import { CacheModule } from './game-cache/cache.module';
 import { MongodbModule } from './mongodb/mongodb.module';
 import { SkillsModule } from './skills/skills.module';
 import { UnitClasesModule } from './unit-clases/unit-clases.module';
+import { ItemModule } from './item/item.module';
 
 @Module({
   imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/TacticWeb', {connectionFactory:(connection) =>{
     connection.plugin(require('mongoose-autopopulate')); 
     return connection;
-  }}), ChatModule, UserModule, GameModule, AuthModule, AdminModule, CacheModule, MongodbModule, SkillsModule, UnitClasesModule],
+  }}), ChatModule, UserModule, GameModule, AuthModule, AdminModule, CacheModule, MongodbModule, SkillsModule, UnitClasesModule, ItemModule],
   controllers: [AppController],
   providers: [AppService, RoomGateway,],
 })
