@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { RoomGateway } from './room/room.gateway';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ChatModule } from './chat/chat.module';
@@ -19,8 +17,8 @@ import { ItemModule } from './item/item.module';
     connection.plugin(require('mongoose-autopopulate')); 
     return connection;
   }}), ChatModule, UserModule, GameModule, AuthModule, AdminModule, CacheModule, MongodbModule, SkillsModule, UnitClasesModule, ItemModule],
-  controllers: [AppController],
-  providers: [AppService, RoomGateway,],
+  controllers: [],
+  providers: [RoomGateway,],
 })
 export class AppModule {}
 
