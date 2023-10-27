@@ -5,6 +5,8 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 import { User } from 'src/user/user.schema';
 import { BaseCache } from './baseCache';
 import { v4 as uuidv4 } from 'uuid';
+import { Item } from 'src/item/schemas/item.schema';
+import { UsableItem } from 'src/item/schemas/usableItem.schema';
 
 @Injectable()
 export class CacheService {
@@ -13,6 +15,7 @@ export class CacheService {
         this.unitClassCache = new BaseCache<UnitClass>(mongoService.unitClassRepository);
         this.gameCache = new BaseCache<Game>(mongoService.gameRepository);
         this.userCache = new BaseCache<User>(mongoService.userRepository);
+        this.usableItemCache = new BaseCache<UsableItem>(mongoService.usableItemRepository)
         
     }
     private gameCache: BaseCache<Game>;
@@ -33,5 +36,11 @@ export class CacheService {
 
     public get UnitClassCache(): BaseCache<UnitClass>{
         return this.unitClassCache;
+    }
+
+    private usableItemCache:BaseCache<UsableItem>;
+
+    public get UsableItemCache(): BaseCache<UsableItem>{
+        return this.usableItemCache;
     }
 }

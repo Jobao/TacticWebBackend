@@ -2,14 +2,30 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { ItemService } from './item.service';
 import { CreateItemDto } from './dto/create-item.dto';
 import { UpdateItemDto } from './dto/update-item.dto';
+import { Public } from 'src/auth/public.decorator';
+import { CreateWeaponItemDTO } from './dto/createWeaponItem.dto';
+import { CreateUsableItemDTO } from './dto/createUsableItem.dto';
+import { CreateEquipableItemDTO } from './dto/createEquipableItem.dto';
 
+@Public()
 @Controller('item')
 export class ItemController {
   constructor(private readonly itemService: ItemService) {}
 
-  @Post()
-  create(@Body() createItemDto: CreateItemDto) {
-    return this.itemService.create(createItemDto);
+  @Post('equipable')
+  createEquipableItem(@Body() payload:CreateEquipableItemDTO) {
+    return this.itemService.createEquipableItem();
+    //return this.itemService.createUsableItem(createItemDto);
+  }
+
+  @Post('weapon')
+  createWeaponItem(@Body() payload:CreateWeaponItemDTO){
+    return this.itemService.createWeaponItem();
+  }
+
+  @Post('usable')
+  createUsableItem(@Body() payload:CreateUsableItemDTO){
+    return this.itemService.createUsableItem(payload);
   }
 
   @Get()

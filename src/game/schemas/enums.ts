@@ -5,9 +5,9 @@ export enum TypeEffect {
     Debuff = "DEBUFF"
 }
 export enum TypeAffect {
-    Self,
-    Target,
-    AOE
+    Self = "SELF",
+    Target = "TARGET",
+    AOE = "AOE"
 }
 
 export enum AttributesName{
