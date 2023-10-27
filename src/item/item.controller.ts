@@ -14,13 +14,13 @@ export class ItemController {
 
   @Post('equipable')
   createEquipableItem(@Body() payload:CreateEquipableItemDTO) {
-    return this.itemService.createEquipableItem();
+    return this.itemService.createEquipableItem(payload);
     //return this.itemService.createUsableItem(createItemDto);
   }
 
   @Post('weapon')
   createWeaponItem(@Body() payload:CreateWeaponItemDTO){
-    return this.itemService.createWeaponItem();
+    return this.itemService.createWeaponItem(payload);
   }
 
   @Post('usable')

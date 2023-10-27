@@ -1,13 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { CreateItemDto } from './dto/create-item.dto';
 import { UpdateItemDto } from './dto/update-item.dto';
-import { Item } from './schemas/item.schema';
-import { UsableItem } from './schemas/usableItem.schema';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
-import { WeaponItem } from './schemas/weaponItem.schema';
-import { EquipableItem } from './schemas/equipableItem.schema';
-import { EquipmentSlot } from 'src/game/schemas/enums';
+import { CreateEquipableItemDTO } from './dto/createEquipableItem.dto';
+import { CreateWeaponItemDTO } from './dto/createWeaponItem.dto';
+import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class ItemService {
@@ -15,31 +13,28 @@ export class ItemService {
     private cacheService:CacheService,
     private mongoService:MongodbService
   ) {}
-  createUsableItem(createItemDto: CreateItemDto) {
-    let ite:UsableItem = new UsableItem();
+  createUsableItem(payload: CreateItemDto) {
+    /*let ite:UsableItem = new UsableItem();
     ite._id = '1';
     ite.description = "prueba";
-    ite.name = "repollito";
-    this.mongoService.usableItemRepository.create(ite);
-    return 'This action adds a new item';
+    ite.name = "repollito";*/
+    payload._id = uuidv4();
+    return this.mongoService.usableItemRepository.create(payload);
   }
-  createWeaponItem(){
-    let weap:WeaponItem = new WeaponItem();
+  createWeaponItem(payload:CreateWeaponItemDTO){
+    /*let weap:WeaponItem = new WeaponItem();
     weap._id = "2";
     weap.description = "ARMA";
     weap.name="katana";
     weap.range = 1;
-    weap.slot = EquipmentSlot.MAINHAND;
-    this.mongoService.weaponItemRepository.create(weap);
+    weap.slot = EquipmentSlot.MAINHAND;*/
+    payload._id = uuidv4();
+    return this.mongoService.weaponItemRepository.create(payload);
   }
 
-  createEquipableItem(){
-    let equip:EquipableItem = new EquipableItem();
-    equip._id = "3";
-    equip.description = "CAbeza";
-    equip.name="sombrero";
-    equip.slot = EquipmentSlot.HEAD;
-    this.mongoService.equipableItemRepository.create(equip);
+  createEquipableItem(payload:CreateEquipableItemDTO){
+    payload._id = uuidv4();
+    return this.mongoService.equipableItemRepository.create(payload);
   }
 
   findAll() {
