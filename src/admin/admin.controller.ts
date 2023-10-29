@@ -17,6 +17,7 @@ import { CreateGameDto } from 'src/game/dto/createGame.dto';
 import { randomInt } from 'crypto';
 import { FAKENAME } from 'src/StaticJson/fakeData';
 import { CacheService } from 'src/game-cache/cache.service';
+import { EquipmentIDDto } from 'src/game/dto/equipmentID.dto';
 
 @Public()
 @Controller('admin')
@@ -143,6 +144,8 @@ export class AdminController {
         user2 = await this.cacheService.UserCache.getInCacheOrBD('cdca6c1a-7c41-4773-bef0-c2bf2d01ea59');
         
         let placeUnitDtos:PlaceUnitDto = new PlaceUnitDto();
+        placeUnitDtos.equipment = new EquipmentIDDto();
+        placeUnitDtos.equipment.head = "5cc34023-8dff-4e16-94be-cd1a46c2e2e1";
         for (let index = 0; index < user1.createdUnits.length; index++) {
             const element = user1.createdUnits[index];
             placeUnitDtos.game_uuid = gId;
@@ -152,6 +155,7 @@ export class AdminController {
             if(!await this.gameService.placeUnit(placeUnitDtos)){
                 console.log("error on place unit (user 1)");
             }
+            placeUnitDtos.equipment = undefined;
         }
 
         for (let index = 0; index < user2.createdUnits.length; index++) {

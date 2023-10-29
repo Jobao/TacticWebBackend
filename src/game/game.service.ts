@@ -9,12 +9,14 @@ import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { GamePhase } from './schemas/enums';
 import { GameANDUserDTO } from './dto/gameUser.dto';
+import { ItemService } from 'src/item/item.service';
 
 @Injectable()
 export class GameService {
   constructor(
     private cacheService:CacheService,
-    private mongoService:MongodbService
+    private mongoService:MongodbService,
+    private itemService:ItemService
   ) {}
 
   async createGame(cGame: CreateGameDto) {
@@ -166,7 +168,12 @@ export class GameService {
                   //No esta ocupado por otra pieza
                   if (!game.isThisUnitPlace(payload.unit_uuid, payload.user_uuid)) {
                       //TODO: cambiar los parametros, enviar la unidad directamente
-                      if (game.placeNewUnit(payload.user_uuid, unit, payload.target)) {
+                      let equipment;
+                      if(payload.equipment){
+                        equipment = await this.itemService.getAllItemsOnDTO(payload.equipment);
+                        
+                      }
+                      if (game.placeNewUnit(payload.user_uuid, unit, payload.target, equipment)) {
                         this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.update(game._id, game));
                         return true;
                       }

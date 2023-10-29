@@ -1,19 +1,34 @@
 import { Prop, SchemaFactory,Schema } from "@nestjs/mongoose";
 import { Document} from "mongoose";
-import { Equipment } from "./equipament.schema";
 import { EquipableItem } from "src/item/schemas/equipableItem.schema";
 import { EquipmentSlot } from "./enums";
+import { Item } from "src/item/schemas/item.schema";
 
 export type UnitEquipedDocument = UnitEquiped & Document;
 
 @Schema({_id:false})
 export class UnitEquiped{
     
-    @Prop({ref: Equipment.name})
+    @Prop({ref: Item.name})
     head:string;
 
-    @Prop({ref: Equipment.name})
+    @Prop({ref: Item.name})
     chest:string
+
+    @Prop({ref: Item.name})
+    gloves:string
+
+    @Prop({ref: Item.name})
+    feet:string
+
+    @Prop({ref: Item.name})
+    mainHand:string
+
+    @Prop({ref: Item.name})
+    secondHand:string
+
+    @Prop({ref: Item.name})
+    amulet:string
 
     equip(equipment:EquipableItem){
         switch (equipment.slot) {
@@ -21,12 +36,23 @@ export class UnitEquiped{
                 this.head = equipment._id
                 break;
             case EquipmentSlot.CHEST:
+                this.chest = equipment._id;
+                break
             case EquipmentSlot.GLOVES:
+                this.gloves = equipment._id;
+                break;
             case EquipmentSlot.FEET:
+                this.feet = equipment._id;
+                break;
             case EquipmentSlot.MAINHAND:
+                this.mainHand = equipment._id;
+                break;
             case EquipmentSlot.SECONDHAND:
+                this.secondHand = equipment._id;
+                break;
             case EquipmentSlot.AMULET:
-        
+                this.amulet = equipment._id;
+                break;
             default:
                 break;
         }

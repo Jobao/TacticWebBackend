@@ -6,6 +6,8 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 import { CreateEquipableItemDTO } from './dto/createEquipableItem.dto';
 import { CreateWeaponItemDTO } from './dto/createWeaponItem.dto';
 import { v4 as uuidv4 } from 'uuid';
+import { EquipmentOBJDto } from 'src/game/dto/equipmentOBJ.dto';
+import { EquipmentIDDto } from 'src/game/dto/equipmentID.dto';
 
 @Injectable()
 export class ItemService {
@@ -13,7 +15,6 @@ export class ItemService {
     private cacheService:CacheService,
     private mongoService:MongodbService
   ) {
-    
     this.loadAllItems();
   }
 
@@ -53,6 +54,39 @@ export class ItemService {
   createEquipableItem(payload:CreateEquipableItemDTO){
     payload._id = uuidv4();
     return this.mongoService.equipableItemRepository.create(payload);
+  }
+
+  async getAllItemsOnDTO(payload:EquipmentIDDto): Promise<EquipmentOBJDto>{
+    let ret:EquipmentOBJDto = new EquipmentOBJDto;
+    let res:boolean = false
+    if(payload.head){
+      ret.head = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.head);
+      res =true;
+    }
+    if(payload.chest){
+      ret.chest = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.head);
+      res =true;
+    }
+    if(payload.feet){
+      ret.feet = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.head);
+      res =true;
+    }
+    if(payload.gloves){
+      ret.gloves = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.head);
+      res =true;
+    }
+    if(payload.mainHand){
+      ret.mainHand = await this.cacheService.WeaponItemCache.getInCacheOrBD(payload.head);
+      res =true;
+    }
+    if(payload.secondHand){
+      ret.secondHand = await this.cacheService.WeaponItemCache.getInCacheOrBD(payload.head);
+      res =true;
+    }
+    if(res){
+      return ret;
+    }
+    return null;
   }
 
   findAll() {

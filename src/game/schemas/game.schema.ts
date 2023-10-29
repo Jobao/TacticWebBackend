@@ -7,6 +7,7 @@ import { Target } from 'src/unit/dto/unitAction.dto';
 import { Unit } from './unit.schema';
 import { StatsName } from './enums';
 import { GameOrder, GameOrderSchema } from './gameOrder.schema';
+import { EquipmentOBJDto } from '../dto/equipmentOBJ.dto';
 
 export type GameDocument = Game & Document;
 
@@ -96,7 +97,7 @@ export class Game{
         }
     }
 
-    placeNewUnit(user_uuid:string, unit:Unit, target:Target){
+    placeNewUnit(user_uuid:string, unit:Unit, target:Target, equipmentDto:EquipmentOBJDto){
         let idx= this.getUserIndexOnPlacedUnitList(user_uuid);
         if(idx !== -1){
             let temp:GameUnit = new GameUnit();
@@ -109,6 +110,15 @@ export class Game{
             temp.canPerformActionThisTurn = true;
             temp.canMove = true;
             temp.canAttack = true;
+            if (equipmentDto) {
+                temp.equip(equipmentDto.chest);
+                temp.equip(equipmentDto.feet);
+                temp.equip(equipmentDto.gloves);
+                temp.equip(equipmentDto.head);
+                temp.equip(equipmentDto.mainHand);
+                temp.equip(equipmentDto.secondHand);
+            }
+
             this.placedUnitList[idx].gameUnit.push(temp);
             return true;
         }

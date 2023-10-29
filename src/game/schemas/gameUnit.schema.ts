@@ -3,12 +3,15 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Document } from 'mongoose';
 import { TupleStatsSchema, TupleStats } from './stats.schema';
 import { EquipmentSlot, StatsName } from './enums';
-import { UnitEquiped } from './unitEquiped.schema';
+import { UnitEquiped, UnitEquipedSchema } from './unitEquiped.schema';
 import { EquipableItem } from 'src/item/schemas/equipableItem.schema';
 export type GameUnitDocument = GameUnit & Document;
 
 @Schema({_id: false})
 export class GameUnit{
+    constructor(){
+        this.equipment = new UnitEquiped();
+    }
 
     @ApiProperty()
     @Prop()
@@ -46,7 +49,7 @@ export class GameUnit{
     @Prop({type:[TupleStatsSchema], autopopulate:true})
     stats:TupleStats[];
 
-    @Prop(UnitEquiped)
+    @Prop({type: UnitEquipedSchema, autopopulate:true})
     equipment:UnitEquiped
 
     ocupied(x:number, y:number): boolean{
@@ -109,10 +112,12 @@ export class GameUnit{
     }
 
     equip(nEquip:EquipableItem){
-       this.equipment.equip(nEquip);
-       nEquip.stats.forEach(element => {
-        this.addStatsValue(element);
-       });
+       if (nEquip) {
+        this.equipment.equip(nEquip);
+        nEquip.stats.forEach(element => {
+         this.addStatsValue(element);
+        });
+       }
     }
 
     unequip(uEquip:EquipableItem){
