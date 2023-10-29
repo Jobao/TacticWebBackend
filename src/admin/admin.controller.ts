@@ -18,6 +18,9 @@ import { randomInt } from 'crypto';
 import { FAKENAME } from 'src/StaticJson/fakeData';
 import { CacheService } from 'src/game-cache/cache.service';
 import { EquipmentIDDto } from 'src/game/dto/equipmentID.dto';
+import { ItemService } from 'src/item/item.service';
+import { EquipmentSlot } from 'src/game/schemas/enums';
+const _ = require("lodash");
 
 @Public()
 @Controller('admin')
@@ -27,7 +30,8 @@ export class AdminController {
         private gameService:GameService,
         private skillService: SkillsService,
         private unitClassService: UnitClasesService,
-        private cacheService:CacheService){}
+        private cacheService:CacheService,
+        private itemService:ItemService){}
 
     @Post('/user')
     addNewUser(@Body() nUser:SignupDto){
@@ -94,7 +98,8 @@ export class AdminController {
 
     @Get('pruebas')
     async prueba(){
-        return await this.gameService.p();
+        console.log(_.sample([1,2,3,4,5,6,7,8]));
+        
     }
 
     @Post('autoinsert')
@@ -143,26 +148,46 @@ export class AdminController {
         user2 = await this.cacheService.UserCache.getInCacheOrBD('cdca6c1a-7c41-4773-bef0-c2bf2d01ea59');
         
         let placeUnitDtos:PlaceUnitDto = new PlaceUnitDto();
-        placeUnitDtos.equipment = new EquipmentIDDto();
-        placeUnitDtos.equipment.head = "5cc34023-8dff-4e16-94be-cd1a46c2e2e1";
+        
+        
         for (let index = 0; index < user1.createdUnits.length; index++) {
             const element = user1.createdUnits[index];
+            placeUnitDtos.equipment = new EquipmentIDDto();
+            
+            placeUnitDtos.equipment.chest = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.CHEST)))._id;
+            placeUnitDtos.equipment.feet = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.FEET)))._id;
+            placeUnitDtos.equipment.gloves = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.GLOVES)))._id;
+            placeUnitDtos.equipment.head = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.HEAD)))._id;
+            placeUnitDtos.equipment.mainHand = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND)))._id;
+            placeUnitDtos.equipment.secondHand = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.SECONDHAND)))._id;
+            placeUnitDtos.equipment.amulet = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.AMULET)))._id;
+            
             placeUnitDtos.game_uuid = gId;
             placeUnitDtos.target = {x:randomInt(0, gDTO.sizeX), y:randomInt(0, gDTO.sizeY)};
             placeUnitDtos.unit_uuid = element._id;
             placeUnitDtos.user_uuid = user1._id;
+            
             if(!await this.gameService.placeUnit(placeUnitDtos)){
                 console.log("error on place unit (user 1)");
             }
-            placeUnitDtos.equipment = undefined;
         }
 
         for (let index = 0; index < user2.createdUnits.length; index++) {
             const element = user2.createdUnits[index];
+            placeUnitDtos.equipment = new EquipmentIDDto();
             placeUnitDtos.game_uuid = gId;
             placeUnitDtos.target = {x:randomInt(0, gDTO.sizeX), y:randomInt(0, gDTO.sizeY)};
             placeUnitDtos.unit_uuid = element._id;
             placeUnitDtos.user_uuid = user2._id;
+
+            placeUnitDtos.equipment.chest = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.CHEST)))._id;
+            placeUnitDtos.equipment.feet = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.FEET)))._id;
+            placeUnitDtos.equipment.gloves = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.GLOVES)))._id;
+            placeUnitDtos.equipment.head = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.HEAD)))._id;
+            placeUnitDtos.equipment.mainHand = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND)))._id;
+            placeUnitDtos.equipment.secondHand = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.SECONDHAND)))._id;
+            placeUnitDtos.equipment.amulet = _.sample((await this.itemService.findAllItemBySlot(EquipmentSlot.AMULET)))._id;
+
             if(!await this.gameService.placeUnit(placeUnitDtos)){
                 console.log("error on place unit (user 2)");
             }

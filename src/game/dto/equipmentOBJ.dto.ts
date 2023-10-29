@@ -8,4 +8,5 @@ export class EquipmentOBJDto{
     feet?:EquipableItem;
     mainHand?:WeaponItem;
     secondHand?:WeaponItem;
+    amulet?:EquipableItem
 }

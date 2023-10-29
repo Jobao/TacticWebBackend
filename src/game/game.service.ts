@@ -10,6 +10,7 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 import { EquipmentSlot, GamePhase } from './schemas/enums';
 import { GameANDUserDTO } from './dto/gameUser.dto';
 import { ItemService } from 'src/item/item.service';
+import { EquipmentOBJDto } from './dto/equipmentOBJ.dto';
 
 @Injectable()
 export class GameService {
@@ -168,7 +169,7 @@ export class GameService {
                   //No esta ocupado por otra pieza
                   if (!game.isThisUnitPlace(payload.unit_uuid, payload.user_uuid)) {
                       //TODO: cambiar los parametros, enviar la unidad directamente
-                      let equipment;
+                      let equipment:EquipmentOBJDto;
                       if(payload.equipment){
                         equipment = await this.itemService.getAllItemsOnDTO(payload.equipment);
                         

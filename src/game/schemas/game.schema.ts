@@ -111,6 +111,8 @@ export class Game{
             temp.canMove = true;
             temp.canAttack = true;
             if (equipmentDto) {
+                console.log(equipmentDto);
+                
                 temp.equip(equipmentDto.chest);
                 temp.equip(equipmentDto.feet);
                 temp.equip(equipmentDto.gloves);

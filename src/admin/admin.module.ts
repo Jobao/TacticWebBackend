@@ -8,9 +8,10 @@ import { MongodbModule } from 'src/mongodb/mongodb.module';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { UnitClasesModule } from 'src/unit-clases/unit-clases.module';
 import { CacheModule } from 'src/game-cache/cache.module';
+import { ItemModule } from 'src/item/item.module';
 
 @Module({
-  imports:[AuthModule, UserModule, GameModule, MongodbModule, UnitClasesModule, SkillsModule, CacheModule],
+  imports:[AuthModule, UserModule, GameModule, MongodbModule, UnitClasesModule, SkillsModule, CacheModule, ItemModule],
   controllers: [AdminController]
 })
 export class AdminModule {}

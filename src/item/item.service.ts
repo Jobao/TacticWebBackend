@@ -65,23 +65,27 @@ export class ItemService {
       res =true;
     }
     if(payload.chest){
-      ret.chest = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.head);
+      ret.chest = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.chest);
       res =true;
     }
     if(payload.feet){
-      ret.feet = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.head);
+      ret.feet = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.feet);
       res =true;
     }
     if(payload.gloves){
-      ret.gloves = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.head);
+      ret.gloves = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.gloves);
       res =true;
     }
     if(payload.mainHand){
-      ret.mainHand = await this.cacheService.WeaponItemCache.getInCacheOrBD(payload.head);
+      ret.mainHand = await this.cacheService.WeaponItemCache.getInCacheOrBD(payload.mainHand);
       res =true;
     }
     if(payload.secondHand){
-      ret.secondHand = await this.cacheService.WeaponItemCache.getInCacheOrBD(payload.head);
+      ret.secondHand = await this.cacheService.WeaponItemCache.getInCacheOrBD(payload.secondHand);
+      res =true;
+    }
+    if(payload.amulet){
+      ret.amulet = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.amulet);
       res =true;
     }
     if(res){
@@ -96,6 +100,8 @@ export class ItemService {
 
   async findAllItemBySlot(slot:EquipmentSlot){
     if(slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.SECONDHAND){
+      console.log("armas");
+      
       return await this.findAllWeaponItemBySlot(slot);
     }
     else{

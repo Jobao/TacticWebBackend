@@ -5,4 +5,5 @@ export class EquipmentIDDto{//MAYBE: Esto podria ser un array ???
     feet:string;
     mainHand:string;
     secondHand:string;
+    amulet:string;
 }
