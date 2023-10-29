@@ -51,7 +51,6 @@ export class AdminController {
         isArray:true,
     })
     async getAllGames(){
-        await this.gameService.p();
         return await this.gameService.getAllGames();
     }
 
@@ -93,9 +92,9 @@ export class AdminController {
         return await this.unitClassService.getPosiblesClasesUnit((await this.userService.findOne(user_uuid)).createdUnits[0]);
     }
 
-    @Put('pruebas')
+    @Get('pruebas')
     async prueba(){
-        await this.unitClassService.getAllNameClass();
+        return await this.gameService.p();
     }
 
     @Post('autoinsert')

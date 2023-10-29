@@ -8,6 +8,7 @@ import { CreateWeaponItemDTO } from './dto/createWeaponItem.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { EquipmentOBJDto } from 'src/game/dto/equipmentOBJ.dto';
 import { EquipmentIDDto } from 'src/game/dto/equipmentID.dto';
+import { EquipmentSlot } from 'src/game/schemas/enums';
 
 @Injectable()
 export class ItemService {
@@ -91,6 +92,23 @@ export class ItemService {
 
   findAll() {
     return `This action returns all item`;
+  }
+
+  async findAllItemBySlot(slot:EquipmentSlot){
+    if(slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.SECONDHAND){
+      return await this.findAllWeaponItemBySlot(slot);
+    }
+    else{
+      return await this.findAllEquipableItemBySlot(slot);
+    }
+  }
+
+  async findAllEquipableItemBySlot(slot:EquipmentSlot){
+    return this.mongoService.equipableItemRepository.getAllItemBySlot(slot);
+  }
+
+  async findAllWeaponItemBySlot(slot:EquipmentSlot){
+    return this.mongoService.weaponItemRepository.getAllItemBySlot(slot);
   }
 
   findOne(id: number) {

@@ -7,7 +7,7 @@ import { PlaceUnitDto } from './dto/placeUnit.dto';
 import { UnitActionDto } from 'src/unit/dto/unitAction.dto';
 import { CacheService } from 'src/game-cache/cache.service';
 import { MongodbService } from 'src/mongodb/mongodb.service';
-import { GamePhase } from './schemas/enums';
+import { EquipmentSlot, GamePhase } from './schemas/enums';
 import { GameANDUserDTO } from './dto/gameUser.dto';
 import { ItemService } from 'src/item/item.service';
 
@@ -278,9 +278,6 @@ export class GameService {
   }
 
   async p(){
-    let g = await this.getGame('504ec53a-567a-447f-b657-e4f327728bd2');
-    if(g){
-      g.calculateUnitOrderAction();
-    }
+    return await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND);
   }
 }

@@ -1,10 +1,11 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
 import { ItemService } from './item.service';
 import { UpdateItemDto } from './dto/update-item.dto';
 import { Public } from 'src/auth/public.decorator';
 import { CreateWeaponItemDTO } from './dto/createWeaponItem.dto';
 import { CreateUsableItemDTO } from './dto/createUsableItem.dto';
 import { CreateEquipableItemDTO } from './dto/createEquipableItem.dto';
+import { EquipmentSlot } from 'src/game/schemas/enums';
 
 @Public()
 @Controller('item')
@@ -25,6 +26,12 @@ export class ItemController {
   @Post('usable')
   createUsableItem(@Body() payload:CreateUsableItemDTO){
     return this.itemService.createUsableItem(payload);
+  }
+
+  @Get('/bySlot')
+  async findAllBySlot(@Query('slot') payload:string){
+    return await this.itemService.findAllItemBySlot(EquipmentSlot[payload]);
+
   }
 
   @Get()
