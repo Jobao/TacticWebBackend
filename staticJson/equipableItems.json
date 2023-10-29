@@ -1,0 +1,4762 @@
+[
+    {
+      "_id": "85223910-5695-4186-9f4b-b1f0e4b75d66",
+      "name": "pariatur",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 67,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ullamco cupidatat irure excepteur ad. Occaecat ut incididunt officia deserunt ullamco."
+    },
+    {
+      "_id": "901cebcf-8b90-4891-aa2a-f8ca0a43c3c2",
+      "name": "enim",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 28,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ad non nisi eiusmod eu magna ex et fugiat et quis officia ut adipisicing."
+    },
+    {
+      "_id": "4a0cb2f9-e6fc-4235-9866-2c4c63913605",
+      "name": "irure",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 19,
+          "statsName": "MP"
+        },
+        {
+          "amount": 41,
+          "statsName": "HP"
+        },
+        {
+          "amount": 92,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nisi eu deserunt enim culpa eu qui culpa eu reprehenderit est sint quis officia. Exercitation non elit ad culpa non fugiat anim nostrud."
+    },
+    {
+      "_id": "c4d3df04-7ec7-46e9-ba2d-73712dc2109a",
+      "name": "ea quis",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 32,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 58,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 92,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit et irure anim exercitation veniam aliquip mollit. Velit quis dolore tempor in sunt proident tempor laboris nostrud cupidatat amet excepteur culpa ut."
+    },
+    {
+      "_id": "3dc900f9-d356-4fc6-8620-9f6aa1972dc3",
+      "name": "officia pariatur",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 87,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum non nostrud consequat labore aute."
+    },
+    {
+      "_id": "5cc34023-8dff-4e16-94be-cd1a46c2e2e1",
+      "name": "in",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 52,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Proident nulla duis dolore ullamco velit est nisi dolore eiusmod exercitation sunt."
+    },
+    {
+      "_id": "f7f73ae5-7964-48f1-a6e2-da9884c65e53",
+      "name": "aliqua",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 78,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla reprehenderit minim veniam minim quis excepteur anim labore. Culpa exercitation magna aliquip elit cupidatat duis."
+    },
+    {
+      "_id": "deacc0d3-bf48-4b3b-806f-ca9f9b5c26fb",
+      "name": "deserunt",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 63,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 60,
+          "statsName": "MD"
+        },
+        {
+          "amount": 59,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit magna adipisicing ea non enim amet consequat. Incididunt labore deserunt sit nostrud excepteur non deserunt laboris elit sint amet cupidatat."
+    },
+    {
+      "_id": "0a86892b-4762-4a68-9d08-0e066d962642",
+      "name": "pariatur sunt",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 74,
+          "statsName": "PA"
+        },
+        {
+          "amount": 43,
+          "statsName": "MP"
+        },
+        {
+          "amount": 65,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cupidatat fugiat mollit nostrud ipsum sint. Id ex non minim aliquip consectetur aute aute occaecat eu aliquip veniam eu est adipisicing."
+    },
+    {
+      "_id": "46c7bf7a-b8d1-40ca-a717-b8ebbe23dbee",
+      "name": "ipsum est",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Minim ea anim nulla reprehenderit id ipsum et ipsum Lorem dolor sint nulla ad do. Voluptate minim aliquip id consectetur eu ad."
+    },
+    {
+      "_id": "bdf89bfa-96c3-4f63-9d99-84978702ca3c",
+      "name": "consectetur",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Dolore eu dolore laborum aliqua adipisicing fugiat deserunt consectetur esse dolore nostrud velit veniam labore."
+    },
+    {
+      "_id": "3e08b135-681f-4ca0-a0a0-7822157ea474",
+      "name": "aliqua",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 17,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 19,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim qui elit consectetur pariatur cupidatat excepteur sint. Voluptate duis cillum sint esse anim nisi cillum cillum ad consequat exercitation minim non occaecat."
+    },
+    {
+      "_id": "ca69e669-a82d-433f-ba29-a1b6a006b1a5",
+      "name": "id deserunt",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 33,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Eu eiusmod dolore non aliquip ipsum consectetur in eiusmod culpa anim culpa aliqua mollit."
+    },
+    {
+      "_id": "3ef6aeed-3423-4767-a870-850cd23b6038",
+      "name": "eiusmod amet",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 50,
+          "statsName": "MP"
+        },
+        {
+          "amount": 52,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Anim fugiat eu id amet velit nulla nisi incididunt irure ex dolor aliqua."
+    },
+    {
+      "_id": "eb6aeefe-536b-46bb-8c70-68c906d7697e",
+      "name": "non",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 76,
+          "statsName": "HP"
+        },
+        {
+          "amount": 57,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ut ullamco aliqua sint minim velit dolore. Eiusmod ad ut fugiat exercitation anim elit consectetur velit proident."
+    },
+    {
+      "_id": "02866f2e-66bd-47d7-a36d-b2a7076f619d",
+      "name": "do",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 20,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 100,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Esse pariatur ipsum ipsum aliqua culpa ex officia quis enim proident irure cupidatat ut nulla."
+    },
+    {
+      "_id": "64dac222-6ae1-42a4-b030-cbb32a656bde",
+      "name": "ad laborum",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 71,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 94,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum minim ipsum dolore sit est velit dolore aliquip consectetur anim eiusmod minim. Consequat deserunt exercitation ea aliquip exercitation qui magna."
+    },
+    {
+      "_id": "bc2754ff-22bc-49d8-91cd-fdf6b77cd65e",
+      "name": "voluptate ex",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 39,
+          "statsName": "PA"
+        },
+        {
+          "amount": 67,
+          "statsName": "PA"
+        },
+        {
+          "amount": 89,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ea labore aute ea ullamco veniam officia voluptate duis amet non excepteur ad eu non. Mollit ipsum qui enim veniam commodo."
+    },
+    {
+      "_id": "bcf7c722-dab7-4be1-a08b-49c837df4028",
+      "name": "esse in",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 47,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 94,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum ut est dolore commodo aute nisi ipsum minim anim nisi aliquip."
+    },
+    {
+      "_id": "92d96164-2a51-4a96-b9a1-ca9ae4588a94",
+      "name": "eiusmod do",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 93,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 49,
+          "statsName": "MP"
+        },
+        {
+          "amount": 60,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Officia culpa anim minim et deserunt commodo qui."
+    },
+    {
+      "_id": "4b4d4b6f-1566-4620-923a-6dd4e9990897",
+      "name": "nulla velit",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "MD"
+        },
+        {
+          "amount": 99,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 23,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aliquip minim et pariatur sunt irure ipsum consequat irure ut esse duis sunt veniam. Excepteur duis pariatur id exercitation fugiat in laboris consequat ex consequat ipsum in in velit."
+    },
+    {
+      "_id": "d96be11b-3e22-4ac5-8270-002238817951",
+      "name": "est nulla",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 82,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Consectetur sint voluptate elit veniam sint. Duis anim sit velit in mollit Lorem nulla ea."
+    },
+    {
+      "_id": "ca8b4741-d869-4918-a6b1-76067dbc053e",
+      "name": "magna",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 28,
+          "statsName": "HP"
+        },
+        {
+          "amount": 62,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Laborum nostrud veniam ad enim."
+    },
+    {
+      "_id": "68bc97ab-8881-4dcf-a10c-7e968d5dc0a9",
+      "name": "tempor",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 55,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 70,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim ullamco cillum aliquip anim mollit est aliquip sit eiusmod laborum dolor aute."
+    },
+    {
+      "_id": "2cfb10ca-8e36-4283-98a6-d7ac70e3b7f8",
+      "name": "ea consectetur",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "PA"
+        },
+        {
+          "amount": 31,
+          "statsName": "MD"
+        },
+        {
+          "amount": 10,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ad aute do fugiat minim commodo quis do id nostrud voluptate nostrud eiusmod."
+    },
+    {
+      "_id": "c13a4c8f-aef8-4e4b-bef4-a5b0a95e0981",
+      "name": "duis",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 39,
+          "statsName": "HP"
+        },
+        {
+          "amount": 31,
+          "statsName": "PA"
+        },
+        {
+          "amount": 48,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum quis sunt commodo consequat officia exercitation commodo non ipsum irure."
+    },
+    {
+      "_id": "05608898-efe6-4985-9e4d-778b5995735b",
+      "name": "non",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 62,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt duis do ex cillum laboris. Exercitation fugiat ullamco qui cillum velit sit proident dolore."
+    },
+    {
+      "_id": "01007b7d-9be9-4f60-9c5b-64d26ddf8566",
+      "name": "in anim",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 91,
+          "statsName": "HP"
+        },
+        {
+          "amount": 78,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 80,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Do ea quis aliqua ipsum ex dolore nostrud."
+    },
+    {
+      "_id": "ee474278-b0a8-4119-9384-eaafa226c3a0",
+      "name": "fugiat",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 67,
+          "statsName": "MP"
+        },
+        {
+          "amount": 74,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit amet magna anim enim reprehenderit cillum pariatur excepteur nulla deserunt minim. Minim adipisicing id irure tempor nulla in ipsum labore pariatur nulla."
+    },
+    {
+      "_id": "781ab563-7c89-4f2f-b86a-ab577a0ac81e",
+      "name": "irure sint",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 53,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Exercitation reprehenderit dolor nostrud enim nisi magna. Ullamco id aliqua aute deserunt incididunt occaecat."
+    },
+    {
+      "_id": "4f6d4513-c2d6-403a-8b28-233a481cd677",
+      "name": "minim ad",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 39,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 10,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Reprehenderit dolore tempor non ullamco commodo officia non mollit."
+    },
+    {
+      "_id": "17daafb5-0414-415a-a6cf-9d06a804a02b",
+      "name": "do esse",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 43,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Proident eiusmod commodo dolore eiusmod labore sint sit. Nostrud sunt eu do ea cupidatat Lorem sint sint."
+    },
+    {
+      "_id": "34fac120-0567-4254-8fa3-1c1488724651",
+      "name": "consequat",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "PA"
+        },
+        {
+          "amount": 28,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla cillum exercitation incididunt magna quis. Fugiat consectetur cupidatat non do eiusmod."
+    },
+    {
+      "_id": "f388390e-b6a6-4263-9d1b-3ae3817e2bcf",
+      "name": "fugiat labore",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 74,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 58,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Commodo nulla do est exercitation laboris cillum proident. Occaecat exercitation incididunt sunt veniam."
+    },
+    {
+      "_id": "e26c2747-9ae3-4316-8f54-f9095672a249",
+      "name": "sit",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 56,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ad ut sunt consequat commodo sunt adipisicing esse."
+    },
+    {
+      "_id": "aac22fc8-9aaa-4681-a3f5-65e3010745cb",
+      "name": "adipisicing",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 96,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 60,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Eiusmod magna laboris laborum ad Lorem incididunt adipisicing do. Elit eiusmod cupidatat tempor eu nisi voluptate est ex do occaecat veniam nisi elit velit."
+    },
+    {
+      "_id": "f3ac6947-bf04-4b02-91e4-f03126e316c4",
+      "name": "commodo",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 94,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 91,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Dolor qui anim irure ullamco ullamco ut esse ipsum in duis ex est. Culpa reprehenderit consectetur ex tempor fugiat."
+    },
+    {
+      "_id": "9a2b1f2b-94d9-4e9b-a32a-734fc9dade07",
+      "name": "commodo",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 39,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 89,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 46,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Pariatur reprehenderit velit nisi ad occaecat ipsum sit in culpa incididunt in incididunt officia esse. Eiusmod ea exercitation Lorem ex labore laborum do reprehenderit qui."
+    },
+    {
+      "_id": "6d93000d-999f-4ba0-8160-e6e566d3bff2",
+      "name": "tempor fugiat",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Excepteur magna minim nisi enim est fugiat consequat."
+    },
+    {
+      "_id": "1c3ef98a-2425-4f2f-85c0-7dbecffafb2d",
+      "name": "nisi velit",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 94,
+          "statsName": "PA"
+        },
+        {
+          "amount": 19,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 45,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cupidatat magna commodo excepteur pariatur officia magna commodo. Laboris mollit esse exercitation nulla mollit laborum ad laborum."
+    },
+    {
+      "_id": "276c3c5c-f35c-4a79-87fd-1669d9a31f2e",
+      "name": "proident consectetur",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 39,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 18,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim consequat aliqua excepteur sunt aliquip in reprehenderit dolore esse occaecat magna mollit."
+    },
+    {
+      "_id": "64ba6045-9f4a-4229-81e4-ea7152176800",
+      "name": "quis",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 65,
+          "statsName": "MD"
+        },
+        {
+          "amount": 25,
+          "statsName": "PA"
+        },
+        {
+          "amount": 74,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ipsum dolore proident cupidatat in dolor incididunt id est consequat veniam nisi incididunt proident."
+    },
+    {
+      "_id": "fc7c6806-09c3-4f99-9c11-22c5aee20c6c",
+      "name": "ad",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 65,
+          "statsName": "MA"
+        },
+        {
+          "amount": 75,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Culpa magna proident cillum elit est veniam exercitation pariatur reprehenderit amet. Do esse adipisicing ullamco voluptate velit officia ullamco proident in commodo sint."
+    },
+    {
+      "_id": "98a88953-587b-42f2-9cf9-7fc4b30e3d85",
+      "name": "ex ex",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 74,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Exercitation Lorem nulla ut minim anim exercitation ut sunt ipsum. Amet amet duis ut laborum cupidatat consequat."
+    },
+    {
+      "_id": "d5eab807-6d86-4a66-95cf-ec5c2f487b9e",
+      "name": "magna",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 89,
+          "statsName": "HP"
+        },
+        {
+          "amount": 80,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 73,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Reprehenderit labore culpa ea ullamco cupidatat sunt nisi enim. Labore enim incididunt consectetur proident pariatur."
+    },
+    {
+      "_id": "7d9a0f77-84e0-47f7-b18c-989aeb59bcd0",
+      "name": "et ullamco",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 57,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 62,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 97,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nisi ea ad ullamco elit magna minim est. Do amet culpa incididunt deserunt consectetur dolor consectetur occaecat officia."
+    },
+    {
+      "_id": "e5f27350-38cb-4dd3-b951-d35e0e332d26",
+      "name": "ex",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 60,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Exercitation sunt Lorem irure quis tempor reprehenderit id labore elit."
+    },
+    {
+      "_id": "ff9e467a-08da-4c1d-af57-0d3e313d30e4",
+      "name": "occaecat aute",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 68,
+          "statsName": "MA"
+        },
+        {
+          "amount": 64,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Duis Lorem excepteur aliqua elit excepteur aute enim aute et commodo ullamco. Quis et nostrud nulla deserunt amet laboris elit sunt nostrud aute."
+    },
+    {
+      "_id": "99ad8538-b8c2-425b-8a74-8bdf5db96bdf",
+      "name": "occaecat cillum",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 78,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Reprehenderit magna elit culpa irure. Labore consectetur reprehenderit proident est est esse excepteur velit ullamco anim."
+    },
+    {
+      "_id": "851a7be1-0425-41b4-8955-ac66ac9fe720",
+      "name": "quis ipsum",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 80,
+          "statsName": "MD"
+        },
+        {
+          "amount": 75,
+          "statsName": "HP"
+        },
+        {
+          "amount": 37,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sit ea Lorem amet esse duis."
+    },
+    {
+      "_id": "afd29f33-0353-4870-bab1-1861f4283656",
+      "name": "id",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "MD"
+        },
+        {
+          "amount": 37,
+          "statsName": "PA"
+        },
+        {
+          "amount": 68,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit eu veniam consequat tempor do aliquip aliqua ex aliqua."
+    },
+    {
+      "_id": "92c095be-c53a-457d-96c2-7bf4dd5ac74f",
+      "name": "sint",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 16,
+          "statsName": "MA"
+        },
+        {
+          "amount": 61,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Adipisicing sint cillum aute deserunt mollit sit elit esse non cillum ullamco et excepteur."
+    },
+    {
+      "_id": "4dc60f3f-5502-4b75-b9ca-0925b6a0eb40",
+      "name": "in tempor",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "MP"
+        },
+        {
+          "amount": 18,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Eiusmod qui amet magna ea cupidatat laboris proident ex reprehenderit sint et non laboris Lorem."
+    },
+    {
+      "_id": "16008a8b-28bd-4511-9e30-0dd35dd5df52",
+      "name": "quis qui",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "MP"
+        },
+        {
+          "amount": 25,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim voluptate esse aliquip sit nostrud commodo id ipsum aute labore dolor esse labore."
+    },
+    {
+      "_id": "fc16219a-4a63-4d28-8661-b7ce71ebac74",
+      "name": "ullamco",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 57,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 25,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Lorem eu tempor sint sit reprehenderit sit labore Lorem veniam Lorem. Ullamco in nisi voluptate consectetur adipisicing."
+    },
+    {
+      "_id": "f01e8590-0515-4cfd-a614-bf789f97afca",
+      "name": "elit",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 64,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Lorem ut aute aliqua enim sunt excepteur sit. Et in sit sint dolore tempor."
+    },
+    {
+      "_id": "737a7dac-5319-4580-8ee1-85692e575596",
+      "name": "cupidatat",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 85,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 16,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt nulla mollit duis culpa in quis nulla."
+    },
+    {
+      "_id": "dfbbed8c-a4c8-4a31-a1c9-9313a4c2334a",
+      "name": "laborum",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 22,
+          "statsName": "PA"
+        },
+        {
+          "amount": 30,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Adipisicing aute ad ut proident. Adipisicing cupidatat ex ad irure ipsum sunt dolore do anim."
+    },
+    {
+      "_id": "67ab370c-05c9-4833-be5f-7dc12b75a365",
+      "name": "cillum reprehenderit",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 62,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Eu aliquip excepteur labore aute nostrud nostrud id amet do consectetur ad aute sunt. Qui qui est est duis tempor."
+    },
+    {
+      "_id": "6f3e58ce-eef7-4874-9520-975bc1a05b56",
+      "name": "enim Lorem",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 58,
+          "statsName": "MD"
+        },
+        {
+          "amount": 81,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 19,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Est velit cillum veniam laborum."
+    },
+    {
+      "_id": "2e6e9a3e-7770-4012-9d52-274184529ced",
+      "name": "magna cupidatat",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 37,
+          "statsName": "MD"
+        },
+        {
+          "amount": 80,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 87,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Elit aute irure consectetur dolore cupidatat officia consectetur sunt. Ex laboris irure enim anim ad consectetur labore consectetur tempor voluptate laborum in eiusmod."
+    },
+    {
+      "_id": "3e3d8141-dea7-48a9-b3e1-579ff7fa362e",
+      "name": "deserunt",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 60,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 39,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim velit culpa ut incididunt officia proident aliqua. Ex est pariatur exercitation amet incididunt officia culpa ex minim sint duis nulla dolore sint."
+    },
+    {
+      "_id": "3847d3bd-28cc-4763-bf59-3b7d00f05fbd",
+      "name": "voluptate",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 93,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Excepteur ad fugiat adipisicing amet voluptate sit ea elit est sint. Occaecat labore aliqua enim aliquip do consectetur irure occaecat aute anim."
+    },
+    {
+      "_id": "844f1557-449d-4ff8-8769-67e72db03702",
+      "name": "aliquip",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 45,
+          "statsName": "MP"
+        },
+        {
+          "amount": 98,
+          "statsName": "PA"
+        },
+        {
+          "amount": 17,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt aliqua pariatur non laborum irure duis tempor non tempor fugiat dolore. Aute irure voluptate ipsum qui occaecat aliquip esse occaecat non nisi reprehenderit commodo."
+    },
+    {
+      "_id": "a8548786-b942-4299-b12f-57421ddfb9bd",
+      "name": "ullamco ut",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Magna ipsum fugiat ex irure nisi duis dolore sit. Dolor aute nostrud in ex ut aliqua ex cillum ullamco."
+    },
+    {
+      "_id": "6507c018-1706-461b-9e3c-c39290ab1db6",
+      "name": "enim",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 31,
+          "statsName": "HP"
+        },
+        {
+          "amount": 20,
+          "statsName": "MA"
+        },
+        {
+          "amount": 51,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Excepteur proident dolor consectetur cupidatat dolore velit ut et dolor nulla aliquip."
+    },
+    {
+      "_id": "765834fb-7006-4f41-b80f-1176da1ef3b8",
+      "name": "dolore",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 56,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 13,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Proident do occaecat consequat ut."
+    },
+    {
+      "_id": "18e7c128-2294-4dc4-bac3-9b898186da40",
+      "name": "ea",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 93,
+          "statsName": "MA"
+        },
+        {
+          "amount": 53,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 31,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Incididunt ea eu sint aliqua voluptate excepteur quis ad id consequat proident pariatur."
+    },
+    {
+      "_id": "27dc5d68-6306-4b63-911f-055211428532",
+      "name": "duis",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 95,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Amet velit qui esse do magna ipsum occaecat reprehenderit labore Lorem anim ea."
+    },
+    {
+      "_id": "89719929-4d2d-46b0-93ea-7a63ab8c0f62",
+      "name": "aliquip deserunt",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 11,
+          "statsName": "MA"
+        },
+        {
+          "amount": 88,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum duis amet sint est sint est mollit."
+    },
+    {
+      "_id": "8189f456-3478-42c2-b360-786db175c73d",
+      "name": "in",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 77,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 74,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 83,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sunt quis elit amet cillum ullamco labore deserunt esse do aliqua esse. Sunt adipisicing aliqua nulla ipsum quis adipisicing ex occaecat exercitation ex et labore labore tempor."
+    },
+    {
+      "_id": "5459e5aa-0428-4216-ad02-2b81cafa34c5",
+      "name": "anim consectetur",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 82,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Culpa esse eiusmod est laboris labore Lorem sit ullamco."
+    },
+    {
+      "_id": "d061aa82-a782-4627-88f9-206593d7293b",
+      "name": "voluptate ad",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 42,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Officia esse amet mollit laboris laborum adipisicing dolor duis ullamco cillum pariatur nulla."
+    },
+    {
+      "_id": "aa37fa14-6c81-45a8-8580-6cc5933ca5dc",
+      "name": "culpa",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ipsum veniam sunt cillum ullamco aliqua."
+    },
+    {
+      "_id": "735e3395-89e8-4b8a-bece-25d180a1a1fc",
+      "name": "dolore do",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 58,
+          "statsName": "HP"
+        },
+        {
+          "amount": 39,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Dolor anim cillum consectetur nisi reprehenderit tempor ut laboris aute."
+    },
+    {
+      "_id": "39563ebe-c41f-44a8-b838-153af8a978df",
+      "name": "do",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sit exercitation ullamco pariatur aliquip laborum mollit esse veniam veniam officia consequat elit ex."
+    },
+    {
+      "_id": "b9a115c3-74d6-47e3-9c3b-25d254ab076a",
+      "name": "sunt",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 53,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Veniam sit eu nostrud deserunt culpa est anim ea. Veniam proident ea est laboris nulla aliqua non commodo."
+    },
+    {
+      "_id": "07109b7c-9134-45e5-a9dd-fd4f2b587187",
+      "name": "enim",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 64,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aute cupidatat consectetur ad velit aute qui."
+    },
+    {
+      "_id": "65498e12-0178-4b7f-b6f6-3f33820f680c",
+      "name": "excepteur",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 29,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nostrud duis ex veniam mollit elit ut deserunt enim consequat exercitation tempor enim ad."
+    },
+    {
+      "_id": "5d097b30-5979-4e46-8cc4-bf7bef6994e7",
+      "name": "ipsum",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 38,
+          "statsName": "HP"
+        },
+        {
+          "amount": 33,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Quis labore id aliquip ad deserunt."
+    },
+    {
+      "_id": "76556ffd-cea7-442d-8fab-33d38e6f496e",
+      "name": "sunt duis",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 86,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Lorem sint nostrud pariatur quis non anim velit mollit dolore. Velit nostrud fugiat amet laboris adipisicing magna fugiat aliqua incididunt eiusmod."
+    },
+    {
+      "_id": "8745b0b7-1e26-4f92-8d4b-a0a8836f8a23",
+      "name": "laboris",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 95,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 71,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Occaecat ex enim mollit aliquip quis. Cupidatat cupidatat proident tempor do nostrud magna non sit elit nisi ullamco nulla."
+    },
+    {
+      "_id": "3f47fb05-2654-4d36-82d6-6feb41388fb0",
+      "name": "cillum eiusmod",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 30,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Laborum et mollit elit id voluptate aute nostrud exercitation. Laboris culpa ad id proident veniam cupidatat consequat cupidatat irure dolore irure qui cillum."
+    },
+    {
+      "_id": "8eefd008-6cca-43b9-961b-b3b8b846c234",
+      "name": "commodo nostrud",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 50,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Lorem excepteur aliquip pariatur ex Lorem voluptate eiusmod incididunt quis dolor laborum ullamco consectetur velit. Deserunt esse adipisicing cillum non incididunt eiusmod officia minim."
+    },
+    {
+      "_id": "4ec0b527-4602-4582-9b4f-9e37cb6bac12",
+      "name": "ea ea",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 77,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Elit laboris eiusmod pariatur nulla."
+    },
+    {
+      "_id": "f75a3ceb-3607-4963-b037-3a42f294aeb3",
+      "name": "quis Lorem",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 73,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 13,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Consequat qui culpa ex ullamco veniam fugiat aliqua."
+    },
+    {
+      "_id": "2ef33a4f-c387-433a-bf0d-d1b2f6818221",
+      "name": "do nulla",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 76,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sunt fugiat adipisicing eiusmod proident consectetur cillum nulla fugiat ex fugiat aliquip velit. Commodo anim ullamco mollit eiusmod."
+    },
+    {
+      "_id": "d143189e-68e3-4ae3-8b27-47e16028d8a5",
+      "name": "sunt",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 22,
+          "statsName": "MD"
+        },
+        {
+          "amount": 82,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 96,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Elit sunt magna voluptate est."
+    },
+    {
+      "_id": "1c3d1064-c188-4da9-b073-acf433473fed",
+      "name": "dolore",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 51,
+          "statsName": "PA"
+        },
+        {
+          "amount": 96,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 67,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Duis dolore minim sit eu id sit voluptate elit nulla fugiat. Id exercitation dolor esse cillum consequat."
+    },
+    {
+      "_id": "3498a93d-f727-4d74-af4b-c6fa88e82e09",
+      "name": "officia",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 11,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 55,
+          "statsName": "PA"
+        },
+        {
+          "amount": 85,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim magna enim elit officia laborum tempor. Officia ullamco eu ullamco incididunt ea excepteur velit adipisicing tempor dolore cillum laboris."
+    },
+    {
+      "_id": "a7007096-c1a9-466d-852a-3fa16b00f236",
+      "name": "elit",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 86,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aute excepteur consequat in nostrud cupidatat culpa laborum sint consequat elit aliqua aute. Proident et anim et do minim sunt Lorem."
+    },
+    {
+      "_id": "0936724f-47f2-45e8-aae4-9be309f750d5",
+      "name": "ipsum dolor",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 15,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit id quis ea deserunt laboris. Aliqua fugiat ad reprehenderit elit sint sint."
+    },
+    {
+      "_id": "dbb22912-dbc0-45bd-a341-0bec609e0de3",
+      "name": "ad",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "PA"
+        },
+        {
+          "amount": 30,
+          "statsName": "PA"
+        },
+        {
+          "amount": 88,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aliquip minim laborum ut adipisicing exercitation minim sint nisi adipisicing ullamco do incididunt."
+    },
+    {
+      "_id": "d97e149c-577d-4115-a392-abb8ce3f2504",
+      "name": "voluptate",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 81,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Mollit est aliqua tempor non."
+    },
+    {
+      "_id": "6eec53ed-2055-4ce1-9848-4b9f27363089",
+      "name": "et",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 88,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ipsum magna nulla in quis et excepteur dolor occaecat mollit. Ullamco commodo adipisicing deserunt mollit in voluptate id amet."
+    },
+    {
+      "_id": "f4550a2e-52f2-4ea7-bb00-09cf922fbddf",
+      "name": "irure",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 12,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ut laboris in ea do culpa consectetur ut dolor mollit proident ex."
+    },
+    {
+      "_id": "d0ceff10-c4a5-4b34-be51-0f7747a51671",
+      "name": "laborum",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 49,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aliquip magna eiusmod veniam reprehenderit cupidatat adipisicing labore duis et minim sunt adipisicing sit nulla."
+    },
+    {
+      "_id": "30968657-ddce-432b-a8bc-e5d6cfd33abd",
+      "name": "duis minim",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Irure reprehenderit consequat dolore ullamco tempor excepteur pariatur dolor Lorem consequat pariatur. Amet mollit nostrud cupidatat aute officia culpa consectetur reprehenderit."
+    },
+    {
+      "_id": "29b14f93-250d-4383-b769-a1e05d85b2d2",
+      "name": "duis",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 94,
+          "statsName": "MA"
+        },
+        {
+          "amount": 31,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit officia deserunt elit aute commodo ipsum consectetur. Laborum excepteur aliqua voluptate pariatur minim est fugiat voluptate sint ullamco elit enim mollit proident."
+    },
+    {
+      "_id": "c5f19ac4-f13e-410b-ab3d-85462ef26456",
+      "name": "proident enim",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 95,
+          "statsName": "MD"
+        },
+        {
+          "amount": 89,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 39,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Et laboris ex duis elit fugiat dolor adipisicing."
+    },
+    {
+      "_id": "f34e7719-30ee-4628-8af6-13c5f9ebd9bd",
+      "name": "cupidatat duis",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 44,
+          "statsName": "MD"
+        },
+        {
+          "amount": 30,
+          "statsName": "MA"
+        },
+        {
+          "amount": 13,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aute cupidatat exercitation consequat eu nostrud sint exercitation sint eu. Duis sint minim incididunt fugiat veniam."
+    },
+    {
+      "_id": "1a36c22f-e800-43d4-8c7c-4fa49df34f2f",
+      "name": "incididunt eiusmod",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 51,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 25,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 86,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ullamco reprehenderit dolore do occaecat sint dolor proident quis laboris eiusmod ad adipisicing cillum."
+    },
+    {
+      "_id": "7a619f40-40ac-41f8-ab8e-457324aa1ffa",
+      "name": "id mollit",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 16,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 18,
+          "statsName": "MD"
+        },
+        {
+          "amount": 18,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Esse deserunt id ipsum ullamco aliqua velit laboris."
+    },
+    {
+      "_id": "9b7a8b19-a310-42b0-925b-0e5e2d5712a4",
+      "name": "irure commodo",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 33,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Officia laboris tempor consequat tempor cillum laboris dolore reprehenderit irure adipisicing. Non reprehenderit anim tempor ea non eiusmod exercitation labore dolore cillum."
+    },
+    {
+      "_id": "21d317db-ddd0-4400-829d-b76a7d1e4dfa",
+      "name": "minim Lorem",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 64,
+          "statsName": "PA"
+        },
+        {
+          "amount": 26,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Occaecat voluptate quis quis enim ullamco reprehenderit cupidatat occaecat culpa. Deserunt consequat minim dolore adipisicing."
+    },
+    {
+      "_id": "e51c689d-929d-46e5-a228-15b8a3ef533b",
+      "name": "laborum",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 18,
+          "statsName": "MD"
+        },
+        {
+          "amount": 70,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Laborum sint qui esse adipisicing commodo culpa amet mollit ad elit ullamco cupidatat esse."
+    },
+    {
+      "_id": "046d74f5-f3c3-4b91-baca-e8104e781b5d",
+      "name": "do",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 71,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ea laboris quis deserunt sit consectetur sint do et aute dolor velit pariatur."
+    },
+    {
+      "_id": "c1cee6ec-9ed0-44d6-8d62-32de6af56581",
+      "name": "dolor",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 66,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 77,
+          "statsName": "MP"
+        },
+        {
+          "amount": 73,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Non mollit nisi ad est in nisi non in proident. Sint irure occaecat ut anim id."
+    },
+    {
+      "_id": "4d5cf4e5-c256-4920-9476-c55f1ff49cb5",
+      "name": "elit",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 48,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 17,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Pariatur Lorem proident irure et Lorem labore anim. Qui sunt nulla adipisicing eiusmod ut ipsum laboris ullamco fugiat esse eu adipisicing aute nulla."
+    },
+    {
+      "_id": "1147389f-5dfb-40b5-a091-5dc1d29dfe00",
+      "name": "sint non",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sint commodo qui velit nulla sint dolor est dolor eiusmod ipsum. Incididunt irure non sit mollit ea ipsum."
+    },
+    {
+      "_id": "35e036cd-0ef3-47b0-8b0e-5c71f8287e2a",
+      "name": "in laborum",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 11,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Magna ex ad duis culpa officia mollit veniam non mollit aute nostrud ipsum reprehenderit dolore."
+    },
+    {
+      "_id": "bc8f5295-0da5-43c0-8ec7-061b0abac4b5",
+      "name": "veniam incididunt",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 16,
+          "statsName": "MD"
+        },
+        {
+          "amount": 77,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Quis qui commodo non aliqua ex veniam commodo do id et aliqua nisi."
+    },
+    {
+      "_id": "56fa7e1a-038a-46af-a893-70e070ceab26",
+      "name": "voluptate",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 98,
+          "statsName": "MA"
+        },
+        {
+          "amount": 10,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Qui ex cupidatat consequat aute consequat sunt consequat ipsum laborum. Quis consectetur voluptate ipsum laboris nisi."
+    },
+    {
+      "_id": "fafbcc45-fd2b-4edf-b54e-6889abea12a5",
+      "name": "esse",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 88,
+          "statsName": "MP"
+        },
+        {
+          "amount": 61,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Commodo nisi ex in esse. Officia culpa aliquip aliqua amet officia sit incididunt exercitation consectetur."
+    },
+    {
+      "_id": "67134bbc-2e92-4ddf-9468-a284e05f418f",
+      "name": "sint",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 22,
+          "statsName": "HP"
+        },
+        {
+          "amount": 12,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 79,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Consectetur incididunt ullamco laborum duis."
+    },
+    {
+      "_id": "779b2c63-1abb-485e-8f32-663b9957bd78",
+      "name": "tempor",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 51,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cupidatat nulla aliquip do ad incididunt veniam nulla. Enim ad cillum magna ut magna deserunt officia magna commodo ullamco proident."
+    },
+    {
+      "_id": "c256463c-a4e9-4cec-a2b8-66efeffb09a7",
+      "name": "esse",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 50,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Proident quis reprehenderit consequat ullamco et irure est laborum duis magna aliqua exercitation mollit."
+    },
+    {
+      "_id": "578a3de6-cda9-476a-b3ef-afe747be0336",
+      "name": "dolor ipsum",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 34,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Eiusmod voluptate qui ullamco consectetur dolore id est non consectetur occaecat."
+    },
+    {
+      "_id": "88bf68ea-47b4-4a8c-8918-93ebbaf036ce",
+      "name": "irure ad",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 13,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt anim labore amet deserunt ea enim elit qui cupidatat."
+    },
+    {
+      "_id": "d8581780-7b4c-40f3-a409-a84d7f2fb72c",
+      "name": "Lorem mollit",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 33,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt mollit deserunt nostrud officia sint minim dolore anim aute. Aliquip commodo duis fugiat et ad elit quis."
+    },
+    {
+      "_id": "1002128b-5a03-422e-a70a-a6110f6a1c05",
+      "name": "amet consectetur",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 86,
+          "statsName": "PA"
+        },
+        {
+          "amount": 22,
+          "statsName": "PA"
+        },
+        {
+          "amount": 87,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla mollit Lorem aute ad."
+    },
+    {
+      "_id": "c0574618-d225-4bc9-8a79-48a06ece87a3",
+      "name": "ea magna",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 19,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Laboris quis veniam nostrud do ad duis aute ad culpa fugiat aute et. Eu culpa dolore velit eiusmod adipisicing do Lorem labore esse id ad exercitation esse."
+    },
+    {
+      "_id": "dacaa6a6-65ab-4178-ae1c-2ab5f54d10cd",
+      "name": "magna laborum",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 83,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 19,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ea do labore est et duis culpa dolor occaecat magna ullamco amet aliquip proident. Qui sint minim in id eiusmod elit fugiat."
+    },
+    {
+      "_id": "c870776f-32c4-4cc7-b4b1-154a2aacd99f",
+      "name": "Lorem",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 43,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 56,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum ea consectetur eiusmod tempor sunt irure aliquip dolor pariatur commodo Lorem magna."
+    },
+    {
+      "_id": "c7b04fff-1903-44a1-9d72-5e5df639091a",
+      "name": "Lorem",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 20,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Incididunt dolore occaecat sint duis minim commodo commodo eu reprehenderit irure aliquip."
+    },
+    {
+      "_id": "334bb729-a9b9-4abc-8be7-274cf138ad37",
+      "name": "sint",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 46,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 93,
+          "statsName": "MD"
+        },
+        {
+          "amount": 38,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim ipsum pariatur minim nostrud tempor ex culpa incididunt fugiat Lorem laborum ad eu. Velit occaecat elit velit excepteur ex adipisicing cillum est."
+    },
+    {
+      "_id": "3fa37f18-d7df-4f61-8c32-2a03414a1ac3",
+      "name": "Lorem laboris",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 95,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 93,
+          "statsName": "HP"
+        },
+        {
+          "amount": 85,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ea duis irure quis amet laboris exercitation amet laborum adipisicing tempor reprehenderit nulla enim ullamco. In deserunt sit reprehenderit cupidatat pariatur do cillum mollit commodo."
+    },
+    {
+      "_id": "8751ab20-1fa9-42b5-904f-7270598389e3",
+      "name": "eiusmod adipisicing",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 88,
+          "statsName": "PA"
+        },
+        {
+          "amount": 81,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Dolore consectetur fugiat nulla proident dolor ex irure fugiat."
+    },
+    {
+      "_id": "229ee9c0-8db3-480b-896c-33956ca1f96e",
+      "name": "ad fugiat",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 55,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 88,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Non officia ut aliqua eiusmod qui nisi magna. Quis cupidatat amet enim esse quis."
+    },
+    {
+      "_id": "572b654d-0fcb-4dbb-92b0-5914264f8c32",
+      "name": "ipsum",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 62,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 61,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Labore voluptate nulla ad do consequat sint est fugiat cillum."
+    },
+    {
+      "_id": "3f0729b4-3674-4783-bee3-25eee4579094",
+      "name": "esse",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 46,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 52,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla laborum amet commodo esse et excepteur laboris adipisicing. Anim ut magna tempor enim irure deserunt esse adipisicing incididunt."
+    },
+    {
+      "_id": "f49e7ef5-bd75-4a5a-b954-2e3b1735f69b",
+      "name": "laboris minim",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 89,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 29,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ullamco quis consequat do cupidatat. Cupidatat eu ad cillum ad nulla consequat aute."
+    },
+    {
+      "_id": "f20308c9-a2a4-4d81-9c59-4a05c4b4f00e",
+      "name": "irure",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Occaecat occaecat labore pariatur enim ea culpa amet consectetur mollit commodo et laborum reprehenderit officia."
+    },
+    {
+      "_id": "0237f940-24dc-4bf6-8a63-f8c444da5155",
+      "name": "adipisicing ipsum",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 31,
+          "statsName": "MA"
+        },
+        {
+          "amount": 79,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum ex eiusmod occaecat officia exercitation. Occaecat consequat esse velit culpa mollit minim mollit duis ad aute irure."
+    },
+    {
+      "_id": "0de03b47-6e61-4f00-bf03-980eaed6fa38",
+      "name": "esse",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 74,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt voluptate laboris magna nisi."
+    },
+    {
+      "_id": "82e380ec-0b00-442f-b3d5-c39f6c7d7f8d",
+      "name": "laboris dolore",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 45,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 15,
+          "statsName": "PA"
+        },
+        {
+          "amount": 85,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Exercitation ex nulla sit adipisicing officia aliqua laborum velit ad velit occaecat deserunt veniam. Proident do dolore ullamco veniam Lorem."
+    },
+    {
+      "_id": "d6270789-3c21-4daf-9c8a-46c4446de1d0",
+      "name": "reprehenderit",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 57,
+          "statsName": "PA"
+        },
+        {
+          "amount": 12,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sunt nisi Lorem incididunt culpa officia exercitation sint officia. In eiusmod est fugiat qui magna irure laboris."
+    },
+    {
+      "_id": "9e188d2d-68b4-43b8-9565-d1b1037dfbab",
+      "name": "magna cupidatat",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 35,
+          "statsName": "MD"
+        },
+        {
+          "amount": 83,
+          "statsName": "MD"
+        },
+        {
+          "amount": 70,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla ut mollit in exercitation ex Lorem excepteur amet id magna aute velit officia."
+    },
+    {
+      "_id": "9ca70149-1f31-49b2-8ff1-9dcb7d956a67",
+      "name": "nostrud ullamco",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 71,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Exercitation laborum ipsum esse enim voluptate anim id enim nostrud velit. Aute sint sint occaecat pariatur in excepteur dolor magna et quis laborum exercitation enim fugiat."
+    },
+    {
+      "_id": "7e37a565-acb8-4976-8cf1-a70b2169e57c",
+      "name": "ullamco",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 18,
+          "statsName": "MP"
+        },
+        {
+          "amount": 80,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 97,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ut fugiat ad id sit enim reprehenderit."
+    },
+    {
+      "_id": "40bc3a1f-2a1f-4c07-9305-ebc5c31fad12",
+      "name": "consectetur mollit",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 77,
+          "statsName": "HP"
+        },
+        {
+          "amount": 79,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Pariatur non labore nisi voluptate nostrud ut."
+    },
+    {
+      "_id": "01ed1798-d84b-4e5a-b103-04ecbbb16d29",
+      "name": "commodo",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 16,
+          "statsName": "MD"
+        },
+        {
+          "amount": 50,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 57,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Dolore sit fugiat deserunt minim culpa mollit."
+    },
+    {
+      "_id": "fe16de4b-d3e5-4897-a38a-59652d327902",
+      "name": "ullamco consectetur",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 76,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ullamco magna sunt irure aute anim irure incididunt."
+    },
+    {
+      "_id": "0139545f-869f-4a29-b6a1-41bcfbe2e831",
+      "name": "nisi magna",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 18,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Est labore tempor minim proident adipisicing dolore ex magna incididunt dolore enim ad."
+    },
+    {
+      "_id": "a48b4812-ab0a-4d5a-9387-23e696fe5eb8",
+      "name": "qui",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 60,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Amet elit nulla consequat excepteur qui ipsum id sunt eu ipsum magna incididunt proident eiusmod."
+    },
+    {
+      "_id": "3bd1d86b-abcc-4129-a357-f57959b05abb",
+      "name": "magna pariatur",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 66,
+          "statsName": "MD"
+        },
+        {
+          "amount": 95,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Minim reprehenderit ullamco irure adipisicing in consectetur irure."
+    },
+    {
+      "_id": "00859fe8-341a-4f68-913f-a934133b99e0",
+      "name": "sit",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 33,
+          "statsName": "HP"
+        },
+        {
+          "amount": 84,
+          "statsName": "MP"
+        },
+        {
+          "amount": 13,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Incididunt veniam nisi et labore id minim do nisi dolore esse mollit dolore."
+    },
+    {
+      "_id": "f7a04875-db70-4f00-bc61-ddca7ab81da3",
+      "name": "labore",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 68,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Excepteur do dolore officia nostrud deserunt adipisicing sit do excepteur veniam deserunt. Minim enim nostrud ut cillum anim cupidatat ex velit elit laborum duis occaecat consectetur eu."
+    },
+    {
+      "_id": "62332178-22b7-478f-a53c-d0559874c5c1",
+      "name": "sit cillum",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 80,
+          "statsName": "MP"
+        },
+        {
+          "amount": 86,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 58,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Mollit anim quis qui ut labore nostrud nulla eu ad ipsum sint consectetur."
+    },
+    {
+      "_id": "06fb48ef-f587-4221-b32b-f40709cd9e3c",
+      "name": "dolore",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 58,
+          "statsName": "MD"
+        },
+        {
+          "amount": 28,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ex proident labore ex id sit officia aliquip sunt consequat tempor sit dolore minim esse. Ea commodo duis excepteur anim cupidatat occaecat."
+    },
+    {
+      "_id": "f5415984-3b50-4983-9040-a6a60a6fd89a",
+      "name": "sint eu",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 29,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Tempor laborum eu cupidatat enim dolore ipsum cupidatat aliquip sit ad nulla consequat et. Ad officia excepteur dolore id aliquip duis dolore dolore cupidatat commodo adipisicing pariatur."
+    },
+    {
+      "_id": "95aea4c2-4321-4b81-8c86-ef7b328dfc68",
+      "name": "adipisicing voluptate",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 12,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 72,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 17,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ad mollit laborum eu elit non eiusmod cillum minim et laboris nulla aute nostrud. Esse quis veniam dolor cillum."
+    },
+    {
+      "_id": "c301ee14-ceac-42cb-92ee-719e8bbcf6b4",
+      "name": "anim eiusmod",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 93,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 15,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 56,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Irure id adipisicing eu amet nostrud veniam eu nulla fugiat esse nostrud veniam ex. Labore est proident laboris irure cupidatat occaecat esse et veniam."
+    },
+    {
+      "_id": "7af676aa-f7e0-44c5-b020-883363a328a6",
+      "name": "veniam",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 71,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 69,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Eu magna dolor dolor elit anim reprehenderit consectetur excepteur est eiusmod deserunt."
+    },
+    {
+      "_id": "8620f8a4-fcf8-4c05-9d96-ea61e83397ae",
+      "name": "aliqua",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 56,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 67,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 69,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sunt est qui nulla do sint anim."
+    },
+    {
+      "_id": "58ea3cfc-2087-441c-88d0-e51275b933d2",
+      "name": "ipsum",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 81,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt quis enim occaecat esse eiusmod exercitation ea magna non occaecat cupidatat in non officia."
+    },
+    {
+      "_id": "e6b35b7e-2666-475b-912d-797a98e05ee3",
+      "name": "duis eiusmod",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 19,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 39,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aute do consectetur pariatur nulla ad commodo amet eiusmod aute. Sunt do in do quis aliqua nisi tempor do tempor magna ea nostrud non adipisicing."
+    },
+    {
+      "_id": "8ce557cc-1c01-4ca6-983f-acdc83da95a3",
+      "name": "ipsum minim",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 41,
+          "statsName": "MP"
+        },
+        {
+          "amount": 29,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sit consequat magna veniam ullamco ut laborum cillum. Velit pariatur commodo culpa non irure eiusmod mollit deserunt est."
+    },
+    {
+      "_id": "69291b13-a405-485b-9cd2-dc9cfb21cd57",
+      "name": "aliqua",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 43,
+          "statsName": "HP"
+        },
+        {
+          "amount": 94,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sint deserunt in fugiat reprehenderit ullamco velit sint magna."
+    },
+    {
+      "_id": "b72a6ae5-2435-42ed-94f4-a0c069d7fe59",
+      "name": "aute",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 62,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 37,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 17,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sint pariatur duis voluptate laborum anim exercitation eiusmod veniam voluptate ipsum proident do fugiat ex. Magna sit nulla fugiat eu adipisicing veniam cillum ex veniam veniam."
+    },
+    {
+      "_id": "2562c8a7-c66a-44dc-b9b0-5a28f0f5f59e",
+      "name": "magna proident",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 23,
+          "statsName": "MA"
+        },
+        {
+          "amount": 44,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 75,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Excepteur consequat cupidatat ullamco magna. Pariatur velit anim non irure et nulla."
+    },
+    {
+      "_id": "aafde378-e71d-4c81-a5d8-1b0e84a86179",
+      "name": "est",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 53,
+          "statsName": "MD"
+        },
+        {
+          "amount": 87,
+          "statsName": "MA"
+        },
+        {
+          "amount": 86,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Exercitation minim tempor excepteur eu reprehenderit incididunt elit et sunt enim do id anim. Reprehenderit elit ex adipisicing occaecat ut elit id est."
+    },
+    {
+      "_id": "abab17dd-e0f2-4aa0-90eb-574123cc720e",
+      "name": "consectetur minim",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 23,
+          "statsName": "MA"
+        },
+        {
+          "amount": 76,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Et nisi qui Lorem irure aute ad deserunt quis."
+    },
+    {
+      "_id": "d682e7d7-4abb-442d-9df4-77362b8787d3",
+      "name": "commodo",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 43,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 49,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 47,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aliquip reprehenderit est irure velit amet ut."
+    },
+    {
+      "_id": "d2f51e29-a8cb-460f-b896-df719c217c3f",
+      "name": "id",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 77,
+          "statsName": "MD"
+        },
+        {
+          "amount": 36,
+          "statsName": "PA"
+        },
+        {
+          "amount": 59,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Excepteur do deserunt ullamco et sunt quis sit cupidatat eu commodo dolore qui esse commodo."
+    },
+    {
+      "_id": "60d8f896-1423-4e05-bb22-80297608ae05",
+      "name": "et",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 48,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 26,
+          "statsName": "MA"
+        },
+        {
+          "amount": 36,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Do incididunt commodo sit commodo do laborum dolore ut adipisicing sunt voluptate consectetur proident voluptate."
+    },
+    {
+      "_id": "f1a8e977-b279-4f20-aafd-23c8e082020f",
+      "name": "esse",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 70,
+          "statsName": "HP"
+        },
+        {
+          "amount": 55,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Laboris cillum mollit sit fugiat cillum. Officia consequat ex incididunt velit do enim aliqua proident laborum laboris cupidatat est Lorem sint."
+    },
+    {
+      "_id": "b995c74c-2499-4ade-8061-f8bcf06a3122",
+      "name": "ullamco",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 78,
+          "statsName": "PA"
+        },
+        {
+          "amount": 46,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Dolore amet Lorem duis ipsum minim tempor ipsum incididunt nisi esse cupidatat ullamco cillum dolore."
+    },
+    {
+      "_id": "61fe9cdf-2062-46de-9df1-b42ed2b44dae",
+      "name": "mollit",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 21,
+          "statsName": "HP"
+        },
+        {
+          "amount": 41,
+          "statsName": "PA"
+        },
+        {
+          "amount": 22,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Consectetur amet et minim nisi aute dolore ea."
+    },
+    {
+      "_id": "00944947-2a99-4eaa-a961-ef190704ca29",
+      "name": "Lorem",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 14,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Esse exercitation velit in sit nulla aliquip laboris amet ut non minim cillum do eiusmod."
+    },
+    {
+      "_id": "28755c4f-f546-4264-87d6-fd2b940693a6",
+      "name": "laboris",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 94,
+          "statsName": "HP"
+        },
+        {
+          "amount": 21,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Labore cillum voluptate non in."
+    },
+    {
+      "_id": "4fe8b013-ef89-4006-955e-3ec8201911c5",
+      "name": "ea ut",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 56,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 61,
+          "statsName": "MP"
+        },
+        {
+          "amount": 99,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Adipisicing esse commodo tempor dolor eiusmod id eu aute commodo ipsum est ipsum. Qui aliquip aliqua dolor adipisicing sit occaecat qui."
+    },
+    {
+      "_id": "dc09eed6-2543-4e49-b0b4-193284485eca",
+      "name": "ut tempor",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 40,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 75,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aute est excepteur dolor excepteur nostrud ullamco occaecat pariatur dolor laboris minim officia. Pariatur proident ad quis do nostrud aliqua minim exercitation ad qui laborum."
+    },
+    {
+      "_id": "018d7b78-9fce-4368-93cc-7ea220686329",
+      "name": "aute",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 91,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Id do duis incididunt eiusmod est nisi et non cillum laboris reprehenderit proident ut."
+    },
+    {
+      "_id": "c5a32127-2ca4-416a-ae4f-0195a5bcbafd",
+      "name": "cillum nisi",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 21,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Qui officia eiusmod occaecat laborum amet dolore dolore nostrud duis dolore aliqua laborum commodo."
+    },
+    {
+      "_id": "5207fbc7-02fa-42da-9555-1087d5d92434",
+      "name": "consequat Lorem",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 18,
+          "statsName": "PA"
+        },
+        {
+          "amount": 74,
+          "statsName": "PA"
+        },
+        {
+          "amount": 54,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Voluptate deserunt ipsum ut incididunt ipsum labore et fugiat voluptate id nulla eiusmod esse consectetur. Nulla sit amet labore ipsum qui ullamco est est dolore excepteur nulla."
+    },
+    {
+      "_id": "49d0238e-5ca9-48d3-bfc0-24b4b1d5a1f1",
+      "name": "minim mollit",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 52,
+          "statsName": "HP"
+        },
+        {
+          "amount": 80,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Pariatur exercitation deserunt cupidatat est cillum tempor occaecat."
+    },
+    {
+      "_id": "6c311980-9e02-4d4d-8780-1f3c0dde2921",
+      "name": "nulla pariatur",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 73,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Laboris adipisicing labore esse non nisi et ut. Do dolore voluptate laborum pariatur culpa ut elit qui aliqua exercitation labore ex fugiat voluptate."
+    },
+    {
+      "_id": "b47e24a4-dcc4-41aa-9b88-8fe167466c3e",
+      "name": "eiusmod enim",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 94,
+          "statsName": "MD"
+        },
+        {
+          "amount": 35,
+          "statsName": "HP"
+        },
+        {
+          "amount": 90,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Occaecat commodo officia ea qui consequat non. Consequat enim cupidatat ut amet id Lorem."
+    },
+    {
+      "_id": "e763bc5c-ad06-430e-9c52-dce70fbd20f3",
+      "name": "fugiat",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 14,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Qui quis aliqua elit tempor fugiat id culpa commodo."
+    },
+    {
+      "_id": "42e21bb4-7ad6-4917-bf57-41fe3fb8e05c",
+      "name": "aute non",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 10,
+          "statsName": "HP"
+        },
+        {
+          "amount": 38,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Reprehenderit officia do deserunt culpa enim eu. Do cillum dolor pariatur exercitation."
+    },
+    {
+      "_id": "b17e0967-0945-4e03-8ce7-33f78c29af51",
+      "name": "nostrud laborum",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 23,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Lorem adipisicing deserunt do duis aliquip consequat fugiat occaecat."
+    },
+    {
+      "_id": "99a8028f-77c0-4532-811d-c49c602a1433",
+      "name": "nostrud",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 42,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Eu aliquip duis qui mollit sit cillum nostrud minim fugiat eiusmod. Voluptate cupidatat do id consequat sunt consequat adipisicing ipsum ut."
+    },
+    {
+      "_id": "f40ecd8a-a851-4872-b846-e8bd51a261aa",
+      "name": "consectetur",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 97,
+          "statsName": "MD"
+        },
+        {
+          "amount": 34,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 75,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Amet nostrud mollit in non ad labore sit fugiat nostrud nostrud veniam duis aliqua qui."
+    },
+    {
+      "_id": "da66b171-ad2c-4a54-99fd-3006cfd91c32",
+      "name": "minim incididunt",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 62,
+          "statsName": "HP"
+        },
+        {
+          "amount": 85,
+          "statsName": "MA"
+        },
+        {
+          "amount": 82,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Tempor fugiat irure officia incididunt dolore eu amet in minim elit voluptate pariatur non. Nisi nulla in id esse non laboris sunt."
+    },
+    {
+      "_id": "566fc337-2799-4b68-98ac-e6643d17dade",
+      "name": "deserunt",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 54,
+          "statsName": "MD"
+        },
+        {
+          "amount": 11,
+          "statsName": "MA"
+        },
+        {
+          "amount": 67,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aliqua aute duis aliqua non proident magna tempor."
+    },
+    {
+      "_id": "f446b3b6-557a-44f8-9941-b815cf4d2117",
+      "name": "sunt",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 38,
+          "statsName": "MA"
+        },
+        {
+          "amount": 80,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla irure id adipisicing labore ut velit quis ut officia amet. Tempor proident nostrud proident commodo non sint esse cillum esse excepteur aliquip ipsum esse adipisicing."
+    },
+    {
+      "_id": "9d37102f-8019-43d4-a5fe-f9446e798163",
+      "name": "cupidatat eu",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 12,
+          "statsName": "HP"
+        },
+        {
+          "amount": 21,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 85,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Laboris laborum elit sit deserunt laborum do ex laborum ea elit. Nisi proident esse ipsum ipsum cillum occaecat consequat ex excepteur aliquip sint duis."
+    },
+    {
+      "_id": "f3be350f-c144-41f1-9c46-ca647ddc933e",
+      "name": "aliqua irure",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 45,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 94,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sint officia pariatur velit et adipisicing esse ipsum duis."
+    },
+    {
+      "_id": "02761eff-f227-4809-9e46-a8ffe7fb66cf",
+      "name": "exercitation sunt",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 12,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Fugiat voluptate in aliquip aliqua sint sit fugiat pariatur."
+    },
+    {
+      "_id": "12455a8e-56b0-42e6-aff7-c6e33bc81cd7",
+      "name": "nulla laborum",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 47,
+          "statsName": "MP"
+        },
+        {
+          "amount": 10,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ullamco officia anim ea aliquip cillum. Velit tempor qui non Lorem amet mollit."
+    },
+    {
+      "_id": "c0f081cd-0daa-453d-966e-9c3b5710cfbd",
+      "name": "qui",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 47,
+          "statsName": "HP"
+        },
+        {
+          "amount": 95,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Pariatur eiusmod mollit ad mollit ea do elit cillum."
+    },
+    {
+      "_id": "9aa85310-50ff-4369-aa16-6e1110fe1d46",
+      "name": "dolor",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 25,
+          "statsName": "MD"
+        },
+        {
+          "amount": 37,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 66,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Magna qui in excepteur laboris nisi consequat anim."
+    },
+    {
+      "_id": "819ed18f-5122-433f-b792-8a952bbc619c",
+      "name": "esse",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 58,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 79,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 20,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aliquip minim voluptate ad aute laborum occaecat eiusmod laboris aute esse laboris."
+    },
+    {
+      "_id": "a9fdd4de-d53e-441a-b5cd-78eeda95b3c5",
+      "name": "irure",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 97,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 95,
+          "statsName": "MP"
+        },
+        {
+          "amount": 24,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Tempor ad labore amet cupidatat aliqua ex enim officia laboris consectetur ullamco nostrud excepteur est."
+    },
+    {
+      "_id": "477ba0c4-9f5e-4276-8d92-ce3cce4ecdae",
+      "name": "nostrud elit",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 35,
+          "statsName": "MP"
+        },
+        {
+          "amount": 28,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Id id non dolore officia occaecat in ex elit ad cillum dolore proident sunt."
+    },
+    {
+      "_id": "d5f6663b-02c1-414d-91b2-9c4c755c8b8f",
+      "name": "est consectetur",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 39,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Labore sit sunt ea minim exercitation voluptate. Labore excepteur cillum aute fugiat ut non enim nostrud reprehenderit duis eiusmod esse."
+    },
+    {
+      "_id": "c1b7e646-317b-4af6-abae-8bfea77e9cf5",
+      "name": "mollit ullamco",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 88,
+          "statsName": "MP"
+        },
+        {
+          "amount": 84,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Do laboris aliqua minim aliqua ad officia id velit culpa id laboris irure sint irure."
+    },
+    {
+      "_id": "0c9bf9ce-fdb4-47c0-9094-da7b973344e4",
+      "name": "consectetur exercitation",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 91,
+          "statsName": "PA"
+        },
+        {
+          "amount": 86,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 66,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Irure excepteur commodo incididunt exercitation commodo aute sit Lorem proident id. Ea velit ad ut in ut ad sunt adipisicing tempor ullamco."
+    },
+    {
+      "_id": "25e69f7d-5dfe-4940-98d7-7440030ec423",
+      "name": "consequat esse",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 47,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 28,
+          "statsName": "HP"
+        },
+        {
+          "amount": 17,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum cupidatat exercitation cillum commodo incididunt excepteur. Fugiat amet mollit anim deserunt tempor anim nulla eu consequat."
+    },
+    {
+      "_id": "717ecc0f-e6e1-4b54-af28-7cb2e53126e4",
+      "name": "sit",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 58,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nisi sunt commodo incididunt velit consectetur nisi in ullamco ipsum. Enim incididunt ad in nostrud duis magna proident aliqua nostrud."
+    },
+    {
+      "_id": "818b81d4-2784-46cc-b06c-81559e0537da",
+      "name": "consectetur",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 16,
+          "statsName": "HP"
+        },
+        {
+          "amount": 53,
+          "statsName": "MP"
+        },
+        {
+          "amount": 59,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Pariatur voluptate nostrud laborum aliquip mollit duis labore eiusmod commodo pariatur velit nostrud aute."
+    },
+    {
+      "_id": "3b204084-edde-4eca-9495-3bc17ca4b6c6",
+      "name": "nulla",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 35,
+          "statsName": "MD"
+        },
+        {
+          "amount": 83,
+          "statsName": "HP"
+        },
+        {
+          "amount": 35,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Amet consectetur quis anim quis cupidatat. Nostrud in nulla do eu tempor laborum commodo occaecat veniam enim mollit ut ut minim."
+    },
+    {
+      "_id": "022f22b1-5f6a-418a-a1c4-08ad43deaf2f",
+      "name": "adipisicing quis",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 34,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 12,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nostrud aute quis sunt laborum dolore sint laborum irure irure ad laborum ipsum. Culpa elit tempor sint incididunt nulla cupidatat sint pariatur aliquip ut ad."
+    },
+    {
+      "_id": "44f28b47-22bf-4be1-91b3-bb253d90edf4",
+      "name": "Lorem sunt",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Esse sint sunt voluptate eiusmod amet sunt amet voluptate nisi cillum tempor officia in minim."
+    },
+    {
+      "_id": "454e121e-a24f-40c6-ba3a-5b18ad526206",
+      "name": "tempor ea",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 26,
+          "statsName": "MP"
+        },
+        {
+          "amount": 29,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ut qui pariatur laboris exercitation sunt est est Lorem."
+    },
+    {
+      "_id": "ce5c393e-9547-4f87-8437-6316125974ac",
+      "name": "elit enim",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 40,
+          "statsName": "MA"
+        },
+        {
+          "amount": 83,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 22,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Eiusmod elit veniam voluptate velit aliquip nisi adipisicing nostrud aliquip. Culpa nulla minim qui quis nisi qui labore ea."
+    },
+    {
+      "_id": "0ca1abd7-aeb3-4cfc-a18d-f9ec235b3f8d",
+      "name": "tempor",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 66,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla do adipisicing consectetur sunt eiusmod aliqua tempor ullamco et ad eu. Quis ea exercitation ex cupidatat cupidatat dolor do occaecat ea velit sunt elit elit enim."
+    },
+    {
+      "_id": "42c52a44-1a75-4222-9162-2a9adb2b4c8f",
+      "name": "tempor laboris",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 18,
+          "statsName": "MA"
+        },
+        {
+          "amount": 45,
+          "statsName": "HP"
+        },
+        {
+          "amount": 29,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nisi consectetur commodo voluptate aliquip reprehenderit dolor Lorem id ea sint."
+    },
+    {
+      "_id": "d71400c7-5b31-4ab5-b079-21f29358569d",
+      "name": "fugiat ex",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 31,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 63,
+          "statsName": "MP"
+        },
+        {
+          "amount": 54,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla ullamco pariatur eu culpa nostrud est. Est veniam cillum sit in nisi laborum nostrud."
+    },
+    {
+      "_id": "aa1b064a-8ee7-4c9e-9c72-08defb071c08",
+      "name": "elit ex",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 89,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Quis do cillum mollit reprehenderit magna qui nulla aliqua ipsum. Sint nisi id aute duis tempor ipsum consectetur dolore non officia elit sint et pariatur."
+    },
+    {
+      "_id": "53b379f5-33d9-4f66-b8f9-8b8c2edcf3c0",
+      "name": "dolore",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 35,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 52,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit adipisicing labore ad proident sint sunt do nisi quis dolore esse nulla proident in. Deserunt eiusmod adipisicing proident sunt fugiat ipsum amet excepteur sint adipisicing."
+    },
+    {
+      "_id": "b025dc45-9b05-4268-891f-9f64dd3d735e",
+      "name": "ullamco",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Voluptate ad sit laborum ipsum voluptate sint minim incididunt dolore et fugiat. Non sunt mollit dolor enim ex cillum pariatur veniam."
+    },
+    {
+      "_id": "aae95ded-caea-4818-b5f0-5f97fe00a3c6",
+      "name": "eu anim",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 48,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit id irure magna nisi deserunt."
+    },
+    {
+      "_id": "cf5888b2-318b-47ba-a856-41d5095de32c",
+      "name": "aliquip",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 96,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ut cillum quis duis incididunt anim nostrud aliqua quis eiusmod et labore dolor."
+    },
+    {
+      "_id": "54b415ef-2b3c-4466-a944-53a617d36927",
+      "name": "consectetur amet",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 22,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 46,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Non elit laboris cillum Lorem magna anim culpa."
+    },
+    {
+      "_id": "e88e2e40-9f9c-48ad-a5ce-a5ba8dae2f00",
+      "name": "velit",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 27,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Non culpa nulla non et sint ut sit esse in. Consequat adipisicing consectetur anim irure anim aute sint."
+    },
+    {
+      "_id": "8d89b974-fd89-4979-9f06-abbec0436a8c",
+      "name": "nulla",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 81,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Excepteur dolor consequat in nulla veniam irure deserunt fugiat veniam adipisicing ad aute. Nisi duis amet fugiat ea sunt in culpa id in voluptate laborum quis culpa."
+    },
+    {
+      "_id": "43e960da-efb8-4ef1-93be-4b6de9c8d2f6",
+      "name": "commodo incididunt",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 51,
+          "statsName": "MP"
+        },
+        {
+          "amount": 40,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 29,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nostrud reprehenderit est laboris nostrud id."
+    },
+    {
+      "_id": "a622f9aa-9081-4696-97c1-1080ccfe1b91",
+      "name": "velit",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 59,
+          "statsName": "PA"
+        },
+        {
+          "amount": 51,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ipsum fugiat laborum non do dolore excepteur qui Lorem nulla est deserunt. Amet nisi non veniam minim incididunt sint ex labore laborum incididunt quis proident non est."
+    },
+    {
+      "_id": "b4551b5e-4cd5-474f-a1c2-826e3af69c3b",
+      "name": "do consectetur",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 10,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 92,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Id irure elit voluptate ad labore fugiat eu exercitation irure incididunt laborum. Sunt amet est adipisicing irure non exercitation ut elit ea reprehenderit eu mollit cupidatat."
+    },
+    {
+      "_id": "42dd129f-6da3-495c-8246-c8d3bdf0f927",
+      "name": "irure",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 33,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Officia et eu deserunt elit incididunt minim voluptate veniam ut sunt minim velit aliquip. Nostrud reprehenderit sit eiusmod esse cillum incididunt voluptate nostrud proident."
+    },
+    {
+      "_id": "423f2964-5c5d-4f9e-bd41-56c02fdf2449",
+      "name": "labore cupidatat",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 50,
+          "statsName": "MP"
+        },
+        {
+          "amount": 96,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Qui et est fugiat consequat qui duis."
+    },
+    {
+      "_id": "05372dae-3de9-4adc-8475-d5f069ea9ca7",
+      "name": "cillum sunt",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 47,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sit ullamco esse officia eu ipsum aute aliquip mollit."
+    },
+    {
+      "_id": "080098a3-9ec9-4e43-96f0-5a4e8c85e176",
+      "name": "labore nostrud",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 56,
+          "statsName": "HP"
+        },
+        {
+          "amount": 95,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aliqua consectetur amet magna cupidatat occaecat nisi commodo amet elit culpa non ut. Sit qui eu excepteur nostrud."
+    },
+    {
+      "_id": "a695dbb2-8e98-48de-a653-1fb483e1a009",
+      "name": "aliquip",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 92,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Incididunt in voluptate laboris velit laborum deserunt proident sint proident nostrud fugiat cillum ipsum. Fugiat officia ea nostrud irure ea qui proident cillum commodo esse consequat anim aliqua qui."
+    },
+    {
+      "_id": "a703c947-4ebf-46af-a296-f1947b4edd42",
+      "name": "ad",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 99,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Consequat ex tempor adipisicing consectetur excepteur magna aliqua minim voluptate id nostrud dolore ex."
+    },
+    {
+      "_id": "e762f869-4ca9-4c1e-befb-9f6c4d3af991",
+      "name": "dolore",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 87,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 20,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ipsum aute amet quis magna commodo mollit proident."
+    },
+    {
+      "_id": "7f3d173c-c771-47a9-bbb0-9bd1095ff3e8",
+      "name": "exercitation",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 57,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 20,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Mollit pariatur eiusmod qui anim qui duis dolor ipsum dolore ex exercitation nulla."
+    },
+    {
+      "_id": "24c6c034-05e3-4e72-99a3-a196da458420",
+      "name": "commodo",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 25,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 78,
+          "statsName": "MD"
+        },
+        {
+          "amount": 71,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Aliquip nostrud cupidatat est aliqua sint qui veniam commodo exercitation fugiat cillum officia anim. Occaecat excepteur qui incididunt sint cillum velit deserunt labore veniam mollit excepteur."
+    },
+    {
+      "_id": "39bb075c-7d99-4489-9812-b4d6179d71ab",
+      "name": "aliquip duis",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 99,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 75,
+          "statsName": "PA"
+        },
+        {
+          "amount": 74,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cillum commodo in ipsum et sint excepteur voluptate proident ullamco amet."
+    },
+    {
+      "_id": "01f0bbc5-f010-4257-a572-a19046b5f523",
+      "name": "adipisicing",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 49,
+          "statsName": "PA"
+        },
+        {
+          "amount": 77,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sunt ea occaecat sunt minim deserunt sunt deserunt sint. Ex dolore magna occaecat adipisicing aute commodo."
+    },
+    {
+      "_id": "226f3ef9-cf95-40aa-93f3-6ca20147b830",
+      "name": "dolore",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 57,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Excepteur elit proident culpa et sint dolor duis Lorem nisi id irure sint aliquip. Officia consequat reprehenderit excepteur sunt sit deserunt officia."
+    },
+    {
+      "_id": "4496573a-99cd-4c15-a604-38ba3585f167",
+      "name": "sunt",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 63,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 66,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 66,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla ut adipisicing aute aliquip elit consequat sint reprehenderit id."
+    },
+    {
+      "_id": "ec577340-7afd-463d-8c85-c940e36559b2",
+      "name": "pariatur",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cupidatat pariatur adipisicing duis voluptate sint quis eiusmod cupidatat cillum et. Nisi sit Lorem labore et."
+    },
+    {
+      "_id": "f3b124d8-d595-425e-831b-16964441287a",
+      "name": "tempor",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "HP"
+        },
+        {
+          "amount": 51,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 53,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ea occaecat excepteur ut voluptate et ea est veniam ad id aliqua eiusmod elit. Ea non qui mollit cupidatat tempor labore laboris ea dolor."
+    },
+    {
+      "_id": "3e3b7ed5-93af-4127-b78c-0441ea7819f4",
+      "name": "aliqua",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 68,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sunt non qui ipsum veniam cillum ipsum labore est. Deserunt excepteur commodo ipsum magna quis excepteur."
+    },
+    {
+      "_id": "13ea1910-b274-4c20-acff-ebbcf35a3293",
+      "name": "nostrud",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 51,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 89,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Incididunt et consequat incididunt aliqua dolor incididunt. Exercitation excepteur ipsum excepteur aliquip eiusmod Lorem et incididunt proident amet exercitation ad laborum Lorem."
+    },
+    {
+      "_id": "a0a188c3-4a40-496d-8a29-ad593c88b654",
+      "name": "eiusmod",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 37,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ad qui cupidatat nisi eiusmod ad in laborum esse esse qui exercitation amet."
+    },
+    {
+      "_id": "077d03e7-941e-429e-904b-a1d67a2f030c",
+      "name": "quis sit",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 60,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 89,
+          "statsName": "MD"
+        },
+        {
+          "amount": 99,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit ipsum fugiat cupidatat ullamco Lorem laboris nisi excepteur laboris pariatur."
+    },
+    {
+      "_id": "a1d8c930-029c-4311-b4c9-5fd69f3bdaf5",
+      "name": "cupidatat",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 68,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 62,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Exercitation minim reprehenderit velit amet sit excepteur et eiusmod amet. Irure laboris sunt irure nostrud mollit ut eiusmod aliqua consequat excepteur."
+    },
+    {
+      "_id": "499c3c84-8e1a-4364-9aaa-d3e762b8fcfb",
+      "name": "veniam occaecat",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 28,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 21,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 65,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Tempor Lorem ad cillum id sit deserunt esse dolor."
+    },
+    {
+      "_id": "04ea4920-052a-4798-b42b-bec9d1f50d41",
+      "name": "incididunt veniam",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 20,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 68,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 46,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Proident esse fugiat dolor cupidatat velit tempor id veniam exercitation est veniam ipsum."
+    },
+    {
+      "_id": "f77adc0e-d4bf-4c0c-8b91-44dba3883dd4",
+      "name": "est mollit",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 95,
+          "statsName": "MP"
+        },
+        {
+          "amount": 97,
+          "statsName": "HP"
+        },
+        {
+          "amount": 81,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Adipisicing Lorem eiusmod commodo irure sunt est nisi anim pariatur sit. Do do nisi ex amet aliquip reprehenderit sunt."
+    },
+    {
+      "_id": "b840258f-4c22-4888-9a8d-be2ca6e9d11d",
+      "name": "sint eiusmod",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 66,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 77,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 66,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim anim cupidatat veniam eiusmod consequat ad. Elit fugiat et sit mollit aliquip ea laborum labore culpa officia cillum."
+    },
+    {
+      "_id": "0d0ab906-6024-45a2-9e1f-625249ed661d",
+      "name": "Lorem",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ex ipsum do laborum deserunt exercitation mollit aliquip id ex ullamco adipisicing esse. Consequat veniam aute tempor exercitation proident in cupidatat ut exercitation ipsum pariatur."
+    },
+    {
+      "_id": "462f9733-0ae3-4a42-b83e-b4d1fd6572ab",
+      "name": "fugiat",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 98,
+          "statsName": "MP"
+        },
+        {
+          "amount": 48,
+          "statsName": "MP"
+        },
+        {
+          "amount": 12,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ex esse exercitation in occaecat."
+    },
+    {
+      "_id": "aac8dde0-7df4-4147-a35e-fdfe621e58ed",
+      "name": "occaecat cupidatat",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "PA"
+        },
+        {
+          "amount": 30,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Labore ipsum sint et exercitation eu non velit. Minim velit aute labore officia adipisicing."
+    },
+    {
+      "_id": "609c07a1-4a74-4eee-92da-6ba7bd65aaea",
+      "name": "id sint",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 31,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Incididunt in mollit culpa esse id culpa cupidatat tempor qui aute."
+    },
+    {
+      "_id": "b3910851-100e-489b-b6b0-c6c6f2645173",
+      "name": "proident occaecat",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 36,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Cupidatat aute elit reprehenderit esse. Id in nostrud laboris quis cillum culpa ex duis sit consequat."
+    },
+    {
+      "_id": "96539c04-b356-4964-8d8e-843b39775fc1",
+      "name": "ea velit",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 93,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 36,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nostrud dolore consectetur adipisicing adipisicing excepteur dolore proident. Enim commodo ex anim minim aute duis quis ex minim proident et reprehenderit."
+    },
+    {
+      "_id": "db42ccd2-edb6-4883-a430-9f558aabcfaf",
+      "name": "nostrud",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 13,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 82,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 37,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Officia laborum sit consequat proident dolore magna enim est non eiusmod. Ad ut fugiat est et commodo consectetur id deserunt aute exercitation labore reprehenderit."
+    },
+    {
+      "_id": "4a06b026-b755-4f83-9705-7919ca7538a3",
+      "name": "et",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 10,
+          "statsName": "HP"
+        },
+        {
+          "amount": 50,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Culpa laboris dolore consectetur esse dolor."
+    },
+    {
+      "_id": "a0d933a0-0e1d-408b-a6b0-9d8f55915826",
+      "name": "est",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Laborum ullamco ex eu proident adipisicing aliqua pariatur sunt cupidatat dolor. Deserunt tempor sint laboris mollit quis."
+    },
+    {
+      "_id": "e9248560-9acf-4f34-8bdf-14ad53bdfdfc",
+      "name": "deserunt",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 28,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Pariatur et cillum ad consectetur adipisicing. Amet labore occaecat enim elit ullamco excepteur tempor eiusmod et Lorem duis et aute."
+    },
+    {
+      "_id": "dac84a3f-fdcb-4caf-9b8c-34965817c6e4",
+      "name": "commodo",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 76,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 71,
+          "statsName": "MP"
+        },
+        {
+          "amount": 46,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Proident Lorem irure deserunt enim est labore velit ut ea cupidatat excepteur eiusmod eiusmod fugiat."
+    },
+    {
+      "_id": "ec06716c-0099-4698-9629-90dc73b3cb22",
+      "name": "velit eiusmod",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 12,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 47,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Velit sint occaecat consectetur aliquip aliqua."
+    },
+    {
+      "_id": "3a9c5715-5123-4e03-8bff-e0e68004915c",
+      "name": "id ipsum",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 10,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 23,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nulla dolore consectetur laborum reprehenderit ipsum tempor ea id duis ut ipsum eu deserunt nostrud. Amet est cupidatat elit voluptate."
+    },
+    {
+      "_id": "138292b7-f99e-4fca-aa2f-c7420db24e66",
+      "name": "magna",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 43,
+          "statsName": "MA"
+        },
+        {
+          "amount": 19,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 40,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ullamco duis est deserunt sunt nulla adipisicing enim."
+    },
+    {
+      "_id": "b1a6aa4e-4ecd-4b17-bb99-ba3455f01253",
+      "name": "ad",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 11,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 47,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Incididunt culpa reprehenderit sit occaecat minim cupidatat cillum dolore elit ipsum."
+    },
+    {
+      "_id": "82e69783-e158-440a-8b89-d6b31bf5331d",
+      "name": "nostrud",
+      "slot": "GLOVES",
+      "stats": [
+        {
+          "amount": 59,
+          "statsName": "MP"
+        },
+        {
+          "amount": 79,
+          "statsName": "MP"
+        },
+        {
+          "amount": 96,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Non eiusmod ullamco id eiusmod Lorem adipisicing voluptate ex fugiat. Qui pariatur nostrud mollit laborum proident nisi anim anim."
+    },
+    {
+      "_id": "7d7d18c3-1671-470f-968a-548f89656290",
+      "name": "sunt proident",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 80,
+          "statsName": "MD"
+        },
+        {
+          "amount": 55,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 55,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt veniam veniam nulla culpa magna ea cupidatat."
+    },
+    {
+      "_id": "c9053970-f8bd-43a0-958d-8f5a57be7a37",
+      "name": "fugiat",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 21,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Enim consectetur ut mollit adipisicing esse ullamco nostrud nisi excepteur amet in elit minim velit."
+    },
+    {
+      "_id": "6d5af31a-285d-4731-84af-d58a368d3750",
+      "name": "Lorem",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Non elit nostrud quis aliquip ipsum enim enim mollit esse."
+    },
+    {
+      "_id": "3f69bbe4-07a7-4cfe-9f39-34e0f6b0e249",
+      "name": "excepteur pariatur",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 26,
+          "statsName": "HP"
+        },
+        {
+          "amount": 46,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ea Lorem deserunt do eu sunt consectetur in ex excepteur qui."
+    },
+    {
+      "_id": "8d70980b-d6d4-499c-9cc9-267f8b716cb1",
+      "name": "occaecat",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 13,
+          "statsName": "MP"
+        },
+        {
+          "amount": 15,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Adipisicing veniam nostrud commodo irure dolor cupidatat aliqua amet. Nulla labore ea et Lorem voluptate officia."
+    },
+    {
+      "_id": "4223e612-d74b-4306-936b-db46da131b40",
+      "name": "eu sunt",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 56,
+          "statsName": "MP"
+        },
+        {
+          "amount": 90,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ullamco excepteur exercitation labore qui in tempor do cupidatat."
+    },
+    {
+      "_id": "af47ea42-b87e-463b-abe2-79e5cd388c8d",
+      "name": "ad mollit",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 100,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Nisi dolor tempor cupidatat sit pariatur do excepteur et enim sit ad nulla. Officia cillum occaecat aute aliqua pariatur aliqua consectetur aliqua sit do adipisicing aute."
+    },
+    {
+      "_id": "324f1cc4-19c0-4881-9b81-9d6453faeaf9",
+      "name": "minim",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 10,
+          "statsName": "MA"
+        },
+        {
+          "amount": 35,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Consequat aliquip irure mollit nisi ad ad."
+    },
+    {
+      "_id": "913f194c-bfa4-4b90-9edc-025743e4679d",
+      "name": "adipisicing tempor",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 36,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Ad excepteur ea Lorem commodo tempor culpa."
+    },
+    {
+      "_id": "e4b1cbae-c367-4e47-9dfd-2bf19278a074",
+      "name": "occaecat",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 61,
+          "statsName": "MD"
+        },
+        {
+          "amount": 94,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 15,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Proident sunt adipisicing commodo quis nisi nulla voluptate eiusmod reprehenderit eu. Laboris commodo id qui aliqua id eiusmod nulla anim."
+    },
+    {
+      "_id": "c44041b3-b514-4cbc-868c-142f393701f6",
+      "name": "eu nostrud",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 47,
+          "statsName": "PA"
+        },
+        {
+          "amount": 19,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Dolor elit veniam duis nulla eiusmod laboris laborum reprehenderit elit enim qui incididunt sit."
+    },
+    {
+      "_id": "7de741d3-64ff-492d-9b6b-419c4a8c1dd1",
+      "name": "quis veniam",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 73,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Et quis velit anim voluptate cillum minim magna pariatur ipsum laborum adipisicing."
+    },
+    {
+      "_id": "17bd684f-10b6-4a65-97aa-ff1d846800a0",
+      "name": "fugiat",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 82,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Tempor excepteur laborum ex reprehenderit eiusmod. Incididunt anim anim dolor nostrud et ullamco mollit amet."
+    },
+    {
+      "_id": "f66fccf9-7848-4ea9-90bc-394a6aa34760",
+      "name": "culpa reprehenderit",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 81,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Lorem ex id eu sit velit."
+    },
+    {
+      "_id": "0edcabe4-6823-4733-85ec-2e592ba0673f",
+      "name": "voluptate",
+      "slot": "CHEST",
+      "stats": [
+        {
+          "amount": 62,
+          "statsName": "MD"
+        },
+        {
+          "amount": 30,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Magna excepteur aliquip velit quis magna consequat culpa. Ut cupidatat adipisicing est deserunt Lorem et pariatur officia ut nulla excepteur dolore mollit culpa."
+    },
+    {
+      "_id": "69d6e1b1-31cc-42d4-97c7-f9b2a3244006",
+      "name": "sunt occaecat",
+      "slot": "HEAD",
+      "stats": [
+        {
+          "amount": 23,
+          "statsName": "MP"
+        },
+        {
+          "amount": 59,
+          "statsName": "MP"
+        },
+        {
+          "amount": 20,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Occaecat incididunt aliquip irure consequat fugiat reprehenderit excepteur. In duis dolor est irure pariatur cupidatat voluptate ipsum Lorem pariatur enim cillum voluptate."
+    },
+    {
+      "_id": "86e2c3c6-d6ba-48fc-897e-5f6f3c38e4e7",
+      "name": "labore",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 87,
+          "statsName": "MP"
+        },
+        {
+          "amount": 71,
+          "statsName": "MD"
+        },
+        {
+          "amount": 67,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Tempor ex enim exercitation magna cupidatat non exercitation est esse ullamco deserunt ea anim aliqua. Commodo pariatur occaecat dolore consequat ad."
+    },
+    {
+      "_id": "3ae6b027-c507-4027-ad85-927e668d5f1a",
+      "name": "nulla tempor",
+      "slot": "FEET",
+      "stats": [
+        {
+          "amount": 36,
+          "statsName": "PA"
+        },
+        {
+          "amount": 56,
+          "statsName": "MP"
+        },
+        {
+          "amount": 96,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Deserunt aute sunt sunt velit est deserunt est elit incididunt cillum incididunt. Aliquip ut esse ullamco quis non anim."
+    },
+    {
+      "_id": "af9551ba-d5b5-476c-9287-d59163a93b27",
+      "name": "et",
+      "slot": "AMULET",
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "EquipableItem",
+      "description": "Sunt et quis sunt officia ea deserunt irure cupidatat mollit enim sint reprehenderit."
+    }
+  ]

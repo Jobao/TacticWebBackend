@@ -7,6 +7,9 @@ import { BaseCache } from './baseCache';
 import { v4 as uuidv4 } from 'uuid';
 import { Item } from 'src/item/schemas/item.schema';
 import { UsableItem } from 'src/item/schemas/usableItem.schema';
+import { EquipableItem } from 'src/item/schemas/equipableItem.schema';
+import { WeaponItem } from 'src/item/schemas/weaponItem.schema';
+import { mongo } from 'mongoose';
 
 @Injectable()
 export class CacheService {
@@ -16,6 +19,8 @@ export class CacheService {
         this.gameCache = new BaseCache<Game>(mongoService.gameRepository);
         this.userCache = new BaseCache<User>(mongoService.userRepository);
         this.usableItemCache = new BaseCache<UsableItem>(mongoService.usableItemRepository)
+        this.equipableItemCache = new BaseCache<EquipableItem>(mongoService.equipableItemRepository);
+        this.weaponItemCache = new BaseCache<WeaponItem>(mongoService.weaponItemRepository);
         
     }
     private gameCache: BaseCache<Game>;
@@ -37,10 +42,22 @@ export class CacheService {
     public get UnitClassCache(): BaseCache<UnitClass>{
         return this.unitClassCache;
     }
-
+//---------------------------ITEMS-------------------------------------------
     private usableItemCache:BaseCache<UsableItem>;
 
     public get UsableItemCache(): BaseCache<UsableItem>{
         return this.usableItemCache;
+    }
+
+    private equipableItemCache:BaseCache<EquipableItem>;
+
+    public get EquipableItemCache(): BaseCache<EquipableItem>{
+        return this.equipableItemCache;
+    }
+
+    private weaponItemCache:BaseCache<WeaponItem>;
+
+    public get WeaponItemCache(): BaseCache<WeaponItem>{
+        return this.weaponItemCache;
     }
 }

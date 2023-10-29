@@ -12,7 +12,25 @@ export class ItemService {
   constructor(
     private cacheService:CacheService,
     private mongoService:MongodbService
-  ) {}
+  ) {
+    
+    this.loadAllItems();
+  }
+
+  async loadAllItems(){
+    let equip = await this.mongoService.equipableItemRepository.findAll();
+    equip.forEach(element => {
+      this.cacheService.EquipableItemCache.setInCache(element._id, element);
+    });
+    let weapon = await this.mongoService.weaponItemRepository.findAll();
+    weapon.forEach(element => {
+      this.cacheService.WeaponItemCache.setInCache(element._id, element);
+    });
+    let usableItem = await this.mongoService.usableItemRepository.findAll();
+    usableItem.forEach(element => {
+      this.cacheService.UsableItemCache.setInCache(element._id, element);
+    });
+  }
   createUsableItem(payload: CreateItemDto) {
     /*let ite:UsableItem = new UsableItem();
     ite._id = '1';

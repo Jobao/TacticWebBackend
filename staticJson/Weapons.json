@@ -1,0 +1,3546 @@
+[
+    {
+      "_id": "72b8e606-42c6-4eae-86fc-db8616de96e2",
+      "name": "nostrud",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 68,
+          "statsName": "MP"
+        },
+        {
+          "amount": 89,
+          "statsName": "MA"
+        },
+        {
+          "amount": 16,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Esse exercitation qui velit culpa quis minim Lorem cillum aute eiusmod dolor. Proident do amet incididunt nulla ut nisi commodo cupidatat in cupidatat occaecat deserunt."
+    },
+    {
+      "_id": "51300fb6-a7bd-4d46-823f-d87c26b6313f",
+      "name": "commodo et",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 12,
+          "statsName": "MP"
+        },
+        {
+          "amount": 91,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 24,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Voluptate pariatur quis ea veniam ea aliqua labore aliqua. Minim do dolor enim dolor fugiat minim nulla esse fugiat esse in excepteur aliqua duis."
+    },
+    {
+      "_id": "b0c93b66-e608-459d-8ea7-768235fa1a8e",
+      "name": "eiusmod",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 70,
+          "statsName": "MA"
+        },
+        {
+          "amount": 23,
+          "statsName": "HP"
+        },
+        {
+          "amount": 78,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Deserunt nulla proident cillum labore magna anim qui ullamco non magna consequat."
+    },
+    {
+      "_id": "6340ca98-0b20-4234-a5e1-eef9c880c218",
+      "name": "ullamco",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "MA"
+        },
+        {
+          "amount": 23,
+          "statsName": "HP"
+        },
+        {
+          "amount": 25,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Magna anim est aliqua nostrud anim nulla non aute duis voluptate."
+    },
+    {
+      "_id": "f3c74ea4-0d5d-4293-a2e8-0f59908dc86b",
+      "name": "dolor sit",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 62,
+          "statsName": "MP"
+        },
+        {
+          "amount": 23,
+          "statsName": "MP"
+        },
+        {
+          "amount": 52,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Magna quis sit amet incididunt Lorem pariatur adipisicing occaecat. Aliqua duis sint nisi Lorem eiusmod sit magna."
+    },
+    {
+      "_id": "d5dcc6d2-6dd9-4ad3-bc36-23a896ebd048",
+      "name": "nisi",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 63,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ex id mollit est magna ea magna pariatur cillum duis ut."
+    },
+    {
+      "_id": "a05c64f8-b0ea-49e8-9c88-5fec3bd4ecaa",
+      "name": "amet consequat",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 21,
+          "statsName": "MP"
+        },
+        {
+          "amount": 62,
+          "statsName": "MP"
+        },
+        {
+          "amount": 28,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Laboris sunt eu Lorem voluptate aliquip eu deserunt nostrud irure nostrud anim anim."
+    },
+    {
+      "_id": "f23e1e22-d9f3-4252-8c07-d597fdf613c9",
+      "name": "non",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 11,
+          "statsName": "MD"
+        },
+        {
+          "amount": 99,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Tempor labore occaecat culpa exercitation quis."
+    },
+    {
+      "_id": "ce8b36a3-9949-4b1f-a5b9-e98bf720db05",
+      "name": "duis ex",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 23,
+          "statsName": "MD"
+        },
+        {
+          "amount": 86,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ex eiusmod enim eu ea amet consequat exercitation sint."
+    },
+    {
+      "_id": "90322323-59a4-461c-a61f-afbfae1c8cf4",
+      "name": "magna velit",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 100,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Magna voluptate consectetur consectetur mollit magna est qui do aliquip consectetur sint do. Incididunt ipsum enim est occaecat est duis ex Lorem pariatur."
+    },
+    {
+      "_id": "882ca62b-fcd7-40ac-bcfc-0cf5275d51c0",
+      "name": "ut ex",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 62,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aute pariatur eu elit laborum mollit consequat velit ut aliqua eu elit est aliquip. Non velit deserunt ad nisi minim."
+    },
+    {
+      "_id": "c9e11f42-af5f-45c5-a5a5-53be72609ce6",
+      "name": "velit",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 31,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 19,
+          "statsName": "MP"
+        },
+        {
+          "amount": 98,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Lorem ex do mollit cillum magna laboris ut elit excepteur deserunt sit esse in. Elit minim eiusmod consectetur eu qui ullamco ex enim incididunt commodo ipsum exercitation."
+    },
+    {
+      "_id": "1ca74322-2911-435f-aee8-9d1ccc598209",
+      "name": "excepteur",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 26,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Mollit pariatur consectetur occaecat voluptate."
+    },
+    {
+      "_id": "60a3aad5-6dc5-4faa-81d6-95b5831e2191",
+      "name": "magna",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 99,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ad consectetur labore irure deserunt labore voluptate incididunt est veniam."
+    },
+    {
+      "_id": "dd1280d5-66e2-4ddf-8b79-9b4983fc3af7",
+      "name": "enim",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "MP"
+        },
+        {
+          "amount": 62,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Elit aute dolore do aliqua ex eiusmod voluptate ut aliquip qui duis aliqua sunt. Nisi fugiat excepteur nulla esse duis consectetur exercitation minim nostrud mollit est."
+    },
+    {
+      "_id": "396895fa-5fbc-4102-b530-7e93f2132122",
+      "name": "aliqua anim",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 76,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aute anim irure et veniam ipsum do aliqua sint occaecat esse officia ad. Nisi ea reprehenderit et adipisicing eiusmod ad consequat pariatur esse sint occaecat."
+    },
+    {
+      "_id": "85edf346-eb37-47ff-aa89-d01b9a4e7eaa",
+      "name": "consectetur",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Et laborum qui fugiat Lorem sint eu reprehenderit reprehenderit est."
+    },
+    {
+      "_id": "1703f8a2-53eb-4e84-a6f5-e4f5158f544b",
+      "name": "tempor",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 85,
+          "statsName": "PA"
+        },
+        {
+          "amount": 47,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Duis mollit culpa Lorem mollit sint consequat dolor. Dolor eu in dolore minim quis ipsum quis Lorem dolore in dolore mollit."
+    },
+    {
+      "_id": "f88d0f18-147b-4d74-9d8b-133f261371d7",
+      "name": "magna",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 13,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Labore ad et duis et culpa culpa exercitation cillum amet sint culpa."
+    },
+    {
+      "_id": "9a86aefb-c01a-4c50-afe9-c1f1bce4fae9",
+      "name": "nostrud",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 59,
+          "statsName": "PA"
+        },
+        {
+          "amount": 39,
+          "statsName": "MP"
+        },
+        {
+          "amount": 25,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Enim deserunt in exercitation qui mollit. Id pariatur aute deserunt commodo pariatur pariatur velit consequat est."
+    },
+    {
+      "_id": "2571b204-53ac-42c0-9381-64b9e7a2dc63",
+      "name": "ea",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 70,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Excepteur culpa amet qui cupidatat magna aute quis id laborum dolor culpa sint. Eu nostrud ea laborum pariatur minim velit."
+    },
+    {
+      "_id": "6ecbe48b-7a84-4efe-82e6-02841e09e096",
+      "name": "esse",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 89,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eu ex exercitation cupidatat esse Lorem."
+    },
+    {
+      "_id": "961211fa-0f7d-4e92-ad9c-9b1737dbacec",
+      "name": "esse",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 76,
+          "statsName": "MP"
+        },
+        {
+          "amount": 47,
+          "statsName": "PA"
+        },
+        {
+          "amount": 96,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eu laboris commodo velit anim dolor nulla dolore ex ea."
+    },
+    {
+      "_id": "d4ccecb6-c705-43c4-a09f-ba3b8eee512a",
+      "name": "consectetur anim",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 88,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 86,
+          "statsName": "MA"
+        },
+        {
+          "amount": 57,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Consectetur sunt duis laborum nostrud cupidatat ipsum qui ex reprehenderit."
+    },
+    {
+      "_id": "37e2223f-816f-40c5-9a25-6f733f64f3d1",
+      "name": "magna culpa",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 91,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Qui voluptate qui ad pariatur irure."
+    },
+    {
+      "_id": "2cc7e235-7f9d-4f89-8473-080691caacc9",
+      "name": "ex",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 43,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 66,
+          "statsName": "MD"
+        },
+        {
+          "amount": 97,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Sint ex nostrud Lorem do esse ut reprehenderit cillum ullamco velit sit eu deserunt tempor. Ea ut laboris incididunt consequat labore ut dolor nostrud consequat est culpa."
+    },
+    {
+      "_id": "92b5db61-4d04-48bc-bbef-7f3ef1274529",
+      "name": "tempor et",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "MD"
+        },
+        {
+          "amount": 54,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 51,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Fugiat reprehenderit esse laborum nostrud deserunt anim velit aliqua in consequat fugiat culpa. Esse aliquip tempor labore adipisicing occaecat."
+    },
+    {
+      "_id": "c18ba878-256f-453a-a48d-20e3be2af369",
+      "name": "excepteur",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 23,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 69,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 84,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aute velit velit commodo ad et occaecat occaecat ullamco do pariatur eu proident."
+    },
+    {
+      "_id": "ef06bcf2-3623-4b79-874f-460e881da37e",
+      "name": "mollit dolor",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "PA"
+        },
+        {
+          "amount": 78,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 45,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Cillum est eiusmod sint sunt enim velit id eiusmod amet et aliqua aute. Duis veniam cillum ipsum cupidatat adipisicing aute veniam occaecat labore."
+    },
+    {
+      "_id": "71ea03fb-90ea-4110-8682-e6923dfb2742",
+      "name": "qui culpa",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ad deserunt consectetur culpa aliquip. Occaecat adipisicing mollit qui exercitation labore adipisicing ut irure do."
+    },
+    {
+      "_id": "a3fb4975-33aa-4f3b-a494-b68aaf033292",
+      "name": "consectetur ex",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 17,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ullamco pariatur aute esse aute mollit consectetur aliquip fugiat aliqua aliqua mollit sint reprehenderit irure. Lorem Lorem sint pariatur labore labore commodo tempor eiusmod non."
+    },
+    {
+      "_id": "aaf7e8fd-2f40-445b-a354-99c26539db6a",
+      "name": "ipsum esse",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 66,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 22,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ea minim mollit laboris ea ad excepteur in eu culpa dolor. Culpa elit sunt aliqua ipsum."
+    },
+    {
+      "_id": "6efe46e9-ee60-4e57-a67a-0ff5b9960647",
+      "name": "tempor sunt",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 97,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Est laboris culpa esse fugiat magna reprehenderit excepteur et quis ex id."
+    },
+    {
+      "_id": "e671201d-772c-4440-adbe-c220cc36edd9",
+      "name": "ullamco adipisicing",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 51,
+          "statsName": "PA"
+        },
+        {
+          "amount": 17,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Consectetur qui tempor do laborum aliqua veniam labore qui pariatur laborum."
+    },
+    {
+      "_id": "ff063ea8-b5ab-41a9-9c44-6c20f1689517",
+      "name": "tempor labore",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 10,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 22,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 30,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Excepteur et culpa cupidatat consequat."
+    },
+    {
+      "_id": "f63780d0-478f-4210-8347-34f6b5988c56",
+      "name": "dolor fugiat",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 44,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 93,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Mollit pariatur nisi cupidatat dolore cupidatat magna sit."
+    },
+    {
+      "_id": "67b2783a-42ef-4138-b385-66f98668274b",
+      "name": "elit",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 32,
+          "statsName": "MD"
+        },
+        {
+          "amount": 81,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 58,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Dolore exercitation officia et velit excepteur nostrud."
+    },
+    {
+      "_id": "b96d3dce-3ceb-4845-9bad-aeb15183638c",
+      "name": "minim",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 51,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ullamco magna incididunt ea incididunt."
+    },
+    {
+      "_id": "c1f29d39-492c-42b0-8dbd-9a04680a3878",
+      "name": "dolore consectetur",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 95,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Est laboris occaecat excepteur et fugiat ullamco voluptate."
+    },
+    {
+      "_id": "14ebc9d6-3efe-4737-be40-66160d348389",
+      "name": "commodo culpa",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 18,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Culpa aliquip labore aliquip sint."
+    },
+    {
+      "_id": "4008d6c5-cc8c-4835-b324-b696b72af912",
+      "name": "laborum ullamco",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 78,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 55,
+          "statsName": "MA"
+        },
+        {
+          "amount": 62,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Adipisicing adipisicing irure officia esse Lorem quis Lorem sint labore fugiat."
+    },
+    {
+      "_id": "c1150caf-2be4-4996-9e08-8574577f6269",
+      "name": "voluptate proident",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 34,
+          "statsName": "MD"
+        },
+        {
+          "amount": 89,
+          "statsName": "PA"
+        },
+        {
+          "amount": 48,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Incididunt ex incididunt cupidatat velit ad enim non sint non incididunt elit."
+    },
+    {
+      "_id": "da16fde7-df81-47a0-8366-2f80a7cd0a0a",
+      "name": "consectetur",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 12,
+          "statsName": "MD"
+        },
+        {
+          "amount": 40,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Lorem culpa nostrud eu minim irure culpa pariatur ipsum commodo. Esse aliquip mollit fugiat qui dolore velit ut."
+    },
+    {
+      "_id": "b5fffc3a-d31b-42f4-8e1a-42a559181fdb",
+      "name": "Lorem nulla",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 85,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Adipisicing velit commodo sint adipisicing in ex laborum non consectetur aliquip magna dolor amet occaecat."
+    },
+    {
+      "_id": "f6e5ce45-a531-4b5a-a43d-91f2b5b89abc",
+      "name": "nulla ut",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 71,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Quis esse officia cillum culpa veniam deserunt. Qui ut culpa proident commodo non eiusmod culpa nulla ipsum do qui esse commodo."
+    },
+    {
+      "_id": "5eac2119-dd27-45ca-a7fc-d7a29245fde7",
+      "name": "ad",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 98,
+          "statsName": "MP"
+        },
+        {
+          "amount": 72,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 84,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Cupidatat elit tempor consectetur sint nisi officia duis cillum nulla anim duis cillum dolor eiusmod. In ad esse fugiat dolore."
+    },
+    {
+      "_id": "e2d70bd5-2eb0-4a35-bb7c-3e598355c323",
+      "name": "ut",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 70,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ex sunt cillum ullamco reprehenderit aliquip aute adipisicing sunt laboris anim reprehenderit deserunt ipsum elit."
+    },
+    {
+      "_id": "aae820ae-62dc-453b-b787-0c50dc16fcf9",
+      "name": "aute",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 68,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Pariatur fugiat sint cupidatat consectetur cillum sunt."
+    },
+    {
+      "_id": "753d2996-e135-431a-b98e-6428c0ac45ff",
+      "name": "fugiat irure",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 18,
+          "statsName": "HP"
+        },
+        {
+          "amount": 47,
+          "statsName": "MA"
+        },
+        {
+          "amount": 16,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aliqua sint non veniam ipsum in."
+    },
+    {
+      "_id": "7396b1d5-5938-415a-a79e-027f9959bbbd",
+      "name": "Lorem",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 28,
+          "statsName": "MA"
+        },
+        {
+          "amount": 66,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Et nisi laborum est nulla id reprehenderit sit eiusmod qui."
+    },
+    {
+      "_id": "7e5833d0-f804-4f49-a9e2-143912f67997",
+      "name": "ex",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 65,
+          "statsName": "MA"
+        },
+        {
+          "amount": 84,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Exercitation culpa laborum voluptate occaecat irure ullamco enim proident non. Ullamco cillum pariatur nulla dolore do aliquip nisi consectetur pariatur."
+    },
+    {
+      "_id": "dc55027f-5d0a-48ce-86d7-2548a1a7725e",
+      "name": "cupidatat",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 10,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 17,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "In officia sit velit fugiat magna ipsum ea fugiat enim qui. Ad labore eiusmod ipsum ex irure."
+    },
+    {
+      "_id": "de774385-e6de-4f7f-80bd-6714d808212a",
+      "name": "proident amet",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 71,
+          "statsName": "MP"
+        },
+        {
+          "amount": 48,
+          "statsName": "MD"
+        },
+        {
+          "amount": 23,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Consequat Lorem aliqua reprehenderit velit velit adipisicing sit excepteur."
+    },
+    {
+      "_id": "dd729916-c69c-4e54-b0b7-33b6c9c1f95e",
+      "name": "anim",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 56,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Minim nostrud eiusmod culpa labore ad esse voluptate commodo sunt exercitation excepteur eu sit in."
+    },
+    {
+      "_id": "67faa380-c85e-4507-8eb0-1afbbf5bc46b",
+      "name": "minim",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 65,
+          "statsName": "HP"
+        },
+        {
+          "amount": 37,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Dolore dolore laboris velit est elit nisi."
+    },
+    {
+      "_id": "7c9c1eaf-938c-4a8d-88c5-c34026502e35",
+      "name": "laboris",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 23,
+          "statsName": "MA"
+        },
+        {
+          "amount": 98,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aliquip laborum dolor eiusmod pariatur pariatur magna anim duis elit ex reprehenderit adipisicing."
+    },
+    {
+      "_id": "39a29143-bba6-4b3b-8edf-3c3bab1d5faf",
+      "name": "ad",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 38,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 10,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Dolor proident velit mollit reprehenderit est qui eiusmod eiusmod dolor sit."
+    },
+    {
+      "_id": "15c60d41-d6ec-4c7f-9854-fd2e0f9b87e2",
+      "name": "ex",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 19,
+          "statsName": "MP"
+        },
+        {
+          "amount": 56,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ex excepteur laborum fugiat laborum ullamco officia commodo pariatur. Sint consequat consectetur laboris deserunt magna."
+    },
+    {
+      "_id": "d872255a-355d-4932-ae07-8c48c5b17abe",
+      "name": "enim non",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 86,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Pariatur aute eu amet cupidatat eu quis. Nostrud laborum nisi aliquip amet."
+    },
+    {
+      "_id": "fe8415fe-b540-43ab-9da8-33aaa00a8a11",
+      "name": "non ipsum",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 40,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Reprehenderit magna aute elit excepteur. Dolore aliqua esse aliqua eu nulla id ad enim aliqua magna dolor ipsum dolor aute."
+    },
+    {
+      "_id": "b71df145-e0c1-4893-a4e2-3f37ee9d960d",
+      "name": "labore id",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 37,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 10,
+          "statsName": "PA"
+        },
+        {
+          "amount": 42,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Quis in enim nisi duis proident et occaecat."
+    },
+    {
+      "_id": "03e61303-6d36-4424-b319-461e11cff7d0",
+      "name": "magna",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 13,
+          "statsName": "MD"
+        },
+        {
+          "amount": 19,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 87,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Anim labore ullamco enim culpa ut ut aliqua veniam in."
+    },
+    {
+      "_id": "9db3f20f-db70-4714-a066-6b428799631a",
+      "name": "sint",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 34,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Reprehenderit aliquip qui officia dolore ullamco pariatur in fugiat minim do aliqua elit reprehenderit anim."
+    },
+    {
+      "_id": "513ea045-894d-481c-91b1-51f40f81d99a",
+      "name": "cillum qui",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "HP"
+        },
+        {
+          "amount": 18,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nisi esse ex eu qui adipisicing qui sint anim exercitation ipsum."
+    },
+    {
+      "_id": "388aa7ee-c8dd-4d8b-975a-2e73b7b855c7",
+      "name": "cupidatat minim",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 61,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Fugiat minim Lorem sunt ex culpa sint nulla do cillum ipsum pariatur. Nisi voluptate pariatur dolore tempor ea elit labore in officia voluptate."
+    },
+    {
+      "_id": "1f9e8042-ff48-43ee-bcf3-0c6215ea6970",
+      "name": "voluptate cillum",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 86,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Magna qui non quis Lorem deserunt dolor duis."
+    },
+    {
+      "_id": "c5420b61-3c43-486c-92e6-d411f3e1d636",
+      "name": "deserunt",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "HP"
+        },
+        {
+          "amount": 63,
+          "statsName": "HP"
+        },
+        {
+          "amount": 60,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ad minim adipisicing velit magna proident commodo occaecat do duis minim exercitation cupidatat sunt. Do esse aliqua magna quis cupidatat nostrud incididunt elit voluptate fugiat."
+    },
+    {
+      "_id": "3d4dddd4-a698-42ef-a5c0-56bc9ac794d9",
+      "name": "quis",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 65,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 23,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Do laboris est dolor enim fugiat cupidatat Lorem dolor veniam ipsum sint excepteur laborum."
+    },
+    {
+      "_id": "6fe65f00-e5fa-461a-b7b9-d67015d36f23",
+      "name": "ex",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 36,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 62,
+          "statsName": "MA"
+        },
+        {
+          "amount": 22,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nostrud Lorem aliqua esse veniam sunt nulla minim est amet elit quis amet incididunt. Id dolor Lorem amet fugiat."
+    },
+    {
+      "_id": "db2ddbee-5492-445a-af9e-f1083d36571a",
+      "name": "proident",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "PA"
+        },
+        {
+          "amount": 38,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Est ad enim tempor sunt cillum sit laboris ea aute officia ad mollit. Nostrud incididunt dolor consequat veniam et ex ea ex sunt id deserunt anim labore do."
+    },
+    {
+      "_id": "f10616b9-70e6-4dcc-a35d-dcfb05bf95ce",
+      "name": "cillum",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 31,
+          "statsName": "HP"
+        },
+        {
+          "amount": 83,
+          "statsName": "MD"
+        },
+        {
+          "amount": 71,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nulla amet aliquip nostrud anim aute id nisi in. Dolore et in deserunt officia amet labore culpa cillum laborum ad sint."
+    },
+    {
+      "_id": "2ac3e12e-f2b7-472a-9b38-8161d029af05",
+      "name": "occaecat",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 99,
+          "statsName": "PA"
+        },
+        {
+          "amount": 26,
+          "statsName": "MA"
+        },
+        {
+          "amount": 74,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Amet excepteur laborum do tempor nulla fugiat labore tempor nisi elit reprehenderit."
+    },
+    {
+      "_id": "12255219-f3dd-4b13-b1e4-8a31bdfa333a",
+      "name": "ea laboris",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 21,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Reprehenderit velit mollit irure eu irure adipisicing velit magna anim. Labore magna ex quis pariatur."
+    },
+    {
+      "_id": "c39f0f6b-1372-45e5-b74c-bbd4035b0b04",
+      "name": "quis",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 94,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 52,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nulla ullamco do pariatur in reprehenderit occaecat."
+    },
+    {
+      "_id": "730b5fb3-2c0f-4a3f-a00a-18abdb940d40",
+      "name": "non consectetur",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 66,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Veniam nisi sunt est elit pariatur irure qui."
+    },
+    {
+      "_id": "f4152158-5a3e-4f6b-b3e4-d67476412ae1",
+      "name": "pariatur",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 94,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 94,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Minim et sint exercitation laboris consectetur aute."
+    },
+    {
+      "_id": "760a46ad-241b-4b07-b6e4-dd3194e56d1b",
+      "name": "sit",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 80,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "In ullamco incididunt commodo tempor ex nulla ut ullamco Lorem nostrud esse id deserunt eu."
+    },
+    {
+      "_id": "a5e8a13d-c14f-4aab-a37e-aef586f642e1",
+      "name": "velit sint",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 20,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 58,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 97,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Laboris voluptate occaecat in ipsum occaecat exercitation quis laboris ipsum. Do incididunt mollit et quis anim elit mollit nostrud pariatur nisi."
+    },
+    {
+      "_id": "b7a5fbf7-15a9-48ab-ae7d-6a66f63c6e3e",
+      "name": "non",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 40,
+          "statsName": "MA"
+        },
+        {
+          "amount": 44,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Minim nisi enim tempor consectetur ex eiusmod do labore irure consectetur Lorem eu consequat fugiat."
+    },
+    {
+      "_id": "a9ba4ac0-1537-4322-b601-d977a23b6fff",
+      "name": "nulla",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 12,
+          "statsName": "HP"
+        },
+        {
+          "amount": 73,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ut esse ut consectetur mollit tempor incididunt aliqua esse."
+    },
+    {
+      "_id": "1b7b208d-59d9-4018-9718-1e2e22564d0d",
+      "name": "magna",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 56,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 55,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aliqua ipsum commodo quis anim commodo irure aliquip. Non irure aute officia reprehenderit irure consequat."
+    },
+    {
+      "_id": "4d431c54-56e5-4c67-b425-db7f33135d2f",
+      "name": "Lorem",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 40,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Duis magna sunt deserunt sint ut culpa voluptate. Veniam reprehenderit consequat commodo laboris duis do adipisicing esse."
+    },
+    {
+      "_id": "2f032728-ebfe-48ae-892d-aa96367e9fb5",
+      "name": "veniam cupidatat",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 57,
+          "statsName": "HP"
+        },
+        {
+          "amount": 43,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Velit laborum sunt irure amet aute ipsum magna aute veniam Lorem esse velit consectetur nostrud. Enim Lorem non voluptate excepteur laborum ipsum aliquip eu voluptate aliqua."
+    },
+    {
+      "_id": "19b4a229-83dc-466c-baad-7e33ccee4d4a",
+      "name": "adipisicing",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 97,
+          "statsName": "MA"
+        },
+        {
+          "amount": 77,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Irure ad sint amet aliquip nulla ex sit magna occaecat mollit elit et."
+    },
+    {
+      "_id": "4e541ad8-5f78-46a2-8598-fd4548a1e4e7",
+      "name": "consequat",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 67,
+          "statsName": "PA"
+        },
+        {
+          "amount": 92,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 87,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Lorem et elit veniam quis culpa nulla ad ullamco. Pariatur magna mollit occaecat mollit irure laborum ullamco quis fugiat ipsum dolor excepteur velit."
+    },
+    {
+      "_id": "517c0b9a-e140-45c8-90a9-c14238fb569c",
+      "name": "consectetur ullamco",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 16,
+          "statsName": "HP"
+        },
+        {
+          "amount": 44,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Irure deserunt velit enim dolor aute minim consectetur ad velit exercitation pariatur elit sunt. Velit consequat enim id dolore cillum ipsum veniam."
+    },
+    {
+      "_id": "edaa3c3d-f2fd-4ef4-8b42-430f23f5c865",
+      "name": "duis",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 48,
+          "statsName": "PA"
+        },
+        {
+          "amount": 54,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Magna et commodo voluptate pariatur proident."
+    },
+    {
+      "_id": "6c4eef3f-346e-4c37-95c8-f9bbeb07179a",
+      "name": "ut velit",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 51,
+          "statsName": "MP"
+        },
+        {
+          "amount": 18,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 55,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ea qui velit cupidatat amet et. Qui magna sit do excepteur amet sunt duis est qui velit dolor duis ipsum."
+    },
+    {
+      "_id": "889d0029-5bad-4efd-b14d-9a247e6d76be",
+      "name": "exercitation",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 45,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 10,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 65,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Minim excepteur fugiat sint Lorem sit eu voluptate est culpa pariatur."
+    },
+    {
+      "_id": "a9ffbb20-6265-4425-a65d-12de7f1a0299",
+      "name": "minim officia",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 44,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nulla sint est ut elit cupidatat proident adipisicing incididunt aute nostrud in commodo. Laboris in non esse irure reprehenderit commodo mollit."
+    },
+    {
+      "_id": "2d2aa778-688a-4fcf-8ca2-f003d9370079",
+      "name": "ut incididunt",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 99,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Consectetur laboris nulla consequat mollit magna voluptate veniam sit nulla. Nulla qui consectetur nisi sint cillum magna eiusmod irure cillum ullamco ipsum occaecat laboris."
+    },
+    {
+      "_id": "809fcc38-d327-4a63-9926-944a01c726ce",
+      "name": "consequat",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 59,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eu nisi pariatur elit do. Eu consectetur enim nulla est nisi occaecat quis."
+    },
+    {
+      "_id": "aa90db65-2638-47d4-a3a2-50d5c45a8048",
+      "name": "Lorem",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 43,
+          "statsName": "MP"
+        },
+        {
+          "amount": 32,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 67,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eiusmod et anim magna ad. Sunt ullamco laborum dolore Lorem ea esse cillum est mollit Lorem et."
+    },
+    {
+      "_id": "625681de-54a6-4623-992d-26525b9b5f32",
+      "name": "enim",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 63,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aliquip in labore proident non eu eiusmod."
+    },
+    {
+      "_id": "f40a4b58-2bfc-4774-ba0f-59d4a7d73f96",
+      "name": "eiusmod",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 74,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 71,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Irure amet non fugiat dolor elit et sit. Eu anim sit amet irure anim do eiusmod nostrud laborum."
+    },
+    {
+      "_id": "7b107d95-3233-4ec1-a689-df4e00ad9bc9",
+      "name": "mollit",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 70,
+          "statsName": "MP"
+        },
+        {
+          "amount": 97,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Reprehenderit eiusmod adipisicing ea labore qui."
+    },
+    {
+      "_id": "48c75a29-9a9c-4727-ad15-eb064a703e9d",
+      "name": "nisi",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 78,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 15,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 45,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aliqua do deserunt consectetur elit voluptate eiusmod exercitation mollit adipisicing."
+    },
+    {
+      "_id": "296a7ba7-cb8f-4848-a6e0-0d4bdd516351",
+      "name": "consequat",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 11,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 28,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Pariatur ea consequat pariatur dolor pariatur nostrud."
+    },
+    {
+      "_id": "e206b4c4-16eb-47f5-a761-7bb7d3c47bde",
+      "name": "velit",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eiusmod sunt Lorem consequat velit. Dolore duis consectetur in labore ad et enim officia nisi esse."
+    },
+    {
+      "_id": "e0eacd06-35e9-4444-bccc-fd39f3d8ce5f",
+      "name": "aute non",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 54,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 59,
+          "statsName": "MP"
+        },
+        {
+          "amount": 54,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ullamco anim dolore dolore incididunt."
+    },
+    {
+      "_id": "22002d9f-85c1-40cf-907b-c90bb88171c8",
+      "name": "nulla",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "MP"
+        },
+        {
+          "amount": 45,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eu mollit aliquip ea nulla fugiat. Adipisicing mollit voluptate aliquip reprehenderit laboris deserunt duis."
+    },
+    {
+      "_id": "801ba2b6-9c84-445a-b606-83c3dc7d0a6f",
+      "name": "excepteur",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 86,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Reprehenderit voluptate laborum mollit mollit reprehenderit do aliquip commodo eiusmod velit."
+    },
+    {
+      "_id": "ee1d6993-3741-43c6-b004-d2bf8e5f1d36",
+      "name": "proident",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 35,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 20,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Exercitation cillum dolor voluptate do commodo. Irure velit magna officia sint proident velit nisi eiusmod fugiat ad officia ullamco cillum."
+    },
+    {
+      "_id": "2b32de69-5b1e-4d77-b49a-d8eb7f026988",
+      "name": "aliqua sint",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 66,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Voluptate enim aute nostrud consectetur elit commodo laboris ex ipsum ut commodo. Sunt anim enim aliqua amet officia ex ex tempor officia tempor."
+    },
+    {
+      "_id": "c8c338fa-beec-4dc5-aa1c-961dca1840fa",
+      "name": "irure reprehenderit",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 30,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 60,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Do duis magna esse commodo veniam sit proident proident voluptate officia sunt cillum in. Mollit culpa cupidatat laboris adipisicing irure eu eiusmod enim irure non cupidatat anim et sit."
+    },
+    {
+      "_id": "d5c46079-22a4-4bd5-81a5-3be776572d6b",
+      "name": "magna",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 21,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 29,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Fugiat dolore nisi culpa culpa ad in veniam reprehenderit consectetur. Excepteur occaecat elit id consectetur quis Lorem consequat id consectetur."
+    },
+    {
+      "_id": "822e49da-d564-40fa-86c9-4277c54db231",
+      "name": "in",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 50,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Cillum qui duis aute labore nulla nostrud aliquip. Amet pariatur magna enim voluptate occaecat fugiat est anim officia minim ut ad commodo sit."
+    },
+    {
+      "_id": "4f4e5426-80f5-4a01-835a-139447f2fd1e",
+      "name": "consequat irure",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 63,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Anim excepteur et Lorem laborum ut consectetur. Sunt tempor amet esse laboris cillum duis occaecat."
+    },
+    {
+      "_id": "34033da1-bef1-4b00-aa3c-11cf44557ba5",
+      "name": "enim",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 82,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 97,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 56,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ipsum incididunt cupidatat consectetur eu laboris et cupidatat sit esse nostrud aliquip ex. Occaecat in aliqua ipsum in ipsum."
+    },
+    {
+      "_id": "c1c1fe44-9d73-4278-a6ec-c9349d6aabdd",
+      "name": "aliquip",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 58,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 30,
+          "statsName": "MA"
+        },
+        {
+          "amount": 66,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eiusmod minim veniam ex officia ullamco non ipsum anim eu reprehenderit."
+    },
+    {
+      "_id": "664f3c98-f98f-430c-95f2-7ebf148b8bc6",
+      "name": "anim",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 13,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Duis tempor exercitation dolor ea aliquip proident. Lorem eiusmod ad fugiat deserunt sint esse."
+    },
+    {
+      "_id": "9538f6df-9f51-4630-9232-bd18930432d2",
+      "name": "amet",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 75,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Dolore sunt est dolor officia adipisicing sint amet et aliquip laborum in."
+    },
+    {
+      "_id": "94f8d084-8078-40dd-8efb-e490b5efe963",
+      "name": "non",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 67,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Lorem minim eu duis ut non dolore est eiusmod voluptate culpa."
+    },
+    {
+      "_id": "6056c48f-343c-420b-bc48-a2b56016f05d",
+      "name": "commodo",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 73,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 40,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Anim tempor dolore pariatur ullamco quis sint sint sint magna. Duis elit ipsum laborum eiusmod sunt mollit occaecat id pariatur laborum anim."
+    },
+    {
+      "_id": "5402f6b3-abcc-4d30-b8a8-27ff7ab21ea9",
+      "name": "sit proident",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 39,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 100,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Et aliqua excepteur anim cillum anim labore non officia nulla magna."
+    },
+    {
+      "_id": "e57f4242-3ccb-492a-85b8-9577ad1c4e67",
+      "name": "in",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 56,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ipsum dolor id excepteur velit enim elit dolor proident est cupidatat id id ea nisi. Aliqua sunt magna pariatur aliquip duis eu est in esse deserunt consectetur aliqua reprehenderit."
+    },
+    {
+      "_id": "e45b6ec4-3ab3-4216-9ca6-5a6f796cc310",
+      "name": "minim",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 58,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 63,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Pariatur labore nisi magna et sint mollit culpa duis eiusmod enim fugiat. Nisi eu sunt nulla excepteur cupidatat elit."
+    },
+    {
+      "_id": "d79d39eb-5104-4970-a817-0a178c66c35b",
+      "name": "excepteur aute",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 67,
+          "statsName": "MA"
+        },
+        {
+          "amount": 86,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nostrud sunt dolore ea ipsum cillum elit tempor labore fugiat tempor consequat eu sint in. Ea aliqua ex sint et irure exercitation laboris commodo eiusmod."
+    },
+    {
+      "_id": "0422018d-d2bf-4fdc-9f0f-c49badf0f6a2",
+      "name": "in",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 20,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ad excepteur Lorem aute cillum Lorem officia voluptate voluptate occaecat enim."
+    },
+    {
+      "_id": "bb82d5a7-b4fb-42ff-9f1d-ab3e824ca20e",
+      "name": "occaecat sit",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 23,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Occaecat culpa proident adipisicing enim ut duis duis officia consectetur eu tempor nostrud ad."
+    },
+    {
+      "_id": "0f20a1b0-fcb9-4de1-81b7-9a75e1dc496c",
+      "name": "labore voluptate",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 44,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 16,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Esse laboris sunt do voluptate. Reprehenderit consectetur ullamco nisi deserunt."
+    },
+    {
+      "_id": "5926e0d4-3604-49ce-856b-c199400fc484",
+      "name": "non aliqua",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 10,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 61,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 98,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ad proident cillum laboris deserunt Lorem consectetur non."
+    },
+    {
+      "_id": "e153c217-523c-4d9c-bb03-9d8e3c730fb7",
+      "name": "ipsum",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 31,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 46,
+          "statsName": "HP"
+        },
+        {
+          "amount": 32,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ex amet enim amet id duis fugiat dolore. Nisi culpa exercitation fugiat consequat amet officia ea dolore dolore duis excepteur esse cupidatat."
+    },
+    {
+      "_id": "0510e1ad-6bcc-4a6e-8abb-4881f6466f31",
+      "name": "elit",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 82,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 98,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Sit laboris irure elit adipisicing ad elit eu deserunt eiusmod sunt dolore do culpa. Excepteur deserunt ullamco est aute amet dolore aute nulla consequat aliqua."
+    },
+    {
+      "_id": "a7971ce3-b9d7-430a-b04f-34f4183b689e",
+      "name": "non",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 49,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nulla sint magna Lorem dolore aute."
+    },
+    {
+      "_id": "75ba11f4-8cfa-4faf-bd46-ee5914abaa04",
+      "name": "cillum excepteur",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Mollit ullamco qui incididunt ad."
+    },
+    {
+      "_id": "626e4daa-aff2-4067-b31d-018775fae668",
+      "name": "aliquip",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 87,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Culpa voluptate sit velit velit proident est. Adipisicing culpa exercitation fugiat aliquip minim pariatur cillum proident laborum."
+    },
+    {
+      "_id": "27a75ec1-bcbd-464a-a784-f0eb0146a865",
+      "name": "non",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 76,
+          "statsName": "MA"
+        },
+        {
+          "amount": 79,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Consequat commodo aliqua pariatur tempor labore ad ipsum veniam reprehenderit ad commodo. Consectetur amet ea irure ut aute eu irure."
+    },
+    {
+      "_id": "31fcb3ad-483c-4234-9940-f41282b1d063",
+      "name": "duis",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 61,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Esse dolor culpa ea aliqua dolor. Dolor elit voluptate sunt culpa adipisicing ex cillum excepteur ea et."
+    },
+    {
+      "_id": "69f54993-0ca2-4753-90d6-9aa77f511a1f",
+      "name": "nulla",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 44,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 66,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Exercitation ut veniam elit laborum duis voluptate esse minim."
+    },
+    {
+      "_id": "f29cd904-48bc-46bd-b592-6200adac128d",
+      "name": "eu",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 88,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 31,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 19,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Irure ea commodo officia incididunt sunt."
+    },
+    {
+      "_id": "d106a726-5384-4b13-b7d9-49af02199b3b",
+      "name": "officia",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 71,
+          "statsName": "MP"
+        },
+        {
+          "amount": 23,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Officia do sunt adipisicing nulla magna occaecat cillum consectetur laboris."
+    },
+    {
+      "_id": "62b778ac-5dd2-433a-a670-4bace9a500e6",
+      "name": "adipisicing occaecat",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 43,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ea magna ullamco deserunt non nostrud sunt dolor eu officia labore. Adipisicing duis magna laboris sunt nisi nostrud labore amet magna culpa."
+    },
+    {
+      "_id": "fe523adc-e471-47e1-af8c-aa9472d3d792",
+      "name": "adipisicing fugiat",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 88,
+          "statsName": "HP"
+        },
+        {
+          "amount": 60,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 26,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Id officia adipisicing laborum ad."
+    },
+    {
+      "_id": "e39b970b-8d3f-4c4b-9192-e698d3b10dba",
+      "name": "non",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 76,
+          "statsName": "MD"
+        },
+        {
+          "amount": 76,
+          "statsName": "PA"
+        },
+        {
+          "amount": 49,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Elit fugiat elit dolor proident enim et est aute sint aute in nisi enim exercitation. Ipsum sint pariatur ex consequat Lorem reprehenderit consequat reprehenderit qui non eu anim."
+    },
+    {
+      "_id": "374ce24c-818f-4114-807e-3685f052cc3e",
+      "name": "cupidatat labore",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Minim amet incididunt aute veniam exercitation proident nostrud voluptate cupidatat sit in in pariatur. Voluptate dolor labore mollit nisi consectetur qui magna."
+    },
+    {
+      "_id": "3b720aab-9858-4459-baed-f33e4abad24e",
+      "name": "enim amet",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 89,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Veniam in adipisicing et esse nulla laboris enim excepteur."
+    },
+    {
+      "_id": "00580ee7-c5ad-4d6a-adbe-f75f0f3fb1d2",
+      "name": "id",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 10,
+          "statsName": "MP"
+        },
+        {
+          "amount": 56,
+          "statsName": "HP"
+        },
+        {
+          "amount": 49,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Reprehenderit eiusmod Lorem cillum ullamco exercitation consectetur nisi quis sint deserunt id consequat anim excepteur. Veniam pariatur laborum cupidatat fugiat proident pariatur."
+    },
+    {
+      "_id": "9b2f1ca9-6b3c-4013-a39a-45446bd8ca78",
+      "name": "minim",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 30,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 37,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ex sit duis cillum deserunt."
+    },
+    {
+      "_id": "a52ae61b-2a8f-4dd8-9d44-f55546e1612f",
+      "name": "exercitation dolore",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 31,
+          "statsName": "MP"
+        },
+        {
+          "amount": 13,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Officia reprehenderit occaecat duis quis amet eiusmod voluptate aliquip pariatur laborum non deserunt. Amet esse culpa nisi consequat nisi irure sunt et ea ad ad."
+    },
+    {
+      "_id": "579a838e-cd3c-4ba2-bd51-668594053d32",
+      "name": "dolor velit",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 74,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Deserunt laboris aliquip aliqua culpa anim qui."
+    },
+    {
+      "_id": "7a5e6cac-4ad2-478e-9cb9-7807cac7277d",
+      "name": "consequat Lorem",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Cillum deserunt anim dolor exercitation."
+    },
+    {
+      "_id": "62ab3a11-1219-4fe8-8df2-26d9f571cc23",
+      "name": "do id",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 35,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 99,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Quis id sit laboris duis excepteur adipisicing enim tempor."
+    },
+    {
+      "_id": "caf4df63-e222-44bc-ba44-9afee0d9acd8",
+      "name": "aliqua consectetur",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Cupidatat voluptate eu ipsum id in eiusmod velit ut irure qui anim enim aute. Tempor nostrud ullamco esse commodo irure."
+    },
+    {
+      "_id": "36fdcf1f-6255-4083-9d00-57514381085b",
+      "name": "magna",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 99,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 62,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 94,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Reprehenderit nulla do exercitation esse commodo quis ex culpa excepteur excepteur et ad."
+    },
+    {
+      "_id": "93f5d99c-7070-4057-a06d-3c1317607c35",
+      "name": "ut qui",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 77,
+          "statsName": "PA"
+        },
+        {
+          "amount": 21,
+          "statsName": "MD"
+        },
+        {
+          "amount": 37,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Culpa elit pariatur anim tempor proident sit."
+    },
+    {
+      "_id": "21b9d1c6-e1fd-47dc-a691-82df18370de2",
+      "name": "laboris irure",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 33,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 29,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 11,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Do proident ex duis non."
+    },
+    {
+      "_id": "9ce5427a-bed8-43b4-bc00-136ab70c823b",
+      "name": "ad",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 86,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 60,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 40,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nisi do occaecat ad commodo aliquip fugiat non commodo quis dolore excepteur. Qui adipisicing occaecat dolor occaecat do quis qui esse ipsum mollit enim deserunt."
+    },
+    {
+      "_id": "5c502bdb-4318-4da3-8642-81868bb9880f",
+      "name": "fugiat minim",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 48,
+          "statsName": "PA"
+        },
+        {
+          "amount": 28,
+          "statsName": "HP"
+        },
+        {
+          "amount": 67,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nostrud ea sunt ea magna adipisicing sunt sint pariatur amet veniam. Fugiat dolore sint qui reprehenderit anim aute ipsum."
+    },
+    {
+      "_id": "cd5be403-feb9-4c06-85a6-fd160e66432d",
+      "name": "in",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 44,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nulla duis adipisicing officia incididunt esse commodo in voluptate irure. Tempor id ex pariatur dolore anim irure aliquip tempor deserunt eiusmod culpa ut enim consequat."
+    },
+    {
+      "_id": "522a9613-13f7-4e8d-a13b-cf86bbca3484",
+      "name": "qui",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 88,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 93,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 71,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Et excepteur dolor ea incididunt sit. Nostrud consectetur ullamco ullamco esse velit excepteur irure aliqua."
+    },
+    {
+      "_id": "2dc56443-e53f-420b-b5fb-d5a85d277e8f",
+      "name": "laboris laborum",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 63,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 50,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Irure do et enim aute pariatur non officia consectetur culpa irure anim. Ad anim irure excepteur Lorem laboris et nulla aliquip amet occaecat qui."
+    },
+    {
+      "_id": "1fec83d7-887d-4140-b508-f040c2f43192",
+      "name": "dolor eiusmod",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 13,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ullamco culpa labore amet ut officia."
+    },
+    {
+      "_id": "7313b3f5-0d22-4377-97af-bfbbb147e80b",
+      "name": "incididunt nulla",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 11,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 57,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nostrud qui velit exercitation consectetur elit duis fugiat nulla ad duis officia fugiat nostrud."
+    },
+    {
+      "_id": "55bdf270-8749-4901-86f6-d0c5be935cd2",
+      "name": "sunt duis",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 53,
+          "statsName": "MA"
+        },
+        {
+          "amount": 78,
+          "statsName": "HP"
+        },
+        {
+          "amount": 29,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Laboris nisi ipsum Lorem commodo occaecat elit elit qui ullamco exercitation voluptate incididunt. Ipsum commodo commodo dolore nulla enim sint aute incididunt culpa amet eu."
+    },
+    {
+      "_id": "db5fe0b4-323c-445b-ab72-eb707d61d166",
+      "name": "commodo incididunt",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 37,
+          "statsName": "MP"
+        },
+        {
+          "amount": 98,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eiusmod quis ea labore fugiat pariatur. Eu reprehenderit irure ut duis."
+    },
+    {
+      "_id": "cff28fa2-6ed6-4683-9abc-5a8d14c77353",
+      "name": "mollit culpa",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 79,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 38,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Cupidatat aute exercitation incididunt reprehenderit minim esse aute cupidatat consectetur. Tempor amet ipsum velit dolor velit aute id irure deserunt ex cillum deserunt."
+    },
+    {
+      "_id": "807c4f6c-83e2-4c40-8c3a-799b2b81cf4a",
+      "name": "nulla labore",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 70,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Occaecat et anim nostrud consequat ullamco. Veniam Lorem est sit adipisicing dolor exercitation nulla."
+    },
+    {
+      "_id": "381bc7b2-0305-422c-8f94-a9aacbbcc4a7",
+      "name": "amet",
+      "slot": "SECONDHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 32,
+          "statsName": "HP"
+        },
+        {
+          "amount": 24,
+          "statsName": "MD"
+        },
+        {
+          "amount": 24,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Sunt laborum pariatur reprehenderit ad cupidatat nulla est minim proident ad duis. Est amet sunt esse adipisicing."
+    },
+    {
+      "_id": "c0839066-036d-4882-9b70-42592354f4a9",
+      "name": "anim",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 71,
+          "statsName": "MD"
+        },
+        {
+          "amount": 47,
+          "statsName": "HP"
+        },
+        {
+          "amount": 84,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Anim labore laborum incididunt consectetur eiusmod irure sit adipisicing in ad."
+    },
+    {
+      "_id": "1642a5e5-67bf-46a2-ada5-c2695b8fc31d",
+      "name": "in culpa",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 69,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ex veniam elit labore veniam veniam elit nisi deserunt proident anim. Ut aliqua laboris dolor duis enim nisi aliqua eiusmod quis."
+    },
+    {
+      "_id": "b44a68c2-992e-4b64-9c52-4e8f0ecbeb6c",
+      "name": "in",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 42,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 13,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nulla nulla eiusmod proident sunt ullamco velit velit."
+    },
+    {
+      "_id": "de1251da-c28b-4198-a368-29d112b5818e",
+      "name": "laborum",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 81,
+          "statsName": "MP"
+        },
+        {
+          "amount": 47,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Incididunt nisi deserunt non ipsum consectetur consequat nostrud dolore ad labore."
+    },
+    {
+      "_id": "0a4d45c3-ee74-44f1-972c-f6e8755b4f55",
+      "name": "sunt",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 85,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 10,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ullamco cillum aliquip commodo laboris nulla id laboris nostrud commodo dolor labore ut id aliquip. Eu laborum ipsum id qui eu aliquip ex nisi nisi deserunt dolore veniam do."
+    },
+    {
+      "_id": "e1fab9ce-ec31-4b02-80fc-146fe53d5fd5",
+      "name": "amet commodo",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 82,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 78,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Occaecat amet elit ipsum eiusmod id dolor eu cillum cillum pariatur ea ut commodo ad. Cillum cillum sunt mollit sit."
+    },
+    {
+      "_id": "7a9362eb-a336-4520-bb82-91488f7f2945",
+      "name": "tempor aute",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 35,
+          "statsName": "MPR"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Fugiat ut labore amet enim sit fugiat. Eu sint commodo exercitation aliquip irure irure id."
+    },
+    {
+      "_id": "f30a5cde-965c-4697-b6ad-7579777a6ac9",
+      "name": "do",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 50,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "In sunt consectetur occaecat minim ullamco ea labore eiusmod proident et voluptate excepteur. Enim ad fugiat duis cupidatat aliquip esse ad cillum labore minim tempor."
+    },
+    {
+      "_id": "b4e9f0e4-d240-47e3-a5a9-999293d78a3f",
+      "name": "occaecat sit",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 48,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 52,
+          "statsName": "HP"
+        },
+        {
+          "amount": 30,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Nostrud culpa velit duis et adipisicing adipisicing nisi sint irure nostrud. Sit Lorem incididunt culpa nostrud magna ex nostrud."
+    },
+    {
+      "_id": "161a1d74-e287-4c62-93ff-ce9c5a6feb44",
+      "name": "do do",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 28,
+          "statsName": "PA"
+        },
+        {
+          "amount": 94,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Culpa officia consequat aliqua commodo sint occaecat. Id veniam elit qui dolore Lorem ea quis Lorem ullamco aute excepteur officia."
+    },
+    {
+      "_id": "24cc019b-12d1-493a-b3ff-bee685e2e334",
+      "name": "ullamco officia",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 21,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Dolore nulla ut pariatur eiusmod velit laborum tempor in laboris laboris ex eiusmod velit."
+    },
+    {
+      "_id": "1c68e0b8-c79f-451c-8409-9b2c3ce9ab53",
+      "name": "qui",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Consectetur qui sunt laboris est eiusmod adipisicing cupidatat ea ut consectetur consequat est velit. Qui in dolor aliqua veniam cillum nulla laboris mollit aliqua dolor sint."
+    },
+    {
+      "_id": "47f7a3c8-4e86-441a-a804-a030220a42cf",
+      "name": "qui",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 92,
+          "statsName": "PA"
+        },
+        {
+          "amount": 87,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 51,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Labore et qui qui voluptate dolor eu veniam. Veniam aliquip enim consectetur amet laborum cupidatat proident laboris occaecat incididunt mollit."
+    },
+    {
+      "_id": "6dd08cc9-1c9f-4055-b2c6-9c0b8c0372e5",
+      "name": "aliqua",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 93,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Anim voluptate fugiat Lorem excepteur eu eu."
+    },
+    {
+      "_id": "d87b9652-23f1-42dd-9b56-9c814ac495c3",
+      "name": "qui",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 63,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Pariatur consequat in elit non laborum nulla cillum eu laboris veniam anim."
+    },
+    {
+      "_id": "90817aeb-c5e8-4dab-b485-794b07e19c7c",
+      "name": "qui",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 13,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 36,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 73,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ut laboris commodo ea Lorem pariatur anim fugiat ut fugiat Lorem reprehenderit quis esse."
+    },
+    {
+      "_id": "91002630-8b47-47aa-bdd4-03d3049c9dbd",
+      "name": "reprehenderit",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 32,
+          "statsName": "MA"
+        },
+        {
+          "amount": 74,
+          "statsName": "MD"
+        },
+        {
+          "amount": 51,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Incididunt eu officia nulla sit fugiat cupidatat anim. Lorem pariatur proident sunt culpa labore ipsum mollit mollit ex fugiat aliquip enim labore."
+    },
+    {
+      "_id": "848c85a2-b7a1-48f1-8c96-3f05f34cd8c7",
+      "name": "fugiat deserunt",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 34,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Voluptate esse consequat incididunt nostrud culpa non."
+    },
+    {
+      "_id": "56bcffbf-6057-4a87-b900-e1e58749c6ad",
+      "name": "culpa",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 27,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Fugiat enim aliquip aliquip ut. Consequat adipisicing ad duis est tempor laboris pariatur proident velit."
+    },
+    {
+      "_id": "1026d654-1a83-47b1-aa9a-c664a1726918",
+      "name": "reprehenderit consequat",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 40,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Proident ipsum proident proident Lorem fugiat consectetur ut adipisicing occaecat quis non ut. Mollit cillum dolore consequat laboris est."
+    },
+    {
+      "_id": "c6e2c625-2794-434a-85f3-60b387436187",
+      "name": "id velit",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 90,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Reprehenderit proident ea aute do. Cillum labore sit incididunt tempor amet officia laboris velit ex consequat minim id labore."
+    },
+    {
+      "_id": "8613976e-897a-4d01-a44e-f450c05f5f33",
+      "name": "adipisicing",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 84,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ad eu irure culpa exercitation amet voluptate est adipisicing ut veniam. Aliqua proident aliqua aliquip qui tempor quis excepteur duis id commodo."
+    },
+    {
+      "_id": "4c15208f-3a82-4cd8-af1e-5994eafeee6a",
+      "name": "quis",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 26,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 61,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eiusmod reprehenderit nulla eiusmod incididunt excepteur ipsum incididunt cupidatat veniam duis occaecat ex dolore nostrud. Occaecat est ad fugiat irure commodo pariatur officia."
+    },
+    {
+      "_id": "411ac6bd-2d17-42f8-ba01-fb71f91f29af",
+      "name": "nostrud eu",
+      "slot": "SECONDHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 26,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 56,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 73,
+          "statsName": "MD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "In fugiat excepteur proident qui excepteur sunt officia elit. Eu voluptate culpa consequat elit consectetur veniam commodo veniam est ad et qui in veniam."
+    },
+    {
+      "_id": "13a16812-95fb-40a3-ba2c-97adf95388fc",
+      "name": "laboris",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 72,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Ipsum enim eu laboris proident ex ea non pariatur esse nostrud sunt."
+    },
+    {
+      "_id": "9d5b1392-5565-40b6-b695-e213dae0a256",
+      "name": "laborum",
+      "slot": "MAINHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 26,
+          "statsName": "MP"
+        },
+        {
+          "amount": 16,
+          "statsName": "MP"
+        },
+        {
+          "amount": 20,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Dolore aliqua sunt labore sint incididunt consectetur magna magna."
+    },
+    {
+      "_id": "ec4eca23-cfb3-406e-9cfb-46edfcf80d16",
+      "name": "non",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Occaecat aute laboris tempor velit cillum ut occaecat excepteur. Cupidatat qui consectetur non adipisicing occaecat ullamco."
+    },
+    {
+      "_id": "e58777c9-b0d1-4634-b15e-390438106bf2",
+      "name": "aute",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 97,
+          "statsName": "MA"
+        },
+        {
+          "amount": 16,
+          "statsName": "DODGE"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Cillum dolore id commodo voluptate magna pariatur. Incididunt eu tempor ipsum ullamco et qui laborum officia eiusmod."
+    },
+    {
+      "_id": "55890a0e-fa2b-41b4-aca7-e76c4a82ebb5",
+      "name": "mollit labore",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 45,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 87,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 86,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Velit excepteur aliquip reprehenderit eiusmod irure eiusmod reprehenderit proident veniam quis anim. Sit cupidatat ex aliquip velit quis Lorem labore magna sunt voluptate."
+    },
+    {
+      "_id": "0dba67e9-c0aa-4cde-8e96-78f9b075ad68",
+      "name": "dolore",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 90,
+          "statsName": "HP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Consequat excepteur est qui officia eu in consequat nulla cillum tempor deserunt aliquip. Sit ea id duis ullamco consequat est dolore nisi."
+    },
+    {
+      "_id": "8b4c5f8c-171c-4d95-8a0f-cb54cea929e6",
+      "name": "pariatur",
+      "slot": "SECONDHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 85,
+          "statsName": "MP"
+        },
+        {
+          "amount": 68,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 57,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Commodo reprehenderit eu eiusmod ipsum excepteur. Quis laborum est minim voluptate voluptate sint mollit elit ex id elit."
+    },
+    {
+      "_id": "a1b7bd6c-2320-47e0-b809-60dbaa72c202",
+      "name": "minim",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 41,
+          "statsName": "DODGE"
+        },
+        {
+          "amount": 81,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eiusmod magna occaecat anim nisi labore officia adipisicing anim labore ut et. Ea occaecat enim sit irure ex ex."
+    },
+    {
+      "_id": "52deae94-6740-4254-bd61-d5e030fe2f27",
+      "name": "elit est",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 97,
+          "statsName": "PA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aute eu magna non non consequat laborum mollit nulla labore proident Lorem."
+    },
+    {
+      "_id": "73faacef-56a8-44d2-8201-684edf2779e3",
+      "name": "nisi magna",
+      "slot": "SECONDHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 42,
+          "statsName": "PA"
+        },
+        {
+          "amount": 40,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Eiusmod consequat amet incididunt id fugiat fugiat ipsum fugiat culpa occaecat."
+    },
+    {
+      "_id": "d9d19e75-17ac-479a-9111-8579ba217fa1",
+      "name": "sit",
+      "slot": "MAINHAND",
+      "range": 3,
+      "stats": [
+        {
+          "amount": 11,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 31,
+          "statsName": "PA"
+        },
+        {
+          "amount": 43,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Aliqua esse id reprehenderit incididunt exercitation exercitation eiusmod proident."
+    },
+    {
+      "_id": "2712dd7a-25fc-41f4-b30b-6f659712ea12",
+      "name": "id",
+      "slot": "SECONDHAND",
+      "range": 5,
+      "stats": [
+        {
+          "amount": 46,
+          "statsName": "MD"
+        },
+        {
+          "amount": 93,
+          "statsName": "MP"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Do minim pariatur ex do elit minim."
+    },
+    {
+      "_id": "9ba9cef1-1635-43f0-9083-383636558570",
+      "name": "sit",
+      "slot": "MAINHAND",
+      "range": 2,
+      "stats": [
+        {
+          "amount": 30,
+          "statsName": "PHD"
+        },
+        {
+          "amount": 93,
+          "statsName": "MPR"
+        },
+        {
+          "amount": 68,
+          "statsName": "MA"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Consequat cillum tempor laboris officia labore nostrud do. Incididunt eu aliquip ad ex est exercitation deserunt nulla in ex."
+    },
+    {
+      "_id": "8d5cf16a-5f0c-42ea-9ca5-bdc9b76c97fc",
+      "name": "qui",
+      "slot": "MAINHAND",
+      "range": 4,
+      "stats": [
+        {
+          "amount": 20,
+          "statsName": "PA"
+        },
+        {
+          "amount": 36,
+          "statsName": "SPEED"
+        },
+        {
+          "amount": 20,
+          "statsName": "SPEED"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Tempor ex adipisicing tempor aute elit ullamco occaecat. Ullamco ad occaecat occaecat dolore ex."
+    },
+    {
+      "_id": "1492a5e9-4248-41da-92e7-2d719c74b388",
+      "name": "do et",
+      "slot": "MAINHAND",
+      "range": 1,
+      "stats": [
+        {
+          "amount": 24,
+          "statsName": "MA"
+        },
+        {
+          "amount": 85,
+          "statsName": "PHD"
+        }
+      ],
+      "itemType": "WeaponItem",
+      "description": "Quis exercitation aliqua consequat aliqua occaecat pariatur esse cillum nulla mollit. Exercitation incididunt ea laborum exercitation ex est elit."
+    }
+  ]

@@ -1,13 +1,12 @@
 import { Prop, Schema, SchemaFactory,  } from '@nestjs/mongoose';
 import { PlacedUnit, PlacedUnitSchema} from "./placedUnits.schema";
-import { UnitInfo } from "./unitInfo.schema";
+import { GameUnit } from "./gameUnit.schema";
 import { Document } from "mongoose";
 import { ApiProperty } from '@nestjs/swagger';
 import { Target } from 'src/unit/dto/unitAction.dto';
 import { Unit } from './unit.schema';
 import { StatsName } from './enums';
 import { GameOrder, GameOrderSchema } from './gameOrder.schema';
-import { BADRESP } from 'dns';
 
 export type GameDocument = Game & Document;
 
@@ -66,10 +65,10 @@ export class Game{
 
     isOcupiedByAnotherUnit(target:Target){
         //let res= false;
-        let unit:UnitInfo;
+        let unit:GameUnit;
         for (let index = 0; index < this.placedUnitList.length; index++) {
             const element = this.placedUnitList[index];
-            element.unitInfo.forEach(element2 => {
+            element.gameUnit.forEach(element2 => {//TODO: CAmbiar por una funcion del array (FIND)
                 if(target.x===element2.posX && target.y === element2.posY){
                     //res = true;
                     unit = element2;
@@ -100,7 +99,7 @@ export class Game{
     placeNewUnit(user_uuid:string, unit:Unit, target:Target){
         let idx= this.getUserIndexOnPlacedUnitList(user_uuid);
         if(idx !== -1){
-            let temp:UnitInfo = new UnitInfo();
+            let temp:GameUnit = new GameUnit();
             temp.unitBase_uuid = unit._id;
             temp.posX = target.x;
             temp.posY=target.y;
@@ -110,7 +109,7 @@ export class Game{
             temp.canPerformActionThisTurn = true;
             temp.canMove = true;
             temp.canAttack = true;
-            this.placedUnitList[idx].unitInfo.push(temp);
+            this.placedUnitList[idx].gameUnit.push(temp);
             return true;
         }
         return false;
@@ -124,8 +123,8 @@ export class Game{
     isThisUnitPlace(unit_uuid:string, user_uuid:string){
         let index = this.getUserIndexOnPlacedUnitList(user_uuid);
         let result = false;
-        if(index >=0){
-            this.placedUnitList[index].unitInfo.forEach(element => {
+        if(index >=0){//TODO: CAmbiar por una funcion del array (FIND)
+            this.placedUnitList[index].gameUnit.forEach(element => {
                 
                 if(element.unitBase_uuid === unit_uuid){
                     result = true;
@@ -138,8 +137,8 @@ export class Game{
     moveUnit(unit_uuid:string, user_uuid:string, x:number, y:number){
         let index = this.getUserIndexOnPlacedUnitList(user_uuid);
         let result = false;
-        if(index >=0){
-            this.placedUnitList[index].unitInfo.forEach(element => {
+        if(index >=0){//TODO: CAmbiar por una funcion del array (FIND)
+            this.placedUnitList[index].gameUnit.forEach(element => {
                 if(element.unitBase_uuid === unit_uuid){
                     element.posX = x;
                     element.posY = y;
@@ -155,7 +154,7 @@ export class Game{
             //this.users_uuid.push(user_uuid);
             let place: PlacedUnit = new PlacedUnit(); //Esto porque no me dejaba hacer ...push({element.uuid ....}) directamente
             place.user_uuid = user_uuid;
-            place.unitInfo = [];
+            place.gameUnit = [];
             this.placedUnitList.push(place);
             return true;
         }
@@ -177,7 +176,7 @@ export class Game{
     canPlaceMoreUnit(user_uuid:string){
         let index = this.getUserIndexOnPlacedUnitList(user_uuid);
         if(index !== -1){
-            return ((this.placedUnitList[index].unitInfo.length < this.maxUnits))
+            return ((this.placedUnitList[index].gameUnit.length < this.maxUnits))
         }
         return false;
     }
@@ -185,33 +184,20 @@ export class Game{
     canRemoveUnit(user_uuid:string){
         let index = this.getUserIndexOnPlacedUnitList(user_uuid);
         if(index !== -1){
-            return ((this.placedUnitList[index].unitInfo.length >= 1))
+            return ((this.placedUnitList[index].gameUnit.length >= 1))
         }
         return false;
     }
 
     getUnit(user_uuid:string, unit_uuid:string){
         let index = this.getUserIndexOnPlacedUnitList(user_uuid);
-        let unit:UnitInfo;
+        let unit:GameUnit;
         if(index !== -1){
             return this.placedUnitList[index].getUnit(unit_uuid);
             //unit = this.placedUnitList[index].unitInfo.find((element) =>element.unitBase_uuid === unit_uuid);
             
         }
         return unit;
-    }
-
-    getUnitOnPos(x:number, y:number){
-        let p:UnitInfo;
-        this.placedUnitList.forEach(element => {
-            element.unitInfo.forEach(uInfo => {
-                if (uInfo.ocupied(x, y)) {
-                    p = uInfo;
-                }
-                
-            });
-        });
-        return p;
     }
 
     /**
@@ -222,7 +208,7 @@ export class Game{
         
         let xx:{u:string, uni:string, sp:number}[] = []
         this.placedUnitList.forEach(placedUser => {
-            placedUser.unitInfo.forEach(unit => {
+            placedUser.gameUnit.forEach(unit => {
                 xx.push({u: placedUser.user_uuid, uni: unit.unitBase_uuid, sp:unit.getStats(StatsName.Speed)});
 
             });

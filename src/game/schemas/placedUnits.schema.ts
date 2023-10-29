@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { UnitInfo, UnitInfoSchema } from './unitInfo.schema';
+import { GameUnit, GameUnitSchema } from './gameUnit.schema';
 import { Document } from 'mongoose';
 import { ApiProperty } from '@nestjs/swagger';
 
@@ -12,13 +12,13 @@ export class PlacedUnit{
     @Prop()
     user_uuid: string;
 
-    @ApiProperty({type:()=> [UnitInfo]})
-    @Prop({type: [UnitInfoSchema], autopopulate:true})
-    unitInfo: UnitInfo[];
+    @ApiProperty({type:()=> [GameUnit]})
+    @Prop({type: [GameUnitSchema], autopopulate:true})
+    gameUnit: GameUnit[];
 
     
     isThisUnitPlace(unit_uuid: string): boolean{
-        this.unitInfo.forEach(element => {
+        this.gameUnit.forEach(element => {
             if(element.unitBase_uuid == unit_uuid){
                 return true;
             }
@@ -27,7 +27,7 @@ export class PlacedUnit{
     }
 
      getUnit(unit_uuid:string){
-        return this.unitInfo.find((element) => element.unitBase_uuid === unit_uuid)
+        return this.gameUnit.find((element) => element.unitBase_uuid === unit_uuid)
 
     }
 }

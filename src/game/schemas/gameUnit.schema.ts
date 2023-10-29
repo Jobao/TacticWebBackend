@@ -2,11 +2,13 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ApiProperty } from '@nestjs/swagger';
 import { Document } from 'mongoose';
 import { TupleStatsSchema, TupleStats } from './stats.schema';
-import { StatsName } from './enums';
-export type UnitInfoDocument = UnitInfo & Document;
+import { EquipmentSlot, StatsName } from './enums';
+import { UnitEquiped } from './unitEquiped.schema';
+import { EquipableItem } from 'src/item/schemas/equipableItem.schema';
+export type GameUnitDocument = GameUnit & Document;
 
 @Schema({_id: false})
-export class UnitInfo{
+export class GameUnit{
 
     @ApiProperty()
     @Prop()
@@ -44,10 +46,12 @@ export class UnitInfo{
     @Prop({type:[TupleStatsSchema], autopopulate:true})
     stats:TupleStats[];
 
+    @Prop(UnitEquiped)
+    equipment:UnitEquiped
+
     ocupied(x:number, y:number): boolean{
         return x===this.posX && y === this.posY;
     }
-
     move(x:number, y:number): boolean{
         if(this.canMove){
             this.posX = x;
@@ -61,10 +65,10 @@ export class UnitInfo{
         return false;
     }
 
-    attack(attackedUnit:UnitInfo){
+    attack(attackedUnit:GameUnit){
         if(this.canAttack){
-            this.canAttack = false;
-            attackedUnit.receiveDamage();
+            //this.canAttack = false;
+            attackedUnit.receiveDamage(this.getStats(StatsName.PA));
             if(!this.canMove){
                 this.canPerformActionThisTurn = false;
             }
@@ -83,23 +87,58 @@ export class UnitInfo{
         this.canPerformActionThisTurn = false;
     }
 
-    receiveDamage(){
-        this.currentHP -=10;
-        if(this.currentHP <= 0){
-            console.log("DEATH");
+    receiveDamage(dmg:number){
+        if (this.currentHP > 0) {
+            this.currentHP -=dmg;
+            if(this.currentHP <= 0){
+                console.log("DEATH");
+            }
         }
     }
 
     getStats(stat:StatsName){
-        let res:number;
-        this.stats.forEach(element => {
+        //let res:number;
+        let result = this.stats.find((x) =>{return x.statsName === stat})
+        /*this.stats.forEach(element => {
             if(element.statsName === stat){
                 res = element.amount;
             }
-        });
+        });*/
 
-        return res;
+        return result.amount;
     }
+
+    equip(nEquip:EquipableItem){
+       this.equipment.equip(nEquip);
+       nEquip.stats.forEach(element => {
+        this.addStatsValue(element);
+       });
+    }
+
+    unequip(uEquip:EquipableItem){
+        uEquip.stats.forEach(element => {
+            this.removeStatsValue(element);
+           });
+    }
+
+    addStatsValue(tuple:TupleStats){
+        let idx =this.stats.findIndex((x) =>{return x.statsName === tuple.statsName});
+        if(idx !== -1){
+            this.stats[idx].amount += tuple.amount;
+        }
+        else{
+            this.stats.push(tuple);
+        }
+    }
+
+    removeStatsValue(tuple:TupleStats){
+        let idx =this.stats.findIndex((x) =>{return x.statsName === tuple.statsName});
+        if(idx !== -1){
+            this.stats[idx].amount -= tuple.amount;
+        }
+    }
+
+    
 }
-export const UnitInfoSchema = SchemaFactory.createForClass(UnitInfo);
-UnitInfoSchema.loadClass(UnitInfo);
+export const GameUnitSchema = SchemaFactory.createForClass(GameUnit);
+GameUnitSchema.loadClass(GameUnit);

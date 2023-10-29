@@ -27,9 +27,6 @@ export class Unit{
     @Prop({type:[TupleStatsSchema], autopopulate:true})
     stats:TupleStats[];
 
-    @Prop(UnitEquiped)
-    equipment:UnitEquiped
-
     changeClass(nClass:UnitClass){
         if (this.currentClassId !==nClass._id) {
             this.currentClassId = nClass._id;

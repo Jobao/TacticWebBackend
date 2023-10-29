@@ -1,0 +1,3181 @@
+[
+    {
+      "_id": "c49167a4-b1e8-4d9b-98b3-12c2f36362b6",
+      "name": "minim",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 22,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Exercitation sunt eiusmod officia pariatur sunt dolor occaecat proident Lorem."
+    },
+    {
+      "_id": "19e7c205-0d60-491e-b54e-9a04f6ffed2b",
+      "name": "sunt esse",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 12,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Enim consectetur eiusmod ex dolor non nulla laborum esse. Occaecat occaecat sunt nostrud ipsum non Lorem aliquip cillum irure reprehenderit laborum fugiat."
+    },
+    {
+      "_id": "cea998de-0113-4735-a684-08c2734e0bee",
+      "name": "pariatur",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 72,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Quis mollit veniam culpa pariatur anim nisi ad irure laborum Lorem incididunt ullamco. Deserunt ullamco nulla consequat esse do voluptate."
+    },
+    {
+      "_id": "56da9a6e-4952-4e6b-b011-8041da889352",
+      "name": "culpa",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 10,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Velit officia voluptate anim excepteur anim dolore ullamco veniam ad amet. Ex reprehenderit nisi proident nulla tempor cillum culpa velit voluptate laborum."
+    },
+    {
+      "_id": "29e51bc1-4479-470c-bc72-9df2a279af0d",
+      "name": "pariatur nostrud",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 86,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum in duis amet tempor magna irure eu amet sunt sunt cillum. Ipsum sint ad ullamco enim aliqua ex qui officia."
+    },
+    {
+      "_id": "fffe0035-1175-402a-9c8c-436f966bef4e",
+      "name": "aliquip exercitation",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 35,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ullamco magna deserunt in ut aute ad incididunt deserunt Lorem mollit ex sint ex sint."
+    },
+    {
+      "_id": "6e8bc4eb-e1cf-4f7c-9fb7-c7f4cfcc0548",
+      "name": "aute duis",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 96,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Officia exercitation veniam minim magna ut."
+    },
+    {
+      "_id": "5422da19-2fc6-4605-b3da-9408bce83306",
+      "name": "aute",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 99,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Enim amet ut Lorem sit ullamco enim laboris ad. In elit mollit ad irure nostrud do."
+    },
+    {
+      "_id": "d5e456fb-5c81-48b5-a93e-386e90df2233",
+      "name": "veniam nostrud",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 11,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Proident anim consectetur nulla id. Magna in mollit laboris mollit nulla officia officia voluptate qui sunt ullamco."
+    },
+    {
+      "_id": "040fc7ff-46e2-4793-89e0-2191203d13fe",
+      "name": "culpa",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 95,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sint do aute et irure voluptate consectetur aute aute ea mollit aliqua nisi Lorem."
+    },
+    {
+      "_id": "52d61650-7774-4e81-9163-f56011785289",
+      "name": "voluptate",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 34,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Do incididunt consequat officia excepteur deserunt est proident irure sunt Lorem pariatur."
+    },
+    {
+      "_id": "a31b0b88-c380-4fd0-947b-b52b1c56e42d",
+      "name": "adipisicing",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 65,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Nulla laboris culpa qui excepteur duis nostrud ipsum proident velit nulla velit tempor. Ipsum dolore veniam id deserunt cupidatat adipisicing magna qui cupidatat aute cillum duis consectetur mollit."
+    },
+    {
+      "_id": "91b2b4e2-b830-4f17-8595-49d03f1fac3c",
+      "name": "eiusmod",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 53,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Qui eu elit minim consequat elit culpa."
+    },
+    {
+      "_id": "0053b008-0e4e-4d7c-898e-895203208306",
+      "name": "tempor",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 23,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sunt tempor aute voluptate reprehenderit consequat aute minim qui tempor aliquip aliqua."
+    },
+    {
+      "_id": "9dd5fa28-6f81-4511-8037-e23c7ce526d2",
+      "name": "nostrud culpa",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 76,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Culpa ad consequat veniam ad mollit nostrud."
+    },
+    {
+      "_id": "aee1c59d-028b-4305-b177-351953fa4033",
+      "name": "deserunt",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 83,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Irure sunt voluptate officia commodo anim commodo. Ullamco sit ad eu qui cillum cillum qui eiusmod sint consectetur pariatur."
+    },
+    {
+      "_id": "4273b82e-4cfd-48fb-aa0b-6ff6af9fb8de",
+      "name": "commodo",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 47,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Id ex laborum ut magna ex."
+    },
+    {
+      "_id": "aaed5128-4153-4b23-85e0-e8a9c28ed025",
+      "name": "aliqua",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 28,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sit ex nulla mollit exercitation."
+    },
+    {
+      "_id": "85e52f65-2880-4c9b-85e0-8aeac2888b66",
+      "name": "exercitation",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 96,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Adipisicing eiusmod reprehenderit officia ex ea duis exercitation adipisicing veniam est dolor ut occaecat."
+    },
+    {
+      "_id": "2b484329-fb32-4422-9e66-b946296ab5ee",
+      "name": "commodo proident",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 98,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Fugiat laboris sit ut amet tempor eiusmod voluptate pariatur. Officia eiusmod reprehenderit ipsum pariatur aliquip ea et veniam aliqua qui mollit ullamco."
+    },
+    {
+      "_id": "49a3efd5-47ec-4e2e-a4c3-210dc9d2088e",
+      "name": "aliqua",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 61,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Est veniam Lorem eu dolor anim est eiusmod ipsum deserunt cillum in. Dolore esse anim aute elit."
+    },
+    {
+      "_id": "146d17f7-f827-46c9-b06a-438affab2ec1",
+      "name": "aute id",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 77,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sunt pariatur nostrud nisi dolore magna. Est sint amet laborum ex et cupidatat eu laborum elit velit cupidatat officia elit consectetur."
+    },
+    {
+      "_id": "2acd1b37-5e4f-429c-a90f-bb795ff9a87f",
+      "name": "commodo ea",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 98,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Mollit quis sit enim ad nostrud mollit consequat aliquip dolor Lorem cupidatat. Ad eu sit enim ut mollit eiusmod reprehenderit nulla eiusmod laboris."
+    },
+    {
+      "_id": "72358f5b-ab42-4958-a0ba-89183a8b6465",
+      "name": "veniam sit",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 84,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Minim eu velit enim nostrud amet pariatur. Deserunt adipisicing commodo qui magna."
+    },
+    {
+      "_id": "4d560315-abb9-4334-8218-405f666da48a",
+      "name": "ipsum adipisicing",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 12,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ullamco ut minim consequat aute ea mollit sunt consectetur ad. Magna anim et in dolore ullamco."
+    },
+    {
+      "_id": "cc203bad-3d57-46b9-bd01-c27b43fac214",
+      "name": "veniam",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 95,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Esse exercitation cupidatat do excepteur pariatur minim duis pariatur commodo eiusmod ad elit duis incididunt. Voluptate amet sunt qui veniam tempor."
+    },
+    {
+      "_id": "f6ebbd7c-5f0c-445f-a7a1-1333ab012f6e",
+      "name": "qui",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 95,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Aliquip adipisicing culpa fugiat laborum cupidatat cillum."
+    },
+    {
+      "_id": "2b840566-8cd9-4cf6-8a44-c5350cc05a8b",
+      "name": "culpa laboris",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 97,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Occaecat ea eu aute excepteur eiusmod sint cillum deserunt anim reprehenderit magna nostrud do."
+    },
+    {
+      "_id": "7ff1e669-b4ab-47f7-8a4a-0d580942bc54",
+      "name": "cupidatat culpa",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 82,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ut reprehenderit deserunt quis irure fugiat aute incididunt ea incididunt."
+    },
+    {
+      "_id": "e3c0808e-e568-4729-9bdc-3c739dd0bd48",
+      "name": "ex",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 87,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Officia pariatur qui aliquip sit ipsum est aliquip."
+    },
+    {
+      "_id": "de7e3757-e77e-4edf-88d7-cfd2da655612",
+      "name": "sunt do",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 82,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Consectetur irure pariatur et consectetur labore."
+    },
+    {
+      "_id": "dd3ee986-8d96-4bd6-94ac-81ce89cdfa50",
+      "name": "aliqua",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 99,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Elit consectetur enim eiusmod ut dolore velit mollit ad pariatur proident et enim."
+    },
+    {
+      "_id": "14afc2d1-5043-4f0a-90e0-c3d754b83e60",
+      "name": "aliqua",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 14,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Deserunt ullamco est nulla occaecat eu qui sint. Consectetur esse duis est duis sint duis Lorem reprehenderit aliqua nostrud minim officia deserunt ullamco."
+    },
+    {
+      "_id": "05bfa653-49eb-4af9-8e0c-ecd2add07a5c",
+      "name": "excepteur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 52,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Excepteur sunt aute tempor laboris."
+    },
+    {
+      "_id": "e7f9b8f0-b9c4-4f23-8a43-3a0cda043c62",
+      "name": "aliquip sint",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 96,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Eu eu consequat culpa mollit nulla esse cillum excepteur consectetur cillum. Voluptate ullamco elit veniam et irure minim anim aliquip."
+    },
+    {
+      "_id": "9c948b2a-7907-40ce-b6d2-a960c835ddf7",
+      "name": "sit cillum",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 94,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Nisi ex ut anim ad minim culpa."
+    },
+    {
+      "_id": "eb867423-b809-4638-8344-b353876354c9",
+      "name": "velit",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 29,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Aute est voluptate dolore fugiat proident. Aliqua ex sunt elit nisi duis sunt pariatur dolor cupidatat reprehenderit cupidatat ut."
+    },
+    {
+      "_id": "f7cf2ea7-af40-4d59-8404-0c7ae9d6deae",
+      "name": "commodo pariatur",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 18,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Incididunt occaecat ipsum et enim consectetur veniam dolore non fugiat eu amet ex fugiat dolore."
+    },
+    {
+      "_id": "d74bfb30-8110-45f8-bb76-8c460e48da9f",
+      "name": "laboris mollit",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 80,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Voluptate fugiat nulla magna ea consequat laboris laborum Lorem veniam. Culpa laborum labore id mollit incididunt mollit consequat in cillum proident aute mollit."
+    },
+    {
+      "_id": "ad1d040d-5e81-487a-9440-cccb801921f8",
+      "name": "do",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 81,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Commodo proident do cillum tempor adipisicing eu nulla in proident."
+    },
+    {
+      "_id": "f6e9923e-d66e-449d-8981-18e9f1de8276",
+      "name": "adipisicing aute",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 29,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Est deserunt amet sit sit duis officia dolor magna aliquip. Anim laborum excepteur cupidatat sint veniam ad adipisicing eiusmod anim cupidatat culpa incididunt."
+    },
+    {
+      "_id": "f2fb11da-a928-4199-9962-84b78ea06589",
+      "name": "deserunt magna",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 34,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Mollit ut occaecat incididunt pariatur exercitation officia."
+    },
+    {
+      "_id": "fec25dca-e35f-4552-8b2b-6389bcb9b375",
+      "name": "ipsum pariatur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 33,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Cillum quis esse culpa ea ex pariatur irure quis quis ipsum eiusmod. Consequat consectetur dolore qui ad velit esse dolore culpa ipsum sit ex."
+    },
+    {
+      "_id": "db56cd0d-6c2e-47cc-a4f9-7a48acf33c80",
+      "name": "enim",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 36,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Culpa do cupidatat mollit non dolore."
+    },
+    {
+      "_id": "7f6eee64-c57f-49a6-a0fc-2942d341e845",
+      "name": "nulla ea",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 38,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Eiusmod consequat non laborum amet do labore ut deserunt sit. Esse sint in id sit."
+    },
+    {
+      "_id": "966bb4c1-325f-4b8c-8cec-0da5cc9c9e48",
+      "name": "consequat",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 80,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Eiusmod aute proident sint sit incididunt sint voluptate anim."
+    },
+    {
+      "_id": "d8a8d000-66d9-43ee-a5d0-815cf552b0c0",
+      "name": "consectetur cupidatat",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 30,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum incididunt ad ex est. Dolor magna duis aliquip mollit id ullamco nisi ullamco."
+    },
+    {
+      "_id": "577566f9-9f96-4efa-902c-83f9ae354dd1",
+      "name": "eiusmod",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 32,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Et enim Lorem quis duis consequat ad magna deserunt mollit ex incididunt. Aliqua ut quis exercitation duis ad cupidatat in laboris."
+    },
+    {
+      "_id": "36532a2b-9055-4c76-9e96-d00cc314760f",
+      "name": "fugiat minim",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 37,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Amet culpa non amet qui."
+    },
+    {
+      "_id": "deb29f91-ec55-46e2-b000-019630cad937",
+      "name": "minim officia",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 64,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "In veniam fugiat quis velit quis dolor ipsum."
+    },
+    {
+      "_id": "f6e790bb-dd9f-4860-bdbb-f3d7cb9dcec2",
+      "name": "dolor cupidatat",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 96,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Officia eu proident eu anim do tempor reprehenderit laborum esse velit. Magna laboris fugiat ipsum cupidatat labore aliqua est consequat magna nisi voluptate quis elit."
+    },
+    {
+      "_id": "ba5eb237-a01a-4d76-a4ef-4133e4db5ed9",
+      "name": "voluptate pariatur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 42,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ad enim cillum occaecat velit. Id nostrud consectetur reprehenderit sunt nostrud eu eiusmod ad officia fugiat adipisicing ullamco eu occaecat."
+    },
+    {
+      "_id": "d84b277d-d769-4e1d-9c85-13e8ac499b52",
+      "name": "velit",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 95,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Reprehenderit veniam enim est fugiat eiusmod ea Lorem proident occaecat."
+    },
+    {
+      "_id": "38ff8c54-f0c4-4ce1-8183-5b0109cad5d7",
+      "name": "nostrud laboris",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 97,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "In minim laboris ipsum sit do id laborum tempor deserunt ipsum ullamco proident in."
+    },
+    {
+      "_id": "354094c0-12a7-41c5-bca2-ae1d9889e41e",
+      "name": "culpa commodo",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 80,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Eiusmod excepteur veniam sint tempor."
+    },
+    {
+      "_id": "eb01507e-9584-4f9b-bb1b-154284f59ab7",
+      "name": "ea",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 55,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Mollit fugiat eu est in ullamco. Ullamco laborum reprehenderit duis ex ullamco Lorem cillum do do pariatur do."
+    },
+    {
+      "_id": "ae1b7ad7-6702-4b73-a426-f1d1f0686ab4",
+      "name": "aliqua",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 33,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum sint occaecat aliqua aliquip amet id ipsum amet tempor laboris aute amet in."
+    },
+    {
+      "_id": "d286a7db-b8c1-4153-a2db-56d02c45e4a3",
+      "name": "fugiat voluptate",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 44,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sunt sunt non irure sit esse ut magna Lorem commodo laboris."
+    },
+    {
+      "_id": "cf2096b0-4bd5-4b18-bb22-477b8085f816",
+      "name": "reprehenderit esse",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 68,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum id veniam minim elit."
+    },
+    {
+      "_id": "e706579d-e971-44a4-b538-44846ac3f492",
+      "name": "eu",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 80,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Do duis nulla non nostrud quis ut pariatur excepteur aliqua cupidatat aliquip sit."
+    },
+    {
+      "_id": "8512cc90-909e-475d-b50e-c45e6c38fcf6",
+      "name": "nulla",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 33,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Mollit reprehenderit consequat qui veniam tempor aliquip velit consequat aliqua adipisicing culpa culpa reprehenderit minim. Labore sit in in dolore ipsum."
+    },
+    {
+      "_id": "34c62ca6-db9d-4256-af02-0760c7ad82d0",
+      "name": "sunt est",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 46,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Elit tempor exercitation pariatur ad."
+    },
+    {
+      "_id": "2011e204-dc6a-4541-898c-8f8a2cf813c0",
+      "name": "enim",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 56,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sint proident ea commodo irure labore elit incididunt qui deserunt in ipsum. Culpa nisi tempor cupidatat tempor ad."
+    },
+    {
+      "_id": "880eadd7-a229-4bda-b928-c2e155b0fa44",
+      "name": "occaecat incididunt",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 17,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Culpa laboris nisi aliquip sunt labore irure exercitation pariatur proident ad magna elit occaecat. Magna aliquip ipsum labore nulla reprehenderit deserunt do consectetur anim proident est cillum deserunt duis."
+    },
+    {
+      "_id": "c1da0360-00a4-4ddd-9e51-51f5c7396d40",
+      "name": "labore",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 13,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Deserunt consectetur reprehenderit do eu aliquip dolore amet cupidatat ipsum proident culpa aliquip."
+    },
+    {
+      "_id": "db1e2a4d-5b44-4283-af8f-4ff226c66316",
+      "name": "in labore",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 98,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ex officia consequat quis commodo non. Nisi ea fugiat nisi irure aliqua consectetur ut dolore sint adipisicing ad esse irure cupidatat."
+    },
+    {
+      "_id": "763bdea2-1d87-40b6-ab62-94d1aff53baa",
+      "name": "id sit",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 21,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ut voluptate aute eu incididunt aute eiusmod consequat nostrud ut fugiat velit id adipisicing exercitation. Cupidatat proident officia laboris magna enim do sit qui."
+    },
+    {
+      "_id": "45d6b38b-60ba-41ea-a6e1-ab94cc3c941c",
+      "name": "nostrud",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 88,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sunt in do ad aliquip sit ea dolore cillum aliquip voluptate mollit irure quis commodo. Cupidatat velit nisi adipisicing minim esse Lorem reprehenderit pariatur elit pariatur ut."
+    },
+    {
+      "_id": "596a07c6-74df-4968-aed3-309ce2778042",
+      "name": "ut non",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 76,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Eu ea consectetur ipsum deserunt et ullamco. Cillum commodo veniam officia elit ea eu."
+    },
+    {
+      "_id": "a5acf448-d700-47db-9614-26d1c2230488",
+      "name": "Lorem",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 69,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Do culpa laborum cillum esse sunt officia pariatur. Voluptate irure adipisicing consectetur aute nulla do reprehenderit."
+    },
+    {
+      "_id": "c7989b77-bcfd-4c1f-b96d-618a3e8604a4",
+      "name": "ipsum dolore",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 60,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Duis laborum aliqua irure duis quis ullamco occaecat dolor fugiat velit quis. Occaecat amet tempor est velit commodo."
+    },
+    {
+      "_id": "ff7a677f-6b53-4a26-a5ad-f38875c58a52",
+      "name": "elit proident",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 57,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Labore eiusmod amet commodo excepteur exercitation non voluptate do elit elit cillum. Velit commodo velit officia velit do reprehenderit commodo et nostrud adipisicing eu."
+    },
+    {
+      "_id": "eb7acbec-9989-4e9d-9195-791d08332d0b",
+      "name": "excepteur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 52,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ad exercitation veniam voluptate dolor veniam nostrud ullamco voluptate ut eu pariatur mollit officia."
+    },
+    {
+      "_id": "e2919025-3428-410e-b39e-de08061cd08f",
+      "name": "aliqua cupidatat",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 63,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Tempor eiusmod elit tempor laborum laboris Lorem. Pariatur aliquip ex officia proident cupidatat mollit deserunt culpa commodo cillum deserunt est ut."
+    },
+    {
+      "_id": "d7e70361-6738-4275-8895-726b208727ef",
+      "name": "Lorem aliquip",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 72,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Laborum consectetur et adipisicing esse proident ipsum eu cupidatat voluptate officia eiusmod voluptate. Magna eiusmod duis culpa sunt ad magna tempor veniam nulla eu."
+    },
+    {
+      "_id": "6fe9b476-7525-48a6-9103-af2cf11ff545",
+      "name": "enim",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 82,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Non nisi in dolore nisi nisi pariatur exercitation irure."
+    },
+    {
+      "_id": "868896d1-98b7-4527-a388-1005ab6d94c5",
+      "name": "esse eiusmod",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 28,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum officia dolore adipisicing pariatur officia ad ea ullamco."
+    },
+    {
+      "_id": "4675d276-93c1-4fea-aaf6-2a00c7fbf2dc",
+      "name": "nulla duis",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 92,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Occaecat Lorem sint amet exercitation deserunt in."
+    },
+    {
+      "_id": "fbb09c29-8f47-4218-8f95-8508bd33713f",
+      "name": "ullamco",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 47,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Anim incididunt nisi irure et mollit ut consequat ipsum quis Lorem ex laboris sint."
+    },
+    {
+      "_id": "48eecaf8-8b8f-4577-88fd-0ef0223f77ed",
+      "name": "dolore enim",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 88,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Duis ex laboris aute culpa proident aliquip ex cupidatat."
+    },
+    {
+      "_id": "e96f23c4-6e50-4734-a0e6-a507a3457d9e",
+      "name": "sint deserunt",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 30,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Nulla esse veniam nulla incididunt non commodo anim quis veniam sit minim dolore adipisicing nulla."
+    },
+    {
+      "_id": "48fd8696-2bff-4669-b1bc-2437eaffadf5",
+      "name": "in sunt",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 45,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Et reprehenderit nulla dolore sunt id nostrud ullamco ullamco irure nostrud reprehenderit ad aliquip nulla."
+    },
+    {
+      "_id": "821ab59e-3430-4221-93f7-22f095dff323",
+      "name": "irure pariatur",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 40,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Amet sint mollit aliquip officia non consectetur."
+    },
+    {
+      "_id": "8047e36c-d671-463f-aae6-b51707f8bdc3",
+      "name": "velit",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 16,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Nostrud veniam elit laborum nulla reprehenderit ex."
+    },
+    {
+      "_id": "e5d46433-521f-4bb7-950f-2021129d1b33",
+      "name": "esse ut",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 77,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Consectetur mollit culpa in elit mollit aute dolor. Fugiat magna ut eu aute nostrud aute nostrud qui sunt consectetur deserunt amet."
+    },
+    {
+      "_id": "b8ec107e-3bb6-4533-9848-64c1bb9b9712",
+      "name": "est",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 39,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Fugiat ad voluptate aute aliquip non et anim aliqua ut pariatur do id sint amet."
+    },
+    {
+      "_id": "6c40c455-f56f-460a-9b39-159fae4f8bb2",
+      "name": "nulla nulla",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 17,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum ullamco exercitation nisi labore amet. Aliqua ut aute commodo consequat pariatur reprehenderit."
+    },
+    {
+      "_id": "54096db7-9a13-4d37-81e8-d1536b2d9eb1",
+      "name": "deserunt tempor",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 59,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Deserunt aute qui culpa non dolore ut reprehenderit aliquip deserunt consectetur sunt velit aliqua irure. Consequat cillum deserunt labore deserunt duis."
+    },
+    {
+      "_id": "485c64fc-443b-41a0-84c3-fd59c89a5ace",
+      "name": "dolore",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 28,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Aute laborum occaecat amet excepteur aliqua irure ea voluptate id. Fugiat duis commodo sunt pariatur excepteur esse tempor id esse proident amet est id."
+    },
+    {
+      "_id": "b02231c0-501d-40d7-94fb-4df5dd181913",
+      "name": "esse id",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 32,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum aute enim Lorem exercitation incididunt sunt velit ad dolor."
+    },
+    {
+      "_id": "e49f4ba3-816b-4eef-a01c-23c9fcd0d30f",
+      "name": "voluptate do",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 10,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Aliqua ipsum dolor dolore incididunt."
+    },
+    {
+      "_id": "838f0d34-bd7e-4d8b-af9e-59756066ce30",
+      "name": "elit",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 71,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum cillum id nostrud laboris minim sunt tempor aute nisi magna non. Occaecat voluptate anim mollit cupidatat ullamco exercitation incididunt voluptate."
+    },
+    {
+      "_id": "4fd2ef8e-044e-41cc-879b-80acf27a55d3",
+      "name": "non",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 95,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Quis est elit aliqua dolore Lorem veniam ex dolore consequat."
+    },
+    {
+      "_id": "2c279f3e-3445-4c5d-aa90-9ebc0c28f28b",
+      "name": "aliqua",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 76,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Amet adipisicing amet sit qui elit minim velit nisi sit laborum. Nulla qui mollit cillum mollit labore proident sunt sunt voluptate laboris qui sunt."
+    },
+    {
+      "_id": "111729d3-e9ee-4e7e-9939-fa408515c8f1",
+      "name": "amet",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 23,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Enim fugiat veniam dolore commodo magna enim est enim irure eu aute. Minim laborum consectetur excepteur cillum mollit sit deserunt aliqua."
+    },
+    {
+      "_id": "371f6e3d-52a8-4676-b8cb-27bb5e84125e",
+      "name": "non nostrud",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 38,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Et elit mollit anim eu sunt non."
+    },
+    {
+      "_id": "95d85c02-efdb-430e-abc8-1875151190bd",
+      "name": "nisi nulla",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 49,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Consequat irure elit tempor consequat consectetur pariatur do qui."
+    },
+    {
+      "_id": "903fa585-ec3f-4f33-b589-f65473563155",
+      "name": "irure",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 56,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ea laboris voluptate Lorem non ea ut in proident ad pariatur incididunt. Commodo est ipsum est adipisicing."
+    },
+    {
+      "_id": "cf8b3a99-a43d-4c03-a400-f717e33607cc",
+      "name": "eiusmod",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 16,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Tempor consectetur voluptate mollit pariatur ullamco id non ad."
+    },
+    {
+      "_id": "1a5275b4-5065-4cd4-bae9-b624a51290ab",
+      "name": "enim",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 100,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Velit minim velit esse duis cupidatat."
+    },
+    {
+      "_id": "af54aa25-8c59-485f-a6ea-e27bf27c0ce2",
+      "name": "elit",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 54,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Enim magna incididunt dolor quis culpa consectetur elit veniam est nulla minim ut consequat nulla. Ipsum est ut quis minim laborum amet et id nulla culpa veniam aliquip ea magna."
+    },
+    {
+      "_id": "4cbe2dad-e073-4a01-8923-5cb684dd6ac1",
+      "name": "nulla aliquip",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 29,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Esse eiusmod excepteur nulla ut proident ad mollit adipisicing laborum. Non ad quis aliqua sit dolore non commodo officia mollit sunt qui."
+    },
+    {
+      "_id": "c5f6273b-fb92-485c-b273-fdeac01477f2",
+      "name": "exercitation labore",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 92,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Minim sint proident occaecat fugiat non anim sint eiusmod ut enim nisi sint. In mollit nisi culpa do."
+    },
+    {
+      "_id": "b68f8e20-9c2a-46c8-acb7-a5b070a9e5b5",
+      "name": "aute nulla",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 62,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Et excepteur reprehenderit laborum tempor nostrud pariatur qui deserunt nisi ullamco."
+    },
+    {
+      "_id": "d5d71ffa-12d1-4a6c-8b94-e0afe3a51bae",
+      "name": "voluptate irure",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 38,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Laboris deserunt aliqua aute non quis consequat aliquip irure sit mollit dolor."
+    },
+    {
+      "_id": "54a846dd-3269-4d82-b88f-915cd7430990",
+      "name": "qui",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 20,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Deserunt minim esse reprehenderit do commodo qui."
+    },
+    {
+      "_id": "66f34f7d-651b-431c-9f02-f293d1a41ac0",
+      "name": "sunt",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 37,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Esse exercitation quis aliqua ipsum mollit magna ut tempor ad."
+    },
+    {
+      "_id": "2228bf0d-fccb-4a5d-aed2-c95c7ae30ac4",
+      "name": "dolor",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 19,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Amet deserunt laboris deserunt qui veniam ex ullamco cupidatat sint cupidatat culpa. Cillum in nostrud culpa deserunt nisi aliquip officia ut proident sint irure."
+    },
+    {
+      "_id": "d2a2a15f-0bc3-470f-9d66-447ee7160d88",
+      "name": "incididunt",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 21,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum consectetur do veniam magna cillum qui cupidatat non amet aute incididunt laborum. Eiusmod exercitation Lorem tempor proident nostrud eu ad."
+    },
+    {
+      "_id": "8d06d5ef-fade-4876-8361-5b78a6860f4d",
+      "name": "pariatur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 31,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Culpa aliqua aliquip nisi officia excepteur ex qui officia."
+    },
+    {
+      "_id": "96278247-7d66-4a94-ad44-85966ec5e7d5",
+      "name": "do fugiat",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 67,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Minim veniam velit qui non ipsum esse ipsum."
+    },
+    {
+      "_id": "94952fe3-a88d-4332-95fd-17e165b4baf1",
+      "name": "fugiat",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 59,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Laborum laboris duis eiusmod dolore id veniam anim voluptate ea laborum in. Aliquip enim nulla veniam labore incididunt labore anim ex laborum sint nostrud quis aute est."
+    },
+    {
+      "_id": "e47ba053-60a4-472f-bb87-7f58539f022a",
+      "name": "incididunt ex",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 64,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Reprehenderit quis culpa laborum sint quis nulla do magna enim dolor aute laboris tempor duis."
+    },
+    {
+      "_id": "3942b49d-24f7-4625-a265-a504015280c8",
+      "name": "occaecat",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 25,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Excepteur consequat excepteur labore ipsum esse labore exercitation irure occaecat culpa."
+    },
+    {
+      "_id": "e015caf8-1dfe-4f49-a24d-dcf47d3dcd4d",
+      "name": "est sunt",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 43,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Reprehenderit consectetur sint occaecat ea et officia eiusmod pariatur velit Lorem tempor aliqua magna."
+    },
+    {
+      "_id": "7cea82ca-a6f4-458f-8342-b5eb8538ab6b",
+      "name": "sit labore",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 44,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Exercitation exercitation adipisicing officia ad enim enim esse."
+    },
+    {
+      "_id": "8f243106-1903-41ea-8282-37d8afee27a9",
+      "name": "quis",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 24,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Deserunt aute dolore incididunt esse ut exercitation deserunt esse cupidatat ipsum ad aute nulla."
+    },
+    {
+      "_id": "fe586493-75c1-4886-a577-60f847d16f4d",
+      "name": "eu fugiat",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 99,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ea aliquip eu anim et enim aute quis excepteur ad enim irure aliqua adipisicing aliquip. Commodo commodo commodo dolor pariatur veniam id esse ipsum culpa laborum aute in commodo."
+    },
+    {
+      "_id": "b1e74836-2b2c-463f-aaba-0cb92fbc65be",
+      "name": "nisi",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 45,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ea occaecat aliquip aute proident reprehenderit."
+    },
+    {
+      "_id": "b219e9d3-32ab-4896-9718-4a61bc0d428d",
+      "name": "ipsum",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 25,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Aute et reprehenderit sint anim nostrud magna ullamco."
+    },
+    {
+      "_id": "038ff5ee-6ea4-4f87-9c94-18c86b9f8385",
+      "name": "non officia",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 83,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Voluptate minim enim laboris Lorem consectetur sit."
+    },
+    {
+      "_id": "d0ae84d2-8d87-4429-b028-f58956fef3fb",
+      "name": "do",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 58,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Deserunt voluptate do occaecat ullamco duis quis veniam."
+    },
+    {
+      "_id": "d218413f-0d8e-46f6-b59b-4ae0c571a084",
+      "name": "aute",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 96,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Laborum labore fugiat consectetur aute."
+    },
+    {
+      "_id": "67a609e1-5ea1-4c2e-ac43-7360088e6679",
+      "name": "ea",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 24,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Do ullamco enim esse sit."
+    },
+    {
+      "_id": "a81bee60-6147-48a4-aba9-55d53ee30e76",
+      "name": "consequat",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 35,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Proident eiusmod adipisicing est occaecat nisi dolore duis sint nisi duis mollit. Mollit non esse enim officia occaecat exercitation cillum deserunt occaecat laboris."
+    },
+    {
+      "_id": "0a3a8c9d-7eb4-4c08-a34d-333262692b51",
+      "name": "fugiat",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 96,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Minim non et incididunt dolore laborum sit cillum duis."
+    },
+    {
+      "_id": "89a7521c-2313-4454-9374-fe9ab43a8a90",
+      "name": "mollit reprehenderit",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 87,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Est duis ut Lorem duis."
+    },
+    {
+      "_id": "9174e228-14c6-4a38-a30f-108335b64457",
+      "name": "est ex",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 92,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Voluptate ad amet aliquip aute laboris Lorem ad non fugiat nostrud. Magna quis ex dolore cupidatat exercitation eiusmod."
+    },
+    {
+      "_id": "2585f1b8-7649-44bf-9b3b-594969414176",
+      "name": "consequat et",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 94,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Veniam voluptate dolor voluptate minim dolore aliquip aliqua sit consectetur laborum ut ex. Et eiusmod consectetur officia commodo minim velit nisi do cupidatat magna commodo nulla laboris."
+    },
+    {
+      "_id": "ab37cfb3-381a-4ccc-9242-66c519f5edcf",
+      "name": "officia irure",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 51,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Veniam ut reprehenderit consequat ullamco. Dolore Lorem velit ad enim ex dolor quis anim ea consectetur velit proident aliquip."
+    },
+    {
+      "_id": "3a86ac20-edbc-49c2-a5d1-088a13a6421c",
+      "name": "fugiat mollit",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 66,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Officia id nulla nostrud veniam."
+    },
+    {
+      "_id": "1a72a8c9-c117-4926-babe-d4f9bc38a28b",
+      "name": "nulla dolor",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 35,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Incididunt ipsum ullamco cupidatat ut eu labore velit cillum culpa nisi mollit nulla incididunt. Do mollit deserunt aute officia do irure eu do anim velit."
+    },
+    {
+      "_id": "21a920cd-6e59-4215-ac1c-92a7544c6f41",
+      "name": "Lorem nisi",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 19,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ex minim duis officia sit reprehenderit. Minim et ex eiusmod ad est amet nisi ea aliquip tempor laboris eiusmod."
+    },
+    {
+      "_id": "85cef47d-e4d0-49f5-9d25-739bb86b4a03",
+      "name": "culpa",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 28,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Pariatur culpa incididunt consectetur sint aliquip qui cillum adipisicing irure cillum ullamco do."
+    },
+    {
+      "_id": "13ac3119-bd6b-47d4-a0d2-bb554754c80a",
+      "name": "proident ullamco",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 60,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sit laboris pariatur reprehenderit minim ullamco in enim velit minim. Non esse velit consequat voluptate aute voluptate dolore fugiat."
+    },
+    {
+      "_id": "605493e8-604a-4b61-b647-3228242671f8",
+      "name": "est",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 55,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Dolor deserunt consequat nostrud laboris reprehenderit est occaecat tempor pariatur. Sunt laborum aliqua laborum id id."
+    },
+    {
+      "_id": "993f394b-fe6a-45ad-860a-cd2cfd1bf6d2",
+      "name": "officia veniam",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 23,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Reprehenderit anim deserunt adipisicing est sit do deserunt sit qui adipisicing amet qui. Irure laboris ipsum tempor id excepteur nisi nulla id."
+    },
+    {
+      "_id": "98a641d7-c992-4bb9-b1a7-92f56a2b253c",
+      "name": "ut",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 12,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Culpa adipisicing deserunt non minim duis exercitation dolor dolor est laborum."
+    },
+    {
+      "_id": "a83c215c-d4a8-4206-b7a5-fff7d3ec6da1",
+      "name": "pariatur",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 43,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Officia magna Lorem in deserunt officia fugiat ad aliqua."
+    },
+    {
+      "_id": "ecc0a903-c28f-46e2-8460-5eb303449561",
+      "name": "adipisicing eiusmod",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 38,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Veniam deserunt fugiat dolore proident laboris consequat aliqua aliqua occaecat mollit esse ex. Proident non fugiat aliqua velit id incididunt enim enim."
+    },
+    {
+      "_id": "dfd67db1-559d-4b74-8d6d-82adf16c9a71",
+      "name": "ullamco veniam",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 28,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Esse ex excepteur mollit duis Lorem do laborum non nisi. Ad eu aliqua sunt est labore irure dolor est voluptate Lorem exercitation officia exercitation."
+    },
+    {
+      "_id": "28c55a5c-7d2e-44fb-8359-a78ccb644667",
+      "name": "ullamco proident",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 10,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Qui incididunt aliquip amet duis aute Lorem eiusmod labore ut et in."
+    },
+    {
+      "_id": "d87f1f61-bf15-40ef-a618-f87f05f101da",
+      "name": "exercitation et",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 83,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Cillum ut ad magna ea sint enim pariatur officia voluptate tempor esse."
+    },
+    {
+      "_id": "d19f01e3-3d30-48db-8b16-ce7b86fd5352",
+      "name": "veniam",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 30,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Labore nulla eiusmod sunt commodo ipsum sit aliqua cupidatat est aliqua tempor eu ex."
+    },
+    {
+      "_id": "5956e01e-18e1-4fbe-a6bf-fee6bc9af16a",
+      "name": "consectetur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 92,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Elit dolore dolor exercitation labore reprehenderit velit est."
+    },
+    {
+      "_id": "39173361-2f58-4ba8-961c-ae4732bae616",
+      "name": "dolore",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 97,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Cillum laborum deserunt sit ipsum esse adipisicing cupidatat dolor. Lorem ex reprehenderit dolor excepteur et dolore consequat deserunt."
+    },
+    {
+      "_id": "b332076d-270e-4e55-aff5-c355bec61d31",
+      "name": "qui",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 31,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Incididunt adipisicing consectetur proident in veniam eu. Irure ipsum ullamco nulla laborum proident voluptate."
+    },
+    {
+      "_id": "42437f71-97de-4d1d-8ea0-c60a4cc84565",
+      "name": "commodo cillum",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 83,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum magna sunt tempor anim laboris laborum adipisicing."
+    },
+    {
+      "_id": "b74c7f68-0e98-480f-b320-2fd90a8f1be9",
+      "name": "laboris",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 22,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Velit consequat velit excepteur fugiat deserunt."
+    },
+    {
+      "_id": "3ea47f25-9c44-49e1-a880-e6e8de8bb7cd",
+      "name": "fugiat proident",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 21,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ullamco incididunt fugiat consectetur sint reprehenderit qui officia tempor qui quis exercitation consectetur esse."
+    },
+    {
+      "_id": "fd2ddc1b-7633-449c-a111-ec381383bfe7",
+      "name": "pariatur amet",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 74,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Reprehenderit culpa esse esse laborum Lorem qui sint consequat."
+    },
+    {
+      "_id": "bb3ed5ec-fe85-4abd-b029-768d9da9d1b8",
+      "name": "cillum",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 14,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Esse aliquip Lorem et dolor incididunt laboris consequat dolore incididunt eu irure velit. Ex commodo esse dolor ad anim proident tempor in elit."
+    },
+    {
+      "_id": "f5bf8e6d-1cae-47b0-9d99-75081ccda547",
+      "name": "laborum reprehenderit",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 93,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Est fugiat consequat est reprehenderit minim aute consectetur anim veniam nulla laborum velit."
+    },
+    {
+      "_id": "94f19cb2-5c74-46c3-9c0e-38e79d62167a",
+      "name": "cillum",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 29,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Qui ipsum minim tempor occaecat cillum exercitation eiusmod aute reprehenderit sunt duis."
+    },
+    {
+      "_id": "d43e20e7-2890-4967-82a4-8ec5e43e1509",
+      "name": "tempor aute",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 52,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ut dolor laborum est incididunt mollit deserunt tempor proident qui."
+    },
+    {
+      "_id": "aad5f63a-0cbe-4009-8a45-103388a0d753",
+      "name": "laborum",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 54,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Magna id sunt do est tempor est eu."
+    },
+    {
+      "_id": "ceb6a208-3714-4d33-a153-22053afe5ebb",
+      "name": "ea consectetur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 86,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ea ex consequat consequat amet voluptate cillum mollit minim occaecat."
+    },
+    {
+      "_id": "f4691e35-a0d9-436e-9f38-092b794adde8",
+      "name": "cupidatat eu",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 80,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Pariatur proident sit ea deserunt consectetur minim incididunt consectetur et enim."
+    },
+    {
+      "_id": "a842b488-0793-4276-99b4-d31612eedc0b",
+      "name": "mollit",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 25,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Sint aliqua non aliquip dolore non."
+    },
+    {
+      "_id": "93353b4f-6985-4d5e-9566-a7eeb7ea3dbb",
+      "name": "quis Lorem",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 65,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Nisi dolor proident id eu. Deserunt nulla nostrud mollit voluptate voluptate."
+    },
+    {
+      "_id": "8cec4779-75b8-4f56-87f9-0df017b89904",
+      "name": "in mollit",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 15,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Lorem Lorem pariatur duis sunt exercitation dolor commodo eu ullamco sunt irure. Minim reprehenderit culpa officia ipsum aliquip ipsum consectetur sit ipsum."
+    },
+    {
+      "_id": "f1882a5e-6d9c-461d-92d8-eff996661460",
+      "name": "labore",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 38,
+            "statsName": "MA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Exercitation incididunt in est est voluptate ipsum minim."
+    },
+    {
+      "_id": "2ef75874-e493-4310-b89f-3f123a4124ea",
+      "name": "ex",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 29,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ipsum laborum aliquip dolore ullamco pariatur ea officia sint velit enim id laborum consectetur mollit. Aliquip occaecat qui pariatur est officia."
+    },
+    {
+      "_id": "549f96c1-5318-4eb9-bd06-2685d2154d96",
+      "name": "consequat nulla",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 69,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Aute ut quis magna laboris aliquip nisi eiusmod laboris officia."
+    },
+    {
+      "_id": "1c319e4f-6942-402c-a4dc-eb7a5820b002",
+      "name": "amet",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 68,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Excepteur adipisicing pariatur occaecat aliquip labore deserunt. Tempor quis commodo ex voluptate occaecat labore."
+    },
+    {
+      "_id": "07edc4b1-eae9-40e0-8cd6-a54d1ac36ad0",
+      "name": "duis aliqua",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 11,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Eu dolore duis officia aliqua exercitation aute dolor esse eiusmod enim."
+    },
+    {
+      "_id": "0ceb4edd-a591-422d-a63c-d05e9bebc6ee",
+      "name": "sint",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 98,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Pariatur labore nisi veniam non exercitation aute voluptate excepteur nisi ea. Occaecat ea cillum aliqua dolore."
+    },
+    {
+      "_id": "7961ca16-5b82-41b5-9b28-3edca4bd3eea",
+      "name": "dolore",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 73,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Dolor dolore eu aute proident commodo sunt mollit. Lorem consequat eiusmod occaecat ad aliqua eiusmod eu."
+    },
+    {
+      "_id": "71788bab-5815-414a-b578-78f75bf66692",
+      "name": "ut exercitation",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 45,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Incididunt non mollit fugiat ut. Quis cupidatat non veniam aliqua do cillum est irure."
+    },
+    {
+      "_id": "7bf4be3b-4c5d-4d61-b7db-ad1bf7bb14f4",
+      "name": "ipsum",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 62,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Irure nisi consectetur nostrud quis proident in magna. Exercitation deserunt in cupidatat veniam sit exercitation irure irure aliquip."
+    },
+    {
+      "_id": "17958fed-0fe8-4d95-bfa8-109331812c78",
+      "name": "non",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 93,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Aliquip commodo irure amet tempor quis. Proident reprehenderit et consequat dolor anim."
+    },
+    {
+      "_id": "ca53257d-816a-41d1-ba31-548dfa797a56",
+      "name": "cillum tempor",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 13,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Tempor pariatur eiusmod elit eu nostrud qui ipsum id qui commodo sint aliquip cillum Lorem."
+    },
+    {
+      "_id": "256ad5c0-ebb2-4040-8d7b-288cddbac174",
+      "name": "veniam incididunt",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 82,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Enim elit magna cupidatat qui magna fugiat dolore in minim dolore laborum nostrud nulla."
+    },
+    {
+      "_id": "2640ac72-d844-42ae-bb60-e92cdfd12479",
+      "name": "non",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 81,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Aliquip non ut duis commodo laboris nostrud sunt in minim sit nostrud. Lorem velit cillum sint laborum duis fugiat sunt laboris adipisicing aute dolor do."
+    },
+    {
+      "_id": "b9782f37-dfa7-4d13-a54d-d96d1c64e3c5",
+      "name": "ex consectetur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 16,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Nulla nostrud sint esse id veniam ea mollit esse fugiat sint."
+    },
+    {
+      "_id": "3cf72095-03ce-4902-86c5-887ac88bd555",
+      "name": "incididunt eu",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 21,
+            "statsName": "SPEED"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Deserunt nostrud ad ullamco amet irure reprehenderit."
+    },
+    {
+      "_id": "c6836c85-1951-45f4-8053-761504414588",
+      "name": "ad proident",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 17,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Nulla enim culpa laborum officia velit sit non officia labore. Lorem est consequat eiusmod consequat."
+    },
+    {
+      "_id": "d10c2e3b-f2c7-4870-8ba2-a1720384aa19",
+      "name": "non",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 62,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Minim Lorem exercitation quis officia labore deserunt minim nostrud. Voluptate veniam est Lorem adipisicing incididunt."
+    },
+    {
+      "_id": "756edfe1-c0db-4a77-a5a2-cba8c62bd9ba",
+      "name": "aute est",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 48,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Reprehenderit qui quis consectetur consequat aliqua duis eiusmod do incididunt officia voluptate reprehenderit aute veniam."
+    },
+    {
+      "_id": "329af226-fa4b-47e1-87d3-da3a245db36e",
+      "name": "nostrud mollit",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 50,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Ex duis irure irure mollit irure quis aliqua ipsum sint ipsum in ex. Ea excepteur ipsum non voluptate quis adipisicing aliqua."
+    },
+    {
+      "_id": "1e870d16-cfee-4074-9954-1982fd34fb79",
+      "name": "sit consequat",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 100,
+            "statsName": "HP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Enim occaecat aute aliquip mollit veniam aliqua culpa eiusmod."
+    },
+    {
+      "_id": "3b2fb9da-fa4e-4e81-84ad-a8ec2cb5bc1a",
+      "name": "ea",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 100,
+            "statsName": "MP"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "RECOVER"
+      },
+      "itemType": "UsableItem",
+      "description": "Ea exercitation minim cupidatat ipsum duis adipisicing duis adipisicing."
+    },
+    {
+      "_id": "fce0f091-ccf3-4abb-9044-116a09bb8cef",
+      "name": "esse",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 26,
+            "statsName": "PHD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Anim laborum dolore adipisicing quis quis enim Lorem ea."
+    },
+    {
+      "_id": "53f7d981-9ae0-40ad-a9a5-e2f6ebc645dd",
+      "name": "laborum consectetur",
+      "effects": {
+        "turn": 3,
+        "stats": [
+          {
+            "amount": 28,
+            "statsName": "MD"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Velit quis ex laboris dolor."
+    },
+    {
+      "_id": "e22e2b6e-d786-4f5c-aaed-83014fc4ae73",
+      "name": "sunt",
+      "effects": {
+        "turn": 2,
+        "stats": [
+          {
+            "amount": 98,
+            "statsName": "PA"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Pariatur veniam tempor aute irure duis sint fugiat nulla deserunt. Aliqua aute quis et eiusmod ad officia incididunt in incididunt consectetur culpa."
+    },
+    {
+      "_id": "2230df67-49d9-436c-ba53-1c7d62fcadf4",
+      "name": "cupidatat",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 24,
+            "statsName": "DODGE"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "BUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Consectetur deserunt dolore dolore ipsum aliquip dolor fugiat velit esse non qui incididunt. Adipisicing amet ad fugiat ex Lorem cupidatat reprehenderit consectetur officia proident nostrud aliquip aute veniam."
+    },
+    {
+      "_id": "fac117c7-f8ee-4a07-84df-35bdad910e29",
+      "name": "tempor excepteur",
+      "effects": {
+        "turn": 1,
+        "stats": [
+          {
+            "amount": 57,
+            "statsName": "MPR"
+          }
+        ],
+        "typeAffect": "SELF",
+        "typeEffect": "DEBUFF"
+      },
+      "itemType": "UsableItem",
+      "description": "Culpa minim deserunt ea deserunt laboris labore officia."
+    }
+  ]

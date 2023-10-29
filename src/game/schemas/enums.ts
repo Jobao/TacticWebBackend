@@ -18,7 +18,7 @@ export enum AttributesName{
     AGILITY = "AGILITY"
 }
 
-export enum StatsName{
+export enum StatsName{//'HP', 'MP', 'PA', 'MA', 'MPR', 'PHD', 'MD', 'DODGE', 'SPEED'
     HP = "HP",//En base la stamina
     MP = "MP",//En base al spirit
     PA = "PA",//Physic Attack
@@ -36,7 +36,7 @@ export enum GamePhase{
     INGAME = "INGAME"
 }
 
-export enum EquipmentSlot{
+export enum EquipmentSlot{//'HEAD', 'CHEST', 'GLOVES', 'FEET', 'AMULET' --- 'MAINHAND', 'SECONDHAND'
     HEAD= "HEAD",
     CHEST="CHEST",
     GLOVES= "GLOVES",
