@@ -100,7 +100,6 @@ export class ItemService {
 
   async findAllItemBySlot(slot:EquipmentSlot){
     if(slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.SECONDHAND){
-      console.log("armas");
       
       return await this.findAllWeaponItemBySlot(slot);
     }

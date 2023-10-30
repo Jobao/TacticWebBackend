@@ -69,7 +69,7 @@ export class Game{
         let unit:GameUnit;
         for (let index = 0; index < this.placedUnitList.length; index++) {
             const element = this.placedUnitList[index];
-            element.gameUnit.forEach(element2 => {//TODO: CAmbiar por una funcion del array (FIND)
+            element.gameUnit.forEach(element2 => {//IMPROVE: CAmbiar por una funcion del array (FIND)
                 if(target.x===element2.posX && target.y === element2.posY){
                     //res = true;
                     unit = element2;
@@ -82,7 +82,7 @@ export class Game{
 
     getUserIndexOnPlacedUnitList(user_uuid:string): number {
         for (let userIndex = 0; userIndex < this.placedUnitList.length; userIndex++) {
-            if(this.placedUnitList[userIndex].user_uuid === user_uuid){
+            if(this.placedUnitList[userIndex].user_uuid === user_uuid){//IMPROVE: Usar clases de JS
                 return userIndex;
             }
         }
@@ -104,14 +104,11 @@ export class Game{
             temp.unitBase_uuid = unit._id;
             temp.posX = target.x;
             temp.posY=target.y;
-            temp.currentHP = unit.getStats(StatsName.HP);
-            temp.currentMP = unit.getStats(StatsName.MP);
-            temp.stats = unit.stats;
+
             temp.canPerformActionThisTurn = true;
             temp.canMove = true;
             temp.canAttack = true;
-            if (equipmentDto) {
-                console.log(equipmentDto);
+            if (equipmentDto) {//IMPROVE:
                 
                 temp.equip(equipmentDto.chest);
                 temp.equip(equipmentDto.feet);
@@ -120,7 +117,9 @@ export class Game{
                 temp.equip(equipmentDto.mainHand);
                 temp.equip(equipmentDto.secondHand);
             }
-
+            temp.currentHP = unit.getStats(StatsName.HP);
+            temp.currentMP = unit.getStats(StatsName.MP);
+            temp.stats = unit.stats;
             this.placedUnitList[idx].gameUnit.push(temp);
             return true;
         }
@@ -135,7 +134,7 @@ export class Game{
     isThisUnitPlace(unit_uuid:string, user_uuid:string){
         let index = this.getUserIndexOnPlacedUnitList(user_uuid);
         let result = false;
-        if(index >=0){//TODO: CAmbiar por una funcion del array (FIND)
+        if(index >=0){//IMPROVE: CAmbiar por una funcion del array (FIND)
             this.placedUnitList[index].gameUnit.forEach(element => {
                 
                 if(element.unitBase_uuid === unit_uuid){

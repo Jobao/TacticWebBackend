@@ -70,13 +70,15 @@ export class GameUnit{
 
     attack(attackedUnit:GameUnit){
         if(this.canAttack){
-            //this.canAttack = false;
             attackedUnit.receiveDamage(this.getStats(StatsName.PA));
+            //this.canAttack = false;
             if(!this.canMove){
                 this.canPerformActionThisTurn = false;
             }
         }
     }
+
+
 
     newTurn(){
         this.canMove = true;
@@ -96,6 +98,10 @@ export class GameUnit{
             if(this.currentHP <= 0){
                 console.log("DEATH");
             }
+        }
+        else{
+            console.log("Target muerto");
+            
         }
     }
 

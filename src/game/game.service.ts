@@ -11,6 +11,7 @@ import { EquipmentSlot, GamePhase } from './schemas/enums';
 import { GameANDUserDTO } from './dto/gameUser.dto';
 import { ItemService } from 'src/item/item.service';
 import { EquipmentOBJDto } from './dto/equipmentOBJ.dto';
+import { GameUnit } from './schemas/gameUnit.schema';
 
 @Injectable()
 export class GameService {
@@ -246,8 +247,17 @@ export class GameService {
                         if(game.isInsideBoard(payload.action.target)){
                           let unitInPlace = game.isOcupiedByAnotherUnit(payload.action.target);
                           if(unitInPlace){
-                            placedUnit.attack(unitInPlace);
-                            update = true;
+                            if (await this.controlRange(placedUnit, unitInPlace)) {
+                              placedUnit.attack(unitInPlace);
+                              update = true;
+                            }
+                            else{
+                              console.log("muy lejos");
+                              
+                            }
+                          }
+                          else{
+                            console.log("No hay nadie");
                           }
                         }
                       }
@@ -266,6 +276,26 @@ export class GameService {
       }
     }
   }
+
+  async controlRange(unit:GameUnit, attacked:GameUnit):Promise<boolean>{
+    let distance = this.manhattanDistNOVECTOR(unit.posX, unit.posY, attacked.posX, attacked.posY);
+    let range = 1//Default range
+    if(unit.equipment.mainHand){
+      let weapon = await this.cacheService.WeaponItemCache.getInCacheOrBD(unit.equipment.mainHand);
+      if(weapon){
+        range = weapon.range;
+      }
+      
+    }
+    console.log("RANGE: " + range);
+    
+    return range>=distance;
+  }
+
+  manhattanDistNOVECTOR(x1:number, y1:number, x2:number, y2:number) {//https://www.geeksforgeeks.org/calculate-the-manhattan-distance-between-two-cells-of-given-2d-array/
+    let dist = Math.abs(x2 - x1) + Math.abs(y2 - y1);
+    return dist;
+}
 
   async getGame(game_uuid:string){
     let game = await this.cacheService.GameCache.getInCacheOrBD(game_uuid);

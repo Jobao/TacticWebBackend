@@ -193,6 +193,8 @@ export class AdminController {
             }
         }
         this.gameService.startGame({user_uuid:user1._id, game_uuid:gId});
+        let game = await this.cacheService.GameCache.getInCacheOrBD(gId);
+        this.gameService.controlRange(game.placedUnitList[0].gameUnit[0], game.placedUnitList[0].gameUnit[1])
     }
 
     
