@@ -11,6 +11,7 @@ export type GameUnitDocument = GameUnit & Document;
 export class GameUnit{
     constructor(){
         this.equipment = new UnitEquiped();
+        this.stats = [];
     }
 
     @ApiProperty()
@@ -46,7 +47,7 @@ export class GameUnit{
     canAttack:boolean;
 
     @ApiProperty()
-    @Prop({type:[TupleStatsSchema], autopopulate:true})
+    @Prop({type:[TupleStatsSchema], autopopulate:true,default:[]})
     stats:TupleStats[];
 
     @Prop({type: UnitEquipedSchema, autopopulate:true})

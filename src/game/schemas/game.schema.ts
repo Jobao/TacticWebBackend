@@ -108,6 +108,7 @@ export class Game{
             temp.canPerformActionThisTurn = true;
             temp.canMove = true;
             temp.canAttack = true;
+            temp.stats = unit.stats;//asigno stats base
             if (equipmentDto) {//IMPROVE:
                 
                 temp.equip(equipmentDto.chest);
@@ -119,7 +120,7 @@ export class Game{
             }
             temp.currentHP = unit.getStats(StatsName.HP);
             temp.currentMP = unit.getStats(StatsName.MP);
-            temp.stats = unit.stats;
+            
             this.placedUnitList[idx].gameUnit.push(temp);
             return true;
         }
