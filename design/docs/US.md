@@ -1,5 +1,3 @@
-Casos de uso
-
 ### Chat
 
 - [ ]  Mandar mensaje en el lobby
@@ -9,10 +7,10 @@ Casos de uso
 
 ### Usuarios
 
-- [ ] Crear usuario (incluye auth)
-- [ ] Login usuario
+- [x] Crear usuario (incluye auth)
+- [x] Login usuario
 - [ ] Modificar datos del usuario
-- [ ] Crear unidades
+- [x] Crear unidades
 - [ ] Modificar unidades
   - [ ] Cambiar nombre
   - [ ] Cambiar classe
@@ -23,12 +21,19 @@ Casos de uso
 
 ### Game
 
-- [ ] Crear un juego
-- [ ] Unirse a un juego
-- [ ] Salir de un juego
-- [ ] Colocar unidad
+- [x] Crear un juego
+- [x] Unirse a un juego
+- [x] Salir de un juego
+- [x] Colocar unidad
 - [ ] Enviar acciones
-  - [ ] Wait
-  - [ ] Mover
+  - [x] Wait
+  - [x] Mover
+  - [ ] Atacar
   - [ ] Usar Habilidad
   - [ ] Usar Item
+
+
+### Seguridad
+
+- [ ] JWT
+- [ ] Password hash

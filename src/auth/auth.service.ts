@@ -1,9 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UserService } from 'src/user/user.service';
-import { Auth, AuthDocument } from './auth.schema';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import { Auth} from './auth.schema';
 import { LoginDto } from './dto/login.dto';
 import { v4 as uuidv4 } from 'uuid';
 import { SignupDto } from './dto/signup.dto';
@@ -14,15 +12,19 @@ export class AuthService {
     constructor(private jwtService: JwtService, private userService:UserService,private mongoService:MongodbService) {}
 
     async login(payload: LoginDto){
-        //let t = this.mongoService.
         let r= await this.mongoService.authRepository.findOne(payload.user);
+        console.log(r);
+        
         if(r){
-            if(r.checkPassword(payload.pass)){
+            if(await r.checkPassword(payload.pass)){
                 
                 const paylo = { sub: r.uuid, username: r._id };
                 return {
                             access_token:  "Bearer " + await this.jwtService.signAsync(paylo),
                     };
+            }
+            else{
+                return "Usuario no valido"
             }
         }
     }

@@ -1,4 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+const bcrypt = require('bcrypt');
 
 export type AuthDocument = Auth & Document;
 
@@ -13,11 +14,23 @@ export class Auth{
     pass:string;
 
     
-    checkPassword(pass:string):boolean{
-        return pass===this.pass;
+    async checkPassword(pass:string):Promise<boolean>{
+        return await bcrypt.compare(pass, this.pass);
     }
     
 }
 
 export const AuthSchema = SchemaFactory.createForClass(Auth);
 AuthSchema.loadClass(Auth);
+
+AuthSchema.pre('save', async function (next) {
+    if(!this.isModified("pass")) return next();
+    try{
+        this.pass = await bcrypt.hash(this.pass, 10);
+        return next();
+    }
+    catch(error){
+        return next();
+    }
+    
+});
