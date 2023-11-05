@@ -13,7 +13,6 @@ export class AuthService {
 
     async login(payload: LoginDto){
         let r= await this.mongoService.authRepository.findOne(payload.user);
-        console.log(r);
         
         if(r){
             if(await r.checkPassword(payload.pass)){

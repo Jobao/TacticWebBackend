@@ -35,5 +35,5 @@
 
 ### Seguridad
 
-- [ ] JWT
-- [ ] Password hash
+- [x] JWT
+- [x] Password hash
