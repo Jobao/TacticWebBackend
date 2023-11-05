@@ -15,7 +15,7 @@ import { CacheModule } from 'src/game-cache/cache.module';
       secret: jwtConstants.secret,
       signOptions: { expiresIn: '1h' },
     }),
-    MongodbModule, UserModule, CacheModule, MongooseModule],
+    MongodbModule, UserModule, MongooseModule],
   controllers: [AuthController],
   providers: [AuthService],
   exports:[AuthService]

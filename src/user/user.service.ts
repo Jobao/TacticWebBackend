@@ -14,14 +14,14 @@ export class UserService {
     private cacheService:CacheService, private unitClassService:UnitClasesService){}
     /**
      * NO llamar directamente de los controllers/gateway
-     * Llamar auth.Create
+     * Llamar auth.signup
      */
     async create(cUser:CreateUserDto){
         let user = new User();
         user._id = cUser._id;
         user.user = cUser.user;
         user.displayName = cUser.displayName;
-        await this.mongoService.userRepository.create(user);
+        return await this.mongoService.userRepository.create(user);
         
     }
 

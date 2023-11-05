@@ -11,8 +11,7 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 
 @Injectable()
 export class AuthService {
-    constructor(private jwtService: JwtService, private userService:UserService,private mongoService:MongodbService,
-        @InjectModel(Auth.name) private authModel:Model<AuthDocument>) {}
+    constructor(private jwtService: JwtService, private userService:UserService,private mongoService:MongodbService) {}
 
     async login(payload: LoginDto){
         //let t = this.mongoService.
@@ -34,9 +33,13 @@ export class AuthService {
         auth._id = payload.user;
         auth.pass = payload.pass;
         auth.uuid = uuid;
-        this.mongoService.authRepository.create(auth);
-        //this.authModel.create({_id: payload.user, pass: payload.pass, uuid: uuid})
-        this.userService.create({_id: uuid, user: payload.user, displayName: payload.displayName})
 
+        try {
+            await this.mongoService.authRepository.create(auth)
+            return await this.userService.create({_id: uuid, user: payload.user, displayName: payload.displayName})
+        } catch (error) {
+            console.log(error);
+            
+        }
     }
 }

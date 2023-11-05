@@ -20,4 +20,16 @@ export class MongodbService {
     readonly weaponItemRepository:WeaponItemRepository){
         
     }
+
+    async DONT_USE_DELETE_ALL_DOCUMENT_ON_MONGO(){
+        await this.gameRepository.CLEAN_ALL_COLLECTION_ATTENTION_010101010();
+        await this.userRepository.CLEAN_ALL_COLLECTION_ATTENTION_010101010();
+        //await this.unitClassRepository.CLEAN_ALL_COLLECTION_ATTENTION_010101010();
+        await this.authRepository.CLEAN_ALL_COLLECTION_ATTENTION_010101010();
+        //await this.classSkillRepository.CLEAN_ALL_COLLECTION_ATTENTION_010101010();
+        //await this.usableItemRepository.CLEAN_ALL_COLLECTION_ATTENTION_010101010();
+        //await this.equipableItemRepository.CLEAN_ALL_COLLECTION_ATTENTION_010101010();
+        //await this.weaponItemRepository.CLEAN_ALL_COLLECTION_ATTENTION_010101010();
+
+    }
 }
