@@ -11,16 +11,25 @@ import { MongodbModule } from './mongodb/mongodb.module';
 import { SkillsModule } from './skills/skills.module';
 import { UnitClasesModule } from './unit-clases/unit-clases.module';
 import { ItemModule } from './item/item.module';
+import configuration from './config';
+import { ConfigModule, ConfigService} from '@nestjs/config';
+
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/TacticWeb', {connectionFactory:(connection) =>{
+  imports: [ConfigModule.forRoot({load: [configuration]}),
+  MongooseModule.forRoot(process.env.MONGO_URI + '/'  + process.env.MONGO_DB_NAME, {connectionFactory:(connection) =>{
     connection.plugin(require('mongoose-autopopulate')); 
     return connection;
   }}), ChatModule, UserModule, GameModule, AuthModule, AdminModule, CacheModule, MongodbModule, SkillsModule, UnitClasesModule, ItemModule],
   controllers: [],
   providers: [RoomGateway,],
 })
-export class AppModule {}
+export class AppModule {
+  constructor()
+  {
+    console.log(process.env.MONGO_URI + '/'  + process.env.MONGO_DB_NAME);
+  }
+}
 
 
 /*{provide: APP_GUARD,
