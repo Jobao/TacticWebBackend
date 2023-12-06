@@ -308,6 +308,13 @@ export class GameService {
     return (await this.mongoService.gameRepository.findAll());
   }
 
+  async getAllGameByUser(user_uuid:string){
+    let user = await this.cacheService.UserCache.getInCacheOrBD(user_uuid)
+    if(user){
+       return await this.mongoService.gameRepository.getGamesByUser(user.gameJoinedList);
+    }
+  }
+
   async p(){
     return await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND);
   }

@@ -1,9 +1,10 @@
-import { Body, Controller, Post} from '@nestjs/common';
+import { Body, Controller, Get, Post, Res, UseGuards} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
 import { Public } from './public.decorator';
 import { SignupDto } from './dto/signup.dto';
 import { ApiTags } from '@nestjs/swagger';
+import { AuthHTTPGuard } from './authHTTP.guard';
 
 @Controller('')
 @ApiTags('Auth')
@@ -13,12 +14,19 @@ export class AuthController {
     @Public()
     @Post('login')
     async login(@Body() payload: LoginDto){
-       return this.authService.login(payload);
+        let v = await this.authService.login(payload);
+        
+       return v;
     }
 
     @Public()
     @Post('signup')
     async signup(@Body() payload: SignupDto){
         this.authService.signup(payload);
+    }
+    @UseGuards(AuthHTTPGuard)
+    @Get('ping')
+    async ping(){
+        return {status:'ok'}
     }
 }

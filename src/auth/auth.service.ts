@@ -23,9 +23,10 @@ export class AuthService {
                     };
             }
             else{
-                return "Usuario no valido"
+                return {status:"error"}
             }
         }
+        return {status:"error"}
     }
 
     async signup(payload: SignupDto){

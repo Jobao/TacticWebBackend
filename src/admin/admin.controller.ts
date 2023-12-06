@@ -57,6 +57,7 @@ export class AdminController {
         isArray:true,
     })
     async getAllGames(){
+        
         return await this.gameService.getAllGames();
     }
 
