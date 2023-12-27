@@ -109,6 +109,7 @@ export class AdminController {
 
   @Post('autoinsert')
   async autoInsert() {
+    this.cacheService.CLEAN_CACHE();
     await this.mongodbService.DONT_USE_DELETE_ALL_DOCUMENT_ON_MONGO();
     let idJugador1 = await this.authService.signup({
       user: 'joao',
