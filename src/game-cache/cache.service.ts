@@ -13,51 +13,66 @@ import { mongo } from 'mongoose';
 
 @Injectable()
 export class CacheService {
-    constructor(private mongoService:MongodbService){
+  constructor(private mongoService: MongodbService) {
+    this.unitClassCache = new BaseCache<UnitClass>(
+      mongoService.unitClassRepository,
+    );
+    this.gameCache = new BaseCache<Game>(mongoService.gameRepository);
+    this.userCache = new BaseCache<User>(mongoService.userRepository);
+    this.usableItemCache = new BaseCache<UsableItem>(
+      mongoService.usableItemRepository,
+    );
+    this.equipableItemCache = new BaseCache<EquipableItem>(
+      mongoService.equipableItemRepository,
+    );
+    this.weaponItemCache = new BaseCache<WeaponItem>(
+      mongoService.weaponItemRepository,
+    );
+  }
 
-        this.unitClassCache = new BaseCache<UnitClass>(mongoService.unitClassRepository);
-        this.gameCache = new BaseCache<Game>(mongoService.gameRepository);
-        this.userCache = new BaseCache<User>(mongoService.userRepository);
-        this.usableItemCache = new BaseCache<UsableItem>(mongoService.usableItemRepository)
-        this.equipableItemCache = new BaseCache<EquipableItem>(mongoService.equipableItemRepository);
-        this.weaponItemCache = new BaseCache<WeaponItem>(mongoService.weaponItemRepository);
-        
-    }
-    private gameCache: BaseCache<Game>;
-    
-    public get GameCache() : BaseCache<Game> {
-        return this.gameCache;
-    }
-    
-//-------------------------------User-----------------------------User
-    private userCache:BaseCache<User>;
+  public async CLEAN_CACHE() {
+    this.unitClassCache.CLEAR_CACHE();
+    this.gameCache.CLEAR_CACHE();
+    this.userCache.CLEAR_CACHE();
+    this.usableItemCache.CLEAR_CACHE();
+    this.equipableItemCache.CLEAR_CACHE();
+    this.weaponItemCache.CLEAR_CACHE();
+  }
+  private gameCache: BaseCache<Game>;
 
-    public get UserCache(): BaseCache<User>{
-        return this.userCache;
-    }
-    //---------------------UnitClass---------------UnitClass-----------
+  public get GameCache(): BaseCache<Game> {
+    return this.gameCache;
+  }
 
-    private unitClassCache:BaseCache<UnitClass>;
+  //-------------------------------User-----------------------------User
+  private userCache: BaseCache<User>;
 
-    public get UnitClassCache(): BaseCache<UnitClass>{
-        return this.unitClassCache;
-    }
-//---------------------------ITEMS-------------------------------------------
-    private usableItemCache:BaseCache<UsableItem>;
+  public get UserCache(): BaseCache<User> {
+    return this.userCache;
+  }
+  //---------------------UnitClass---------------UnitClass-----------
 
-    public get UsableItemCache(): BaseCache<UsableItem>{
-        return this.usableItemCache;
-    }
+  private unitClassCache: BaseCache<UnitClass>;
 
-    private equipableItemCache:BaseCache<EquipableItem>;
+  public get UnitClassCache(): BaseCache<UnitClass> {
+    return this.unitClassCache;
+  }
+  //---------------------------ITEMS-------------------------------------------
+  private usableItemCache: BaseCache<UsableItem>;
 
-    public get EquipableItemCache(): BaseCache<EquipableItem>{
-        return this.equipableItemCache;
-    }
+  public get UsableItemCache(): BaseCache<UsableItem> {
+    return this.usableItemCache;
+  }
 
-    private weaponItemCache:BaseCache<WeaponItem>;
+  private equipableItemCache: BaseCache<EquipableItem>;
 
-    public get WeaponItemCache(): BaseCache<WeaponItem>{
-        return this.weaponItemCache;
-    }
+  public get EquipableItemCache(): BaseCache<EquipableItem> {
+    return this.equipableItemCache;
+  }
+
+  private weaponItemCache: BaseCache<WeaponItem>;
+
+  public get WeaponItemCache(): BaseCache<WeaponItem> {
+    return this.weaponItemCache;
+  }
 }
