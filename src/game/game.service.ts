@@ -44,9 +44,8 @@ export class GameService {
       } else {
         game.maxUnits = cGame.maxUnits;
       }
-      //FIXME: Aca hay que obtener los datos del dto
-      game.sizeX = 10;
-      game.sizeY = 10;
+      game.sizeX = cGame.sizeX;
+      game.sizeY = cGame.sizeY;
       //FIXME: Ver porque gamephase me da error, aca le asigno un valor magico
       game.gamePhase = GamePhase.DRAFT;
       game.joinGame(cGame.user_uuid);
