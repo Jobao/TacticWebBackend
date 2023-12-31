@@ -31,12 +31,12 @@ export class CacheService {
   }
 
   public async CLEAN_CACHE() {
-    this.unitClassCache.CLEAR_CACHE();
+    //this.unitClassCache.CLEAR_CACHE();
     this.gameCache.CLEAR_CACHE();
     this.userCache.CLEAR_CACHE();
-    this.usableItemCache.CLEAR_CACHE();
-    this.equipableItemCache.CLEAR_CACHE();
-    this.weaponItemCache.CLEAR_CACHE();
+    //this.usableItemCache.CLEAR_CACHE();
+    //this.equipableItemCache.CLEAR_CACHE();
+    //this.weaponItemCache.CLEAR_CACHE();
   }
   private gameCache: BaseCache<Game>;
 

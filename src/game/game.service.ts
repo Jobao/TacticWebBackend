@@ -366,7 +366,6 @@ export class GameService {
         range = weapon.range;
       }
     }
-    console.log('RANGE: ' + range);
 
     return range >= distance;
   }
