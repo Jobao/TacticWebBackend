@@ -266,6 +266,7 @@ export class GameService {
    * @returns
    */
   async actionUnit(payload: UnitActionDto) {
+    let res: { status: string; reason: string } = { status: '', reason: '' };
     let game = await this.cacheService.GameCache.getInCacheOrBD(
       payload.game_uuid,
     );
@@ -302,7 +303,15 @@ export class GameService {
                               update = true;
                             }
                           }
+                        } else {
+                          res.status = 'FAIL';
+                          res.reason = 'Posicion fuera del tablero';
+                          return res;
                         }
+                      } else {
+                        res.status = 'FAIL';
+                        res.reason = 'No se puede mover';
+                        return res;
                       }
                       break;
                     case 'ATTACK':
@@ -318,12 +327,24 @@ export class GameService {
                               placedUnit.attack(unitInPlace);
                               update = true;
                             } else {
-                              console.log('muy lejos');
+                              res.status = 'FAIL';
+                              res.reason = 'Fuera de rango';
+                              return res;
                             }
                           } else {
-                            console.log('No hay nadie');
+                            res.status = 'FAIL';
+                            res.reason = 'No hay target';
+                            return res;
                           }
+                        } else {
+                          res.status = 'FAIL';
+                          res.reason = 'Posicion fuera del tablero';
+                          return res;
                         }
+                      } else {
+                        res.status = 'FAIL';
+                        res.reason = 'No puede atacar';
+                        return res;
                       }
                       break;
                     default:
