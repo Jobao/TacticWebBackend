@@ -1,7 +1,9 @@
 export default () => ({
-    mongo: {
-      uri: process.env.MONGO_URI,
-      dbName: process.env.MONGO_DB_NAME
-    }
-  });
-      
+  mongo: {
+    uri: process.env.MONGO_URI,
+    dbName: process.env.MONGO_DB_NAME,
+  },
+  dep: {
+    uri: '',
+  },
+});

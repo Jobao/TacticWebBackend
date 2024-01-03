@@ -18,7 +18,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot({ load: [configuration] }),
     MongooseModule.forRoot(
-      'mongodb+srv://tacticprueba-main-db-014622f406f:37hz4TfrMhYfRtHJb5BSwe37912KD5@prod-us-central1-3.yr9so.mongodb.net/tacticprueba-main-db-014622f406f',
+      process.env.uri,
       //process.env.MONGO_URI + '/' + process.env.MONGO_DB_NAME,
       {
         connectionFactory: (connection) => {
