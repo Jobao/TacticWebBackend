@@ -266,6 +266,8 @@ export class GameService {
    * @returns
    */
   async actionUnit(payload: UnitActionDto) {
+    console.log(payload);
+    let update = false;
     let res: { status: string; reason: string } = { status: '', reason: '' };
     let game = await this.cacheService.GameCache.getInCacheOrBD(
       payload.game_uuid,
@@ -282,7 +284,7 @@ export class GameService {
               let placedUnit = game.getUnit(user._id, payload.unit_uuid);
               if (placedUnit) {
                 if (placedUnit.canPerformActionThisTurn) {
-                  let update = false;
+                  
                   switch (payload.action.type) {
                     case 'WAIT':
                       placedUnit.wait();
@@ -302,16 +304,24 @@ export class GameService {
                             ) {
                               update = true;
                             }
+                            else {
+                              res.status = 'FAIL';
+                              res.reason = 'No se pudo mover';
+                              
+                            }
+                          }
+                          else {
+                            res.status = 'FAIL';
+                            res.reason = 'Existe una unidad en ese lugar';
+                            
                           }
                         } else {
                           res.status = 'FAIL';
                           res.reason = 'Posicion fuera del tablero';
-                          return res;
                         }
                       } else {
                         res.status = 'FAIL';
                         res.reason = 'No se puede mover';
-                        return res;
                       }
                       break;
                     case 'ATTACK':
@@ -329,46 +339,62 @@ export class GameService {
                             } else {
                               res.status = 'FAIL';
                               res.reason = 'Fuera de rango';
-                              return res;
                             }
                           } else {
                             res.status = 'FAIL';
                             res.reason = 'No hay target';
-                            return res;
                           }
                         } else {
                           res.status = 'FAIL';
                           res.reason = 'Posicion fuera del tablero';
-                          return res;
                         }
                       } else {
                         res.status = 'FAIL';
                         res.reason = 'No puede atacar';
-                        return res;
                       }
                       break;
                     default:
                       break;
                   }
-                  if (update) {
-                    this.cacheService.GameCache.setInCache(
-                      game._id,
-                      await this.mongoService.gameRepository.update(
-                        game._id,
-                        game,
-                      ),
-                    );
-                    return { status: 'OK' };
-                  } else {
-                    return { status: 'FAIL' };
-                  }
+                  
                 }
+              }else{
+                res.status ='FAIL';
+                res.reason='NO  '
               }
             }
+            else {
+              res.status = 'FAIL';
+              res.reason = 'Usuario inexistente';
+              
+            }
+          }
+          else {
+            res.status = 'FAIL';
+            res.reason = 'NO es tu turno';
           }
         }
       }
+      else {
+        res.status = 'FAIL';
+        res.reason = 'Juego no iniciado';
+      }
     }
+    else {
+      res.status = 'FAIL';
+      res.reason = 'Juego Inexistente';
+    }
+    if (update) {
+      this.cacheService.GameCache.setInCache(
+        game._id,
+        await this.mongoService.gameRepository.update(
+          game._id,
+          game,
+        ),
+      );
+      res.status = 'OK';
+    }
+    return res;
   }
 
   async controlRange(unit: GameUnit, attacked: GameUnit): Promise<boolean> {

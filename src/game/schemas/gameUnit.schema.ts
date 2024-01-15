@@ -60,7 +60,7 @@ export class GameUnit {
     if (this.canMove) {
       this.posX = x;
       this.posY = y;
-      this.canMove = false;
+      //this.canMove = false;
       if (!this.canAttack) {
         this.canPerformActionThisTurn = false;
       }

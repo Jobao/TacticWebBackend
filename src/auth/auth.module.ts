@@ -13,13 +13,14 @@ import { CacheModule } from 'src/game-cache/cache.module';
     JwtModule.register({
       global: true,
       secret: jwtConstants.secret,
-      signOptions: { expiresIn: '1h' },
+      signOptions: { expiresIn: '8h' },
     }),
-    MongodbModule, UserModule, MongooseModule],
+    MongodbModule,
+    UserModule,
+    MongooseModule,
+  ],
   controllers: [AuthController],
   providers: [AuthService],
-  exports:[AuthService]
+  exports: [AuthService],
 })
 export class AuthModule {}
-
-
