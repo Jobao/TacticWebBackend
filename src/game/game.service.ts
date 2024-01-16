@@ -266,7 +266,6 @@ export class GameService {
    * @returns
    */
   async actionUnit(payload: UnitActionDto) {
-    console.log(payload);
     let update = false;
     let res: { status: string; reason: string } = { status: '', reason: '' };
     let game = await this.cacheService.GameCache.getInCacheOrBD(

@@ -6,60 +6,73 @@ import { UnitClassMongoRepository } from 'src/mongodb/repositories/unitClassMong
 
 @Injectable()
 export class UnitClasesService {
-    constructor(private mongooseService:UnitClassMongoRepository, private cacheService:CacheService){
-        this.loadAllClassesInCache();
-        
-    }
+  constructor(
+    private mongooseService: UnitClassMongoRepository,
+    private cacheService: CacheService,
+  ) {
+    this.loadAllClassesInCache();
+  }
 
-    addNewClass(nClass:UnitClass){
-        this.mongooseService.create(nClass);
-    }
+  addNewClass(nClass: UnitClass) {
+    this.mongooseService.create(nClass);
+  }
 
-    getAllClasses(){
-        return this.mongooseService.findAll();
-    }
+  getAllClasses() {
+    return this.mongooseService.findAll();
+  }
 
-    async getAllNameClass(){
-        return await this.mongooseService.getAllNameClass();
+  async getAllNameClass() {
+    return await this.mongooseService.getAllNameClass();
+  }
+  /**
+   * si puede usar la clase, la devuleve, sino NULL
+   * @param class_id
+   * @param unit
+   * @returns
+   */
+  canUseThisClass(class_id: string, unit: Unit) {
+    let uClass = this.cacheService.UnitClassCache.inCache(class_id);
+    if (uClass) {
+      if (uClass.canUseThisUnitClass(unit.classExperience)) {
+        return uClass;
+      }
     }
-    /**
-     * si puede usar la clase, la devuleve, sino NULL
-     * @param class_id 
-     * @param unit 
-     * @returns 
-     */
-    canUseThisClass(class_id:string, unit:Unit){
-        let uClass =this.cacheService.UnitClassCache.inCache(class_id);
-        if (uClass) {
-            if(uClass.canUseThisUnitClass(unit.classExperience)){
-                return uClass;
-            }
+    return null;
+  }
+
+  loadAllClassesInCache() {
+    this.getAllClasses().then((x) => {
+      x.forEach((element) => {
+        this.cacheService.UnitClassCache.setInCache(element._id, element);
+      });
+    });
+  }
+
+  getPosiblesClasesUnit(unit: Unit) {
+    let ret: UnitClass[] = [];
+    this.cacheService.UnitClassCache.cache.forEach((element) => {
+      if (element.requiredClass.length === 0) {
+        ret.push(element);
+      } //cargo los que no piden nada
+      else {
+        if (element.canUseThisUnitClass(unit.classExperience)) {
+          ret.push(element);
         }
-        return null;
-    }
+      }
+    });
 
-    loadAllClassesInCache(){
-        this.getAllClasses().then((x) =>{
-            x.forEach(element => {
-                this.cacheService.UnitClassCache.setInCache(element._id, element);
-            });
-        });
-    }
+    return ret;
+  }
 
-    getPosiblesClasesUnit(unit:Unit){
-        let ret:UnitClass[]=[];
-        this.cacheService.UnitClassCache.cache.forEach((element) =>{
-            
-            if(element.requiredClass.length === 0){
-                ret.push(element);
-            }//cargo los que no piden nada
-            else{
-                if(element.canUseThisUnitClass(unit.classExperience)){
-                    ret.push(element);
-                }
-            }
-        });
+  getPosiblesClassesIniciales() {
+    let ret: UnitClass[] = [];
 
-        return ret;
-    }
+    this.cacheService.UnitClassCache.cache.forEach((element) => {
+      if (element.requiredClass.length === 0) {
+        ret.push(element);
+      }
+    });
+
+    return ret;
+  }
 }
