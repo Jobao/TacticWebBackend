@@ -5,6 +5,10 @@ import { TupleStatsSchema, TupleStats } from './stats.schema';
 import { EquipmentSlot, StatsName } from './enums';
 import { UnitEquiped, UnitEquipedSchema } from './unitEquiped.schema';
 import { EquipableItem } from 'src/item/schemas/equipableItem.schema';
+import {
+  TupleClassExperienceSchema,
+  TupleClassExperience,
+} from './classExperience.schema';
 export type GameUnitDocument = GameUnit & Document;
 
 @Schema({ _id: false })
@@ -52,6 +56,12 @@ export class GameUnit {
 
   @Prop({ type: UnitEquipedSchema, autopopulate: true })
   equipment: UnitEquiped;
+
+  @Prop({ type: TupleClassExperienceSchema, autopopulate: true })
+  mainClassExperience: TupleClassExperience;
+
+  @Prop({ type: TupleClassExperienceSchema, autopopulate: true })
+  secondClassExperience: TupleClassExperience;
 
   ocupied(x: number, y: number): boolean {
     return x === this.posX && y === this.posY;

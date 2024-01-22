@@ -109,6 +109,8 @@ export class AdminController {
 
   @Post('autoinsert')
   async autoInsert() {
+    console.log('insert');
+
     this.cacheService.CLEAN_CACHE();
     await this.mongodbService.DONT_USE_DELETE_ALL_DOCUMENT_ON_MONGO();
     let idJugador1 = await this.authService.signup({
@@ -150,16 +152,23 @@ export class AdminController {
       //--------------------------------//
       //Creo las unidades
       let cUnit: CreateUnitDto = new CreateUnitDto();
+
       for (let index = 0; index < 3; index++) {
         //classNameList.length
-        cUnit.class_id = classNameList[index]._id;
+        cUnit.class_id =
+          classNameList[
+            randomInt(0, this.cacheService.UnitClassCache.cache.size - 1)
+          ]._id;
         cUnit.name = FAKENAME[randomInt(0, FAKENAME.length - 1)].name;
         cUnit.user_uuid = user1._id;
         await this.userService.addNewUnit(cUnit);
       }
 
       for (let index = 0; index < 3; index++) {
-        cUnit.class_id = classNameList[index]._id;
+        cUnit.class_id =
+          classNameList[
+            randomInt(0, this.cacheService.UnitClassCache.cache.size - 1)
+          ]._id;
         cUnit.name = FAKENAME[randomInt(0, FAKENAME.length - 1)].name;
         cUnit.user_uuid = user2._id;
         await this.userService.addNewUnit(cUnit);

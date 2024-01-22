@@ -9,4 +9,9 @@ export class UnitClasesController {
   getInitialClasses() {
     return this.unitClassService.getPosiblesClassesIniciales();
   }
+
+  @Get('')
+  getAllClasses() {
+    return this.unitClassService.getAllClasses();
+  }
 }

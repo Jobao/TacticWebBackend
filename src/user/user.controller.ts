@@ -25,6 +25,10 @@ export class UserController {
     payload.user_uuid = req['user'].sub;
     return this.userService.addNewUnit(payload);
   }
+  @Get('/unit')
+  async getAllUnits(@Req() req: Request) {
+    return await this.userService.getAllUnits(req['user'].sub);
+  }
 
   @Get('/unit/:unit_uuid')
   getUnit(@Param('unit_uuid') unit_uuid: string, @Req() req: Request) {

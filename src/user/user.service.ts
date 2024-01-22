@@ -50,7 +50,7 @@ export class UserService {
       if (uClass) {
         unit._id = uuidv4();
         unit.name = cUnity.name;
-        unit.changeClass(uClass);
+        unit.changeMainClass(uClass);
         usr.addUnit(unit);
         await this.cacheService.UserCache.setInCache(
           usr._id,
@@ -103,5 +103,12 @@ export class UserService {
       return { status: 'FAIL' };
     }
     return { status: 'FAIL' };
+  }
+
+  async getAllUnits(user_uuid: string) {
+    const usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+    if (usr) {
+      return usr.createdUnits;
+    }
   }
 }

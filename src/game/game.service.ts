@@ -283,7 +283,6 @@ export class GameService {
               let placedUnit = game.getUnit(user._id, payload.unit_uuid);
               if (placedUnit) {
                 if (placedUnit.canPerformActionThisTurn) {
-                  
                   switch (payload.action.type) {
                     case 'WAIT':
                       placedUnit.wait();
@@ -302,17 +301,13 @@ export class GameService {
                               )
                             ) {
                               update = true;
-                            }
-                            else {
+                            } else {
                               res.status = 'FAIL';
                               res.reason = 'No se pudo mover';
-                              
                             }
-                          }
-                          else {
+                          } else {
                             res.status = 'FAIL';
                             res.reason = 'Existe una unidad en ese lugar';
-                            
                           }
                         } else {
                           res.status = 'FAIL';
@@ -355,42 +350,34 @@ export class GameService {
                     default:
                       break;
                   }
-                  
                 }
-              }else{
-                res.status ='FAIL';
-                res.reason='NO  '
+              } else {
+                res.status = 'FAIL';
+                res.reason = 'NO  ';
               }
-            }
-            else {
+            } else {
               res.status = 'FAIL';
               res.reason = 'Usuario inexistente';
-              
             }
-          }
-          else {
+          } else {
             res.status = 'FAIL';
             res.reason = 'NO es tu turno';
           }
         }
-      }
-      else {
+      } else {
         res.status = 'FAIL';
         res.reason = 'Juego no iniciado';
       }
-    }
-    else {
+    } else {
       res.status = 'FAIL';
       res.reason = 'Juego Inexistente';
     }
     if (update) {
       this.cacheService.GameCache.setInCache(
         game._id,
-        await this.mongoService.gameRepository.update(
-          game._id,
-          game,
-        ),
+        await this.mongoService.gameRepository.update(game._id, game),
       );
+      await this.controlEndGame(game);
       res.status = 'OK';
     }
     return res;
@@ -445,4 +432,8 @@ export class GameService {
   async p() {
     return await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND);
   }
+
+  async controlEndGame(game: Game) {}
+
+  async endGame() {}
 }
