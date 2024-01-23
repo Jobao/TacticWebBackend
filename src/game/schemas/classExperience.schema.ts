@@ -20,15 +20,8 @@ export class TupleClassExperience {
   @Prop()
   habilidadesDesbloquedas: [];
 
-  addExperience(amount: number, nClass: UnitClass) {
+  addExperience(amount: number) {
     this.currentExperience += amount;
-    if (this.currentExperience >= nClass.requiredExp[this.currentClassLevel]) {
-      this.currentClassLevel++;
-      this.currentExperience =
-        this.currentExperience - nClass.requiredExp[this.currentClassLevel];
-      return true;
-    }
-    return false;
   }
 }
 

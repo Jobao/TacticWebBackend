@@ -57,9 +57,7 @@ export class Unit {
   increaseClassExperience(amount: number, nClass: UnitClass) {
     let tp = this.findTupleClassExperience(nClass._id);
     if (tp) {
-      if (tp.addExperience(amount, nClass)) {
-        this.levelUp();
-      }
+      tp.addExperience(amount);
     } else {
       console.log('error: no se encontro el tuple de experiencia');
     }

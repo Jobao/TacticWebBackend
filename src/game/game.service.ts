@@ -329,6 +329,8 @@ export class GameService {
                               await this.controlRange(placedUnit, unitInPlace)
                             ) {
                               placedUnit.attack(unitInPlace);
+                              placedUnit.addExperience(10);
+
                               update = true;
                             } else {
                               res.status = 'FAIL';
@@ -377,6 +379,7 @@ export class GameService {
         game._id,
         await this.mongoService.gameRepository.update(game._id, game),
       );
+
       await this.controlEndGame(game);
       res.status = 'OK';
     }
@@ -433,7 +436,9 @@ export class GameService {
     return await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND);
   }
 
-  async controlEndGame(game: Game) {}
+  async controlEndGame(game: Game) {
+    //si el juego termino, se reparte la experiencia
+  }
 
   async endGame() {}
 }

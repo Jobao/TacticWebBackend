@@ -82,7 +82,7 @@ export class GameUnit {
   attack(attackedUnit: GameUnit) {
     if (this.canAttack) {
       attackedUnit.receiveDamage(this.getStats(StatsName.PA));
-      this.canAttack = false;
+      //this.canAttack = false;
       if (!this.canMove) {
         this.canPerformActionThisTurn = false;
       }
@@ -159,6 +159,10 @@ export class GameUnit {
     if (idx !== -1) {
       this.stats[idx].amount -= tuple.amount;
     }
+  }
+
+  addExperience(amount: number) {
+    this.mainClassExperience.addExperience(amount);
   }
 }
 export const GameUnitSchema = SchemaFactory.createForClass(GameUnit);
