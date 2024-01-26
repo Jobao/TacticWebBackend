@@ -12,6 +12,7 @@ import { GameANDUserDTO } from './dto/gameUser.dto';
 import { ItemService } from 'src/item/item.service';
 import { EquipmentOBJDto } from './dto/equipmentOBJ.dto';
 import { GameUnit } from './schemas/gameUnit.schema';
+import { GetGameDTO } from './dto/getGame.dto';
 
 @Injectable()
 export class GameService {
@@ -414,8 +415,11 @@ export class GameService {
 
   async getGame(game_uuid: string) {
     let game = await this.cacheService.GameCache.getInCacheOrBD(game_uuid);
+
     if (game) {
-      return game;
+      let gameDTO = new GetGameDTO(game, this.cacheService);
+
+      return gameDTO;
     }
   }
 
@@ -426,9 +430,29 @@ export class GameService {
   async getAllGameByUser(user_uuid: string) {
     let user = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
     if (user) {
-      return await this.mongoService.gameRepository.getGamesByUser(
+      let games = await this.mongoService.gameRepository.getGamesByUser(
         user.gameJoinedList,
       );
+      if (games) {
+        /*let gamesDTO: GetGameDTO[] = [];
+        games.forEach((element) => {
+          gamesDTO.push(new GetGameDTO(element, this.cacheService));
+        });*/
+        let gamesDTO: {
+          game_uuid: string;
+          isStart: boolean;
+          isEnd: boolean;
+        }[] = [];
+        games.forEach((element) => {
+          gamesDTO.push({
+            game_uuid: element._id,
+            isEnd: element.isEnd,
+            isStart: element.isStart,
+          });
+        });
+
+        return gamesDTO;
+      }
     }
   }
 
