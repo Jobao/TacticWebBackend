@@ -29,6 +29,13 @@ export class UserController {
   async getAllUnits(@Req() req: Request) {
     return await this.userService.getAllUnits(req['user'].sub);
   }
+  @Post('/unit/changeclass')
+  UnitchangeClass(
+    @Body() payload: { unit_uuid: string; class_id: string },
+    @Req() req: Request,
+  ) {
+    return this.userService.unitChangeClass(payload, req['user'].sub);
+  }
 
   @Get('/unit/:unit_uuid')
   getUnit(@Param('unit_uuid') unit_uuid: string, @Req() req: Request) {

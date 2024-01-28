@@ -8,6 +8,7 @@ import {
   TupleRequiredClassSchema,
 } from '../../game/schemas/requiredClass.schema';
 import { Document } from 'mongoose';
+import { TupleClassExperience } from 'src/game/schemas/classExperience.schema';
 
 export type UnitClassDocument = UnitClass & Document;
 @Schema()
@@ -22,22 +23,26 @@ export class UnitClass {
   requiredClass: TupleRequiredClass[];
 
   @Prop()
-  requiredExp: number[];
+  requiredExpToLevelUp: number[];
 
-  canUseThisUnitClass(t: TupleRequiredClass[]) {
-    let cant = this.requiredClass.length;
+  canUseThisUnitClass(t: TupleClassExperience[]) {
+    if (t.length > 0) {
+      let cant = this.requiredClass.length;
 
-    //Por cada elemento requerido, tengo que ver si en T esta
-    this.requiredClass.forEach((element) => {
-      t.forEach((element2) => {
-        if (element._id === element2._id) {
-          if (element2.currentExperience >= element.currentExperience) {
-            cant--;
+      //Por cada elemento requerido, tengo que ver si en T esta
+      this.requiredClass.forEach((element) => {
+        t.forEach((element2) => {
+          if (element._id === element2._id) {
+            if (element2.currentClassLevel >= element.requiredLevel) {
+              cant--;
+            }
           }
-        }
+        });
       });
-    });
-    return cant === 0;
+      return cant === 0;
+    } else {
+      return false;
+    }
   }
 }
 

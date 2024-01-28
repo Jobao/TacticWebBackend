@@ -57,7 +57,7 @@ export class UserService {
           await this.update(usr),
         );
       } else {
-        console.log('CANT');
+        console.log('La clase seleccionada no es valida');
       }
     }
   }
@@ -109,6 +109,29 @@ export class UserService {
     const usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
     if (usr) {
       return usr.createdUnits;
+    }
+  }
+
+  async unitChangeClass(
+    payload: { unit_uuid: string; class_id: string },
+    user_uuid: string,
+  ) {
+    const usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+    if (usr) {
+      var unit = usr.getUnit(payload.unit_uuid);
+      if (unit) {
+        if (this.unitClassService.canUseThisClass(payload.class_id, unit)) {
+          var res = unit.changeMainClass(
+            await this.unitClassService.findOneClass(payload.class_id),
+          );
+          if (res) {
+            this.cacheService.UserCache.setInCache(
+              usr._id,
+              await this.update(usr),
+            );
+          }
+        }
+      }
     }
   }
 }

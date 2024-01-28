@@ -98,7 +98,8 @@ export class AdminController {
   @Get('class/1')
   async getSupCase(@Body('user_uuid') user_uuid: string) {
     return await this.unitClassService.getPosiblesClasesUnit(
-      (await this.userService.findOne(user_uuid)).createdUnits[0],
+      (await this.userService.findOne(user_uuid)).createdUnits[0]
+        .classExperience,
     );
   }
 

@@ -8,7 +8,7 @@ export class TupleRequiredClass {
   @Prop()
   _id: string;
   @Prop()
-  currentExperience: number;
+  requiredLevel: number;
 }
 
 export const TupleRequiredClassSchema =

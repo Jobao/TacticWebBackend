@@ -3,6 +3,7 @@ import { CacheService } from 'src/game-cache/cache.service';
 import { Unit } from 'src/game/schemas/unit.schema';
 import { UnitClass } from 'src/unit-clases/schema/unitClass.schema';
 import { UnitClassMongoRepository } from 'src/mongodb/repositories/unitClassMongoRepository';
+import { TupleClassExperience } from 'src/game/schemas/classExperience.schema';
 
 @Injectable()
 export class UnitClasesService {
@@ -15,6 +16,10 @@ export class UnitClasesService {
 
   addNewClass(nClass: UnitClass) {
     this.mongooseService.create(nClass);
+  }
+
+  async findOneClass(class_id: string) {
+    return await this.cacheService.UnitClassCache.getInCacheOrBD(class_id);
   }
 
   getAllClasses() {
@@ -48,14 +53,14 @@ export class UnitClasesService {
     });
   }
 
-  getPosiblesClasesUnit(unit: Unit) {
+  getPosiblesClasesUnit(experience: TupleClassExperience[]) {
     let ret: UnitClass[] = [];
     this.cacheService.UnitClassCache.cache.forEach((element) => {
       if (element.requiredClass.length === 0) {
         ret.push(element);
       } //cargo los que no piden nada
       else {
-        if (element.canUseThisUnitClass(unit.classExperience)) {
+        if (element.canUseThisUnitClass(experience)) {
           ret.push(element);
         }
       }

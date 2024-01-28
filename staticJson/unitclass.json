@@ -1,335 +1,972 @@
 [
-    {
-      "_id": "Suremax",
-      "requiredExp": [
-        181,
-        125,
-        175,
-        137,
-        196,
-        131
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 3,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 9,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 10,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 9,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 10,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Noralex",
-      "requiredExp": [
-        144,
-        174,
-        100,
-        154,
-        124
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 8,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 7,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 6,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 7,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 6,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Musanpoly",
-      "requiredExp": [
-        137,
-        189,
-        153,
-        104,
-        160,
-        179
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 6,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 2,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 4,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 9,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 2,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Zilodyne",
-      "requiredExp": [
-        126,
-        198,
-        196,
-        183,
-        100,
-        162
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 2,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 6,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 3,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 4,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 3,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Dancity",
-      "requiredExp": [
-        135,
-        101,
-        127,
-        155,
-        189
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 9,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 8,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 1,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 6,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 2,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Zaj",
-      "requiredExp": [
-        183,
-        190,
-        189,
-        134,
-        151
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 10,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 2,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 9,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 6,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 2,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Telequiet",
-      "requiredExp": [
-        183,
-        157,
-        148,
-        171,
-        150
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 6,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 10,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 7,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 9,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 4,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Gadtron",
-      "requiredExp": [
-        172,
-        100,
-        178,
-        106,
-        128
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 2,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 6,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 9,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 3,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 8,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Entropix",
-      "requiredExp": [
-        144,
-        111,
-        121,
-        175,
-        114
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 1,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 6,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 6,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 7,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 5,
-          "attributeName": "AGILITY"
-        }
-      ]
-    },
-    {
-      "_id": "Globoil",
-      "requiredExp": [
-        176,
-        115,
-        178,
-        131,
-        126
-      ],
-      "requiredClass": [],
-      "baseAttributes": [
-        {
-          "amount": 7,
-          "attributeName": "STAMINA"
-        },
-        {
-          "amount": 9,
-          "attributeName": "SPIRIT"
-        },
-        {
-          "amount": 1,
-          "attributeName": "STRENGTH"
-        },
-        {
-          "amount": 4,
-          "attributeName": "INTELECT"
-        },
-        {
-          "amount": 3,
-          "attributeName": "AGILITY"
-        }
-      ]
-    }
-  ]
+  {
+    "_id": "Ovolo",
+    "requiredExp": [
+      119,
+      127,
+      146,
+      158,
+      132
+    ],
+    "baseAttributes": [
+      {
+        "amount": 6,
+        "modificador": 1,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 3,
+        "modificador": 1,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 2,
+        "modificador": 9,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 8,
+        "modificador": 9,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 7,
+        "modificador": 6,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Lyria",
+    "requiredExp": [
+      107,
+      117,
+      152,
+      103,
+      125,
+      146
+    ],
+    "baseAttributes": [
+      {
+        "amount": 10,
+        "modificador": 5,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 4,
+        "modificador": 10,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 2,
+        "modificador": 1,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 4,
+        "modificador": 5,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 5,
+        "modificador": 10,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Kneedles",
+    "requiredExp": [
+      118,
+      154,
+      195,
+      123,
+      110
+    ],
+    "baseAttributes": [
+      {
+        "amount": 7,
+        "modificador": 9,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 6,
+        "modificador": 8,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 7,
+        "modificador": 5,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 7,
+        "modificador": 4,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 4,
+        "modificador": 2,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Conjurica",
+    "requiredExp": [
+      144,
+      158,
+      114,
+      195,
+      125,
+      173
+    ],
+    "baseAttributes": [
+      {
+        "amount": 1,
+        "modificador": 8,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 6,
+        "modificador": 9,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 1,
+        "modificador": 2,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 9,
+        "modificador": 7,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 3,
+        "modificador": 8,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Optique",
+    "requiredExp": [
+      156,
+      164,
+      186,
+      171,
+      199
+    ],
+    "baseAttributes": [
+      {
+        "amount": 10,
+        "modificador": 6,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 4,
+        "modificador": 4,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 7,
+        "modificador": 8,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 6,
+        "modificador": 8,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 7,
+        "modificador": 7,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Realmo",
+    "requiredExp": [
+      151,
+      177,
+      100,
+      140,
+      136
+    ],
+    "baseAttributes": [
+      {
+        "amount": 2,
+        "modificador": 8,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 8,
+        "modificador": 9,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 6,
+        "modificador": 8,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 8,
+        "modificador": 1,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 2,
+        "modificador": 2,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Immunics",
+    "requiredExp": [
+      137,
+      151,
+      152,
+      197,
+      102,
+      197
+    ],
+    "baseAttributes": [
+      {
+        "amount": 4,
+        "modificador": 3,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 2,
+        "modificador": 8,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 1,
+        "modificador": 2,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 2,
+        "modificador": 8,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 9,
+        "modificador": 9,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Solaren",
+    "requiredExp": [
+      153,
+      192,
+      110,
+      182,
+      161
+    ],
+    "baseAttributes": [
+      {
+        "amount": 1,
+        "modificador": 1,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 8,
+        "modificador": 3,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 8,
+        "modificador": 5,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 2,
+        "modificador": 8,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 7,
+        "modificador": 4,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Handshake",
+    "requiredExp": [
+      155,
+      188,
+      129,
+      170,
+      100
+    ],
+    "baseAttributes": [
+      {
+        "amount": 7,
+        "modificador": 10,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 10,
+        "modificador": 8,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 9,
+        "modificador": 3,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 7,
+        "modificador": 2,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 5,
+        "modificador": 9,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Gracker",
+    "requiredExp": [
+      138,
+      176,
+      144,
+      197,
+      158
+    ],
+    "baseAttributes": [
+      {
+        "amount": 9,
+        "modificador": 9,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 5,
+        "modificador": 6,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 7,
+        "modificador": 3,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 9,
+        "modificador": 4,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 10,
+        "modificador": 7,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Printspan",
+    "requiredExp": [
+      198,
+      181,
+      136,
+      173,
+      105
+    ],
+    "baseAttributes": [
+      {
+        "amount": 10,
+        "modificador": 7,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 9,
+        "modificador": 4,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 8,
+        "modificador": 10,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 6,
+        "modificador": 4,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 9,
+        "modificador": 4,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Kangle",
+    "requiredExp": [
+      167,
+      113,
+      131,
+      148,
+      176
+    ],
+    "baseAttributes": [
+      {
+        "amount": 6,
+        "modificador": 10,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 7,
+        "modificador": 10,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 8,
+        "modificador": 8,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 6,
+        "modificador": 8,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 7,
+        "modificador": 7,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Cyclonica",
+    "requiredExp": [
+      112,
+      130,
+      132,
+      102,
+      161,
+      133
+    ],
+    "baseAttributes": [
+      {
+        "amount": 1,
+        "modificador": 8,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 10,
+        "modificador": 3,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 7,
+        "modificador": 2,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 9,
+        "modificador": 5,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 3,
+        "modificador": 9,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Radiantix",
+    "requiredExp": [
+      166,
+      123,
+      125,
+      192,
+      124
+    ],
+    "baseAttributes": [
+      {
+        "amount": 3,
+        "modificador": 10,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 6,
+        "modificador": 6,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 9,
+        "modificador": 2,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 10,
+        "modificador": 1,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 7,
+        "modificador": 1,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Nikuda",
+    "requiredExp": [
+      129,
+      112,
+      104,
+      185,
+      147
+    ],
+    "baseAttributes": [
+      {
+        "amount": 10,
+        "modificador": 1,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 2,
+        "modificador": 2,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 6,
+        "modificador": 5,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 3,
+        "modificador": 6,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 4,
+        "modificador": 9,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Zoxy",
+    "requiredExp": [
+      157,
+      127,
+      162,
+      115,
+      198
+    ],
+    "baseAttributes": [
+      {
+        "amount": 1,
+        "modificador": 3,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 10,
+        "modificador": 9,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 9,
+        "modificador": 6,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 9,
+        "modificador": 5,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 7,
+        "modificador": 6,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Liquidoc",
+    "requiredExp": [
+      115,
+      181,
+      198,
+      199,
+      189
+    ],
+    "baseAttributes": [
+      {
+        "amount": 6,
+        "modificador": 10,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 7,
+        "modificador": 1,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 7,
+        "modificador": 6,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 9,
+        "modificador": 5,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 4,
+        "modificador": 3,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Nitracyr",
+    "requiredExp": [
+      176,
+      179,
+      159,
+      136,
+      194
+    ],
+    "baseAttributes": [
+      {
+        "amount": 1,
+        "modificador": 5,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 1,
+        "modificador": 4,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 9,
+        "modificador": 1,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 1,
+        "modificador": 6,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 10,
+        "modificador": 3,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Qaboos",
+    "requiredExp": [
+      190,
+      192,
+      103,
+      175,
+      145,
+      182
+    ],
+    "baseAttributes": [
+      {
+        "amount": 2,
+        "modificador": 10,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 5,
+        "modificador": 8,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 4,
+        "modificador": 3,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 7,
+        "modificador": 9,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 10,
+        "modificador": 5,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Panzent",
+    "requiredExp": [
+      146,
+      127,
+      198,
+      139,
+      129,
+      122
+    ],
+    "baseAttributes": [
+      {
+        "amount": 5,
+        "modificador": 7,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 3,
+        "modificador": 2,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 3,
+        "modificador": 7,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 4,
+        "modificador": 3,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 8,
+        "modificador": 1,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Paprikut",
+    "requiredExp": [
+      117,
+      174,
+      128,
+      194,
+      167
+    ],
+    "baseAttributes": [
+      {
+        "amount": 6,
+        "modificador": 4,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 3,
+        "modificador": 6,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 4,
+        "modificador": 7,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 1,
+        "modificador": 3,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 9,
+        "modificador": 5,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Zytrax",
+    "requiredExp": [
+      127,
+      162,
+      127,
+      143,
+      193,
+      137
+    ],
+    "baseAttributes": [
+      {
+        "amount": 3,
+        "modificador": 9,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 1,
+        "modificador": 3,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 4,
+        "modificador": 4,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 5,
+        "modificador": 10,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 7,
+        "modificador": 6,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Aclima",
+    "requiredExp": [
+      167,
+      109,
+      100,
+      166,
+      115
+    ],
+    "baseAttributes": [
+      {
+        "amount": 5,
+        "modificador": 4,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 6,
+        "modificador": 10,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 4,
+        "modificador": 10,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 5,
+        "modificador": 8,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 8,
+        "modificador": 10,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Bicol",
+    "requiredExp": [
+      197,
+      113,
+      198,
+      117,
+      124
+    ],
+    "baseAttributes": [
+      {
+        "amount": 4,
+        "modificador": 9,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 9,
+        "modificador": 9,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 6,
+        "modificador": 9,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 2,
+        "modificador": 8,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 9,
+        "modificador": 6,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Zepitope",
+    "requiredExp": [
+      133,
+      165,
+      174,
+      139,
+      144
+    ],
+    "baseAttributes": [
+      {
+        "amount": 9,
+        "modificador": 3,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 2,
+        "modificador": 1,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 8,
+        "modificador": 9,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 1,
+        "modificador": 8,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 7,
+        "modificador": 10,
+        "attributeName": "AGILITY"
+      }
+    ]
+  },
+  {
+    "_id": "Animalia",
+    "requiredExp": [
+      103,
+      120,
+      171,
+      188,
+      162,
+      189
+    ],
+    "baseAttributes": [
+      {
+        "amount": 6,
+        "modificador": 9,
+        "attributeName": "STAMINA"
+      },
+      {
+        "amount": 9,
+        "modificador": 2,
+        "attributeName": "SPIRIT"
+      },
+      {
+        "amount": 9,
+        "modificador": 4,
+        "attributeName": "STRENGTH"
+      },
+      {
+        "amount": 8,
+        "modificador": 1,
+        "attributeName": "INTELECT"
+      },
+      {
+        "amount": 1,
+        "modificador": 6,
+        "attributeName": "AGILITY"
+      }
+    ]
+  }
+]
