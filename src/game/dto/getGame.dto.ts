@@ -75,6 +75,8 @@ export class PlacedUnitDTO {
 
   unitBase_uuid: string;
 
+  name: string;
+
   posX: number;
 
   posY: number;
