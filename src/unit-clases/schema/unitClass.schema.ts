@@ -27,9 +27,6 @@ export class UnitClass {
 
   canUseThisUnitClass(t: TupleClassExperience[]) {
     let cant = this.requiredClass.length;
-    if (cant > 0) {
-      console.log(this._id);
-    }
 
     //Por cada elemento requerido, tengo que ver si en T esta
     this.requiredClass.forEach((element) => {

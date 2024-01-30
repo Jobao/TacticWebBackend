@@ -8,6 +8,7 @@ import { CacheService } from 'src/game-cache/cache.service';
 import { Unit } from 'src/game/schemas/unit.schema';
 import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
 import { EquipmentIDDto } from 'src/game/dto/equipmentID.dto';
+import { UnitEquiped } from 'src/game/schemas/unitEquiped.schema';
 
 @Injectable()
 export class UserService {
@@ -53,6 +54,7 @@ export class UserService {
         unit._id = uuidv4();
         unit.name = cUnity.name;
         unit.changeMainClass(uClass);
+        unit.defaultEquipment = new UnitEquiped();
         usr.addUnit(unit);
         await this.cacheService.UserCache.setInCache(
           usr._id,

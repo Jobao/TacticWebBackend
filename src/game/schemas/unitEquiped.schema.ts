@@ -9,6 +9,16 @@ export type UnitEquipedDocument = UnitEquiped & Document;
 
 @Schema({ _id: false })
 export class UnitEquiped {
+  constructor() {
+    this.head = '';
+    this.chest = '';
+    this.gloves = '';
+    this.feet = '';
+    this.mainHand = '';
+    this.secondHand = '';
+    this.amulet = '';
+    this.equipmentStats = [];
+  }
   @Prop({ ref: Item.name })
   head: string;
 
