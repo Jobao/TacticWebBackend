@@ -134,6 +134,7 @@ export class Game {
       if (equipmentDto) {
         //IMPROVE:
 
+        temp.equipment.equipmentStats = [];
         temp.equip(equipmentDto.chest);
         temp.equip(equipmentDto.feet);
         temp.equip(equipmentDto.gloves);

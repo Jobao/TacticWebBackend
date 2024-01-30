@@ -41,6 +41,8 @@ export class UnitClasesService {
       if (uClass.canUseThisUnitClass(unit.classExperience)) {
         return uClass;
       }
+    } else {
+      console.log('clase no encontrada');
     }
     return null;
   }

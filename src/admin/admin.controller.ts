@@ -130,6 +130,9 @@ export class AdminController {
     if (idJugador1 && idJugador2) {
       let classNameList: UnitClass[] = [];
       classNameList = await this.unitClassService.getAllNameClass();
+      if (classNameList.length === 0) {
+        console.log('No hay clases');
+      }
       //Salgo de todos los juegos
       let user1 = await this.cacheService.UserCache.getInCacheOrBD(
         idJugador1._id,

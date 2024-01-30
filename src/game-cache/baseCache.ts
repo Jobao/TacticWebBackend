@@ -20,14 +20,18 @@ export class BaseCache<T> {
   }
 
   async getInCacheOrBD(uuid: string) {
-    if (!this.inCache(uuid)) {
-      let doc = await this.mongo.findOne(uuid);
-      if (doc) {
-        this.setInCache(doc._id, doc);
+    if (uuid !== '') {
+      if (!this.inCache(uuid)) {
+        let doc = await this.mongo.findOne(uuid);
+        if (doc) {
+          this.setInCache(doc._id, doc);
+        }
       }
+
+      return this.inCache(uuid);
     }
 
-    return this.inCache(uuid);
+    return undefined;
   }
 
   async CLEAR_CACHE() {

@@ -26,23 +26,22 @@ export class UnitClass {
   requiredExpToLevelUp: number[];
 
   canUseThisUnitClass(t: TupleClassExperience[]) {
-    if (t.length > 0) {
-      let cant = this.requiredClass.length;
-
-      //Por cada elemento requerido, tengo que ver si en T esta
-      this.requiredClass.forEach((element) => {
-        t.forEach((element2) => {
-          if (element._id === element2._id) {
-            if (element2.currentClassLevel >= element.requiredLevel) {
-              cant--;
-            }
-          }
-        });
-      });
-      return cant === 0;
-    } else {
-      return false;
+    let cant = this.requiredClass.length;
+    if (cant > 0) {
+      console.log(this._id);
     }
+
+    //Por cada elemento requerido, tengo que ver si en T esta
+    this.requiredClass.forEach((element) => {
+      t.forEach((element2) => {
+        if (element._id === element2._id) {
+          if (element2.currentClassLevel >= element.requiredLevel) {
+            cant--;
+          }
+        }
+      });
+    });
+    return cant === 0;
   }
 }
 

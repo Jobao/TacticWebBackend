@@ -1,17 +1,18 @@
-import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Document } from 'mongoose';
 
 export type ItemDocument = Item & Document;
 
-@Schema({discriminatorKey:'itemType'})
+@Schema({ discriminatorKey: 'itemType' })
 export class Item {
-    @Prop()
-    _id:string;
-    @Prop()
-    description:string;
-    @Prop()
-    name:string;
+  @Prop()
+  _id: string;
+  @Prop()
+  description: string;
+  @Prop()
+  name: string;
 
-    /*@Prop({enum:[]})
+  /*@Prop({enum:[]})
     itemType:string*/
 }
 

@@ -34,31 +34,53 @@ export class UnitEquiped {
   equipmentStats: TupleStats[];
 
   equip(equipment: EquipableItem) {
-    switch (equipment.slot) {
-      case EquipmentSlot.HEAD:
-        this.head = equipment._id;
-        this.addStats(equipment.stats);
-        break;
-      case EquipmentSlot.CHEST:
-        this.chest = equipment._id;
-        break;
-      case EquipmentSlot.GLOVES:
-        this.gloves = equipment._id;
-        break;
-      case EquipmentSlot.FEET:
-        this.feet = equipment._id;
-        break;
-      case EquipmentSlot.MAINHAND:
-        this.mainHand = equipment._id;
-        break;
-      case EquipmentSlot.SECONDHAND:
-        this.secondHand = equipment._id;
-        break;
-      case EquipmentSlot.AMULET:
-        this.amulet = equipment._id;
-        break;
-      default:
-        break;
+    if (equipment) {
+      switch (equipment.slot) {
+        case EquipmentSlot.HEAD:
+          if (this.head !== equipment._id) {
+            this.head = equipment._id;
+            this.addStats(equipment.stats);
+          }
+          break;
+        case EquipmentSlot.CHEST:
+          if (this.chest !== equipment._id) {
+            this.chest = equipment._id;
+            this.addStats(equipment.stats);
+          }
+          break;
+        case EquipmentSlot.GLOVES:
+          if (this.gloves !== equipment._id) {
+            this.gloves = equipment._id;
+            this.addStats(equipment.stats);
+          }
+          break;
+        case EquipmentSlot.FEET:
+          if (this.feet !== equipment._id) {
+            this.feet = equipment._id;
+            this.addStats(equipment.stats);
+          }
+          break;
+        case EquipmentSlot.MAINHAND:
+          if (this.mainHand !== equipment._id) {
+            this.mainHand = equipment._id;
+            this.addStats(equipment.stats);
+          }
+          break;
+        case EquipmentSlot.SECONDHAND:
+          if (this.secondHand !== equipment._id) {
+            this.secondHand = equipment._id;
+            this.addStats(equipment.stats);
+          }
+          break;
+        case EquipmentSlot.AMULET:
+          if (this.amulet !== equipment._id) {
+            this.amulet = equipment._id;
+            this.addStats(equipment.stats);
+          }
+          break;
+        default:
+          break;
+      }
     }
   }
 
@@ -83,13 +105,20 @@ export class UnitEquiped {
   }
 
   addStats(stats: [TupleStats]) {
+    var index = -1;
     stats.forEach((element) => {
-      var finded = this.equipmentStats.find((s) => {
-        return s.statsName === element.statsName;
+      var finded = this.equipmentStats.find((s, i) => {
+        if (s.statsName === element.statsName) {
+          index = i;
+          return true;
+        }
+        return false;
       });
+
       if (!finded) {
         this.equipmentStats.push(element);
       } else {
+        this.equipmentStats[index].amount += element.amount;
       }
     });
   }

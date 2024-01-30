@@ -7,6 +7,7 @@ import { MongodbService } from 'src/mongodb/mongodb.service';
 import { CacheService } from 'src/game-cache/cache.service';
 import { Unit } from 'src/game/schemas/unit.schema';
 import { UnitClasesService } from 'src/unit-clases/unit-clases.service';
+import { EquipmentIDDto } from 'src/game/dto/equipmentID.dto';
 
 @Injectable()
 export class UserService {
@@ -24,6 +25,7 @@ export class UserService {
     user._id = cUser._id;
     user.user = cUser.user;
     user.displayName = cUser.displayName;
+    user.inventory = [];
     return await this.mongoService.userRepository.create(user);
   }
 
@@ -131,6 +133,54 @@ export class UserService {
             );
           }
         }
+      }
+    }
+  }
+
+  async setDefaultEquipment(
+    user_uuid: string,
+    unit_uuid: string,
+    equipmentDto: EquipmentIDDto,
+  ) {
+    const usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+    if (usr) {
+      var unit = usr.getUnit(unit_uuid);
+      if (unit) {
+        unit.defaultEquipment.equip(
+          await this.cacheService.EquipableItemCache.getInCacheOrBD(
+            equipmentDto.amulet,
+          ),
+        );
+        unit.defaultEquipment.equip(
+          await this.cacheService.EquipableItemCache.getInCacheOrBD(
+            equipmentDto.chest,
+          ),
+        );
+        unit.defaultEquipment.equip(
+          await this.cacheService.EquipableItemCache.getInCacheOrBD(
+            equipmentDto.feet,
+          ),
+        );
+        unit.defaultEquipment.equip(
+          await this.cacheService.EquipableItemCache.getInCacheOrBD(
+            equipmentDto.gloves,
+          ),
+        );
+        unit.defaultEquipment.equip(
+          await this.cacheService.EquipableItemCache.getInCacheOrBD(
+            equipmentDto.head,
+          ),
+        );
+        unit.defaultEquipment.equip(
+          await this.cacheService.EquipableItemCache.getInCacheOrBD(
+            equipmentDto.mainHand,
+          ),
+        );
+        unit.defaultEquipment.equip(
+          await this.cacheService.EquipableItemCache.getInCacheOrBD(
+            equipmentDto.secondHand,
+          ),
+        );
       }
     }
   }
