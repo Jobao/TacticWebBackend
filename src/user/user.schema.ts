@@ -2,17 +2,10 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Unit, UnitSchema } from 'src/game/schemas/unit.schema';
 import { GetUserDto } from './dto/getUser.dto';
 import { Item } from 'src/item/schemas/item.schema';
-import {
-  WeaponItem,
-  WeaponItemSchema,
-} from 'src/item/schemas/weaponItem.schema';
-import {
-  EquipableItem,
-  EquipableItemSchema,
-} from 'src/item/schemas/equipableItem.schema';
-import UserInventory, {
-  UserInventorySchema,
-} from './schema/userInventory.schema';
+import { WeaponItem, WeaponItemSchema } from 'src/item/schemas/weaponItem.schema';
+import { EquipableItem, EquipableItemSchema } from 'src/item/schemas/equipableItem.schema';
+import UserInventory, { UserInventorySchema } from './schema/userInventory.schema';
+import { HttpException } from '@nestjs/common';
 
 export type UserDocument = User & Document;
 
@@ -33,8 +26,8 @@ export class User {
   @Prop()
   gameJoinedList: string[];
 
-  @Prop({ type: [UserInventorySchema], autopopulate: true })
-  inventory: UserInventory[];
+  @Prop({ type: UserInventorySchema, autopopulate: true })
+  inventory: UserInventory;
 
   toGetDto() {
     let ret: GetUserDto;
@@ -93,6 +86,10 @@ export class User {
     let tmp = this.gameJoinedList;
     this.gameJoinedList = [];
     return tmp;
+  }
+
+  addItem(amount: number, item_uuid: string, tipo: string) {
+    console.log('~ User ~ addItem ~ Esto no anda:');
   }
 }
 

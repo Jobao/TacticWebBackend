@@ -11,12 +11,24 @@ import { MongodbModule } from 'src/mongodb/mongodb.module';
 import { UserController } from './user.controller';
 import { UnitClasesModule } from 'src/unit-clases/unit-clases.module';
 import { CacheModule } from 'src/game-cache/cache.module';
+import { ItemModule } from 'src/item/item.module';
 
 @Module({
-    imports:[MongooseModule.forFeature([{name: Game.name, schema: GameSchema}, {name: User.name, schema: UserSchema}, {name: Auth.name , schema: AuthSchema}, {name: ClassSkill.name , schema: ClassSkillSchema},{name: UnitClass.name , schema: UnitClassSchema}]),
-            MongodbModule, UnitClasesModule, CacheModule],
-    providers:[UserGateway, UserService],
-    exports:[UserService],
-    controllers: [UserController]
+  imports: [
+    MongooseModule.forFeature([
+      { name: Game.name, schema: GameSchema },
+      { name: User.name, schema: UserSchema },
+      { name: Auth.name, schema: AuthSchema },
+      { name: ClassSkill.name, schema: ClassSkillSchema },
+      { name: UnitClass.name, schema: UnitClassSchema },
+    ]),
+    MongodbModule,
+    UnitClasesModule,
+    CacheModule,
+    ItemModule,
+  ],
+  providers: [UserGateway, UserService],
+  exports: [UserService],
+  controllers: [UserController],
 })
 export class UserModule {}

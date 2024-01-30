@@ -97,10 +97,7 @@ export class AdminController {
 
   @Get('class/1')
   async getSupCase(@Body('user_uuid') user_uuid: string) {
-    return await this.unitClassService.getPosiblesClasesUnit(
-      (await this.userService.findOne(user_uuid)).createdUnits[0]
-        .classExperience,
-    );
+    return await this.unitClassService.getPosiblesClasesUnit((await this.userService.findOne(user_uuid)).createdUnits[0].classExperience);
   }
 
   @Get('pruebas')
@@ -110,8 +107,6 @@ export class AdminController {
 
   @Post('autoinsert')
   async autoInsert() {
-    console.log('insert');
-
     this.cacheService.CLEAN_CACHE();
     await this.mongodbService.DONT_USE_DELETE_ALL_DOCUMENT_ON_MONGO();
     let idJugador1 = await this.authService.signup({
@@ -128,27 +123,18 @@ export class AdminController {
     //console.log(idJugador2);
 
     if (idJugador1 && idJugador2) {
+      this.userService.addItemInventory(idJugador1._id, 5, '51300fb6-a7bd-4d46-823f-d87c26b6313f');
       let classNameList: UnitClass[] = [];
       classNameList = await this.unitClassService.getAllNameClass();
       if (classNameList.length === 0) {
         console.log('No hay clases');
       }
       //Salgo de todos los juegos
-      let user1 = await this.cacheService.UserCache.getInCacheOrBD(
-        idJugador1._id,
-      );
-      await this.gameService.leaveAllGameUser(
-        user1._id,
-        await this.userService.leaveAllGames(user1),
-      );
+      let user1 = await this.cacheService.UserCache.getInCacheOrBD(idJugador1._id);
+      await this.gameService.leaveAllGameUser(user1._id, await this.userService.leaveAllGames(user1));
 
-      let user2 = await this.cacheService.UserCache.getInCacheOrBD(
-        idJugador2._id,
-      );
-      await this.gameService.leaveAllGameUser(
-        user2._id,
-        await this.userService.leaveAllGames(user2),
-      );
+      let user2 = await this.cacheService.UserCache.getInCacheOrBD(idJugador2._id);
+      await this.gameService.leaveAllGameUser(user2._id, await this.userService.leaveAllGames(user2));
       //---------------------------------//
       //Remuevo todas las unidades
       this.userService.removeAllUnits(user1._id);
@@ -159,20 +145,14 @@ export class AdminController {
 
       for (let index = 0; index < 3; index++) {
         //classNameList.length
-        cUnit.class_id =
-          classNameList[
-            randomInt(0, this.cacheService.UnitClassCache.cache.size - 1)
-          ]._id;
+        cUnit.class_id = classNameList[randomInt(0, this.cacheService.UnitClassCache.cache.size - 1)]._id;
         cUnit.name = FAKENAME[randomInt(0, FAKENAME.length - 1)].name;
         cUnit.user_uuid = user1._id;
         await this.userService.addNewUnit(cUnit);
       }
 
       for (let index = 0; index < 3; index++) {
-        cUnit.class_id =
-          classNameList[
-            randomInt(0, this.cacheService.UnitClassCache.cache.size - 1)
-          ]._id;
+        cUnit.class_id = classNameList[randomInt(0, this.cacheService.UnitClassCache.cache.size - 1)]._id;
         cUnit.name = FAKENAME[randomInt(0, FAKENAME.length - 1)].name;
         cUnit.user_uuid = user2._id;
         await this.userService.addNewUnit(cUnit);
@@ -198,27 +178,13 @@ export class AdminController {
         const element = user1.createdUnits[index];
         placeUnitDtos.equipment = new EquipmentIDDto();
 
-        placeUnitDtos.equipment.chest = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.CHEST),
-        )._id;
-        placeUnitDtos.equipment.feet = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.FEET),
-        )._id;
-        placeUnitDtos.equipment.gloves = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.GLOVES),
-        )._id;
-        placeUnitDtos.equipment.head = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.HEAD),
-        )._id;
-        placeUnitDtos.equipment.mainHand = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND),
-        )._id;
-        placeUnitDtos.equipment.secondHand = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.SECONDHAND),
-        )._id;
-        placeUnitDtos.equipment.amulet = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.AMULET),
-        )._id;
+        placeUnitDtos.equipment.chest = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.CHEST))._id;
+        placeUnitDtos.equipment.feet = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.FEET))._id;
+        placeUnitDtos.equipment.gloves = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.GLOVES))._id;
+        placeUnitDtos.equipment.head = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.HEAD))._id;
+        placeUnitDtos.equipment.mainHand = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND))._id;
+        placeUnitDtos.equipment.secondHand = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.SECONDHAND))._id;
+        placeUnitDtos.equipment.amulet = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.AMULET))._id;
 
         placeUnitDtos.game_uuid = gId;
         placeUnitDtos.target = {
@@ -244,27 +210,13 @@ export class AdminController {
         placeUnitDtos.unit_uuid = element._id;
         placeUnitDtos.user_uuid = user2._id;
 
-        placeUnitDtos.equipment.chest = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.CHEST),
-        )._id;
-        placeUnitDtos.equipment.feet = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.FEET),
-        )._id;
-        placeUnitDtos.equipment.gloves = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.GLOVES),
-        )._id;
-        placeUnitDtos.equipment.head = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.HEAD),
-        )._id;
-        placeUnitDtos.equipment.mainHand = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND),
-        )._id;
-        placeUnitDtos.equipment.secondHand = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.SECONDHAND),
-        )._id;
-        placeUnitDtos.equipment.amulet = _.sample(
-          await this.itemService.findAllItemBySlot(EquipmentSlot.AMULET),
-        )._id;
+        placeUnitDtos.equipment.chest = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.CHEST))._id;
+        placeUnitDtos.equipment.feet = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.FEET))._id;
+        placeUnitDtos.equipment.gloves = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.GLOVES))._id;
+        placeUnitDtos.equipment.head = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.HEAD))._id;
+        placeUnitDtos.equipment.mainHand = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.MAINHAND))._id;
+        placeUnitDtos.equipment.secondHand = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.SECONDHAND))._id;
+        placeUnitDtos.equipment.amulet = _.sample(await this.itemService.findAllItemBySlot(EquipmentSlot.AMULET))._id;
 
         if (!(await this.gameService.placeUnit(placeUnitDtos))) {
           console.log('error on place unit (user 2)');

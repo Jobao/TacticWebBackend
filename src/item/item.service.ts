@@ -13,23 +13,23 @@ import { EquipmentSlot } from 'src/game/schemas/enums';
 @Injectable()
 export class ItemService {
   constructor(
-    private cacheService:CacheService,
-    private mongoService:MongodbService
+    private cacheService: CacheService,
+    private mongoService: MongodbService,
   ) {
     this.loadAllItems();
   }
 
-  async loadAllItems(){
+  async loadAllItems() {
     let equip = await this.mongoService.equipableItemRepository.findAll();
-    equip.forEach(element => {
+    equip.forEach((element) => {
       this.cacheService.EquipableItemCache.setInCache(element._id, element);
     });
     let weapon = await this.mongoService.weaponItemRepository.findAll();
-    weapon.forEach(element => {
+    weapon.forEach((element) => {
       this.cacheService.WeaponItemCache.setInCache(element._id, element);
     });
     let usableItem = await this.mongoService.usableItemRepository.findAll();
-    usableItem.forEach(element => {
+    usableItem.forEach((element) => {
       this.cacheService.UsableItemCache.setInCache(element._id, element);
     });
   }
@@ -41,7 +41,7 @@ export class ItemService {
     payload._id = uuidv4();
     return this.mongoService.usableItemRepository.create(payload);
   }
-  createWeaponItem(payload:CreateWeaponItemDTO){
+  createWeaponItem(payload: CreateWeaponItemDTO) {
     /*let weap:WeaponItem = new WeaponItem();
     weap._id = "2";
     weap.description = "ARMA";
@@ -52,43 +52,43 @@ export class ItemService {
     return this.mongoService.weaponItemRepository.create(payload);
   }
 
-  createEquipableItem(payload:CreateEquipableItemDTO){
+  createEquipableItem(payload: CreateEquipableItemDTO) {
     payload._id = uuidv4();
     return this.mongoService.equipableItemRepository.create(payload);
   }
 
-  async getAllItemsOnDTO(payload:EquipmentIDDto): Promise<EquipmentOBJDto>{
-    let ret:EquipmentOBJDto = new EquipmentOBJDto;
-    let res:boolean = false
-    if(payload.head){
+  async getAllItemsOnDTO(payload: EquipmentIDDto): Promise<EquipmentOBJDto> {
+    let ret: EquipmentOBJDto = new EquipmentOBJDto();
+    let res: boolean = false;
+    if (payload.head) {
       ret.head = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.head);
-      res =true;
+      res = true;
     }
-    if(payload.chest){
+    if (payload.chest) {
       ret.chest = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.chest);
-      res =true;
+      res = true;
     }
-    if(payload.feet){
+    if (payload.feet) {
       ret.feet = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.feet);
-      res =true;
+      res = true;
     }
-    if(payload.gloves){
+    if (payload.gloves) {
       ret.gloves = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.gloves);
-      res =true;
+      res = true;
     }
-    if(payload.mainHand){
+    if (payload.mainHand) {
       ret.mainHand = await this.cacheService.WeaponItemCache.getInCacheOrBD(payload.mainHand);
-      res =true;
+      res = true;
     }
-    if(payload.secondHand){
+    if (payload.secondHand) {
       ret.secondHand = await this.cacheService.WeaponItemCache.getInCacheOrBD(payload.secondHand);
-      res =true;
+      res = true;
     }
-    if(payload.amulet){
+    if (payload.amulet) {
       ret.amulet = await this.cacheService.EquipableItemCache.getInCacheOrBD(payload.amulet);
-      res =true;
+      res = true;
     }
-    if(res){
+    if (res) {
       return ret;
     }
     return null;
@@ -98,22 +98,36 @@ export class ItemService {
     return `This action returns all item`;
   }
 
-  async findAllItemBySlot(slot:EquipmentSlot){
-    if(slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.SECONDHAND){
-      
+  async findAllItemBySlot(slot: EquipmentSlot) {
+    if (slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.SECONDHAND) {
       return await this.findAllWeaponItemBySlot(slot);
-    }
-    else{
+    } else {
       return await this.findAllEquipableItemBySlot(slot);
     }
   }
 
-  async findAllEquipableItemBySlot(slot:EquipmentSlot){
+  async findAllEquipableItemBySlot(slot: EquipmentSlot) {
     return this.mongoService.equipableItemRepository.getAllItemBySlot(slot);
   }
 
-  async findAllWeaponItemBySlot(slot:EquipmentSlot){
+  async findAllWeaponItemBySlot(slot: EquipmentSlot) {
     return this.mongoService.weaponItemRepository.getAllItemBySlot(slot);
+  }
+
+  async getTypeByID(item_id: string) {
+    //TODO: ASCO
+    var item = await this.cacheService.EquipableItemCache.getInCacheOrBD(item_id);
+    if (item) {
+      return 'EquipableItem';
+    }
+    var item2 = await this.cacheService.WeaponItemCache.getInCacheOrBD(item_id);
+    if (item2) {
+      return 'WeaponItem';
+    }
+    var item3 = await this.cacheService.UsableItemCache.getInCacheOrBD(item_id);
+    if (item3) {
+      return 'UsableItem';
+    }
   }
 
   findOne(id: number) {

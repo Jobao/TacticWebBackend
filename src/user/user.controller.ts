@@ -1,12 +1,4 @@
-import {
-  Body,
-  Controller,
-  Get,
-  Param,
-  Post,
-  Req,
-  UseGuards,
-} from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Req, UseGuards } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUnitDto } from 'src/unit/dto/createUnit.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
@@ -30,10 +22,7 @@ export class UserController {
     return await this.userService.getAllUnits(req['user'].sub);
   }
   @Post('/unit/changeclass')
-  UnitchangeClass(
-    @Body() payload: { unit_uuid: string; class_id: string },
-    @Req() req: Request,
-  ) {
+  UnitchangeClass(@Body() payload: { unit_uuid: string; class_id: string }, @Req() req: Request) {
     return this.userService.unitChangeClass(payload, req['user'].sub);
   }
 
@@ -43,10 +32,12 @@ export class UserController {
   }
 
   @Get('/unit/:user_uuid/:unit_uuid')
-  getUnitCustomUser(
-    @Param('unit_uuid') unit_uuid: string,
-    @Param('user_uuid') user_uuid: string,
-  ) {
+  getUnitCustomUser(@Param('unit_uuid') unit_uuid: string, @Param('user_uuid') user_uuid: string) {
     return this.userService.getUnit(user_uuid, unit_uuid);
+  }
+
+  @Get('/inventory')
+  getInventory(@Req() req: Request) {
+    return this.userService.getInventory(req['user'].sub);
   }
 }

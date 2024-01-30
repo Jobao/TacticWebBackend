@@ -14,20 +14,12 @@ import { mongo } from 'mongoose';
 @Injectable()
 export class CacheService {
   constructor(private mongoService: MongodbService) {
-    this.unitClassCache = new BaseCache<UnitClass>(
-      mongoService.unitClassRepository,
-    );
+    this.unitClassCache = new BaseCache<UnitClass>(mongoService.unitClassRepository);
     this.gameCache = new BaseCache<Game>(mongoService.gameRepository);
     this.userCache = new BaseCache<User>(mongoService.userRepository);
-    this.usableItemCache = new BaseCache<UsableItem>(
-      mongoService.usableItemRepository,
-    );
-    this.equipableItemCache = new BaseCache<EquipableItem>(
-      mongoService.equipableItemRepository,
-    );
-    this.weaponItemCache = new BaseCache<WeaponItem>(
-      mongoService.weaponItemRepository,
-    );
+    this.usableItemCache = new BaseCache<UsableItem>(mongoService.usableItemRepository);
+    this.equipableItemCache = new BaseCache<EquipableItem>(mongoService.equipableItemRepository);
+    this.weaponItemCache = new BaseCache<WeaponItem>(mongoService.weaponItemRepository);
   }
 
   public async CLEAN_CACHE() {

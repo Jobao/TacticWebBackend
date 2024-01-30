@@ -23,9 +23,7 @@ export class GameService {
   ) {}
 
   async createGame(cGame: CreateGameDto) {
-    let user = await this.cacheService.UserCache.getInCacheOrBD(
-      cGame.user_uuid,
-    );
+    let user = await this.cacheService.UserCache.getInCacheOrBD(cGame.user_uuid);
 
     if (user) {
       let game: Game = new Game();
@@ -54,42 +52,26 @@ export class GameService {
 
       this.updateGame(game);
       //this.cacheService.GameCache.setInCache(game._id,await this.mongoService.gameRepository.create(game));
-      this.cacheService.UserCache.setInCache(
-        user._id,
-        await this.mongoService.userRepository.update(user._id, user),
-      );
+      this.cacheService.UserCache.setInCache(user._id, await this.mongoService.userRepository.update(user._id, user));
       return game;
     }
   }
 
   async updateGame(uGame: Game) {
-    this.cacheService.GameCache.setInCache(
-      uGame._id,
-      await this.mongoService.gameRepository.create(uGame),
-    );
+    this.cacheService.GameCache.setInCache(uGame._id, await this.mongoService.gameRepository.create(uGame));
   }
 
   async joinGame(jGame: JoinGameDto) {
-    let user = await this.cacheService.UserCache.getInCacheOrBD(
-      jGame.user_uuid,
-    );
-    let game = await this.cacheService.GameCache.getInCacheOrBD(
-      jGame.game_uuid,
-    );
+    let user = await this.cacheService.UserCache.getInCacheOrBD(jGame.user_uuid);
+    let game = await this.cacheService.GameCache.getInCacheOrBD(jGame.game_uuid);
 
     if (game && user) {
       if (!game.isEnd && !game.isStart) {
         if (game.joinGame(user._id)) {
           user.joinGame(game._id);
 
-          this.cacheService.GameCache.setInCache(
-            game._id,
-            await this.mongoService.gameRepository.update(game._id, game),
-          );
-          this.cacheService.UserCache.setInCache(
-            user._id,
-            await this.mongoService.userRepository.update(user._id, user),
-          );
+          this.cacheService.GameCache.setInCache(game._id, await this.mongoService.gameRepository.update(game._id, game));
+          this.cacheService.UserCache.setInCache(user._id, await this.mongoService.userRepository.update(user._id, user));
         } else {
           console.log('Ya estoy');
         }
@@ -102,36 +84,24 @@ export class GameService {
   }
 
   async leaveGame(lGame: GameANDUserDTO) {
-    let game = await this.cacheService.GameCache.getInCacheOrBD(
-      lGame.game_uuid,
-    );
+    let game = await this.cacheService.GameCache.getInCacheOrBD(lGame.game_uuid);
 
     if (game) {
       if (game.getUserIndexOnPlacedUnitList(lGame.user_uuid) !== -1) {
         //Si no aparezco aca no hago nada directamente
         if (!game.isEnd) {
           if (!game.isStart) {
-            let user = await this.cacheService.UserCache.getInCacheOrBD(
-              lGame.user_uuid,
-            );
+            let user = await this.cacheService.UserCache.getInCacheOrBD(lGame.user_uuid);
             if (user) {
               let remainUsers = game.leaveGame(lGame.user_uuid);
               user.leaveGame(game._id);
-              this.cacheService.UserCache.setInCache(
-                user._id,
-                await this.mongoService.userRepository.update(user._id, user),
-              );
+              this.cacheService.UserCache.setInCache(user._id, await this.mongoService.userRepository.update(user._id, user));
               if (remainUsers === 0) {
                 //si no queda nadie
-                this.cacheService.GameCache.removeInCache(
-                  (await this.mongoService.gameRepository.remove(game._id)).id,
-                );
+                this.cacheService.GameCache.removeInCache((await this.mongoService.gameRepository.remove(game._id)).id);
                 //this.cacheService.removeGameInCache((await this.mongoService.removeGame(game))._id);
               } else {
-                this.cacheService.GameCache.setInCache(
-                  game._id,
-                  await this.mongoService.gameRepository.update(game._id, game),
-                );
+                this.cacheService.GameCache.setInCache(game._id, await this.mongoService.gameRepository.update(game._id, game));
               }
             }
           } else {
@@ -147,9 +117,7 @@ export class GameService {
       let game = await this.cacheService.GameCache.getInCacheOrBD(g);
       if (game) {
         if (game.leaveGame(user_uuid)) {
-          this.cacheService.GameCache.removeInCache(
-            (await this.mongoService.gameRepository.remove(game._id)).id,
-          );
+          this.cacheService.GameCache.removeInCache((await this.mongoService.gameRepository.remove(game._id)).id);
         } else {
           this.updateGame(game);
         }
@@ -159,9 +127,7 @@ export class GameService {
 
   //TODO: Se podria implementar un sistema de votacion para iniciar el juego
   async startGame(sGame: GameANDUserDTO) {
-    let game = await this.cacheService.GameCache.getInCacheOrBD(
-      sGame.game_uuid,
-    );
+    let game = await this.cacheService.GameCache.getInCacheOrBD(sGame.game_uuid);
     if (game) {
       if (!game.isStart) {
         //Me aseguro que solo se puede iniciar una vez el juego
@@ -173,10 +139,7 @@ export class GameService {
           //game.calculateUnitOrderAction();
 
           //TODO: Deberia el orden de las unidades
-          this.cacheService.GameCache.setInCache(
-            game._id,
-            await this.mongoService.gameRepository.update(game._id, game),
-          );
+          this.cacheService.GameCache.setInCache(game._id, await this.mongoService.gameRepository.update(game._id, game));
         } else {
           console.log('Por ahora no se puede jugar solo :(');
         }
@@ -189,53 +152,28 @@ export class GameService {
   }
 
   async placeUnit(payload: PlaceUnitDto) {
-    let user = await this.cacheService.UserCache.getInCacheOrBD(
-      payload.user_uuid,
-    );
+    let user = await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid);
     if (user) {
       let unit = user.getUnit(payload.unit_uuid);
       if (unit) {
-        let game = await this.cacheService.GameCache.getInCacheOrBD(
-          payload.game_uuid,
-        );
+        let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
         if (game) {
           //El juego existe
           if (game.canPlaceMoreUnit(user._id)) {
-            if (
-              game.gamePhase === GamePhase.DRAFT &&
-              !game.isStart &&
-              !game.isEnd
-            ) {
+            if (game.gamePhase === GamePhase.DRAFT && !game.isStart && !game.isEnd) {
               //Estoy en fase, no empezo y no termino
               if (game.isInsideBoard(payload.target)) {
                 //Esta dentro del tablero
                 if (!game.isOcupiedByAnotherUnit(payload.target)) {
                   //No esta ocupado por otra pieza
-                  if (
-                    !game.isThisUnitPlace(payload.unit_uuid, payload.user_uuid)
-                  ) {
+                  if (!game.isThisUnitPlace(payload.unit_uuid, payload.user_uuid)) {
                     //TODO: cambiar los parametros, enviar la unidad directamente
                     let equipment: EquipmentOBJDto;
                     if (payload.equipment) {
-                      equipment = await this.itemService.getAllItemsOnDTO(
-                        payload.equipment,
-                      );
+                      equipment = await this.itemService.getAllItemsOnDTO(payload.equipment);
                     }
-                    if (
-                      game.placeNewUnit(
-                        payload.user_uuid,
-                        unit,
-                        payload.target,
-                        equipment,
-                      )
-                    ) {
-                      this.cacheService.GameCache.setInCache(
-                        game._id,
-                        await this.mongoService.gameRepository.update(
-                          game._id,
-                          game,
-                        ),
-                      );
+                    if (game.placeNewUnit(payload.user_uuid, unit, payload.target, equipment)) {
+                      this.cacheService.GameCache.setInCache(game._id, await this.mongoService.gameRepository.update(game._id, game));
                       return true;
                     } else {
                       console.log('la unidad no se pudo colocar (BD)');
@@ -269,17 +207,13 @@ export class GameService {
   async actionUnit(payload: UnitActionDto) {
     let update = false;
     let res: { status: string; reason: string } = { status: '', reason: '' };
-    let game = await this.cacheService.GameCache.getInCacheOrBD(
-      payload.game_uuid,
-    );
+    let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
     if (game) {
       if (game.isStart) {
         if (game.getUserIndexOnPlacedUnitList(payload.user_uuid) !== -1) {
           //Existo en este juego
           if (game.isMyTurn(payload.user_uuid)) {
-            let user = await this.cacheService.UserCache.getInCacheOrBD(
-              payload.user_uuid,
-            );
+            let user = await this.cacheService.UserCache.getInCacheOrBD(payload.user_uuid);
             if (user) {
               let placedUnit = game.getUnit(user._id, payload.unit_uuid);
               if (placedUnit) {
@@ -292,15 +226,8 @@ export class GameService {
                     case 'MOVE':
                       if (placedUnit.canMove) {
                         if (game.isInsideBoard(payload.action.target)) {
-                          if (
-                            !game.isOcupiedByAnotherUnit(payload.action.target)
-                          ) {
-                            if (
-                              placedUnit.move(
-                                payload.action.target.x,
-                                payload.action.target.y,
-                              )
-                            ) {
+                          if (!game.isOcupiedByAnotherUnit(payload.action.target)) {
+                            if (placedUnit.move(payload.action.target.x, payload.action.target.y)) {
                               update = true;
                             } else {
                               res.status = 'FAIL';
@@ -322,13 +249,9 @@ export class GameService {
                     case 'ATTACK':
                       if (placedUnit.canAttack) {
                         if (game.isInsideBoard(payload.action.target)) {
-                          let unitInPlace = game.isOcupiedByAnotherUnit(
-                            payload.action.target,
-                          );
+                          let unitInPlace = game.isOcupiedByAnotherUnit(payload.action.target);
                           if (unitInPlace) {
-                            if (
-                              await this.controlRange(placedUnit, unitInPlace)
-                            ) {
+                            if (await this.controlRange(placedUnit, unitInPlace)) {
                               placedUnit.attack(unitInPlace);
                               placedUnit.addExperience(10);
 
@@ -376,10 +299,7 @@ export class GameService {
       res.reason = 'Juego Inexistente';
     }
     if (update) {
-      this.cacheService.GameCache.setInCache(
-        game._id,
-        await this.mongoService.gameRepository.update(game._id, game),
-      );
+      this.cacheService.GameCache.setInCache(game._id, await this.mongoService.gameRepository.update(game._id, game));
 
       await this.controlEndGame(game);
       res.status = 'OK';
@@ -388,17 +308,10 @@ export class GameService {
   }
 
   async controlRange(unit: GameUnit, attacked: GameUnit): Promise<boolean> {
-    let distance = this.manhattanDistNOVECTOR(
-      unit.posX,
-      unit.posY,
-      attacked.posX,
-      attacked.posY,
-    );
+    let distance = this.manhattanDistNOVECTOR(unit.posX, unit.posY, attacked.posX, attacked.posY);
     let range = 1; //Default range
     if (unit.equipment.mainHand) {
-      let weapon = await this.cacheService.WeaponItemCache.getInCacheOrBD(
-        unit.equipment.mainHand,
-      );
+      let weapon = await this.cacheService.WeaponItemCache.getInCacheOrBD(unit.equipment.mainHand);
       if (weapon) {
         range = weapon.range;
       }
@@ -430,9 +343,7 @@ export class GameService {
   async getAllGameByUser(user_uuid: string) {
     let user = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
     if (user) {
-      let games = await this.mongoService.gameRepository.getGamesByUser(
-        user.gameJoinedList,
-      );
+      let games = await this.mongoService.gameRepository.getGamesByUser(user.gameJoinedList);
       if (games) {
         /*let gamesDTO: GetGameDTO[] = [];
         games.forEach((element) => {

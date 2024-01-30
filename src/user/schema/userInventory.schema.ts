@@ -3,13 +3,22 @@ import { Document } from 'mongoose';
 
 export type UserInventoryDocument = UserInventory & Document;
 
-@Schema({ id: false })
+export type TupleInventory = {
+  amount: number;
+  item_id: string;
+};
+
+@Schema({ id: false, _id: false })
 export default class UserInventory {
+  constructor() {
+    this.equipableInventory = [];
+    this.weaponInventory = [];
+  }
   @Prop({ type: [{ amount: Number, item_id: String }] })
-  equipableInventory: [{ amount: number; item_id: string }];
+  equipableInventory: TupleInventory[];
 
   @Prop({ type: [{ amount: Number, item_id: String }] })
-  weaponInventory: [{ amount: number; item_id: string }];
+  weaponInventory: TupleInventory[];
 }
 
 export const UserInventorySchema = SchemaFactory.createForClass(UserInventory);
