@@ -153,16 +153,13 @@ export class UserService {
   }
 
   async addItemInventory(user_uuid: string, amount: number, item_uuid: string) {
-    console.log('entro');
-
     var update = false;
-    const usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+    var usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+
     var item;
     if (usr) {
       if (item_uuid !== '') {
         var tipo = await this.itemService.getTypeByID(item_uuid);
-        console.log(tipo);
-
         if (tipo === 'EquipableItem') {
           item = await this.cacheService.EquipableItemCache.getInCacheOrBD(item_uuid);
           if (item) {
@@ -188,6 +185,7 @@ export class UserService {
               usr.inventory.weaponInventory.push({ amount: amount, item_id: item_uuid });
             }
             update = true;
+            //console.log(usr.inventory.weaponInventory);
           }
         }
       }

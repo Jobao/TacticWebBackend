@@ -1,12 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { TupleInventory, TupleInventorySchema } from './tupleInventory.schema';
 
 export type UserInventoryDocument = UserInventory & Document;
-
-export type TupleInventory = {
-  amount: number;
-  item_id: string;
-};
 
 @Schema({ id: false, _id: false })
 export default class UserInventory {
@@ -14,10 +10,10 @@ export default class UserInventory {
     this.equipableInventory = [];
     this.weaponInventory = [];
   }
-  @Prop({ type: [{ amount: Number, item_id: String }] })
+  @Prop({ type: () => [TupleInventorySchema], autopopulate: true })
   equipableInventory: TupleInventory[];
 
-  @Prop({ type: [{ amount: Number, item_id: String }] })
+  @Prop({ type: [TupleInventorySchema], autopopulate: true })
   weaponInventory: TupleInventory[];
 }
 

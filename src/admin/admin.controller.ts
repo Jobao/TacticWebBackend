@@ -123,7 +123,9 @@ export class AdminController {
     //console.log(idJugador2);
 
     if (idJugador1 && idJugador2) {
-      this.userService.addItemInventory(idJugador1._id, 5, '51300fb6-a7bd-4d46-823f-d87c26b6313f');
+      await this.userService.addItemInventory(idJugador1._id, 5, '460593f8-cc6c-4b5d-bdce-9840e173b332');
+      await this.userService.addItemInventory(idJugador1._id, 2, '0a745590-c20c-4c3a-8f01-0df385f3b361');
+
       let classNameList: UnitClass[] = [];
       classNameList = await this.unitClassService.getAllNameClass();
       if (classNameList.length === 0) {
@@ -131,6 +133,7 @@ export class AdminController {
       }
       //Salgo de todos los juegos
       let user1 = await this.cacheService.UserCache.getInCacheOrBD(idJugador1._id);
+
       await this.gameService.leaveAllGameUser(user1._id, await this.userService.leaveAllGames(user1));
 
       let user2 = await this.cacheService.UserCache.getInCacheOrBD(idJugador2._id);

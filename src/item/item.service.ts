@@ -95,7 +95,7 @@ export class ItemService {
   }
 
   findAll() {
-    return `This action returns all item`;
+    return `This action returns all item 2`;
   }
 
   async findAllItemBySlot(slot: EquipmentSlot) {

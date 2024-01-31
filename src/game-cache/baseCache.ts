@@ -1,8 +1,11 @@
+import { v4 as uuidv4 } from 'uuid';
 export class BaseCache<T> {
   constructor(mongo) {
     this.cache = new Map<string, T>();
     this.mongo = mongo;
+    this.uuid = uuidv4();
   }
+  uuid: string;
   private mongo: any;
 
   cache: Map<string, T>;
@@ -23,6 +26,7 @@ export class BaseCache<T> {
     if (uuid !== '') {
       if (!this.inCache(uuid)) {
         let doc = await this.mongo.findOne(uuid);
+
         if (doc) {
           this.setInCache(doc._id, doc);
         }
