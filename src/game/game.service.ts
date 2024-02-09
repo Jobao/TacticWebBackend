@@ -45,7 +45,6 @@ export class GameService {
       }
       game.sizeX = cGame.sizeX;
       game.sizeY = cGame.sizeY;
-      //FIXME: Ver porque gamephase me da error, aca le asigno un valor magico
       game.gamePhase = GamePhase.DRAFT;
       game.joinGame(cGame.user_uuid);
       user.joinGame(game._id);

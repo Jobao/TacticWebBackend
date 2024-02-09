@@ -21,7 +21,8 @@ import { EquipmentIDDto } from 'src/game/dto/equipmentID.dto';
 import { ItemService } from 'src/item/item.service';
 import { EquipmentSlot } from 'src/game/schemas/enums';
 import { MongodbService } from 'src/mongodb/mongodb.service';
-const _ = require('lodash');
+//const _ = require('lodash');
+import _ from 'lodash';
 
 @Public()
 @Controller('admin')

@@ -194,4 +194,50 @@ export class UserService {
       }
     }
   }
+
+  //TODO: Aca me quede con el
+  async removeItemInventory(user_uuid: string, amount: number, item_uuid: string) {
+    var update = false;
+    var usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+
+    var item;
+    if (usr) {
+      if (item_uuid !== '') {
+        var tipo = await this.itemService.getTypeByID(item_uuid);
+        if (tipo === 'EquipableItem') {
+          item = await this.cacheService.EquipableItemCache.getInCacheOrBD(item_uuid);
+          if (item) {
+            var finded = usr.inventory.equipableInventory.findIndex((x) => {
+              return x.item_id === item_uuid;
+            });
+            if (finded !== -1) {
+              usr.inventory.equipableInventory[finded].amount -= amount;
+              if (usr.inventory.equipableInventory[finded].amount === 0) {
+                usr.inventory.equipableInventory.splice(finded, 1);
+              }
+            }
+          }
+          update = true;
+        } else {
+          if (tipo === 'WeaponItem') {
+            item = await this.cacheService.WeaponItemCache.getInCacheOrBD(item_uuid);
+            var finded = usr.inventory.weaponInventory.findIndex((x) => {
+              return x.item_id === item_uuid;
+            });
+            if (finded !== -1) {
+              usr.inventory.weaponInventory[finded].amount -= amount;
+              if (usr.inventory.weaponInventory[finded].amount === 0) {
+                usr.inventory.weaponInventory.splice(finded, 1);
+              }
+            }
+            update = true;
+            //console.log(usr.inventory.weaponInventory);
+          }
+        }
+      }
+      if (update) {
+        this.cacheService.UserCache.setInCache(usr._id, await this.update(usr));
+      }
+    }
+  }
 }

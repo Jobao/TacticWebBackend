@@ -5,6 +5,10 @@ Jugar un juego ya iniciado
 
 Crear un Juego
 
-- [ ] Login
-- [ ] 
++ Login
++ Crear Juego
++ Asignar unidades
++ Esperar que se una alguien mas
++ Iniciar Juego
+  
  

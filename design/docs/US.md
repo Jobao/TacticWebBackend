@@ -17,6 +17,7 @@
   - [ ] Equipamentos
     - [ ] Agregar equipamento
     - [ ] Eliminar equipamento 
+- [ ] Eliminar unidades
 
 
 ### Game
