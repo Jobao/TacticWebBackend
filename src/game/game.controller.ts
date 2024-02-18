@@ -39,10 +39,7 @@ export class GameController {
 
   @Post('/:game_uuid/join')
   joinGame(@Param('game_uuid') game_uuid: string, @Request() req) {
-    let payload: GameANDUserDTO;
-    payload.user_uuid = req['user'].sub;
-    payload.game_uuid = game_uuid;
-    this.gameService.joinGame(payload);
+    this.gameService.joinGame({ user_uuid: req['user'].sub, game_uuid: game_uuid });
   }
 
   @Post('/:game_uuid/leave')
