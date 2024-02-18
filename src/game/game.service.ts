@@ -31,6 +31,7 @@ export class GameService {
       game.owner_uuid = cGame.user_uuid;
       game.isStart = false;
       game.isEnd = false;
+      game.isPublic = cGame.isPublic;
 
       game.placedUnitList = [];
       if (!cGame.minUnits) {
@@ -45,7 +46,7 @@ export class GameService {
       }
       game.sizeX = cGame.sizeX;
       game.sizeY = cGame.sizeY;
-      game.gamePhase = GamePhase.DRAFT;
+      game.gamePhase = GamePhase.PLANNING;
       game.joinGame(cGame.user_uuid);
       user.joinGame(game._id);
 
@@ -159,7 +160,7 @@ export class GameService {
         if (game) {
           //El juego existe
           if (game.canPlaceMoreUnit(user._id)) {
-            if (game.gamePhase === GamePhase.DRAFT && !game.isStart && !game.isEnd) {
+            if (game.gamePhase === GamePhase.PLANNING && !game.isStart && !game.isEnd) {
               //Estoy en fase, no empezo y no termino
               if (game.isInsideBoard(payload.target)) {
                 //Esta dentro del tablero
@@ -348,6 +349,31 @@ export class GameService {
         games.forEach((element) => {
           gamesDTO.push(new GetGameDTO(element, this.cacheService));
         });*/
+        let gamesDTO: {
+          game_uuid: string;
+          isStart: boolean;
+          isEnd: boolean;
+          gamePhase: string;
+        }[] = [];
+        games.forEach((element) => {
+          gamesDTO.push({
+            game_uuid: element._id,
+            isEnd: element.isEnd,
+            isStart: element.isStart,
+            gamePhase: element.gamePhase,
+          });
+        });
+
+        return gamesDTO;
+      }
+    }
+  }
+
+  async getAllPublicGames(user_uuid: string) {
+    let user = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
+    if (user) {
+      let games = await this.mongoService.gameRepository.getPublicGames(user.gameJoinedList);
+      if (games) {
         let gamesDTO: {
           game_uuid: string;
           isStart: boolean;

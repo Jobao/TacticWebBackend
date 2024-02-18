@@ -1,13 +1,4 @@
-import {
-  Body,
-  Controller,
-  Post,
-  UseGuards,
-  Request,
-  Param,
-  Get,
-  Req,
-} from '@nestjs/common';
+import { Body, Controller, Post, UseGuards, Request, Param, Get, Req } from '@nestjs/common';
 import { AuthHTTPGuard } from 'src/auth/authHTTP.guard';
 import { CreateGameDto } from './dto/createGame.dto';
 import { GameService } from './game.service';
@@ -26,6 +17,11 @@ export class GameController {
   @Get('/allgamesbyuser')
   getAllGamesUser(@Request() req: Request) {
     return this.gameService.getAllGameByUser(req['user'].sub);
+  }
+
+  @Get('/publicgames')
+  getAllPublicGamesGamesUser(@Request() req: Request) {
+    return this.gameService.getAllPublicGames(req['user'].sub);
   }
   @Post()
   createNewGame(@Body() payload: CreateGameDto, @Request() req) {
@@ -58,22 +54,14 @@ export class GameController {
   }
 
   @Post('/:game_uuid/placeUnit')
-  placeUnit(
-    @Param('game_uuid') game_uuid: string,
-    @Body() payload: PlaceUnitDto,
-    @Request() req,
-  ) {
+  placeUnit(@Param('game_uuid') game_uuid: string, @Body() payload: PlaceUnitDto, @Request() req) {
     payload.user_uuid = req['user'].sub;
     payload.game_uuid = game_uuid;
     this.gameService.placeUnit(payload);
   }
 
   @Post('/:game_uuid/action')
-  async sendActionUnit(
-    @Param('game_uuid') game_uuid: string,
-    @Body() payload: UnitActionDto,
-    @Request() req,
-  ) {
+  async sendActionUnit(@Param('game_uuid') game_uuid: string, @Body() payload: UnitActionDto, @Request() req) {
     payload.user_uuid = req['user'].sub;
     payload.game_uuid = game_uuid;
     return await this.gameService.actionUnit(payload);

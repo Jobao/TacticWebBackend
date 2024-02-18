@@ -60,13 +60,11 @@ export class Game {
   @Prop({ type: [GameOrderSchema], autopopulate: true })
   gameOrder: GameOrder[];
 
+  @Prop()
+  isPublic: boolean;
+
   isInsideBoard(target: Target) {
-    return (
-      target.x >= 0 &&
-      target.x < this.sizeX &&
-      target.y >= 0 &&
-      target.y < this.sizeY
-    );
+    return target.x >= 0 && target.x < this.sizeX && target.y >= 0 && target.y < this.sizeY;
   }
 
   isOcupiedByAnotherUnit(target: Target) {
@@ -86,11 +84,7 @@ export class Game {
   }
 
   getUserIndexOnPlacedUnitList(user_uuid: string): number {
-    for (
-      let userIndex = 0;
-      userIndex < this.placedUnitList.length;
-      userIndex++
-    ) {
+    for (let userIndex = 0; userIndex < this.placedUnitList.length; userIndex++) {
       if (this.placedUnitList[userIndex].user_uuid === user_uuid) {
         //IMPROVE: Usar clases de JS
         return userIndex;
@@ -106,12 +100,7 @@ export class Game {
     }
   }
 
-  placeNewUnit(
-    user_uuid: string,
-    unit: Unit,
-    target: Target,
-    equipmentDto: EquipmentOBJDto,
-  ) {
+  placeNewUnit(user_uuid: string, unit: Unit, target: Target, equipmentDto: EquipmentOBJDto) {
     let idx = this.getUserIndexOnPlacedUnitList(user_uuid);
     if (idx !== -1) {
       let temp: GameUnit = new GameUnit();
@@ -123,13 +112,9 @@ export class Game {
       temp.canMove = true;
       temp.canAttack = true;
       temp.stats = unit.defaultStats; //asigno stats base
-      temp.mainClassExperience = unit.findTupleClassExperience(
-        unit.defaultMainClassId,
-      );
+      temp.mainClassExperience = unit.findTupleClassExperience(unit.defaultMainClassId);
       if (unit.defaultMainClassId !== '') {
-        temp.secondClassExperience = unit.findTupleClassExperience(
-          unit.defaultSecondClassId,
-        );
+        temp.secondClassExperience = unit.findTupleClassExperience(unit.defaultSecondClassId);
       }
       if (equipmentDto) {
         //IMPROVE:

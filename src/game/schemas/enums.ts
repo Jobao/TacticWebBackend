@@ -31,7 +31,7 @@ export enum StatsName { //'HP', 'MP', 'PA', 'MA', 'MPR', 'PHD', 'MD', 'DODGE', '
 }
 
 export enum GamePhase {
-  DRAFT = 'DRAFT',
+  PLANNING = 'PLANNING',
   INGAME = 'INGAME',
 }
 
