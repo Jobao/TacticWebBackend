@@ -13,6 +13,7 @@ import { ItemService } from 'src/item/item.service';
 import { EquipmentOBJDto } from './dto/equipmentOBJ.dto';
 import { GameUnit } from './schemas/gameUnit.schema';
 import { GetGameDTO } from './dto/getGame.dto';
+import { ResponseType } from 'src/response/responseType';
 
 @Injectable()
 export class GameService {
@@ -64,23 +65,36 @@ export class GameService {
   async joinGame(jGame: JoinGameDto) {
     let user = await this.cacheService.UserCache.getInCacheOrBD(jGame.user_uuid);
     let game = await this.cacheService.GameCache.getInCacheOrBD(jGame.game_uuid);
-
+    let res: ResponseType = { status: '', reason: '' };
     if (game && user) {
       if (!game.isEnd && !game.isStart) {
         if (game.joinGame(user._id)) {
-          user.joinGame(game._id);
-
-          this.cacheService.GameCache.setInCache(game._id, await this.mongoService.gameRepository.update(game._id, game));
-          this.cacheService.UserCache.setInCache(user._id, await this.mongoService.userRepository.update(user._id, user));
+          if (user.joinGame(game._id)) {
+            this.cacheService.GameCache.setInCache(game._id, await this.mongoService.gameRepository.update(game._id, game));
+            this.cacheService.UserCache.setInCache(user._id, await this.mongoService.userRepository.update(user._id, user));
+            res.reason = '';
+            res.status = 'OK';
+          } else {
+            res.reason = 'El usuario ya tenia este juego';
+            res.status = 'FAIL';
+            console.log('El usuario ya tenia este juego');
+          }
         } else {
+          res.reason = 'Ya estoy';
+          res.status = 'FAIL';
           console.log('Ya estoy');
         }
       } else {
         console.log('Juego ya en curso o finalizado');
+        res.reason = 'Juego ya en curso o finalizado';
+        res.status = 'FAIL';
       }
     } else {
       console.log('Inexistent game or user');
+      res.reason = 'Inexistent game or user';
+      res.status = 'FAIL';
     }
+    return res;
   }
 
   async leaveGame(lGame: GameANDUserDTO) {
@@ -206,7 +220,7 @@ export class GameService {
    */
   async actionUnit(payload: UnitActionDto) {
     let update = false;
-    let res: { status: string; reason: string } = { status: '', reason: '' };
+    let res: ResponseType = { status: '', reason: '' };
     let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
     if (game) {
       if (game.isStart) {
@@ -343,12 +357,9 @@ export class GameService {
   async getAllGameByUser(user_uuid: string) {
     let user = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
     if (user) {
+      this.cacheService.GameCache;
       let games = await this.mongoService.gameRepository.getGamesByUser(user.gameJoinedList);
       if (games) {
-        /*let gamesDTO: GetGameDTO[] = [];
-        games.forEach((element) => {
-          gamesDTO.push(new GetGameDTO(element, this.cacheService));
-        });*/
         let gamesDTO: {
           game_uuid: string;
           isStart: boolean;
