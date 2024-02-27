@@ -13,7 +13,7 @@ import { ItemService } from 'src/item/item.service';
 import { EquipmentOBJDto } from './dto/equipmentOBJ.dto';
 import { GameUnit } from './schemas/gameUnit.schema';
 import { GetGameDTO } from './dto/getGame.dto';
-import { ResponseType } from 'src/response/responseType';
+import { CustomResponseType } from 'src/response/responseType';
 
 @Injectable()
 export class GameService {
@@ -65,7 +65,7 @@ export class GameService {
   async joinGame(jGame: JoinGameDto) {
     let user = await this.cacheService.UserCache.getInCacheOrBD(jGame.user_uuid);
     let game = await this.cacheService.GameCache.getInCacheOrBD(jGame.game_uuid);
-    let res: ResponseType = { status: '', reason: '' };
+    let res: CustomResponseType<undefined> = { status: '', reason: '', data: undefined };
     if (game && user) {
       if (!game.isEnd && !game.isStart) {
         if (game.joinGame(user._id)) {
@@ -220,7 +220,7 @@ export class GameService {
    */
   async actionUnit(payload: UnitActionDto) {
     let update = false;
-    let res: ResponseType = { status: '', reason: '' };
+    let res: CustomResponseType<undefined> = { status: '', reason: '', data: undefined };
     let game = await this.cacheService.GameCache.getInCacheOrBD(payload.game_uuid);
     if (game) {
       if (game.isStart) {
@@ -341,12 +341,19 @@ export class GameService {
   }
 
   async getGame(game_uuid: string) {
+    let res: CustomResponseType<GetGameDTO | undefined> = { status: '', reason: '', data: undefined };
     let game = await this.cacheService.GameCache.getInCacheOrBD(game_uuid);
 
     if (game) {
       let gameDTO = new GetGameDTO(game, this.cacheService);
-
-      return gameDTO;
+      res.data = gameDTO;
+      res.status = 'OK';
+      res.reason = '';
+      return res;
+    } else {
+      res.status = 'FAIL';
+      res.reason = 'El juego no existe';
+      return res;
     }
   }
 
