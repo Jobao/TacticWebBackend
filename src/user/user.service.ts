@@ -12,7 +12,7 @@ import { UnitEquiped } from 'src/game/schemas/unitEquiped.schema';
 import UserInventory from './schema/userInventory.schema';
 import { GetUserInventoryDTO } from './dto/getUserInventory.dto';
 import { ItemService } from 'src/item/item.service';
-import { CustomResponseType } from 'src/response/responseType';
+import { CustomResponseType, FailsStrings } from 'src/response/responseType';
 
 @Injectable()
 export class UserService {
@@ -101,14 +101,12 @@ export class UserService {
   }
 
   async getAllUnits(user_uuid: string) {
-    let res: CustomResponseType<Unit[] | undefined> = { status: '', reason: '', data: undefined };
+    let res: CustomResponseType<Unit[]> = new CustomResponseType<Unit[]>();
     const usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
     if (usr) {
-      res.status = 'OK';
-      res.data = usr.createdUnits;
+      res.setOK(usr.createdUnits);
     } else {
-      res.status = 'FAIL';
-      res.reason = 'NO existe el usuario';
+      res.setFAIL(FailsStrings.INEXISTENT_USER);
     }
 
     return res;

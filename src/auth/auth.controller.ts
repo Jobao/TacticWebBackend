@@ -1,13 +1,4 @@
-import {
-  Body,
-  Controller,
-  Get,
-  Post,
-  Req,
-  Res,
-  Response,
-  UseGuards,
-} from '@nestjs/common';
+import { Body, Controller, Get, Post, Req, Res, Response, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
 import { Public } from './public.decorator';
@@ -15,6 +6,7 @@ import { SignupDto } from './dto/signup.dto';
 import { ApiTags } from '@nestjs/swagger';
 import { AuthHTTPGuard } from './authHTTP.guard';
 import { Request } from 'express';
+import { CustomResponseType } from 'src/response/responseType';
 
 @Controller('')
 @ApiTags('Auth')
@@ -24,19 +16,17 @@ export class AuthController {
   @Public()
   @Post('login')
   async login(@Body() payload: LoginDto, @Req() request: Request) {
-    let v = await this.authService.login(payload);
-    request.res.setHeader(
-      'Set-Cookie',
-      `token=${v.access_token}; HttpOnly; Secure`,
-    );
-    //Estoy cambiiando para que devuelva el repsonse
-    return v;
+    let loginAttemp = await this.authService.login(payload);
+    if (loginAttemp.status === 'OK') {
+      request.res.setHeader('Set-Cookie', `token=${loginAttemp.data.access_token}; HttpOnly; Secure`);
+    }
+    return loginAttemp;
   }
 
   @Public()
   @Post('signup')
   async signup(@Body() payload: SignupDto) {
-    this.authService.signup(payload);
+    return await this.authService.signup(payload);
   }
   @UseGuards(AuthHTTPGuard)
   @Get('ping')

@@ -111,7 +111,7 @@ export class ItemService {
   }
 
   async findAllWeaponItemBySlot(slot: EquipmentSlot) {
-    return this.mongoService.weaponItemRepository.getAllItemBySlot(slot);
+    return await this.mongoService.weaponItemRepository.getAllItemBySlot(slot);
   }
 
   async getTypeByID(item_id: string) {

@@ -7,6 +7,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { SignupDto } from './dto/signup.dto';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 import { Request } from '@nestjs/common';
+import { CustomResponseType, FailsStrings, ILoginResponse } from 'src/response/responseType';
+import { User } from 'src/user/user.schema';
 
 @Injectable()
 export class AuthService {
@@ -17,21 +19,26 @@ export class AuthService {
   ) {}
 
   async login(payload: LoginDto) {
-    let r = await this.mongoService.authRepository.findOne(payload.user);
+    let res: CustomResponseType<ILoginResponse> = new CustomResponseType<ILoginResponse>();
 
-    if (r) {
-      let aux = '';
-      if (await r.checkPassword(payload.pass)) {
-        const paylo = { sub: r.uuid, username: r._id };
-        return {
+    let user = await this.mongoService.authRepository.findOne(payload.user);
+
+    if (user) {
+      if (await user.checkPassword(payload.pass)) {
+        const paylo = { sub: user.uuid, username: user._id };
+        const response: ILoginResponse = {
           access_token: 'Bearer ' + (await this.jwtService.signAsync(paylo)),
-          user_uuid: r.uuid,
+          user_uuid: user.uuid,
         };
+        res.setOK(response);
       } else {
-        return { status: 'error' };
+        res.setFAIL(FailsStrings.INVALID_PASSWORD);
       }
+    } else {
+      res.setFAIL(FailsStrings.INEXISTENT_USER);
     }
-    return { status: 'error' };
+
+    return res;
   }
 
   async signup(payload: SignupDto) {
@@ -40,16 +47,29 @@ export class AuthService {
     auth._id = payload.user;
     auth.pass = payload.pass;
     auth.uuid = uuid;
+    let response: CustomResponseType<User> = new CustomResponseType<User>();
 
     try {
-      await this.mongoService.authRepository.create(auth);
-      return await this.userService.create({
-        _id: uuid,
-        user: payload.user,
-        displayName: payload.displayName,
-      });
+      const createdAuth = await this.mongoService.authRepository.create(auth);
+      if (createdAuth) {
+        const createdUser = await this.userService.create({
+          _id: uuid,
+          user: payload.user,
+          displayName: payload.displayName,
+        });
+        if (createdUser) {
+          response.setOK(createdUser);
+        } else {
+          response.setFAIL(FailsStrings.CANT_CREATE_USER);
+        }
+      } else {
+        response.setFAIL(FailsStrings.CANT_CREATE_AUTH);
+      }
+      return response;
     } catch (error) {
-      console.log(error);
+      response.setFAIL(FailsStrings.DUPLICATE_USER);
+
+      return response;
     }
   }
 }

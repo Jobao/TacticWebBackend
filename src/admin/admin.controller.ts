@@ -22,7 +22,10 @@ import { ItemService } from 'src/item/item.service';
 import { EquipmentSlot } from 'src/game/schemas/enums';
 import { MongodbService } from 'src/mongodb/mongodb.service';
 //const _ = require('lodash');
-import _ from 'lodash';
+import { WeaponItem } from 'src/item/schemas/weaponItem.schema';
+import { Item } from 'src/item/schemas/item.schema';
+//import Prueba  from 'tactic-game-common/src/dto/prueba';
+var _ = require('lodash');
 
 @Public()
 @Controller('admin')
@@ -102,8 +105,8 @@ export class AdminController {
   }
 
   @Get('pruebas')
-  async prueba() {
-    this.cacheService.CLEAN_CACHE();
+  async prueba(@Body() nnn) {
+    //this.cacheService.CLEAN_CACHE();
   }
 
   @Post('autoinsert')
@@ -124,8 +127,8 @@ export class AdminController {
     //console.log(idJugador2);
 
     if (idJugador1 && idJugador2) {
-      await this.userService.addItemInventory(idJugador1._id, 5, '460593f8-cc6c-4b5d-bdce-9840e173b332');
-      await this.userService.addItemInventory(idJugador1._id, 2, '0a745590-c20c-4c3a-8f01-0df385f3b361');
+      await this.userService.addItemInventory(idJugador1.data._id, 5, '460593f8-cc6c-4b5d-bdce-9840e173b332');
+      await this.userService.addItemInventory(idJugador1.data._id, 2, '0a745590-c20c-4c3a-8f01-0df385f3b361');
 
       let classNameList: UnitClass[] = [];
       classNameList = await this.unitClassService.getAllNameClass();
@@ -133,11 +136,11 @@ export class AdminController {
         console.log('No hay clases');
       }
       //Salgo de todos los juegos
-      let user1 = await this.cacheService.UserCache.getInCacheOrBD(idJugador1._id);
+      let user1 = await this.cacheService.UserCache.getInCacheOrBD(idJugador1.data._id);
 
       await this.gameService.leaveAllGameUser(user1._id, await this.userService.leaveAllGames(user1));
 
-      let user2 = await this.cacheService.UserCache.getInCacheOrBD(idJugador2._id);
+      let user2 = await this.cacheService.UserCache.getInCacheOrBD(idJugador2.data._id);
       await this.gameService.leaveAllGameUser(user2._id, await this.userService.leaveAllGames(user2));
       //---------------------------------//
       //Remuevo todas las unidades
@@ -173,8 +176,8 @@ export class AdminController {
       await this.gameService.joinGame({ user_uuid: user2._id, game_uuid: gId });
 
       //Actualizo los usuarios
-      user1 = await this.cacheService.UserCache.getInCacheOrBD(idJugador1._id);
-      user2 = await this.cacheService.UserCache.getInCacheOrBD(idJugador2._id);
+      user1 = await this.cacheService.UserCache.getInCacheOrBD(idJugador1.data._id);
+      user2 = await this.cacheService.UserCache.getInCacheOrBD(idJugador2.data._id);
 
       let placeUnitDtos: PlaceUnitDto = new PlaceUnitDto();
 
