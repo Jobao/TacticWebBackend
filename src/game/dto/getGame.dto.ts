@@ -27,6 +27,7 @@ export class GetGameDTO {
         this.unitList.push(new PlacedUnitDTO(user.user_uuid, unit, cache));
       });
     });
+
     this.sizeX = game.sizeX;
     this.sizeY = game.sizeY;
   }

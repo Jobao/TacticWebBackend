@@ -346,6 +346,7 @@ export class GameService {
 
     if (game) {
       let gameDTO = new GetGameDTO(game, this.cacheService);
+
       res.data = gameDTO;
       res.status = 'OK';
       res.reason = '';
