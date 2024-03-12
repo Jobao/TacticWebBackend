@@ -115,9 +115,9 @@ export class UnitEquiped {
   }
 
   addStats(stats: [TupleStats]) {
-    var index = -1;
+    let index = -1;
     stats.forEach((element) => {
-      var finded = this.equipmentStats.find((s, i) => {
+      const finded = this.equipmentStats.find((s, i) => {
         if (s.statsName === element.statsName) {
           index = i;
           return true;

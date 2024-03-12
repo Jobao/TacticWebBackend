@@ -115,10 +115,10 @@ export class UserService {
   async unitChangeClass(payload: { unit_uuid: string; class_id: string }, user_uuid: string) {
     const usr = await this.cacheService.UserCache.getInCacheOrBD(user_uuid);
     if (usr) {
-      var unit = usr.getUnit(payload.unit_uuid);
+      const unit = usr.getUnit(payload.unit_uuid);
       if (unit) {
         if (this.unitClassService.canUseThisClass(payload.class_id, unit)) {
-          var res = unit.changeMainClass(await this.unitClassService.findOneClass(payload.class_id));
+          const res = unit.changeMainClass(await this.unitClassService.findOneClass(payload.class_id));
           if (res) {
             this.cacheService.UserCache.setInCache(usr._id, await this.update(usr));
           }

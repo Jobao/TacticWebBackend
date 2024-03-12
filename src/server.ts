@@ -1,7 +1,7 @@
-import {Server} from 'socket.io'
+import { Server } from 'socket.io';
 
-export var serverVar: Server;
+export let serverVar: Server;
 
-export function setServer(server: Server){
-    serverVar = server;
+export function setServer(server: Server) {
+  serverVar = server;
 }

@@ -350,7 +350,7 @@ export class GameService {
       this.cacheService.GameCache;
       let games = await this.mongoService.gameRepository.getGamesByUser(user.gameJoinedList);
       if (games) {
-        let gamesDTO: {
+        const gamesDTO: {
           game_uuid: string;
           isStart: boolean;
           isEnd: boolean;
